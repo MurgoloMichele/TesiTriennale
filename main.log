@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  24 AUG 2018 10:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  28 AUG 2018 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1063,7 +1063,7 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 
 ]
 (./main.toc
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
  [][]  
  []
 
@@ -1129,96 +1129,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 ]
 Capitolo 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 36.
+[11]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 57.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 36.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 57.
 
-Underfull \vbox (badness 3009) has occurred while \output is active []
-
- [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2012) has occurred while \output is active []
 
  [12]
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-[13] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[14] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 101.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 101.
-
-Overfull \hbox (20.0763pt too wide) in paragraph at lines 101--102
+Overfull \hbox (20.0763pt too wide) in paragraph at lines 122--123
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][] 
  []
 
-<pictures/modello-comportamentale.png, id=80, 752.8125pt x 396.48125pt>
+<pictures/modello-comportamentale.png, id=84, 752.8125pt x 396.48125pt>
 File: pictures/modello-comportamentale.png Graphic file (type png)
 
 <use pictures/modello-comportamentale.png>
 Package pdftex.def Info: pictures/modello-comportamentale.png used on input lin
-e 106.
+e 127.
 (pdftex.def)             Requested size: 376.40532pt x 198.24013pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--118
+Underfull \hbox (badness 10000) in paragraph at lines 137--139
 
  []
 
 
 Underfull \vbox (badness 1558) has occurred while \output is active []
 
-
-Overfull \hbox (28.45016pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 3.5.  PROBLEMATICHE DOVUTE ALL'UTILIZZO DI DUE DIVERSI FORM
-ATI \OT1/cmr/m/n/10.95 15
- []
-
-[15 <./pictures/modello-comportamentale.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+ [16 <./pictures/modello-comportamentale.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-) (./sections/4-soluzione_proposta.tex [16]
+) (./sections/4-soluzione_proposta.tex [17] [18
+
+]
 Capitolo 4.
 
 Overfull \hbox (139.43231pt too wide) in paragraph at lines 18--19
 [][][][][][][][][][][][][][][][][] 
  []
 
-[17
-
-]
+[19]
 Overfull \hbox (94.53246pt too wide) in paragraph at lines 81--82
 []\OT1/cmr/m/n/10.95 Installazione del-l'ul-ti-ma ver-sio-ne di ar-gus \OT1/cmr
 /m/it/10.95 3.0.8.2 \OT1/cmr/m/n/10.95 dal si-to http://qosient.com/argus/dev/a
@@ -1237,49 +1234,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--87
 
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+<pictures/homestf.png, id=106, 901.3675pt x 348.30125pt>
+File: pictures/homestf.png Graphic file (type png)
+
+<use pictures/homestf.png>
+Package pdftex.def Info: pictures/homestf.png used on input line 92.
+(pdftex.def)             Requested size: 450.68263pt x 174.15019pt.
+
+Overfull \hbox (69.98476pt too wide) in paragraph at lines 92--93
+[] 
+ []
+
+[20 <./pictures/homestf.png>]
+<pictures/stfmodels.png, id=111, 901.3675pt x 189.70876pt>
+File: pictures/stfmodels.png Graphic file (type png)
+
+<use pictures/stfmodels.png>
+Package pdftex.def Info: pictures/stfmodels.png used on input line 113.
+(pdftex.def)             Requested size: 450.68263pt x 94.85414pt.
+
+Overfull \hbox (69.98476pt too wide) in paragraph at lines 113--115
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./pictures/stfmodels.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--176
+Underfull \hbox (badness 10000) in paragraph at lines 173--175
 
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
-[21] <pictures/multicore.jpeg, id=114, 409.53pt x 334.24875pt>
+[24] <pictures/multicore.jpeg, id=127, 409.53pt x 334.24875pt>
 File: pictures/multicore.jpeg Graphic file (type jpg)
 
 <use pictures/multicore.jpeg>
-Package pdftex.def Info: pictures/multicore.jpeg used on input line 242.
+Package pdftex.def Info: pictures/multicore.jpeg used on input line 244.
 (pdftex.def)             Requested size: 204.7645pt x 167.12396pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+Underfull \hbox (badness 10000) in paragraph at lines 247--248
 
  []
 
-) (./sections/5-esperimenti.tex [22 <./pictures/multicore.jpeg>]
-Capitolo 5.
-[23
+) (./sections/5-esperimenti.tex [25 <./pictures/multicore.jpeg>] [26
 
-]) (./sections/6-conclusioni.tex [24]
+]
+Capitolo 5.
+[27]) (./sections/6-conclusioni.tex [28]
 Capitolo 6.
-) [25
+) [29
 
 ] (./main.aux)
 
@@ -1287,13 +1315,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 34252 strings out of 493029
- 738266 string characters out of 6136234
- 783918 words of memory out of 5000000
- 37277 multiletter control sequences out of 15000+600000
+ 34262 strings out of 493029
+ 738496 string characters out of 6136234
+ 784126 words of memory out of 5000000
+ 37285 multiletter control sequences out of 15000+600000
  12572 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 154i,11n,189p,10391b,2202s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 154i,11n,189p,10391b,2203s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -1307,10 +1335,10 @@ s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 l10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (25 pages, 283994 bytes).
+Output written on main.pdf (29 pages, 313526 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 185 PDF objects out of 1000 (max. 8388607)
+ 129 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 34 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 44 words of extra memory for PDF output out of 10000 (max. 10000000)
 

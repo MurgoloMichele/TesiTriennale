@@ -3,6 +3,8 @@
 \chapter{Analisi del problema}
 
 \section{Network flows}
+
+
 Le misurazioni del traffico sono necessarie per gestire tutti i tipi di reti IP. L'amministratore delle reti ha bisogno di una vista dettagliata del traffico di rete per ragioni di sicurezza, contabilità e gestione. Le composizioni del traffico devono essere analizzate accuratamente quando si valutano le metriche del traffico o quando si riscontrano problemi di rete.
 
 Tutte queste misurazioni devono essere fatte analizzando tutti i pacchetti che scorrono verso i punti centrali della rete come router o switch. L'analisi di questi pacchetti può essere eseguita all'istante o registrando tutti i pacchetti e analizzarli in un secondo momento. Con l'aumento delle capacità di rete e dei volumi di traffico questo tipo di approccio non è molto efficiente. 
@@ -10,6 +12,25 @@ Tutte queste misurazioni devono essere fatte analizzando tutti i pacchetti che s
 Invece i pacchetti simili (pacchetti con un insieme di proprietà comuni) possono essere raggruppati insieme per la composizioni di \textit{flows}. Un \textit{flow} può essere composto da tutti i pacchetti che condividono la stessa origine e l'indirizzo di destinazione, in questo modo tipi simili di traffico possono essere memorizzati in un formato più compatto senza perdere le informazioni a cui siamo interessati.
 
 Una volta raccolte queste informazioni si ha una vista dettagliata del traffico di rete. 
+
+\subsection{Architettura Network Flow}
+Il core del modello di misurazione del traffico sono entità di rete chiamate \textit{metri} del traffico. I contatori osservano i pacchetti mentre passano per un singolo punto sulla loro rete e li classificano in determinati gruppi. Per chiascun gruppo di questo tipo, un misuratore accumula deterinati attributi, ad esempio il numero di pacchetti e byte osservati per il gruppo. Questi gruppi di traffico possono corrispondere a un utente, un sistema host, una rete, un gruppo direti, un particolare indirizzo di trasporto, qualsiasi combinazione di quanto sopra. \newline
+
+Ai fini della misurazione del flusso del traffico, definiamo il concetto di \textit{network flow}, che è come un equivalente logico artificiale di una chiamata o di una connessione. Un flusso è una porzione di traffico, delimitata da un orario di inizio e di fine, che appartiene a uno dei gruppi di traffico a consumo sopra menzionati. \newline [http://www.ietf.org/rfc/rfc2722.txt]
+
+Per i protocolli di rete senza connessione come IP non esiste per definizione alcun modo per stabilire se un pacchetto con una particolare combinazione sorgente - destinazione fa parte di un flusso di pacchetti o non, ogni pacchetto è completamente indipendente. Un contatore di traffio ha, come parte della sua configurazione, un insieme di regole che specificano i flussi di interesse, in termine dei valori dei loro attributi. Deriva i valori degli attributi da ciascun pacchetto osservato e li utilizza per decidere a quale flusso appartengono. Classificare i pacchetti in \textit{flows} in questo modo fornisce un modo economico e pratico per misurare il traffico di rete e suddividerlo in gruppi ben definiti.
+
+\paragraph{Attributi dei Flows}
+Ogni contatore del traffico mantiene una tabella con i record dei \textit{flows}. Un record contiene i valori degli attributi di interesse per il suo \textit{flow}. Questi attributi potrebbero includere
+\begin{itemize}
+				\item \textbf{Indirizzi} per la sorgente e la destinazione dei \textit{flows}. Questi comprendono il tipo di protocollo, gli indirizzi di sorgente e destinazione a vari livelli della rete (estratti dall'intestazione del pacchetto) e il numero dell'interfaccia su cui è stato osservato il pacchetto.
+				\item \textbf{Orario} su cui sono stati visualizzati i pacchetti per questo flusso, vale a dire i tempi di creazione e ultima attività del flusso.
+				\item \textbf{Direzione} del traffico dei \textit{flows} 
+\end{itemize}
+
+
+Il gruppo di traffico di un flusso è specificato dai valori dei suoi attributi \textbf{Indirizzo}. Ad esempio, se gli attributi di un indirizzo di flusso sono stati specificati come "indirizzo sorgente = indirizzo IP 10.1.0.1, indirizzo di destinazione = indirizzo IP 26.1.0.1", in tale flusso verranno conteggiati solo i pacchetti IP da 10.1.0.1 a 26.1.0.1 e viceversa.
+
 
 \section{Argus}
 
@@ -113,7 +134,7 @@ La seconda parte dell'algoritmo consiste nell'utilizzare questi modelli di verit
 
 
 \section{Problematiche dovute all'utilizzo di due diversi formati}
-Come si è potuto notare nelle sezioni \textit{2.2} e \textit{2.3}, gli header di \textit{nProbe} ed \textit{Argus} presentano delle differenze che non permettono di essere utilizzati in modo intercambiale. I file che produce in output \textit{Argus} presentano 17 cambi, ben 12 in meno rispetto ai file di output prodotti da \textit{nProbe}.
+Come si è potuto notare nelle sezioni \textit{2.2} e \textit{2.3}, gli header di \textit{nProbe} ed \textit{Argus} presentano delle differenze che non permettono di essere utilizzati in modo intercambiabile. I file che produce in output \textit{Argus} presentano 17 cambi, ben 12 in meno rispetto ai file di output prodotti da \textit{nProbe}.
 L'utilizzazione di due diversi formati presenta errori quando si cerca di utilizzare file prodotti da \textit{nProbe} in Stratosphere IPS. \newline
 
 Questa incompatibilità ha portato alla necessità di una conversione: i file prodotti dal \textit{DIEF} devono essere convertiti in file di formato usato da \textit{Argus}. Questa conversione deve essere efficiente e precisa.

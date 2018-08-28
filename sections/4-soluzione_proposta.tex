@@ -89,6 +89,7 @@ Per eseguire il programma lo si esegue con
 \begin{lstlisting}[language=bash]
 	./stf.py
 \end{lstlisting}
+\includegraphics[scale=0.5]{homestf.png}
 
 Per caricare un dataset si utilizza il comando
 \begin{lstlisting}[language=bash]
@@ -109,10 +110,9 @@ Per visualizzare il behavioral model si utilizza il comando
 \begin{lstlisting}[language=bash]
 	models -L [id]	
 \end{lstlisting}
+\includegraphics[scale=0.5]{stfmodels.png}
 \end{document}
 
-
-La scrittura del programma è stata effettuata in due fasi, nella prima è stato realizzato un programma che effettua la conversione in single core. Nella seconda fase si è passati alla parallelizzazione del programma.
 
 \section{Conversione}
 I due formati che vengono utilizzati hanno formati diversi, si è scelto di tenere soltanto i campi utilizzati dal programma \textit{Argus} poichè è il formato che viene utilizzato da Stratosphere. I campi di \textit{nProbe} che quindi non compaiono nei file di tipo \textit{*.binetflow} vengono scartati.
