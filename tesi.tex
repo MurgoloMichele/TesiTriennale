@@ -1,0 +1,477 @@
+\documentclass[11pt,a4paper,twoside,openright]{book}
+\usepackage{frontespizio}
+\usepackage[english,italian]{babel}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage[linguistics]{forest}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage[utf8x]{inputenx}
+\usepackage{url}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\definecolor{folderbg}{RGB}{124,166,198}
+\definecolor{folderborder}{RGB}{110,144,169}
+
+\def\Size{4pt}
+\tikzset{
+  folder/.pic={
+    \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
+      (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);  
+    \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
+      (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
+  }
+}
+
+\newenvironment{abstract}%
+	{\cleardoublepage%
+		\thispagestyle{empty}%
+		\null \vfill\begin{center}%
+			\bfseries \abstractname \end{center}}%
+	{\vfill\null}
+
+\begin{document}
+\begin{frontespizio}
+\Universita{Modena}
+\Facolta{Scienze Matematiche, Fisiche e Informatiche}
+\Corso[Laurea]{Informatica}
+\Titoletto{Tesi di laurea}
+\Titolo{Titolo tesi}
+\Candidato[101851]{Michele Murgolo}
+\Relatore{Prof.~Mirco Marchetti}
+\Relatore{Prof.~Giovanni Apruzzese}
+\Annoaccademico{2017-2018}
+\end{frontespizio}
+
+\null\vspace{\stretch{1}}
+\begin{flushright}
+				\textit{La pagina della dedica}
+\end{flushright}
+\vspace{\stretch{2}}\null
+
+\cite{Stratosphere}
+\begin{abstract}
+				Stratosphere Testing Framework (stf) è una framework di ricerca sulla sicurezza della rete per analizzare i modelli comportamentali delle connessioni di rete nel Progetto Stratosphere. Il suo obiettivo è aiutare i ricercatori a trovare nuovi comportamenti malware, etichettare tali comportamenti, creare i loro modelli di traffico e verificare gli algoritmi di rilevamento. Stf funziona utilizzando algoritmi di apprendimento automatico sui modelli comportamentali.
+				L'obiettivo di Stratosphere Project è creare un IPS comportamentale (Intrusion Detection System) in grado di rilevare e bloccare i comportamenti dannosi nella rete. Come parte di questo progetto, stf viene utilizzato per generare modelli altamente attendibili di traffico dannoso consentendo una verifica automatica delle prestazioni di rilevamento.
+				Il framework genera questi modelli da file in formato binetflow, il DIEF salva il traffico internet in file formato flows.
+				Si è scritto un programma in python3 che esegue la conversione batch da flows a binetflow.
+				I file che il programma deve convertire sono numerosi e di grandi dimensioni, ogni giorno di traffico ha una dimensione media pari a 150Mb.
+				Per effettuare una conversione efficiente si è utilizzato un approccio multicore che ha permesso di ottenere uno speed up lineare della conversione. 
+\end{abstract}
+
+\newpage
+
+\chapter{Introduzione}
+
+\section{Preparazione environment}
+Per lo sviluppo del programma e lo studio del framework è stata utilizzata una macchina virtuale con Ubuntu 16.04 LTS.
+
+\paragraph{Installazione Stratosphere IPS}
+Sulla macchina virtuale è stato installato il framework di Stratospehere IPS. Per l'installazione si sono seguiti i seguenti passaggi:
+
+\begin{itemize}
+				\item Installazione del programma git \textit{2.7.4}
+\begin{lstlisting}[language=bash]
+$ sudo apt install git
+\end{lstlisting}
+
+				\item Clonazione repository github del framework
+\begin{lstlisting}[language=bash]
+$ git clone https://github.com/stratosphereips/StratosphereTestingFramework
+\end{lstlisting}
+
+				\item Installazione del programma \textit{python-pip}
+\begin{lstlisting}[language=bash]
+$ sudo apt install python-pip
+\end{lstlisting}
+\end{itemize}
+				
+\begin{itemize}
+				\paragraph{Installazione dipendenze per Stratosphere IPS}
+
+				\item prettytable \textit{0.7.2-3}
+\begin{lstlisting}[language=bash]
+$ sudo apt install python-prettytable
+\end{lstlisting}
+
+				\item transaction \textit{1.4.3-3}
+\begin{lstlisting}[language=bash]
+$ sudo apt install python-transaction
+\end{lstlisting}
+
+				\item persistent \textit{4.1.1-1build2}
+\begin{lstlisting}[language=bash]
+$ sudo apt install python-persistent
+\end{lstlisting}
+
+				\item zodb \textit{5.4.0}
+\begin{lstlisting}[language=bash]
+$ sudo pip install zodb
+\end{lstlisting}
+
+				\item sparse \textit{1.1-1.3build1}
+\begin{lstlisting}[language=bash]
+$ sudo apt install python-sparse
+\end{lstlisting}
+
+				\item dateutil \textit{2.4.2-1}
+\begin{lstlisting}[language=bash]
+$ sudo apt install python-dateutil
+\end{lstlisting}
+
+				\item Installazione dell'ultima versione di argus \textit{3.0.8.2} dal sito http://qosient.com/argus/dev/argus-latest.tar.gz
+
+				\item Installazione dell'ultima versione di argus-client \textit{3.0.8.2} dal sito http://qosient.com/argus/dev/argus-clients-latest.tar.gz
+
+\end{itemize}
+
+\paragraph{Per l'installazione di argus di installano le seguenti dipendenze}
+
+\begin{itemize}
+				\item libpcap \textit{1.7.4-2}
+\begin{lstlisting}[language=bash]
+$ sudo apt install libpcab-dev
+\end{lstlisting}
+
+\item bison \textit{3.0.4}
+\begin{lstlisting}[language=bash]
+$ sudo apt install bison
+\end{lstlisting}
+
+\item flex \textit{2.6.0-11}
+\begin{lstlisting}[language=bash]
+$ sudo apt install flex
+\end{lstlisting}
+
+\end{itemize}
+
+\paragraph{Utilizzo del programma stf\\}
+Per eseguire il programma lo si esegue con
+\begin{lstlisting}[language=bash]
+	./stf.py
+\end{lstlisting}
+
+Per caricare un dataset si utilizza il comando
+\begin{lstlisting}[language=bash]
+	datasets -c /absolute/path/file.binetflow	
+\end{lstlisting}
+
+Per generare la connessione si utilizza il comando
+\begin{lstlisting}[language=bash]
+	connections -g	
+\end{lstlisting}
+
+Infine, per generare i modelli, il comando
+\begin{lstlisting}[language=bash]
+	models -g	
+\end{lstlisting}
+
+Per visualizzare il behavioral model si utilizza il comando
+\begin{lstlisting}[language=bash]
+	models -L [id]	
+\end{lstlisting}
+
+\chapter{Analisi del problema}
+I file da convertire hanno una struttura gerarchica\\
+\begin{forest}
+  for tree={
+    font=\ttfamily,
+    grow'=0,
+    child anchor=west,
+    parent anchor=south,
+    anchor=west,
+    calign=first,
+    inner xsep=7pt,
+    edge path={
+      \noexpand\path [draw, \forestoption{edge}]
+      (!u.south west) +(7.5pt,0) |- (.child anchor) pic {folder} \forestoption{edge label};
+    },
+    before typesetting nodes={
+      if n=1
+        {insert before={[,phantom]}}
+        {}
+    },
+    fit=band,
+    before computing xy={l=15pt},
+  }  
+[folder structure
+  [years
+    [months
+        [days
+            [hours]
+        ]
+    ]
+  ]
+]
+\end{forest}
+
+
+
+//I file all'interno della subdir hours sono sempre 60, uno per ogni minuto e sono compressi con il programma gzip.
+
+I file di tipo flows hanno un header formato da 29 campi
+
+\begin{itemize}
+
+\item{ipv4 source address}
+\item{ipv4 destination address}
+\item{ipv4 next hop}
+\item{input snmp}
+\item{output snmp}
+\item{input packets}
+\item{input bytes}
+\item{first switched}
+\item{last switched}
+\item{source port}
+\item{destination port}
+\item{tcp flags}
+\item{protocol}
+\item{source tos}
+\item{source as}
+\item{destination as}
+\item{ipv4 source mask}
+\item{ipv4 destination mask}
+\item{l7 protocol}
+\item{biflow direction}
+\item{flow start seconds}
+\item{flow end seconds}
+\item{output packets}
+\item{output bytes}
+\item{flow id}
+\item{flow active timeout}
+\item{flow inactive timeout}
+\item{input source mac}
+\item{output destination mac}
+
+\end{itemize}
+
+Mentre nei file binetflow l'header è formato dai seguenti campi
+
+\begin{itemize}
+
+\item{start time}
+\item{duration}
+\item{protocol}
+\item{source address}
+\item{source port}
+\item{direction}
+\item{destination address}
+\item{destination port}
+\item{state}
+\item{source tos}
+\item{destination tos}
+\item{tot packets}
+\item{tot bytes}
+\item{source bytes}
+\item{source data}
+\item{destination data}
+\item{label}
+
+\end{itemize}
+
+I campi del file flows che non compaiono in quelli del file binetflow sono stati eliminati. 
+
+\begin{table}[]
+				\centering
+				\caption{Tabella di conversione}
+				\label{Tabella di conversione}
+				\begin{tabular}{|l|l|}
+								\hline
+								binetflow												 & flow																								 \\ \hline
+								start time											 & first switched																			 \\ \hline
+								duration												 & last switched - first switched											 \\ \hline
+								protocol												 & protocol																						 \\ \hline
+								source address                   & ipv4 source address                                 \\ \hline
+								source port                      & source port                                         \\ \hline
+								direction                        & biflow direction                                    \\ \hline
+								destination address              & ipv4 destination address                            \\ \hline
+								destination port                 & destination port                                    \\ \hline
+								state                            & -                                                   \\ \hline
+								source tos                       & source tos                                          \\ \hline
+								destination tos                  & -                                                   \\ \hline
+								tot packets                      & input packets + output packets                      \\ \hline
+								tot bytes                        & input bytes + output bytes                          \\ \hline
+								source bytes                     & input bytes                                         \\ \hline
+								source data											 & -																									 \\ \hline
+								destination data								 & -																									 \\ \hline
+								label														 & -																									 \\ \hline
+
+				\end{tabular}
+\end{table}
+
+\chapter{Soluzione proposta}
+La scrittura del programma è stata effettuata in due fasi, nella prima è stato realizzato un programma che effettua la conversione in single core. Nella seconda fase si è passati alla parallelizzazione del programma.
+
+
+\section{Versione single core}
+In questa versione il programma effettua le letture, le conversioni e le scritture su file con un unico processore.
+
+Pseudocodice del programma single core
+\begin{algorithm}
+\caption{Single core version}\label{single core version}
+\begin{algorithmic}[1]
+\Procedure{Hydra}{}
+\ForAll{\textit{file} in path}
+\State read data from \textit{file}
+\State convert data into new format
+\State append data into new file
+\EndFor
+
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\section{Versione multi core}
+
+Pseudocodice del programma multi core
+\begin{algorithm}
+\caption{Multi core version}\label{multi core version}
+\begin{algorithmic}[1]
+\Procedure{Hydra}{}
+\ForAll{\textit{file} in path}
+\State $\textit{Queue[]} \gets \textit{file}$
+\State read data from $\textit{file}$
+\State spawn 4 process
+\While{\textit{Queue[]} $\textbf{not empty}$}
+\State $\textit{filename} \gets $\textit{Queue.get()}
+\State convert data into new format
+\State append data into new file
+\EndWhile
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+
+\chapter{Esperimenti e risultati}
+
+\section{benchmark single core}
+
+I benchmark sono stati effettuati in due modalità:
+\begin{enumerate}
+				\item cold cache
+				\item warm cache
+\end{enumerate}
+
+Sono stati effettuati 10 test in entrambe le modalità. I risultati vengono riportati a seguire.//
+tutti i benchmark sono stati effettuati con \textit{/usr/bin/time}
+
+\paragraph{warm cache benchmarks}
+\begin{enumerate}
+				\item 2:28:03 98\%CPU
+				\item 2:27:98 98\%CPU
+				\item 2:28:86 98\%CPU
+				\item 2:28:97 95\%CPU
+				\item 2:24:52 99\%CPU
+				\item 2:34:21 94\%CPU
+				\item 2:28:36 98\%CPU
+				\item 2:35:02 93\%CPU
+				\item 2:25:59 99\%CPU
+				\item 2:28:75 96\%CPU
+\end{enumerate}
+
+La media calcolata è quindi di \textbf{2:28:38 97\%CPU}
+
+\paragraph{cold cache benchmarks}
+\begin{enumerate}
+				\item 2:30:92 95\%CPU
+				\item 2:32:67 94\%CPU
+				\item 2:25:34 99\%CPU
+				\item 2:28:13 97\%CPU
+				\item 2:30:27 95\%CPU
+				\item 2:26:01 98\%CPU
+				\item 2:28:29 96\%CPU
+				\item 2:26:79 98\%CPU
+				\item 2:27:97 97\%CPU
+				\item 2:31:14 97\%CPU
+\end{enumerate}
+
+La media calcolata è quindi di \textbf{2:28:75 97\%CPU}
+
+Come è possibile notare i risultati non variano in modo apprezzabile.
+
+
+\section{Benchmark multi core}
+I benchmark sono stati effettuati in due modalità:
+\begin{enumerate}
+				\item cold cache
+				\item warm cache
+\end{enumerate}
+Sono stati effettuati 10 test in entrambe le modalità. I risultati vengono riportati a seguire.//
+Tutti i benchmark sono stati effettuati con \textit{/usr/bin/time}
+
+\paragraph{warm cache benchmarks}
+\begin{enumerate}
+				\item 0:54:82 265\%CPU
+				\item 0:36:13 375\%CPU
+				\item 0:38:24 367\%CPU
+				\item 0:40:25 377\%CPU
+				\item 0:40:14 368\%CPU
+				\item 0:44:28 351\%CPU
+				\item 0:41:67 368\%CPU
+				\item 0:40:72 383\%CPU
+				\item 0:40:83 381\%CPU
+				\item 0:41:19 382\%CPU
+\end{enumerate}
+La media calcolata è quindi di \textbf{0:41:83 362\%CPU}
+
+\paragraph{cold cache benchmarks}
+\begin{enumerate}
+				\item 0:35:12 383\%CPU
+				\item 0:36:61 370\%CPU
+				\item 0:38:21 379\%CPU
+				\item 0:34:76 388\%CPU
+				\item 0:38:58 375\%CPU
+				\item 0:36:28 377\%CPU
+				\item 0:41:48 358\%CPU
+				\item 0:43:31 340\%CPU
+				\item 0:41:01 376\%CPU
+				\item 0:36:50 377\%CPU
+\end{enumerate}
+La media calcolata è quindi di \textbf{0:38:19 372\%CPU}
+
+\chapter{Conclusioni}
+\section{Prestazioni}
+
+Lo \textit{speedup relativo} su \textit{p} processori si calcola come
+
+\begin{center}
+\begin{math}
+S(p) = \frac{T(1)}{T(p)}
+\end{math}
+\end{center}
+
+Con i risultati ottenuti si ha uno \textit{speedup relativo} di
+
+\begin{center}
+\begin{math}
+S(p) = \frac{T(148)}{T(40)} = \textbf{3,7}
+\end{math}
+\end{center}
+
+In un sistema ideale, in cui il carico di lavoro potrebbe essere perfettamente partizionato su \textit{p} processori, lo speedup relativo dovrebbe essere uguale a p. In questo caso si parla di \textbf{speedup lineare}.
+
+Si definisce \textit{efficienza} il rapporto
+\begin{center}
+\begin{math}
+E(p) = \frac{S(p)}{p}
+\end{math}
+\end{center}
+
+Idealmente, se l'algoritmo avesse uno speedup lineare, si avrebbe 
+\begin{math}
+E(p) = 1
+\end{math}
+
+Più l'efficienza si allontana da 1, peggio stiamo sfruttando le risorse di calcolo disponibili nel sistema parallelo.
+\begin{center}
+\begin{math}
+				E(p) = \frac{S(3,7)}{4} = \textbf{0,925}
+\end{math}
+\end{center}
+
+\end{document}

@@ -1,0 +1,30 @@
+\select@language {italian}
+\select@language {italian}
+\contentsline {chapter}{\numberline {1}Introduzione}{7}
+\contentsline {chapter}{\numberline {2}Stato dell'arte}{9}
+\contentsline {chapter}{\numberline {3}Analisi del problema}{11}
+\contentsline {section}{\numberline {3.1}Network flows}{11}
+\contentsline {section}{\numberline {3.2}Argus}{11}
+\contentsline {section}{\numberline {3.3}nProbe}{12}
+\contentsline {section}{\numberline {3.4}Stratosphere IPS}{13}
+\contentsline {subsection}{\numberline {3.4.1}Il significato dei modelli comportamentali}{14}
+\contentsline {section}{\numberline {3.5}Problematiche dovute all'utilizzo di due diversi formati}{15}
+\contentsline {section}{\numberline {3.6}Presentazione del problema}{16}
+\contentsline {chapter}{\numberline {4}Soluzione proposta}{17}
+\contentsline {paragraph}{Preparazione environment}{17}
+\contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{17}
+\contentsline {section}{\numberline {4.2}Installazione di Argus}{18}
+\contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{18}
+\contentsline {section}{\numberline {4.4}Conversione}{19}
+\contentsline {section}{\numberline {4.5}Automatizzazione conversione}{19}
+\contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{20}
+\contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{20}
+\contentsline {paragraph}{Lavorare su chunk di file}{21}
+\contentsline {paragraph}{Meccanismi di lock}{21}
+\contentsline {paragraph}{Scrittura su file 1:1}{22}
+\contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{22}
+\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{23}
+\contentsline {section}{\numberline {5.1}benchmark single core}{23}
+\contentsline {section}{\numberline {5.2}Benchmark multi core}{23}
+\contentsline {chapter}{\numberline {6}Conclusioni}{25}
+\contentsline {section}{\numberline {6.1}Prestazioni}{25}

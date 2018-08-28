@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\chapter{Conclusioni}
+\section{Prestazioni}
+
+Sia \textit{T(p)} il tempo di esecuzione in secondi di un certo algoritmo su \textit{p processori}. Di conseguenza sia \textit{T(1)} il tempo di esecuzione del codice parallelo su 1 processore.
+La \textit{misura di scalabilità} o \textit{speedup} relativo di un algoritmo parallelo eseguito su \textit{p} processori si calcola come:
+
+\begin{center}
+\begin{math}
+S(p) = \frac{T(1)}{T(p)}
+\end{math}
+\end{center}
+
+Con i risultati ottenuti si ha uno \textit{speedup relativo} di
+
+\begin{center}
+\begin{math}
+S(p) = \frac{T(148)}{T(40)} = \textbf{3,7}
+\end{math}
+\end{center}
+
+In un sistema ideale, in cui il carico di lavoro potrebbe essere perfettamente partizionato su \textit{p} processori, lo speedup relativo dovrebbe essere uguale a p. In questo caso si parla di \textbf{speedup lineare}.
+
+Si definisce \textit{efficienza} il rapporto
+\begin{center}
+\begin{math}
+E(p) = \frac{S(p)}{p}
+\end{math}
+\end{center}
+
+Idealmente, se l'algoritmo avesse uno speedup lineare, si avrebbe 
+\begin{math}
+E(p) = 1
+\end{math}
+
+Più l'efficienza si allontana da 1, peggio stiamo sfruttando le risorse di calcolo disponibili nel sistema parallelo.
+\begin{center}
+\begin{math}
+				E(p) = \frac{S(3,7)}{4} = \textbf{0,925}
+\end{math}
+\end{center}
+\end{document}

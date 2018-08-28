@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper,twoside,openright]{book}
+\usepackage{frontespizio}
+\usepackage[english,italian]{babel}
+\usepackage{svg}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage[linguistics]{forest}
+\usepackage[margin=1.5in]{geometry}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage[utf8x]{inputenx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{graphicx}
+
+\usepackage{subfiles}
+\graphicspath{{pictures/}{../pictures/}}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\definecolor{folderbg}{RGB}{124,166,198}
+\definecolor{folderborder}{RGB}{110,144,169}
+
+\def\Size{4pt}
+\tikzset{
+  folder/.pic={
+    \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
+      (-1.05*\Size,0.2\Size+5pt) rectangle ++(.75*\Size,-0.2\Size-5pt);  
+    \filldraw[draw=folderborder,top color=folderbg!50,bottom color=folderbg]
+      (-1.15*\Size,-\Size) rectangle (1.15*\Size,\Size);
+  }
+}
+
+\newenvironment{abstract}%
+	{\cleardoublepage%
+		\thispagestyle{empty}%
+		\null \vfill\begin{center}%
+			\bfseries \abstractname \end{center}}%
+	{\vfill\null}
+
+\begin{document}
+
+\subfile{sections/copertina.tex}
+
+\null\vspace{\stretch{1}}
+\begin{flushright}
+				\textit{La pagina della dedica}
+\end{flushright}
+\vspace{\stretch{2}}\null
+
+\subfile{sections/sommario.tex}
+
+\tableofcontents
+\let\tableofcontents\relax
+
+
+\subfile{sections/1-introduzione.tex}
+
+\subfile{sections/2-stato_dellarte.tex}
+
+\subfile{sections/3-analisi_del_problema.tex}
+
+\subfile{sections/4-soluzione_proposta.tex}
+
+\subfile{sections/5-esperimenti.tex}
+
+\subfile{sections/6-conclusioni.tex}
+
+
+\end{document}
