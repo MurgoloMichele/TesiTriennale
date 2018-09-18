@@ -2,42 +2,104 @@
 \begin{document}
 \chapter{Analisi del problema}
 
-\section{Network flows}
+\section{Analisi traffico di rete}
 
+Nell'era digitale il traffico di rete è aumentato notevolmente e con esso gli attacchi di tipo informatico, per questo motivo è necessario trovare soluzioni per analizzare questo grande quantitativo di pacchetti che attraversano i dispositivi di rete delle aziende di grosse dimensioni. Nel mondo informatico di oggi è molto importante poter determinare rapidamente e con precisione l'origine e la portata di un potenziale attacco su una rete al fine di poterlo contrastare in modo efficace.
+Per fare ciò viene costruito un \textit{audit trail} di informazioni collezionate dal traffico di rete usando una combinazione di network flow e PCAP. 
+Un audit trail è un file che contiene una registrazione cronologica di attività relative alla sicurezza per consentire la ricostruzione e l'esame di eventi.
 
-Le misurazioni del traffico sono necessarie per gestire tutti i tipi di reti IP. L'amministratore delle reti ha bisogno di una vista dettagliata del traffico di rete per ragioni di sicurezza, contabilità e gestione. Le composizioni del traffico devono essere analizzate accuratamente quando si valutano le metriche del traffico o quando si riscontrano problemi di rete.
-
-Tutte queste misurazioni devono essere fatte analizzando tutti i pacchetti che scorrono verso i punti centrali della rete come router o switch. L'analisi di questi pacchetti può essere eseguita all'istante o registrando tutti i pacchetti e analizzarli in un secondo momento. Con l'aumento delle capacità di rete e dei volumi di traffico questo tipo di approccio non è molto efficiente. 
-
-Invece i pacchetti simili (pacchetti con un insieme di proprietà comuni) possono essere raggruppati insieme per la composizioni di \textit{flows}. Un \textit{flow} può essere composto da tutti i pacchetti che condividono la stessa origine e l'indirizzo di destinazione, in questo modo tipi simili di traffico possono essere memorizzati in un formato più compatto senza perdere le informazioni a cui siamo interessati.
-
-Una volta raccolte queste informazioni si ha una vista dettagliata del traffico di rete. 
-
-\subsection{Architettura Network Flow}
-Il core del modello di misurazione del traffico sono entità di rete chiamate \textit{metri} del traffico. I contatori osservano i pacchetti mentre passano per un singolo punto sulla loro rete e li classificano in determinati gruppi. Per chiascun gruppo di questo tipo, un misuratore accumula deterinati attributi, ad esempio il numero di pacchetti e byte osservati per il gruppo. Questi gruppi di traffico possono corrispondere a un utente, un sistema host, una rete, un gruppo direti, un particolare indirizzo di trasporto, qualsiasi combinazione di quanto sopra. \newline
-
-Ai fini della misurazione del flusso del traffico, definiamo il concetto di \textit{network flow}, che è come un equivalente logico artificiale di una chiamata o di una connessione. Un flusso è una porzione di traffico, delimitata da un orario di inizio e di fine, che appartiene a uno dei gruppi di traffico a consumo sopra menzionati. \newline [http://www.ietf.org/rfc/rfc2722.txt]
-
-Per i protocolli di rete senza connessione come IP non esiste per definizione alcun modo per stabilire se un pacchetto con una particolare combinazione sorgente - destinazione fa parte di un flusso di pacchetti o non, ogni pacchetto è completamente indipendente. Un contatore di traffio ha, come parte della sua configurazione, un insieme di regole che specificano i flussi di interesse, in termine dei valori dei loro attributi. Deriva i valori degli attributi da ciascun pacchetto osservato e li utilizza per decidere a quale flusso appartengono. Classificare i pacchetti in \textit{flows} in questo modo fornisce un modo economico e pratico per misurare il traffico di rete e suddividerlo in gruppi ben definiti.
-
-\paragraph{Attributi dei Flows}
-Ogni contatore del traffico mantiene una tabella con i record dei \textit{flows}. Un record contiene i valori degli attributi di interesse per il suo \textit{flow}. Questi attributi potrebbero includere
+\subsection{Network Flow}
+Un flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione che hanno degli attributi in comune:
 \begin{itemize}
-				\item \textbf{Indirizzi} per la sorgente e la destinazione dei \textit{flows}. Questi comprendono il tipo di protocollo, gli indirizzi di sorgente e destinazione a vari livelli della rete (estratti dall'intestazione del pacchetto) e il numero dell'interfaccia su cui è stato osservato il pacchetto.
-				\item \textbf{Orario} su cui sono stati visualizzati i pacchetti per questo flusso, vale a dire i tempi di creazione e ultima attività del flusso.
-				\item \textbf{Direzione} del traffico dei \textit{flows} 
+				\item indirizzo IP sorgente
+				\item indirizzo IP destinazione
+				\item porta sorgente
+				\item porta destinazione
+				\item protocollo
 \end{itemize}
 
+Se i pacchetti che attraversano un dispositivo di rete hanno questi attributi in comune possono essere raggruppati in un flow.
 
-Il gruppo di traffico di un flusso è specificato dai valori dei suoi attributi \textbf{Indirizzo}. Ad esempio, se gli attributi di un indirizzo di flusso sono stati specificati come "indirizzo sorgente = indirizzo IP 10.1.0.1, indirizzo di destinazione = indirizzo IP 26.1.0.1", in tale flusso verranno conteggiati solo i pacchetti IP da 10.1.0.1 a 26.1.0.1 e viceversa.
+\subsection{Packet Capture}
+Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete. Un packet capture intercetta i singoli pacchetti e li archivia. Nei sistemi operativi Unix è utilizzata la libreria \textbf{libpcap} mentre nei sistemi Windows si fa utilizzo di \textbf{WinPcap}
+
+\subsection{NetFlow}
+NetFlow è un protocollo di analisi di rete che offre la possibilità di raccogliere informazioni dettagliate sul traffico mentre attraversa un'interfaccia. NetFlow è una tecnologia proprietaria di Cisco. I dispositivi di rete conformi a NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
+
+Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condividono tutti i seguenti 7 valori:
+
+\begin{itemize}
+				\item interfaccia di ingresso
+				\item indirizzo IP sorgente
+				\item indirizzo IP destinazione
+				\item protocollo IP
+				\item porta sorgente TCP o UDP, 0 per altri protocolli
+				\item IP Type of Service
+\end{itemize}
+
+\subsubsection{Componenti di NetFlow}
+Una architettura NetFlow ha i seguenti componenti
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{netflowexample.jpg}
+\caption{Architettura NetFlow}
+\end{figure}
+
+\begin{verse}
+\textbf{NetFlow monitor}
+un componente applicato a un'interfaccia che raccoglie informazioni sui flow. I NetFlow monitor sono costituiti da un record e una cache.
+\end{verse}
+
+\begin{verse}
+\textbf{NetFlow exporter}
+Aggrega i pacchetti in flows e ne esporta i record verso uno o più \textit{flow collectors}.
+Quando dei pacchetti arrivano al NetFlow exporter, vengono ispezionati singolarmente per uno più attributi che vengono utilizzti per determinare se il pachetto è univoco o è simile agli altri pacchetti. Se il pacchetto presenta attributi simili viene classificato nello stesso flow.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{netflowexporter.jpg}
+\caption{NetFlow exporter}
+\end{figure}
+
+Dopo aver esaminato questi attributi, il NetFlow exporter li aggrega in record di flow e li salva in un database che può essere una cache NetFlow o un NetFlow collector.
+\end{verse}
+
+\begin{verse}
+\textbf{NetFlow collector}
+Responsabile della ricezione, conservazione e pre-elaborazione dei dati di un flow ricevuti da un \textit{flow exporter}. Solitamente è un software separato in esecuzione su un server di rete. I record NetFlow vengono esportati in un NetFlow collector tramite protocollo UDP.
+\end{verse}
+
+\begin{verse}
+\textbf{Analysis application} 
+Analizza i dati dei flows ricevuti nel contesto del rilevamento delle intrusioni o del profilo di traffico.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{netflowreport.jpg}
+\caption{SolarWinds NetFlow Traffic Analyzer}
+\end{figure}
+\end{verse}
 
 
-\section{Argus}
+L'analisi dei flow può aiutare a determinare le statistiche del traffico in generale, ma non è sufficiente quando è necessario analizzare una conversazione specifica nel dettaglio. È quindi necessario un utilizzo di entrambe le tecnologie per la monitorazione del traffico.
 
-\textit{Audit Record Generation and Utilization System} è la prima implementazione del monitoraggio dei flussi di rete ed è un progetto di monitoraggio continuo del flusso di rete open source. \newline
+È importante rendersi conto che una risposta efficae agli incidenti è tutta una questione di dimensioni. Raccogliendo solo PCAP si potrebbero avere troppi dati in un tempo troppo breve, usare PCAP per scoprire con chi uncomputer era connesso su un segmento occupata della rete è, nel migliore dei casi, una lunga query e, nel peggiore dei casi, impossibile (****QUESTO PARAGRAFO VA RISCRITTO****).
 
-Questo programma è utilizzato da \textit{Stratosphere IPS} e di conseguenza accetta in input file che rispettano il formato di \textit{Argus}. Questi file hanno estensione \textit{*.binetflow} e hanno un header formato da 17 campi, separati dal carattere ","
-\begin{table}[H]
+Pertanto l'approccio migliore per le organizzazioni è quello di utilizzare prima NetFlow per poi integrarsi con PCAP in un secondo momento.
+
+\section{Strumenti software utilizzati}
+Verranno ora descritti i software utilizzati in questa tesi. I software utilizzati sono multipiattaforma, in questa tesi sono stati adoperati su sistema operativo basato su una distribuzione GNU/Linux.
+
+\subsection{Audit Record Generation and Utilization System}
+Argus (Audit Record Generation and Utilization System) è la prima implementazione del monitoraggio dei flow, è un progetto open source e multipiattaforma.
+Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, trai quali Windows, MaxOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina, argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. \newline
+
+Argus viene utilizzato da molte università e aziende per registrare dei flow che vengono utilizzati sia nell'analisi immediata dell'utilizzo della rete, sia nell'analisi storica.
+I record Netflow di Argus offrono un rapporto fino a 10.000:1 dalla dimensione del pacchetto al record scritto sul disco, che consente alle installazioni di salvare i record per molto più tempo rispetto alle acquisizioni di pacchetti completi.
+
+
+\begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
 \textbf{campo} & \textbf{descrizione}                    \\ \hline
@@ -63,11 +125,22 @@ Label          & metadata label                          \\ \hline
 
 \section{nProbe}
 
-Negli ambienti commerciali, \textit{NetFlow} è probabilmente lo standard \textit{de facto} per la contabilità e la fatturazione del traffico di rete. \textit{NetFlow} è una tecnologia creata originariamente da Cisco e ora è standardizzata come \textit{Internet Protocol Flow Information eXport} \newline
-Il \textit{DIEF} utilizza \textit{nProbe} per la cattura e l'analisi dei pacchetti di reti. La cattura dei pacchetti viene salvata su file che hanno formato proprietario, con estensione \textit{*.flows}.
-Questo formato ha un header formato da 29 campi, ciascun campo è separato da un carattere speciale.
+Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la contabilità e la fatturazione del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow. È disponibile per la maggior parte dei sistemi operativi sul mercato. \newline
 
-\begin{table}[H]
+Nel monitoraggio basato sui flow ci sono due componenti principali: il flow exporter e il flow collector. Solitamente NetFlow è un pradigma in modalità push poichè i dispositivi di rete non hanno quasi nessun tipo di memoria di archiviazione e quindi inviano i dai il più presto possibile verso un collector. Questa architettura non è ottimale poichè la sonda sta inviando gli stessi dati a tutti i collector e anche perchè nel caso in cui debba essere aggiunto un nuovo collector, la sonda deve essere riconfigurata. Un altro problema è che i dati scambiati sono in chiaro, il che significa che chiunque intercetta i flussi inviati dalla sonda può scoprire cosa succede nella rete monitorata. 
+Ntopng ha ripristinato questo paradigma utilizzando un'architettura in modalità polling. \newline
+
+Con l'utilizzo di ZMQ ntopng si iscrive in modo dinamico alla sonda, comunica alla sonda il tipo di dati a cui è interessata nel flow e la sonda invia solo questa informazione, senza inviare tutti i flow a ntopng. Questa pratica ottimizza il traffico di rete e limita i cicli della CPU a quelli realmente necessari per continuare a raccogliere flows.
+
+\paragraph{ZeroMQ}
+ZeroMQ è una libreria di messagistica asincrona ad alte prestazione destinata all'utilizzo in applicazioni distribuite o concorrenti. L'API ZeroMQ fornisce socket che possono rappresentare una connessione molti-a-molti tra endpoint. Operando con una granularità del messaggio, richiedono l'uso di un pattern di messagistica e sono particolarmente ottimizzati per quel tipo di pattern.
+
+
+\includegraphics[scale=1.5]{PollMode.jpg}{H}
+
+
+
+\begin{table}[h]
 \begin{tabular}{|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{campo}} & \multicolumn{1}{c|}{\textbf{descrizione}}     \\ \hline

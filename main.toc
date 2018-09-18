@@ -1,32 +1,36 @@
 \select@language {italian}
 \select@language {italian}
 \contentsline {chapter}{\numberline {1}Introduzione}{7}
-\contentsline {chapter}{\numberline {2}Stato dell'arte}{9}
-\contentsline {chapter}{\numberline {3}Analisi del problema}{11}
-\contentsline {section}{\numberline {3.1}Network flows}{11}
-\contentsline {subsection}{\numberline {3.1.1}Architettura Network Flow}{11}
-\contentsline {paragraph}{Attributi dei Flows}{12}
-\contentsline {section}{\numberline {3.2}Argus}{12}
-\contentsline {section}{\numberline {3.3}nProbe}{13}
-\contentsline {section}{\numberline {3.4}Stratosphere IPS}{14}
-\contentsline {subsection}{\numberline {3.4.1}Il significato dei modelli comportamentali}{15}
-\contentsline {section}{\numberline {3.5}Problematiche dovute all'utilizzo di due diversi formati}{16}
-\contentsline {section}{\numberline {3.6}Presentazione del problema}{17}
-\contentsline {chapter}{\numberline {4}Soluzione proposta}{19}
-\contentsline {paragraph}{Preparazione environment}{19}
-\contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{19}
-\contentsline {section}{\numberline {4.2}Installazione di Argus}{20}
-\contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{20}
-\contentsline {section}{\numberline {4.4}Conversione}{21}
-\contentsline {section}{\numberline {4.5}Automatizzazione conversione}{22}
-\contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{23}
-\contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{23}
-\contentsline {paragraph}{Lavorare su chunk di file}{23}
-\contentsline {paragraph}{Meccanismi di lock}{24}
-\contentsline {paragraph}{Scrittura su file 1:1}{24}
-\contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{24}
-\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{27}
-\contentsline {section}{\numberline {5.1}benchmark single core}{27}
-\contentsline {section}{\numberline {5.2}Benchmark multi core}{27}
-\contentsline {chapter}{\numberline {6}Conclusioni}{29}
-\contentsline {section}{\numberline {6.1}Prestazioni}{29}
+\contentsline {chapter}{\numberline {2}Stato dell'arte}{11}
+\contentsline {chapter}{\numberline {3}Analisi del problema}{13}
+\contentsline {section}{\numberline {3.1}Analisi traffico di rete}{13}
+\contentsline {subsection}{\numberline {3.1.1}Network Flow}{13}
+\contentsline {subsection}{\numberline {3.1.2}Packet Capture}{14}
+\contentsline {subsection}{\numberline {3.1.3}NetFlow}{14}
+\contentsline {subsubsection}{\numberline {3.1.3.1}Componenti di NetFlow}{14}
+\contentsline {section}{\numberline {3.2}Strumenti software utilizzati}{17}
+\contentsline {subsection}{\numberline {3.2.1}Audit Record Generation and Utilization System}{17}
+\contentsline {section}{\numberline {3.3}nProbe}{18}
+\contentsline {paragraph}{\numberline {3.3.0.0.1}ZeroMQ}{19}
+\contentsline {section}{\numberline {3.4}Stratosphere IPS}{19}
+\contentsline {subsection}{\numberline {3.4.1}Il significato dei modelli comportamentali}{21}
+\contentsline {section}{\numberline {3.5}Problematiche dovute all'utilizzo di due diversi formati}{22}
+\contentsline {section}{\numberline {3.6}Presentazione del problema}{22}
+\contentsline {chapter}{\numberline {4}Soluzione proposta}{25}
+\contentsline {paragraph}{\numberline {4.0.0.0.1}Preparazione environment}{25}
+\contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{25}
+\contentsline {section}{\numberline {4.2}Installazione di Argus}{26}
+\contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{27}
+\contentsline {section}{\numberline {4.4}Conversione}{28}
+\contentsline {section}{\numberline {4.5}Automatizzazione conversione}{28}
+\contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{29}
+\contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{30}
+\contentsline {paragraph}{\numberline {4.6.1.0.1}Lavorare su chunk di file}{30}
+\contentsline {paragraph}{\numberline {4.6.1.0.2}Meccanismi di lock}{30}
+\contentsline {paragraph}{\numberline {4.6.1.0.3}Scrittura su file 1:1}{31}
+\contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{31}
+\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{33}
+\contentsline {section}{\numberline {5.1}benchmark single core}{33}
+\contentsline {section}{\numberline {5.2}Benchmark multi core}{33}
+\contentsline {chapter}{\numberline {6}Conclusioni}{35}
+\contentsline {section}{\numberline {6.1}Prestazioni}{35}

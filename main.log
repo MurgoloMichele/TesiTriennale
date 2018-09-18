@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  28 AUG 2018 11:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  30 AUG 2018 12:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -915,18 +915,18 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 )) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
+LaTeX Font Info:    ... okay on input line 47.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -986,8 +986,8 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box83
-LaTeX Info: Redefining \it@ocap on input line 44.
-LaTeX Info: Redefining \it@ccap on input line 44.
+LaTeX Info: Redefining \it@ocap on input line 47.
+LaTeX Info: Redefining \it@ccap on input line 47.
 
 
 File italian.ldf warning: 
@@ -995,7 +995,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 44.
+italian.ldf    on input line 47.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
@@ -1062,12 +1062,7 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ] [4
 
 ]
-(./main.toc
-Underfull \hbox (badness 10000) in paragraph at lines 19--19
- [][]  
- []
-
-)
+(./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1081,11 +1076,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
@@ -1106,11 +1104,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--28
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 29--61
+Underfull \hbox (badness 10000) in paragraph at lines 29--64
 
  []
 
-(./sections/2-stato_dellarte.tex [8]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+(./sections/2-stato_dellarte.tex [9] [10
+
+]
 Capitolo 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--10
@@ -1122,91 +1126,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-) (./sections/3-analisi_del_problema.tex [9
-
-] [10
+) (./sections/3-analisi_del_problema.tex [11] [12
 
 ]
 Capitolo 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-[11]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 14.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
+ [13]
+<pictures/netflowexample.jpg, id=80, 498.76479pt x 299.25888pt>
+File: pictures/netflowexample.jpg Graphic file (type jpg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+<use pictures/netflowexample.jpg>
+Package pdftex.def Info: pictures/netflowexample.jpg used on input line 45.
+(pdftex.def)             Requested size: 349.13297pt x 209.47977pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+<pictures/netflowexporter.jpg, id=84, 439.72733pt x 306.38408pt>
+File: pictures/netflowexporter.jpg Graphic file (type jpg)
+
+<use pictures/netflowexporter.jpg>
+Package pdftex.def Info: pictures/netflowexporter.jpg used on input line 61.
+(pdftex.def)             Requested size: 307.80702pt x 214.46738pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./pictures/netflowexample.jpg>]
+<pictures/netflowreport.jpg, id=88, 702.625pt x 398.48875pt>
+File: pictures/netflowreport.jpg Graphic file (type jpg)
+
+<use pictures/netflowreport.jpg>
+Package pdftex.def Info: pictures/netflowreport.jpg used on input line 79.
+(pdftex.def)             Requested size: 351.31163pt x 199.24388pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <./pictures/netflowexporter.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 57.
+[17 <./pictures/netflowreport.jpg>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 119.
+
+
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 57.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 119.
 
-Underfull \vbox (badness 2012) has occurred while \output is active []
-
- [12]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [13]
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-[14] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
+
+ []
+
+[18] <pictures/PollMode.jpg, id=99, 221.628pt x 25.5354pt>
+File: pictures/PollMode.jpg Graphic file (type jpg)
+
+<use pictures/PollMode.jpg>
+Package pdftex.def Info: pictures/PollMode.jpg used on input line 139.
+(pdftex.def)             Requested size: 332.44118pt x 38.30298pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+[19 <./pictures/PollMode.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Overfull \hbox (20.0763pt too wide) in paragraph at lines 122--123
+Overfull \hbox (20.0763pt too wide) in paragraph at lines 195--196
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][] 
  []
 
-<pictures/modello-comportamentale.png, id=84, 752.8125pt x 396.48125pt>
+<pictures/modello-comportamentale.png, id=107, 752.8125pt x 396.48125pt>
 File: pictures/modello-comportamentale.png Graphic file (type png)
 
 <use pictures/modello-comportamentale.png>
 Package pdftex.def Info: pictures/modello-comportamentale.png used on input lin
-e 127.
+e 200.
 (pdftex.def)             Requested size: 376.40532pt x 198.24013pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \vbox (badness 1810) has occurred while \output is active []
+
+ [21 <./pictures/modello-comportamentale.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
 
  []
 
 
-Underfull \vbox (badness 1558) has occurred while \output is active []
-
- [16 <./pictures/modello-comportamentale.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
-) (./sections/4-soluzione_proposta.tex [17] [18
+[22]) (./sections/4-soluzione_proposta.tex [23] [24
 
 ]
 Capitolo 4.
@@ -1215,7 +1259,7 @@ Overfull \hbox (139.43231pt too wide) in paragraph at lines 18--19
 [][][][][][][][][][][][][][][][][] 
  []
 
-[19]
+[25]
 Overfull \hbox (94.53246pt too wide) in paragraph at lines 81--82
 []\OT1/cmr/m/n/10.95 Installazione del-l'ul-ti-ma ver-sio-ne di ar-gus \OT1/cmr
 /m/it/10.95 3.0.8.2 \OT1/cmr/m/n/10.95 dal si-to http://qosient.com/argus/dev/a
@@ -1234,7 +1278,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--87
 
  []
 
-<pictures/homestf.png, id=106, 901.3675pt x 348.30125pt>
+<pictures/homestf.png, id=129, 901.3675pt x 348.30125pt>
 File: pictures/homestf.png Graphic file (type png)
 
 <use pictures/homestf.png>
@@ -1245,8 +1289,7 @@ Overfull \hbox (69.98476pt too wide) in paragraph at lines 92--93
 [] 
  []
 
-[20 <./pictures/homestf.png>]
-<pictures/stfmodels.png, id=111, 901.3675pt x 189.70876pt>
+[26] <pictures/stfmodels.png, id=133, 901.3675pt x 189.70876pt>
 File: pictures/stfmodels.png Graphic file (type png)
 
 <use pictures/stfmodels.png>
@@ -1262,66 +1305,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
+[27 <./pictures/homestf.png> <./pictures/stfmodels.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ []
 
- [21 <./pictures/stfmodels.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--175
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-[24] <pictures/multicore.jpeg, id=127, 409.53pt x 334.24875pt>
+[30] <pictures/multicore.jpeg, id=150, 409.53pt x 334.24875pt>
 File: pictures/multicore.jpeg Graphic file (type jpg)
 
 <use pictures/multicore.jpeg>
-Package pdftex.def Info: pictures/multicore.jpeg used on input line 244.
+Package pdftex.def Info: pictures/multicore.jpeg used on input line 242.
 (pdftex.def)             Requested size: 204.7645pt x 167.12396pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+ [31]
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
-) (./sections/5-esperimenti.tex [25 <./pictures/multicore.jpeg>] [26
-
-]
+) (./sections/5-esperimenti.tex [32 <./pictures/multicore.jpeg>]
 Capitolo 5.
-[27]) (./sections/6-conclusioni.tex [28]
+[33
+
+]) (./sections/6-conclusioni.tex [34]
 Capitolo 6.
-) [29
+) [35
 
 ] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 34262 strings out of 493029
- 738496 string characters out of 6136234
- 784126 words of memory out of 5000000
- 37285 multiletter control sequences out of 15000+600000
+ 34284 strings out of 493029
+ 739074 string characters out of 6136234
+ 782631 words of memory out of 5000000
+ 37303 multiletter control sequences out of 15000+600000
  12572 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 154i,11n,189p,10391b,2203s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 154i,11n,189p,10391b,2204s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -1335,10 +1378,10 @@ s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 l10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (29 pages, 313526 bytes).
+Output written on main.pdf (35 pages, 510756 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
+ 208 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 44 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 64 words of extra memory for PDF output out of 10000 (max. 10000000)
 
