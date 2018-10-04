@@ -10,27 +10,27 @@
 \contentsline {subsubsection}{\numberline {3.1.3.1}Componenti di NetFlow}{14}
 \contentsline {section}{\numberline {3.2}Strumenti software utilizzati}{17}
 \contentsline {subsection}{\numberline {3.2.1}Audit Record Generation and Utilization System}{17}
-\contentsline {section}{\numberline {3.3}nProbe}{18}
-\contentsline {paragraph}{\numberline {3.3.0.0.1}ZeroMQ}{19}
-\contentsline {section}{\numberline {3.4}Stratosphere IPS}{19}
-\contentsline {subsection}{\numberline {3.4.1}Il significato dei modelli comportamentali}{21}
-\contentsline {section}{\numberline {3.5}Problematiche dovute all'utilizzo di due diversi formati}{22}
-\contentsline {section}{\numberline {3.6}Presentazione del problema}{22}
-\contentsline {chapter}{\numberline {4}Soluzione proposta}{25}
-\contentsline {paragraph}{\numberline {4.0.0.0.1}Preparazione environment}{25}
-\contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{25}
-\contentsline {section}{\numberline {4.2}Installazione di Argus}{26}
-\contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{27}
-\contentsline {section}{\numberline {4.4}Conversione}{28}
-\contentsline {section}{\numberline {4.5}Automatizzazione conversione}{28}
-\contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{29}
-\contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{30}
-\contentsline {paragraph}{\numberline {4.6.1.0.1}Lavorare su chunk di file}{30}
-\contentsline {paragraph}{\numberline {4.6.1.0.2}Meccanismi di lock}{30}
-\contentsline {paragraph}{\numberline {4.6.1.0.3}Scrittura su file 1:1}{31}
-\contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{31}
-\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{33}
-\contentsline {section}{\numberline {5.1}benchmark single core}{33}
-\contentsline {section}{\numberline {5.2}Benchmark multi core}{33}
-\contentsline {chapter}{\numberline {6}Conclusioni}{35}
-\contentsline {section}{\numberline {6.1}Prestazioni}{35}
+\contentsline {subsection}{\numberline {3.2.2}nProbe}{18}
+\contentsline {section}{\numberline {3.3}Stratosphere IPS}{19}
+\contentsline {subsection}{\numberline {3.3.1}Architettura}{20}
+\contentsline {subsection}{\numberline {3.3.2}Modelli comportamentali}{20}
+\contentsline {section}{\numberline {3.4}Problematiche dovute all'utilizzo di due diversi formati}{21}
+\contentsline {section}{\numberline {3.5}Presentazione del problema}{21}
+\contentsline {chapter}{\numberline {4}Soluzione proposta}{23}
+\contentsline {paragraph}{\numberline {4.0.0.0.1}Preparazione environment}{23}
+\contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{23}
+\contentsline {section}{\numberline {4.2}Installazione di Argus}{24}
+\contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{25}
+\contentsline {section}{\numberline {4.4}Conversione}{26}
+\contentsline {section}{\numberline {4.5}Automatizzazione conversione}{26}
+\contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{27}
+\contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{28}
+\contentsline {paragraph}{\numberline {4.6.1.0.1}Lavorare su chunk di file}{28}
+\contentsline {paragraph}{\numberline {4.6.1.0.2}Meccanismi di lock}{28}
+\contentsline {paragraph}{\numberline {4.6.1.0.3}Scrittura su file 1:1}{29}
+\contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{29}
+\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{31}
+\contentsline {section}{\numberline {5.1}benchmark single core}{31}
+\contentsline {section}{\numberline {5.2}Benchmark multi core}{31}
+\contentsline {chapter}{\numberline {6}Conclusioni}{33}
+\contentsline {section}{\numberline {6.1}Prestazioni}{33}

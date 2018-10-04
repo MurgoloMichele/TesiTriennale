@@ -6,6 +6,7 @@
 
 Nell'era digitale il traffico di rete è aumentato notevolmente e con esso gli attacchi di tipo informatico, per questo motivo è necessario trovare soluzioni per analizzare questo grande quantitativo di pacchetti che attraversano i dispositivi di rete delle aziende di grosse dimensioni. Nel mondo informatico di oggi è molto importante poter determinare rapidamente e con precisione l'origine e la portata di un potenziale attacco su una rete al fine di poterlo contrastare in modo efficace.
 Per fare ciò viene costruito un \textit{audit trail} di informazioni collezionate dal traffico di rete usando una combinazione di network flow e PCAP. 
+
 Un audit trail è un file che contiene una registrazione cronologica di attività relative alla sicurezza per consentire la ricostruzione e l'esame di eventi.
 
 \subsection{Network Flow}
@@ -24,7 +25,7 @@ Se i pacchetti che attraversano un dispositivo di rete hanno questi attributi in
 Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete. Un packet capture intercetta i singoli pacchetti e li archivia. Nei sistemi operativi Unix è utilizzata la libreria \textbf{libpcap} mentre nei sistemi Windows si fa utilizzo di \textbf{WinPcap}
 
 \subsection{NetFlow}
-NetFlow è un protocollo di analisi di rete che offre la possibilità di raccogliere informazioni dettagliate sul traffico mentre attraversa un'interfaccia. NetFlow è una tecnologia proprietaria di Cisco. I dispositivi di rete conformi a NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
+NetFlow è un protocollo di analisi di rete proprietario di Cisco che offre la possibilità di raccogliere informazioni dettagliate sul traffico mentre attraversa un'interfaccia. I dispositivi di rete conformi a NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
 
 Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condividono tutti i seguenti 7 valori:
 
@@ -54,7 +55,8 @@ un componente applicato a un'interfaccia che raccoglie informazioni sui flow. I 
 \begin{verse}
 \textbf{NetFlow exporter}
 Aggrega i pacchetti in flows e ne esporta i record verso uno o più \textit{flow collectors}.
-Quando dei pacchetti arrivano al NetFlow exporter, vengono ispezionati singolarmente per uno più attributi che vengono utilizzti per determinare se il pachetto è univoco o è simile agli altri pacchetti. Se il pacchetto presenta attributi simili viene classificato nello stesso flow.
+Quando dei pacchetti arrivano al NetFlow exporter, vengono ispezionati singolarmente per uno o più attributi che vengono utilizzati per determinare se il pachetto è univoco o è simile agli altri pacchetti. Se il pacchetto presenta attributi simili viene classificato nello stesso flow.
+
 
 \begin{figure}[H]
 \centering
@@ -82,21 +84,17 @@ Analizza i dati dei flows ricevuti nel contesto del rilevamento delle intrusioni
 \end{verse}
 
 
-L'analisi dei flow può aiutare a determinare le statistiche del traffico in generale, ma non è sufficiente quando è necessario analizzare una conversazione specifica nel dettaglio. È quindi necessario un utilizzo di entrambe le tecnologie per la monitorazione del traffico.
-
-È importante rendersi conto che una risposta efficae agli incidenti è tutta una questione di dimensioni. Raccogliendo solo PCAP si potrebbero avere troppi dati in un tempo troppo breve, usare PCAP per scoprire con chi uncomputer era connesso su un segmento occupata della rete è, nel migliore dei casi, una lunga query e, nel peggiore dei casi, impossibile (****QUESTO PARAGRAFO VA RISCRITTO****).
-
-Pertanto l'approccio migliore per le organizzazioni è quello di utilizzare prima NetFlow per poi integrarsi con PCAP in un secondo momento.
-
 \section{Strumenti software utilizzati}
 Verranno ora descritti i software utilizzati in questa tesi. I software utilizzati sono multipiattaforma, in questa tesi sono stati adoperati su sistema operativo basato su una distribuzione GNU/Linux.
 
 \subsection{Audit Record Generation and Utilization System}
-Argus (Audit Record Generation and Utilization System) è la prima implementazione del monitoraggio dei flow, è un progetto open source e multipiattaforma.
-Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, trai quali Windows, MaxOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina, argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. \newline
+Argus (Audit Record Generation and Utilization System) è stato la prima implementazione del monitoraggio dei flow, è un progetto open source e multipiattaforma.
+Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, tra i quali Windows, MaxOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina, argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. \newline
 
 Argus viene utilizzato da molte università e aziende per registrare dei flow che vengono utilizzati sia nell'analisi immediata dell'utilizzo della rete, sia nell'analisi storica.
-I record Netflow di Argus offrono un rapporto fino a 10.000:1 dalla dimensione del pacchetto al record scritto sul disco, che consente alle installazioni di salvare i record per molto più tempo rispetto alle acquisizioni di pacchetti completi.
+I record Netflow di Argus offrono un rapporto fino a 10.000:1 dalla dimensione del pacchetto al record scritto sul disco, che consente alle installazioni di salvare i record per molto più tempo rispetto alle acquisizioni di pacchetti completi. \newline
+
+La seguente tabella descrive i campi dei flow che argus salva su file.
 
 
 \begin{table}[h]
@@ -123,24 +121,13 @@ Label          & metadata label                          \\ \hline
 \end{tabular}
 \end{table}
 
-\section{nProbe}
+\subsection{nProbe}
 
 Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la contabilità e la fatturazione del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow. È disponibile per la maggior parte dei sistemi operativi sul mercato. \newline
 
-Nel monitoraggio basato sui flow ci sono due componenti principali: il flow exporter e il flow collector. Solitamente NetFlow è un pradigma in modalità push poichè i dispositivi di rete non hanno quasi nessun tipo di memoria di archiviazione e quindi inviano i dai il più presto possibile verso un collector. Questa architettura non è ottimale poichè la sonda sta inviando gli stessi dati a tutti i collector e anche perchè nel caso in cui debba essere aggiunto un nuovo collector, la sonda deve essere riconfigurata. Un altro problema è che i dati scambiati sono in chiaro, il che significa che chiunque intercetta i flussi inviati dalla sonda può scoprire cosa succede nella rete monitorata. 
-Ntopng ha ripristinato questo paradigma utilizzando un'architettura in modalità polling. \newline
+La tabella seguente descrive i campi dei flow che il software nProbe salva su file.
 
-Con l'utilizzo di ZMQ ntopng si iscrive in modo dinamico alla sonda, comunica alla sonda il tipo di dati a cui è interessata nel flow e la sonda invia solo questa informazione, senza inviare tutti i flow a ntopng. Questa pratica ottimizza il traffico di rete e limita i cicli della CPU a quelli realmente necessari per continuare a raccogliere flows.
-
-\paragraph{ZeroMQ}
-ZeroMQ è una libreria di messagistica asincrona ad alte prestazione destinata all'utilizzo in applicazioni distribuite o concorrenti. L'API ZeroMQ fornisce socket che possono rappresentare una connessione molti-a-molti tra endpoint. Operando con una granularità del messaggio, richiedono l'uso di un pattern di messagistica e sono particolarmente ottimizzati per quel tipo di pattern.
-
-
-\includegraphics[scale=1.5]{PollMode.jpg}{H}
-
-
-
-\begin{table}[h]
+\begin{table}[H]
 \begin{tabular}{|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{campo}} & \multicolumn{1}{c|}{\textbf{descrizione}}     \\ \hline
@@ -177,17 +164,27 @@ OUT\_DST\_MAC                        & destination MAC address                  
 \end{table}
 
 \section{Stratosphere IPS}
-In questa tesi si è utilizzato Stratosphere Testing Framework, un \textit{Network Intrusion Detection System} che genera modelli comportamentali delle connessioni di reti. Il suo obiettivo è aiutare i ricercatori a trovare nuovi comportamenti malware, etichettare tali comportamenti, creare i loro modelli di traffico e verificare gli algoritmi di rilevamento. Stf funziona utilizzando algoritmi di apprendimento automatico sui modelli comportamentali.
+In questa tesi si è utilizzato Stratosphere IPS, un software open source disponibile per sistemi operativi Windows e distribuzioni GNU/Linux. In questa tesi si è fatto utilizzo esclusivo della versione per distribuzioni GNU/Linux.
+Stratosphere Linux IPS (slips), al corrente pubblicato come alpha, è un sistema di rilevazione e prevenzione delle intrusioni comportamentale che utilizza algoritmi di machine learning per rilevare comportamenti dannosi. 
+L'obiettivo di Stratosphere IPS è quello di creare un Intrusion Prevention System che può rilevare e bloccare comportamenti malevoli all'interno di una rete.
 
-L'obiettivo di Stratosphere Project è quello di creare un \textit{IDS} comportamentale in grado di rilevare e bloccare i comportamenti dannosi nella rete.
+\begin{verse}
+\textbf{Algoritmi di machine learning}
+insieme di metodi di calcolo che utilizzano l'esperienza per migliorare le prestazioni o per effettuare delle previsioni accurate.
+\end{verse}
 
-Come parte di questo progetto, stf viene utilizzato per generare modelli altamente attendibili di traffico dannoso consentendo una verifica automatica delle prestazioni di rilevamento. \newline
+\subsection{Architettura}
+Slips si occupa della parte di rilevazione attraverso machine learning. Il traffico di rete viene letto da e salvato da Argus che rimane in ascolto su una porta. Slips legge poi i flows passati da standard input dal client di Argus. 
+In questo modo è possibile analizzare il traffico del proprio computer o di qualsiasi altra rete su cui sia in esecuzione Argus.
 
-\textit{Stratosphere IPS} non è strettamente un \textit{IPS} nel senso che può impedire l'intrusione. Usa l'acronimo \textit{IPS} perchè l'\textit{IPS} di Stratosphere può bloccare connessioni malevoli usando il firewall del computer. Tuttavia, a causa della natura delle connessioni di traffico, l'\textit{IPS} di Stratosphere necessita di un po' di tempo per rilevare il comportamento dannoso e quindi non può bloccare i primi pacchetti nella connessione.
+\subsection{Modelli comportamentali}
+Slips fa utilizzo di modelli comportamentali creati da Stratosphere Testing Framework.
 
-L'\textit{IPS} di Stratosphere è in grado di rilevare e bloccare connessioni di rete molto fini e pericolose, e quindi dovrebbe essere visto come un complemento delle attuali misure di sicurezza della rete.
+\begin{verse}
+\textbf{Stratosphere Testing Framework}
+è un framework di ricerca sulla sicurezza della rete per analizzare i modelli comportamentali delle connessioni di rete. Il suo obiettivo è aiutare i ricercatori a trovare nuovi comportamenti malware, etichettare tali comportamenti, creare i loro modelli di traffico e verificare gli algoritmi di rilevamento. Una volta creati e verificati i migliori modelli comportamentali di malware, questi verranno utilizzati da slips per il rilevamento. Stratosphere Testing Framework usa algoritmi di machine learning sui modelli comportamentali.
+\end{verse}
 
-\subsection{Il significato dei modelli comportamentali} 
 Il nucleo di \textit{Stratosphere IPS} è composto dai modelli comportamentali di reti e algoritmi di rilevamento. I modelli comportamentali rappresentano ciò che una connessione specifica fa nella rete durante la sua vita. Il comportamento è costuito analizzando la sua periodicità, le dimensioni e la durata di ciascun flusso. Sulla base di queste caratteristiche a ciascun flusso viene assegnata una lettera e il gruppo di lettere caratterizza il comportamento della connessione.
 
 Prendiamo come esempio una connessione generata da una botnet che ha il seguente modello comportamentale
@@ -195,25 +192,23 @@ Prendiamo come esempio una connessione generata da una botnet che ha il seguente
 88*y*y*i*H*H*H*y*0yy*H*H*H*y*y*y*y*H*h*y*h*h*H*H*h*H*y*y*y*H*
 \end{lstlisting}
 
-Questa catena di stati che chiamiamo modello comportamentale evidenzia alcune delle caratteristiche del canale C\&C. In questo caso ci dice che i flussi sono altamente periodici (lettere \textit{h}, \textit{i}), con qualche periodicità persa vicino all'inizio (lettere \textit{y}). I flussi hanno anche una grande dimensione con una durata media. I simboli tra le lettere sono correlati al tempo trascorso tra i flussi. In questo caso il simbolo '\textit{*}' significa che il flusso è separato da meno di un'ora. Guardando le lettere si può vedere che questa è una connessione piuttosto periodica, e controllando efficacemente i suoi flussi confermiamo tale ipotesi.
+In questo caso ci dice che i flussi sono altamente periodici (lettere \textit{h}, \textit{i}), con qualche periodicità persa vicino all'inizio (lettere \textit{y}). I flussi hanno anche una grande dimensione con una durata media. I simboli tra le lettere sono correlati al tempo trascorso tra i flussi. In questo caso il simbolo '\textit{*}' significa che il flusso è separato da meno di un'ora.
 Con l'utilizzo di questo tipo di modelli siamo in grado di generare le caratteristiche comportamentali di un gran numero di azioni dannose. L'immagine seguente mostra i criteri di assegnazione delle lettere per i modelli comportamentali \newline
+
+\begin{figure}[H]
+\centering
 \includegraphics[scale=0.5]{modello-comportamentale.png}
-
-
-Gli algoritmi di rilevamento utilizzano modelli comportamentali proprietari dannosi per rilevare nuove connessioni sospette nella rete. Il rilevamento viene attualmente eseguito utilizzando algoritmi basati su catene di \textit{Markov}.
-La prima parte dell'algoritmo consiste nell'apprendimento e nell'etichettatura del traffico di verità di base. Questo traffico viene utilizzato per creare modelli verificati di comportamenti di rete noti e stabili. \newline
-
-La seconda parte dell'algoritmo consiste nell'utilizzare questi modelli di verità di base noti e verificati per rilevare comportamenti simili in reti sconosciute. \textit{Stratosphere IPS} catturerà il traffico in un computer client e confronterà ogni connessione sconosciuta con i modelli conosciuti di comportamento del traffico. Poichè il modo in cui viene effettuato il rilevamento e come vengono creati i modelli, ciascun modello comportamentale può corrispondere a un'ampia gamma di comportamenti simili senza essere troppo generico. I modelli sono quindi utili per trovare comportamenti simili senza il rischio di generare troppi falsi positivi.
-
+				\caption{Tabella modelli comportamentali}
+\end{figure}
 
 \section{Problematiche dovute all'utilizzo di due diversi formati}
-Come si è potuto notare nelle sezioni \textit{2.2} e \textit{2.3}, gli header di \textit{nProbe} ed \textit{Argus} presentano delle differenze che non permettono di essere utilizzati in modo intercambiabile. I file che produce in output \textit{Argus} presentano 17 cambi, ben 12 in meno rispetto ai file di output prodotti da \textit{nProbe}.
-L'utilizzazione di due diversi formati presenta errori quando si cerca di utilizzare file prodotti da \textit{nProbe} in Stratosphere IPS. \newline
+I file prodotti da nProbe e Argus, oltre ad avere formati diversi, hanno anche campi eterogenei. Stratosphere IPS si appoggia ad Argus per la cattura di file e di conseguenza può leggere file solo in formato binetflow. 
+Se una azienda si appoggia a Cisco utilizzando nProbe non può quindi fare utilizzo di questo software, poichè non riesce a leggere file in formato differente.
 
-Questa incompatibilità ha portato alla necessità di una conversione: i file prodotti dal \textit{DIEF} devono essere convertiti in file di formato usato da \textit{Argus}. Questa conversione deve essere efficiente e precisa.
+Questa incompatibilità ha portato alla necessità di una conversione: i file prodotti da nProbe devono essere convertiti in file con formato usato da Argus. Questa conversione deve essere precisa ed efficiente.
 
 \section{Presentazione del problema}
-Il \textit{DIEF} salva i file in una struttura gerarchica fissa ben definita: ci sono 4 livelli di subdir, in cui il primo livello indica l'anno, il secondo il mese, il terzo il giorno e il quarto l'ora. All'interno dell'ultima subdir, quella delle ore, ci sono 60 file uno per ogni minuto della giornata.
+I file prodotti da nProbe hanno una struttura gerarchica fissa ben definita: ci sono 4 livelli di subdir, in cui il primo livello indica l'anno, il secondo il mese, il terzo il giorno e il quarto l'ora. All'interno dell'ultima subdir, quella delle ore, ci sono 60 file uno per ogni minuto della giornata.
 
 \begin{forest}
   for tree={
