@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  24 OCT 2018 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  29 OCT 2018 16:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,12 +1067,12 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 ] [4
 
 ]
-(./main.toc
-Underfull \hbox (badness 10000) in paragraph at lines 22--22
+(./main.toc [5]
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
  [][]  
  []
 
-[5])
+)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1119,17 +1119,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--66
 
 ]
 Capitolo 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
+[11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-) (./sections/3-analisi_del_problema.tex [12]
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+) (./sections/3-analisi_del_problema.tex [13] [14
+
+]
 Capitolo 3.
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
@@ -1137,191 +1139,216 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
- [13
-
-]
-<pictures/netflowgraph.png, id=80, 684.5575pt x 502.87875pt>
+ [15]
+<pictures/netflowgraph.png, id=86, 684.5575pt x 502.87875pt>
 File: pictures/netflowgraph.png Graphic file (type png)
 
 <use pictures/netflowgraph.png>
-Package pdftex.def Info: pictures/netflowgraph.png used on input line 46.
+Package pdftex.def Info: pictures/netflowgraph.png used on input line 50.
 (pdftex.def)             Requested size: 410.73766pt x 301.72957pt.
 
-Overfull \hbox (30.03978pt too wide) in paragraph at lines 46--47
+Overfull \hbox (30.03978pt too wide) in paragraph at lines 50--51
  [][] 
  []
 
-[14] <pictures/netflowexporter.png, id=85, 854.19125pt x 447.6725pt>
+[16] <pictures/netflowexporter.png, id=91, 854.19125pt x 447.6725pt>
 File: pictures/netflowexporter.png Graphic file (type png)
 
 <use pictures/netflowexporter.png>
-Package pdftex.def Info: pictures/netflowexporter.png used on input line 63.
+Package pdftex.def Info: pictures/netflowexporter.png used on input line 67.
 (pdftex.def)             Requested size: 427.09459pt x 223.8357pt.
 
-Overfull \hbox (46.39671pt too wide) in paragraph at lines 63--64
+Overfull \hbox (46.39671pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
-[15 <./pictures/netflowgraph.png>]
-<pictures/netflowreport.jpg, id=90, 702.625pt x 398.48875pt>
+[17 <./pictures/netflowgraph.png>]
+<pictures/netflowreport.jpg, id=96, 702.625pt x 398.48875pt>
 File: pictures/netflowreport.jpg Graphic file (type jpg)
 
 <use pictures/netflowreport.jpg>
-Package pdftex.def Info: pictures/netflowreport.jpg used on input line 81.
+Package pdftex.def Info: pictures/netflowreport.jpg used on input line 87.
 (pdftex.def)             Requested size: 351.31163pt x 199.24388pt.
- [16 <./pictures/netflowexporter.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
+ [18 <./pictures/netflowexporter.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
-
- []
-
-[17 <./pictures/netflowreport.jpg>]
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 117.
+[19 <./pictures/netflowreport.jpg>]
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 127.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 117.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 127.
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
-[18] [19] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[20] [21] [22] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Overfull \hbox (20.0763pt too wide) in paragraph at lines 192--193
+Overfull \hbox (20.0763pt too wide) in paragraph at lines 211--212
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--197
+Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
-[20] <pictures/modello-comportamentale.png, id=109, 752.8125pt x 396.48125pt>
+<pictures/modello-comportamentale.png, id=115, 752.8125pt x 396.48125pt>
 File: pictures/modello-comportamentale.png Graphic file (type png)
 
 <use pictures/modello-comportamentale.png>
 Package pdftex.def Info: pictures/modello-comportamentale.png used on input lin
-e 200.
+e 220.
 (pdftex.def)             Requested size: 376.40532pt x 198.24013pt.
-
-<pictures/folderstructure.png, id=110, 352.31625pt x 382.42876pt>
-File: pictures/folderstructure.png Graphic file (type png)
-
-<use pictures/folderstructure.png>
-Package pdftex.def Info: pictures/folderstructure.png used on input line 215.
-(pdftex.def)             Requested size: 211.39137pt x 229.45901pt.
 
 Overfull \hbox (28.45016pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 3.4.  PROBLEMATICHE DOVUTE ALL'UTILIZZO DI DUE DIVERSI FORM
-ATI \OT1/cmr/m/n/10.95 21
+ATI \OT1/cmr/m/n/10.95 23
  []
 
-[21 <./pictures/modello-comportamentale.png>])
-(./sections/4-soluzione_proposta.tex [22 <./pictures/folderstructure.png>]
+[23 <./pictures/modello-comportamentale.png>]
+<pictures/folderstructure.png, id=120, 352.31625pt x 382.42876pt>
+File: pictures/folderstructure.png Graphic file (type png)
+
+<use pictures/folderstructure.png>
+Package pdftex.def Info: pictures/folderstructure.png used on input line 236.
+(pdftex.def)             Requested size: 211.39137pt x 229.45901pt.
+) (./sections/4-soluzione_proposta.tex
+[24 <./pictures/folderstructure.png>]
 Capitolo 4.
 
-Overfull \hbox (139.43231pt too wide) in paragraph at lines 22--23
+Overfull \hbox (139.43231pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][] 
  []
 
-[23
+[25
 
 ]
-Overfull \hbox (91.61272pt too wide) in paragraph at lines 85--86
+Overfull \hbox (91.61272pt too wide) in paragraph at lines 89--90
 []\OT1/cmr/m/n/10.95 Installazione del-l'ul-ti-ma ver-sio-ne di ar-gus 3.0.8.2 
 dal si-to http://qosient.com/argus/dev/argus-
  []
 
 
-Overfull \hbox (121.1169pt too wide) in paragraph at lines 87--88
+Overfull \hbox (121.1169pt too wide) in paragraph at lines 91--92
 []\OT1/cmr/m/n/10.95 Installazione del-l'ul-ti-ma ver-sio-ne di argus-client 3.
 0.8.2 dal si-to http://qosient.com/argus/dev/argus-
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
-[24] <pictures/homestf.png, id=125, 901.3675pt x 348.30125pt>
+<pictures/homestf.png, id=132, 901.3675pt x 348.30125pt>
 File: pictures/homestf.png Graphic file (type png)
 
 <use pictures/homestf.png>
-Package pdftex.def Info: pictures/homestf.png used on input line 96.
+Package pdftex.def Info: pictures/homestf.png used on input line 100.
 (pdftex.def)             Requested size: 450.68263pt x 174.15019pt.
 
-Overfull \hbox (69.98476pt too wide) in paragraph at lines 96--97
+Overfull \hbox (69.98476pt too wide) in paragraph at lines 100--101
 [] 
  []
 
-<pictures/stfmodels.png, id=126, 901.3675pt x 189.70876pt>
+<pictures/stfmodels.png, id=133, 901.3675pt x 189.70876pt>
 File: pictures/stfmodels.png Graphic file (type png)
 
 <use pictures/stfmodels.png>
-Package pdftex.def Info: pictures/stfmodels.png used on input line 117.
+Package pdftex.def Info: pictures/stfmodels.png used on input line 121.
 (pdftex.def)             Requested size: 450.68263pt x 94.85414pt.
 
-Overfull \hbox (69.98476pt too wide) in paragraph at lines 117--119
+Overfull \hbox (69.98476pt too wide) in paragraph at lines 121--123
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
-[25 <./pictures/homestf.png> <./pictures/stfmodels.png>] [26] [27] [28]
-<pictures/multicore.jpeg, id=144, 409.53pt x 334.24875pt>
+[27 <./pictures/homestf.png>] [28 <./pictures/stfmodels.png>] [29] [30]
+[31] <pictures/multicore.jpeg, id=154, 409.53pt x 334.24875pt>
 File: pictures/multicore.jpeg Graphic file (type jpg)
 
 <use pictures/multicore.jpeg>
-Package pdftex.def Info: pictures/multicore.jpeg used on input line 253.
+Package pdftex.def Info: pictures/multicore.jpeg used on input line 257.
 (pdftex.def)             Requested size: 204.7645pt x 167.12396pt.
- [29]
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
  []
 
-) (./sections/5-esperimenti.tex [30 <./pictures/multicore.jpeg>]
+) (./sections/5-esperimenti.tex [32 <./pictures/multicore.jpeg>]
 Capitolo 5.
-[31
+[33
 
-]) (./sections/6-conclusioni.tex [32]
+]) (./sections/6-conclusioni.tex [34]
 Capitolo 6.
-) (./main.bbl [33
+) (./main.bbl [35
 
-] [34
+] [36
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+[]\OT1/cmr/m/n/10.95 Anatomy of a bot-net.  $\OT1/cmtt/m/n/10.95 https : / / we
+b . archive . org / web /
+ []
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [35] (./main.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+\OT1/cmtt/m/n/10.95 20170201233855 / https : / / www . scribd . com / document 
+/ 179124526 /
+ []
+
+
+Underfull \hbox (badness 2707) in paragraph at lines 26--28
+[]\OT1/cmr/m/n/10.95 Sicurezza: Vi-rus, worm, tro-jan...  $\OT1/cmtt/m/n/10.95 
+http : / / www . bloomriot . org / 91 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
+[]\OT1/cmr/m/n/10.95 spyware.  $\OT1/cmtt/m/n/10.95 https : / / searchsecurity 
+. techtarget . com / definition /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+[]\OT1/cmr/m/n/10.95 Tojan hor-se de-fi-ni-tion.  $\OT1/cmtt/m/n/10.95 https : 
+/ / techterms . com / definition /
+ []
+
+
+Underfull \hbox (badness 5970) in paragraph at lines 44--46
+[]\OT1/cmr/m/n/10.95 What is spy-ware? - de-fi-ni-tion.  $\OT1/cmtt/m/n/10.95 h
+ttps : / / www . kaspersky . com /
+ []
+
+) [37] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 33260 strings out of 493029
- 709207 string characters out of 6136234
- 785531 words of memory out of 5000000
- 36274 multiletter control sequences out of 15000+600000
- 12404 words of font info for 43 fonts, out of 8000000 for 9000
+ 33270 strings out of 493029
+ 709331 string characters out of 6136234
+ 783911 words of memory out of 5000000
+ 36283 multiletter control sequences out of 15000+600000
+ 12572 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,100p,10391b,1274s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,11n,100p,10391b,1272s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -1333,11 +1360,12 @@ s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 l10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (35 pages, 527921 bytes).
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (37 pages, 549800 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
+ 218 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  58 words of extra memory for PDF output out of 10000 (max. 10000000)
 

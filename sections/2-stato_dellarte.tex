@@ -3,9 +3,34 @@
 \chapter{Stato dell'arte}
 
 In questo capitolo verranno discussi i principali lavori che sono stati fatti durante l'ultimo decennio in letteratura. Si procede col fornire un'introduzione preliminare sui concetti che vengono utilizzati durante questa tesi.
+
+\section{Malware}
+Il termine malware è una combinazione delle parole \textit{malicious} e \textit{software}. Il malware rappresenta quei programmi software progettati per danneggiare o effettuare azioni indesiderate su un sistema informatico. \cite{MalwareDef}
+
+Gli obiettivi che può avere un malware sono molteplici e sono in continua evoluzione. Il malware in base allo scopo per cui è stato creato e alle sue caratteristiche viene classificato nei seguenti modi:
+
 \begin{verse}
-				Le \textbf{Botnet} sono una delle minacce più rilevanti per gli utenti di internet e le aziende. Gli utenti di solito infettano mentre navigano in Internet (ad esempio tramite un exploit), un malware viene scaricato sul PC e l'utente malintenzionato è quindi in grado di controllare a distanza la macchina. È diventato un bot nel senso che esegue comandi inviati dall'attaccante. Pertanto, gli aggressori possono controllare quante macchine sono in grado di infettare, creando così le cosiddette: botnet. Possono essere usati dai criminali per rubare informazioni finanziarie a persone, attaccare reti aziendali (es. DDos), cyber-spionaggio, inviare spam, ecc ... Negli ultimi anni, il ruolo delle botnet è emerso nel business criminale e sono diventati facilmente accessibile. Sul "mercato nero" è possibile noleggiare o acquistare queste infrastrutture per realizzare il tuo cyber-crimine.
+				\textbf{Virus} Prendono il nome dai virus in campo biologico e si comportano in modo analogo, sono programmi che si replicano sul computer che hanno infettato e si predispongono ad infettare nuovi computer mediante mezzi di trasmissione quali email e chiavette USB. \cite{VirusDef}
 \end{verse}
+
+\begin{verse}
+				\textbf{Spyware} Il termine Spyware è una combinazione delle parole \textit{Spy} e \textit{Software}. È un software che viene installato sul computer della vittima a sua insaputa e che raccoglie informazioni. 
+				Uno spyware è oggetto di controversia perchè può essere utilizzato negli ambienti lavorativi per controllare le ricerche dei dipendenti o per controllare l'attività dei propri figli su internet. Anche se utilizzato per scopi più innocui può comunque violare la privacy dell'utente. \cite{Spyware2} \newline
+				Usi più scorretti di programmi spyware prevedono di tracciare la cronologia internet di un utente per inviare pubblicità mirata, accedere alle password degli account in uso sul computer infetto e/o alle informazioni bancarie. Le informazioni raccolte attraverso l'uso di spyware possono essere utilizzate in vari modi, l'uso più frequente e più remunerativo ad oggi è quello di rivendere tali informazioni a dei terzi. \cite{Spyware1}
+\end{verse}
+
+\begin{verse}
+				\textbf{Trojan} Il cavallo di Troia è una macchina da guerra che, secondo la leggenda, fu usata dai greci per espugnare la citta di Troia. Questo termine è entrato nel linguaggio comune per indicare uno stratagemma con cui penetrare le difese. Nell'ambito dei malware il trojan è un software che si nasconde all'interno di un altro programma all'apparenza innocuo e che, se eseguito, esegue il codice del trojan \cite{TrojanDef}.
+				Oggi col termine trojan ci si riferisce principalmente ai malware ad accesso remoto. Spesso vengono utilizzati per installare backdoor e keylogger sui sistemi bersaglio. \cite{TrojanPurpose}
+\end{verse}
+
+I malware erano inizialmente usati per compiere azioni dolose sia da hacker malintenzionati che dai governi per sottrarre informazioni personali, inviare spam e commettere frodi. \cite{ScopoMalware} \cite{MalwareRevolution}
+
+L'evoluzione e lo sviluppo di internet ha portato ad un incremento degli utenti connessi sempre maggiore. Questa crescita di internet ha spostato l'obiettivo dei malware che vengono usati sempre di meno per compiere azioni dolose. Fin dal 2003 la maggior parte dei malware sono stati creati per prendere il controllo dei computer dell'utente vittima per scopi illeciti \cite{MalwareRevolution}. Vengono usati computer zombie per l'invio di email di spam o per effettuare attacchi distribuiti Denial of Service (DDoS).
+
+
+\section{Botnet}
+Nella sua forma più semplice una Botnet è un gruppo di computer che sono stati infettati da un malware che consente al suo controller, detto anche master, di avere il controllo sulle macchine infettate. Le Botnet sono usate dal master per compiere operazioni illecite ad insaputa della vittima. Una volta infetto, il computer della vittima prende il nome di zombie. \cite{Botnet}
 
 \textit{Network Intrusion Detection System (IDS)} è un sistema di rilevamento delle intrusioni: una tecnologia di sicurezza efficace, che può rilevare, prevenire e possibilmente reagire agli attacchi informatici, uno dei componenti standard nelle infrastrutture di sicurezza. Monitora le fonti di attività del traffico della rete e distribuisce varie tecniche per fornire servizi di sicurezza. L'obiettivo principale degli \textit{IDS} è quello di rilevare tutte le intrusioni in modo efficiente, l'implementazione consente agli amministratori di rete di rilevare violazioni degli obiettivi di sicurezza.
 

@@ -1,3 +1,47 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{Botnet}
+{Anatomy} of a botnet.
+\newblock
+  \url{https://web.archive.org/web/20170201233855/https://www.scribd.com/document/179124526/Anatomy-of-a-Botnet-WP-pdf}.
+\newblock Accessed: 2017-02-01.
+
+\bibitem{ScopoMalware}
+Federal trade commission- consumer information, "malware".
+\newblock \url{https://www.consumer.ftc.gov/articles/0011-malware}.
+\newblock Accessed: November 2015.
+
+\bibitem{MalwareDef}
+{Malware} definition.
+\newblock \url{https://techterms.com/definition/malware}.
+\newblock Accessed: 27-04-2016.
+
+\bibitem{MalwareRevolution}
+Malware revolution: A change in target.
+\newblock
+  \url{https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc512596(v=technet.10)}.
+\newblock Published: 05/20/2008.
+
+\bibitem{VirusDef}
+Sicurezza: Virus, worm, trojan...
+\newblock \url{http://www.bloomriot.org/91/sicurezza-virus-worm-trojan.html}.
+
+\bibitem{Spyware2}
+spyware.
+\newblock \url{https://searchsecurity.techtarget.com/definition/spyware}.
+\newblock Accessed: september 2016.
+
+\bibitem{TrojanDef}
+Tojan horse definition.
+\newblock \url{https://techterms.com/definition/trojanhorse}.
+
+\bibitem{TrojanPurpose}
+What is a trojan virus? - definition.
+\newblock
+  \url{https://usa.kaspersky.com/resource-center/threats/trojans#.VvD3eOLhDtQ}.
+
+\bibitem{Spyware1}
+What is spyware? - definition.
+\newblock \url{https://www.kaspersky.com/resource-center/threats/spyware}.
 
 \end{thebibliography}
