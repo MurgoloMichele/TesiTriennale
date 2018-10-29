@@ -1,6 +1,7 @@
 \documentclass[11pt,a4paper,twoside,openright]{book}
 \setcounter{secnumdepth}{4}
 \usepackage{frontespizio}
+\usepackage{cite}
 \usepackage[english,italian]{babel}
 \usepackage{svg}
 \usepackage{fancyhdr}
@@ -15,6 +16,7 @@
 \usepackage{float}
 \usepackage{graphicx}
 
+\raggedbottom
 \setlength{\parskip}{1em}
 
 \usepackage{subfiles}
@@ -72,5 +74,7 @@
 
 \subfile{sections/6-conclusioni.tex}
 
+\bibliography{references}{}
+\bibliographystyle{plain}
 
 \end{document}

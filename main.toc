@@ -17,7 +17,6 @@
 \contentsline {section}{\numberline {3.4}Problematiche dovute all'utilizzo di due diversi formati}{21}
 \contentsline {section}{\numberline {3.5}Presentazione del problema}{21}
 \contentsline {chapter}{\numberline {4}Soluzione proposta}{23}
-\contentsline {paragraph}{\numberline {4.0.0.0.1}Preparazione environment}{23}
 \contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{23}
 \contentsline {section}{\numberline {4.2}Installazione di Argus}{24}
 \contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{25}
@@ -25,9 +24,6 @@
 \contentsline {section}{\numberline {4.5}Automatizzazione conversione}{26}
 \contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{27}
 \contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{28}
-\contentsline {paragraph}{\numberline {4.6.1.0.1}Lavorare su chunk di file}{28}
-\contentsline {paragraph}{\numberline {4.6.1.0.2}Meccanismi di lock}{28}
-\contentsline {paragraph}{\numberline {4.6.1.0.3}Scrittura su file 1:1}{29}
 \contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{29}
 \contentsline {chapter}{\numberline {5}Esperimenti e risultati}{31}
 \contentsline {section}{\numberline {5.1}benchmark single core}{31}

@@ -1,14 +1,22 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \chapter{Soluzione proposta}
-\paragraph{Preparazione environment}
-Per lo sviluppo del programma e lo studio del framework è stata creata una piattaforma dedicata alla \textit{Security Analytics}. L'installazione verrà effettuata su \textit{virtual machine} dedicata con Ubuntu 16.04 LTS.
 
+--- outline del capitolo ----
+
+Per lo sviluppo del programma per la conversione dei file e per l'utilizzo di Stratosphere IPS è stata creata una piattaforma dedicata alla Security Analytics tramite l'utilizzo di \textit{VirtualBox} con una installazione del sistema operativo Ubuntu 16.04 LTS.
+
+--- mettere nei software utilizzati ---
+\begin{verse}
+				\textbf{VirtualBox} è un software gratuito e open source per l'esecuzione di macchine virtuali che supporta Windows, GNU/Linux e macOS come sistemi operativi host ed è in grado di eseguire Windows, GNU/Linux, OS/2 Warp, BSD come ad esempio OpenBSD, FreeBSD e infine Solaris e OpenSolaris come sistemi operativi guest. 
+\end{verse}
+
+--- mettere nella sezione 5 ----
 \section{Installazione Stratosphere IPS}
 Sulla macchina virtuale è stato installato il framework di Stratospehere IPS. Per l'installazione si sono seguiti i seguenti passaggi:
 
 \begin{itemize}
-				\item Installazione del programma git \textit{2.7.4}
+				\item Installazione del programma git 2.7.4
 \begin{lstlisting}[language=bash]
 $ sudo apt install git
 \end{lstlisting}
@@ -18,7 +26,7 @@ $ sudo apt install git
 $ git clone https://github.com/stratosphereips/StratosphereTestingFramework
 \end{lstlisting}
 
-				\item Installazione del programma \textit{python-pip}
+				\item Installazione del programma python-pip
 \begin{lstlisting}[language=bash]
 $ sudo apt install python-pip
 \end{lstlisting}
@@ -27,32 +35,32 @@ $ sudo apt install python-pip
 \begin{itemize}
 				\paragraph{Installazione dipendenze per Stratosphere IPS}
 
-				\item prettytable \textit{0.7.2-3}
+				\item prettytable 0.7.2-3
 \begin{lstlisting}[language=bash]
 $ sudo apt install python-prettytable
 \end{lstlisting}
 
-				\item transaction \textit{1.4.3-3}
+				\item transaction 1.4.3-3
 \begin{lstlisting}[language=bash]
 $ sudo apt install python-transaction
 \end{lstlisting}
 
-				\item persistent \textit{4.1.1-1build2}
+				\item persistent 4.1.1-1build2
 \begin{lstlisting}[language=bash]
 $ sudo apt install python-persistent
 \end{lstlisting}
 
-				\item zodb \textit{5.4.0}
+				\item zodb 5.4.0
 \begin{lstlisting}[language=bash]
 $ sudo pip install zodb
 \end{lstlisting}
 
-				\item sparse \textit{1.1-1.3build1}
+				\item sparse 1.1-1.3build1
 \begin{lstlisting}[language=bash]
 $ sudo apt install python-sparse
 \end{lstlisting}
 
-				\item dateutil \textit{2.4.2-1}
+				\item dateutil 2.4.2-1
 \begin{lstlisting}[language=bash]
 $ sudo apt install python-dateutil
 \end{lstlisting}
@@ -63,24 +71,24 @@ $ sudo apt install python-dateutil
 \section{Installazione di Argus}
 
 \begin{itemize}
-				\item libpcap \textit{1.7.4-2}
+				\item libpcap 1.7.4-2
 \begin{lstlisting}[language=bash]
 $ sudo apt install libpcab-dev
 \end{lstlisting}
 
-\item bison \textit{3.0.4}
+\item bison 3.0.4
 \begin{lstlisting}[language=bash]
 $ sudo apt install bison
 \end{lstlisting}
 
-\item flex \textit{2.6.0-11}
+\item flex 2.6.0-11
 \begin{lstlisting}[language=bash]
 $ sudo apt install flex
 \end{lstlisting}
 
-\item Installazione dell'ultima versione di argus \textit{3.0.8.2} dal sito http://qosient.com/argus/dev/argus-latest.tar.gz
+\item Installazione dell'ultima versione di argus 3.0.8.2 dal sito http://qosient.com/argus/dev/argus-latest.tar.gz
 
-\item Installazione dell'ultima versione di argus-client \textit{3.0.8.2} dal sito http://qosient.com/argus/dev/argus-clients-latest.tar.gz
+\item Installazione dell'ultima versione di argus-client 3.0.8.2 dal sito http://qosient.com/argus/dev/argus-clients-latest.tar.gz
 
 \end{itemize}
 
@@ -115,9 +123,10 @@ Per visualizzare il behavioral model si utilizza il comando
 
 
 \section{Conversione}
-I due formati che vengono utilizzati hanno formati diversi, si è scelto di tenere soltanto i campi utilizzati dal programma \textit{Argus} poichè è il formato che viene utilizzato da Stratosphere. I campi di \textit{nProbe} che quindi non compaiono nei file di tipo \textit{*.binetflow} vengono scartati.
+Per convertire i file di nProbe nel formato utilizzato da Argus si è fatto per prima cosa uno studio sui campi degli header per individuarne le differenze. Alcuni campi sono presenti in entrambi i formati seppure con nome diverso, altri sono stati ottenuti come combinazione, mentre quelli che nProbe utilizza in più rispetto ad Argus sono stati scartati. 
 
-Per i restanti campi si rimanda alla seguente tabella di conversione
+Di seguito è rappresentata una tabella che mostra sulla colonna di sinistra i campi dell'header di Argus, mentre sulla destra la scelta dei campi di nProbe per rappresentare i dati nello stesso formato scelto da Argus.
+
 \begin{table}[H]
 				\centering
 				\caption{Tabella di conversione}
@@ -146,10 +155,20 @@ Per i restanti campi si rimanda alla seguente tabella di conversione
 				\end{tabular}
 \end{table}
 
-\section{Automatizzazione conversione}
-La conversione è stata automatizzata con la scrittura di uno script in \textit{python}. Si è scelto di scrivere un programma usando questo linguaggio per la facilità di utilizzo nel lavorare con i file e per le performance.
+nProbe e Argus, oltre le differenze degli header presentano anche differenze nel formato con cui sono scritti i file.
 
-Il problema richiede lo sviluppo di un programma che converte file in modalità batch. \newline
+
+
+\section{Automatizzazione conversione}
+La conversione è stata automatizzata con la scrittura di uno script in Python. Si è scelto di scrivere un programma usando questo linguaggio per la facilità di utilizzo nel lavorare con i file e per le performance.
+
+Il problema richiede lo sviluppo di un programma che converte file in modalità batch.
+I file hanno una struttura gerarchica per data organizzata per sottocartelle, si esegue quindi un ciclo \textit{for} che prende tutti i file in modo ricorsivo.
+
+Dopodichè si apre il file in lettura leggendo una riga per volta, si converte il contenuto e lo si salva in una lista. Una volta terminata la lettura del file si scrive la lista contente i dati convertiti su un nuovo file.
+
+Si è scelto di leggere il file una riga alla volta perchè le grandi dimensioni dei file non permettono un approccio diverso. Un approccio più veloce sarebbe stato quello di leggere i file per intero nella memoria principale ma non è possibile per le grandi dimensioni dei file.
+
 
 Pseudocodice del programma 
 \begin{algorithm}
@@ -165,16 +184,6 @@ Pseudocodice del programma
 \EndProcedure
 \end{algorithmic}
 \end{algorithm}
-
-Come descritto nel capitolo 3, i file hanno una struttra gerarchica per data. Si esegue quindi un ciclo \textit{for} che prende tutti i file in modo ricorsivo.
-
-Si è scelto di leggere il file una riga alla volta perchè le grandi dimensioni dei file non permettono un approccio diverso. Un approccio più veloce sarebbe stato quello di leggere i file per intero nella memoria principale ma non è possibile per le grandi dimensioni dei file.
-\newline
-
-Per ogni riga che viene letta si elimina il carattere speciale che divide i valori e li si inserisce in un vettore principale. Per ogni riga letta si ha quindi un vettore con posizioni dei campi fissi (es. l'IP sorgente sarà sempre in posizione vettore[0]).
-\newline
-
-Si crea un vettore per ogni campo che dovrà essere convertito e dal vettore principale vengono appesi i valori. Successivamente si apre un file nel formato \textit{binetflow} e vengono convertiti e appesi i valori da ogni vettore.
 
 \section{Rendere efficiente la conversione}
 
@@ -193,25 +202,31 @@ Si possono pensare diverse soluzioni che migliorerebbero in modo significativo i
 				\item Scrittura su file 1:1
 \end{itemize}
 
-\paragraph{Lavorare su chunk di file}
+\begin{verse}
+\textbf{Lavorare su chunk di file}
 Per velocizzare il programma e sfruttare i processori disponibili si potrebbe assegnare ad ogni processore un file da leggere e convertire. Quando il processore termina la conversione dei dati scrive sul file in output. In questo modo si dividrebbe il tempo di esecuzione sul numero di processori disponibili. 
 Questa soluzione rende il più veloce possibile la conversione dei file ma i processori finiscono per scrivere sullo stesso file senza avere nessuna regola di precedenza, questo crea problemi perchè le scritture in output non sono ordinate e non è possibile creare modelli comportamentali affidabili. Le scritture su file devono essere ordinate e sequenziali. Inoltre questa soluzione ha il problema di scrivere sempre su unico file e come detto in precedenza questo tipo di soluzione non è possibile.
+\end{verse}
 
-\paragraph{Meccanismi di lock}
-Un modo per risolvere i problemi precedenti è quello di utilizzare il concetto di semaforo. \newline
+\begin{verse}
+\textbf{Meccanismi di lock}
+un modo per risolvere i problemi precedenti è quello di utilizzare il concetto di semaforo. 
 
-In informatica un semaforo è un tipo di dato astratto gestito da un sistema operativo multitasking per sincronizzare l'accesso a risolrse condivise tra processi. È composto da una variabile intera e da una coda di processi. Quando un processo apre il file per scriverci viene impostato un semaforo che segnala che la risorsa è occupata, se un altro processore prova ad aprire lo stesso file per scriverci gli sarà negato l'accesso dal semaforo fino a quando l'altro processo non rilascerà la risorsa.
+In informatica un semaforo è un tipo di dato astratto gestito da un sistema operativo multitasking per sincronizzare l'accesso a risorse condivise tra processi. È composto da una variabile intera e da una coda di processi. Quando un processo apre il file per scriverci viene impostato un semaforo che segnala che la risorsa è occupata, se un altro processore prova ad aprire lo stesso file per scriverci gli sarà negato l'accesso dal semaforo fino a quando l'altro processo non rilascerà la risorsa.
 
-In questo modo si risolve il problema delle scritture ordinate, ma c'è da tener conto che i semafori riducono la velocità di esecuzione dell'algoritmo poichè mentre un processore occupa la risorsa tutti gli altri processori devono mettersi in coda per aspettarne il rilascio. Questa soluzione sebbene rallenti l'esecuzione del programma rispetto alla soluzione precedente è comunque molto più veloce della versione single core perchè si guadagna comunque molto tempo nella lettura e conversione dei dati che viene effettuata alla massima velocità possibile. Questa soluzione risolve anche il problema dell'ordinamento delle scritture. \newline
+In questo modo si risolve il problema delle scritture ordinate, ma c'è da tener conto che i semafori riducono la velocità di esecuzione dell'algoritmo poichè mentre un processore occupa la risorsa tutti gli altri processori devono mettersi in coda per aspettarne il rilascio. Questa soluzione sebbene rallenti l'esecuzione del programma rispetto alla soluzione precedente è comunque molto più veloce della versione single core perchè si guadagna comunque molto tempo nella lettura e conversione dei dati che viene effettuata alla massima velocità possibile. Questa soluzione risolve anche il problema dell'ordinamento delle scritture.
 
 Rimane il problema della scrittura su un unico file che però può essere risolto facilmente decidendo di scrivere su un nuovo file quando raggiunge una dimensione specificata.
 
 Se si implementa la divisione del file di output questa soluzione può considerarsi efficiente anche se rimane il collo di bottiglia introdotto dai semafori che costringe i processi ad aspettare in coda quando una risorsa è impegnata.
+\end{verse}
 
-\paragraph{Scrittura su file 1:1}
-In questa soluzione ogni processore apre un file, lo legge. lo converte e scrive la conversione su un proprio file.
+\begin{verse}
+\textbf{Scrittura su file 1:1}
+in questa soluzione ogni processore apre un file, lo legge. lo converte e scrive la conversione su un proprio file.
 Questa soluzione è decisamente la più semplice tra quelle proposte ed è anche la più efficiente poichè i processori non entrano mai in conflitto tra di loro cosicchè da effettuare letture, conversioni e scritture alla massima velocità possibile dalla macchina.
-Un problema che può creare questa soluzione è la produzione di una grande quantità di file in output. Si pensi di dover una sola settimana di traffico di rete, sono circa 10 mila file.
+Un problema che può creare questa soluzione è la produzione di una grande quantità di file in output. Si pensi che una sola settimana di traffico di rete, sono circa 10 mila file.
+\end{verse}
 
 \subsection{Scelta effettuata}
 
