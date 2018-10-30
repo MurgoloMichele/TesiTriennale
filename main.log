@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  30 OCT 2018 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  30 OCT 2018 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1141,7 +1141,7 @@ LaTeX Info: Redefining \nameref on input line 50.
 \openout5 = `main.out'.
 
  (./sections/copertina.tex
-<main-frn.pdf, id=131, 597.50829pt x 845.0471pt>
+<main-frn.pdf, id=135, 597.50829pt x 845.0471pt>
 File: main-frn.pdf Graphic file (type pdf)
  <use main-frn.pdf>
 Package pdftex.def Info: main-frn.pdf used on input line 4.
@@ -1208,34 +1208,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--67
 
 ]
 Capitolo 2.
-[11] [12] <pictures/botnet.png, id=267, 683.55376pt x 573.14125pt>
+[11] [12] <pictures/botnet.png, id=272, 683.55376pt x 573.14125pt>
 File: pictures/botnet.png Graphic file (type png)
 
 <use pictures/botnet.png>
 Package pdftex.def Info: pictures/botnet.png used on input line 58.
 (pdftex.def)             Requested size: 341.77605pt x 286.56992pt.
  [13] [14 <./pictures/botnet.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
-
- []
-
-) (./sections/3-analisi_del_problema.tex [15] [16
-
-]
-Capitolo 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 15.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
- [17]
-<pictures/netflowgraph.png, id=293, 684.5575pt x 502.87875pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+
+<pictures/IDS.png, id=287, 642.4pt x 675.52374pt>
+File: pictures/IDS.png Graphic file (type png)
+ <use pictures/IDS.png>
+Package pdftex.def Info: pictures/IDS.png used on input line 103.
+(pdftex.def)             Requested size: 321.19922pt x 337.76105pt.
+
+[15] [16 <./pictures/IDS.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+
+ []
+
+) (./sections/3-analisi_del_problema.tex [17] [18
+
+]
+Capitolo 3.
+[19] <pictures/netflowgraph.png, id=314, 684.5575pt x 502.87875pt>
 File: pictures/netflowgraph.png Graphic file (type png)
 
 <use pictures/netflowgraph.png>
@@ -1246,7 +1257,7 @@ Overfull \hbox (30.03978pt too wide) in paragraph at lines 50--51
  [][] 
  []
 
-[18] <pictures/netflowexporter.png, id=299, 854.19125pt x 447.6725pt>
+[20] <pictures/netflowexporter.png, id=321, 854.19125pt x 447.6725pt>
 File: pictures/netflowexporter.png Graphic file (type png)
 
 <use pictures/netflowexporter.png>
@@ -1257,19 +1268,19 @@ Overfull \hbox (46.39671pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
-[19 <./pictures/netflowgraph.png>]
-<pictures/netflowreport.jpg, id=307, 702.625pt x 398.48875pt>
+[21 <./pictures/netflowgraph.png>]
+<pictures/netflowreport.jpg, id=328, 702.625pt x 398.48875pt>
 File: pictures/netflowreport.jpg Graphic file (type jpg)
 
 <use pictures/netflowreport.jpg>
 Package pdftex.def Info: pictures/netflowreport.jpg used on input line 87.
 (pdftex.def)             Requested size: 351.31163pt x 199.24388pt.
- [20 <./pictures/netflowexporter.png>]
+ [22 <./pictures/netflowexporter.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-[21 <./pictures/netflowreport.jpg>]
+[23 <./pictures/netflowreport.jpg>]
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 127.
 
 
@@ -1283,7 +1294,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
-[22] [23] [24] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[24] [25] [26] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1299,7 +1310,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
-<pictures/modello-comportamentale.png, id=335, 752.8125pt x 396.48125pt>
+<pictures/modello-comportamentale.png, id=356, 752.8125pt x 396.48125pt>
 File: pictures/modello-comportamentale.png Graphic file (type png)
 
 <use pictures/modello-comportamentale.png>
@@ -1309,25 +1320,25 @@ e 220.
 
 Overfull \hbox (28.45016pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 3.4.  PROBLEMATICHE DOVUTE ALL'UTILIZZO DI DUE DIVERSI FORM
-ATI \OT1/cmr/m/n/10.95 25
+ATI \OT1/cmr/m/n/10.95 27
  []
 
-[25 <./pictures/modello-comportamentale.png>]
-<pictures/folderstructure.png, id=345, 352.31625pt x 382.42876pt>
+[27 <./pictures/modello-comportamentale.png>]
+<pictures/folderstructure.png, id=365, 352.31625pt x 382.42876pt>
 File: pictures/folderstructure.png Graphic file (type png)
 
 <use pictures/folderstructure.png>
 Package pdftex.def Info: pictures/folderstructure.png used on input line 236.
 (pdftex.def)             Requested size: 211.39137pt x 229.45901pt.
 ) (./sections/4-soluzione_proposta.tex
-[26 <./pictures/folderstructure.png>]
+[28 <./pictures/folderstructure.png>]
 Capitolo 4.
 
 Overfull \hbox (139.43231pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[27
+[29
 
 ]
 Overfull \hbox (91.61272pt too wide) in paragraph at lines 89--90
@@ -1341,7 +1352,7 @@ Overfull \hbox (121.1169pt too wide) in paragraph at lines 91--92
 0.8.2 dal si-to http://qosient.com/argus/dev/argus-
  []
 
-[28]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
@@ -1350,7 +1361,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--95
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 95.
 
-<pictures/homestf.png, id=385, 901.3675pt x 348.30125pt>
+<pictures/homestf.png, id=405, 901.3675pt x 348.30125pt>
 File: pictures/homestf.png Graphic file (type png)
 
 <use pictures/homestf.png>
@@ -1361,7 +1372,7 @@ Overfull \hbox (69.98476pt too wide) in paragraph at lines 100--101
 [] 
  []
 
-<pictures/stfmodels.png, id=386, 901.3675pt x 189.70876pt>
+<pictures/stfmodels.png, id=406, 901.3675pt x 189.70876pt>
 File: pictures/stfmodels.png Graphic file (type png)
 
 <use pictures/stfmodels.png>
@@ -1377,11 +1388,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
-[29 <./pictures/homestf.png>] [30 <./pictures/stfmodels.png>]
+[31 <./pictures/homestf.png>] [32 <./pictures/stfmodels.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 175.
- [31] [32]
-[33] <pictures/multicore.jpeg, id=424, 409.53pt x 334.24875pt>
+ [33] [34]
+[35] <pictures/multicore.jpeg, id=445, 409.53pt x 334.24875pt>
 File: pictures/multicore.jpeg Graphic file (type jpg)
 
 <use pictures/multicore.jpeg>
@@ -1392,15 +1403,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
  []
 
-) (./sections/5-esperimenti.tex [34 <./pictures/multicore.jpeg>]
+) (./sections/5-esperimenti.tex [36 <./pictures/multicore.jpeg>]
 Capitolo 5.
-[35
+[37
 
-]) (./sections/6-conclusioni.tex [36]
+]) (./sections/6-conclusioni.tex [38]
 Capitolo 6.
-) (./main.bbl [37
+) (./main.bbl [39
 
-] [38
+] [40
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
@@ -1415,7 +1426,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--8
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 26--28
+Underfull \hbox (badness 5622) in paragraph at lines 15--18
+[]\OT1/cmr/m/n/10.95 Malware de-fi-ni-tion.  []$\OT1/cmtt/m/n/10.95 https : / /
+ techterms . com / definition / malware$[]\OT1/cmr/m/n/10.95 .
+ []
+
+
+Underfull \hbox (badness 1762) in paragraph at lines 26--28
 []\OT1/cmr/m/n/10.95 Sicurezza: Vi-rus, worm, tro-jan...  []$\OT1/cmtt/m/n/10.9
 5 http : / / www . bloomriot . org / 91 /
  []
@@ -1433,19 +1450,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--37
  []
 
 
-Underfull \hbox (badness 5970) in paragraph at lines 44--46
+Underfull \hbox (badness 4569) in paragraph at lines 44--46
 []\OT1/cmr/m/n/10.95 What is spy-ware? - de-fi-ni-tion.  []$\OT1/cmtt/m/n/10.95
  https : / / www . kaspersky . com /
  []
 
-) [39]
+) [41]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 326B3E44F8E5A2FC0334A5AC86E2C91D;2066.
+(rerunfilecheck)             Checksum: 707B3603D632A3BBE54D5EA9D959F5BF;2139.
 
 
 LaTeX Warning: There were undefined references.
@@ -1453,10 +1470,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 36706 strings out of 493029
- 761216 string characters out of 6136234
- 857596 words of memory out of 5000000
- 39550 multiletter control sequences out of 15000+600000
+ 36721 strings out of 493029
+ 761403 string characters out of 6136234
+ 857707 words of memory out of 5000000
+ 39558 multiletter control sequences out of 15000+600000
  12572 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,100p,10391b,1311s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1473,10 +1490,10 @@ s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 l10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (39 pages, 641690 bytes).
+Output written on main.pdf (41 pages, 701102 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 492 compressed objects within 5 object streams
- 151 named destinations out of 1000 (max. 500000)
- 311 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 591 PDF objects out of 1000 (max. 8388607)
+ 509 compressed objects within 6 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 324 words of extra memory for PDF output out of 10000 (max. 10000000)
 

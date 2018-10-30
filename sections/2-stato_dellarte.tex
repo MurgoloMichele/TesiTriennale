@@ -77,13 +77,57 @@ I principali attacchi informatici effettuati attraverso le botnet variano dallo 
 				\textbf{Bitcoin mining} I bitcoin sono una criptovaluta che a differenza dei soldi che vengono stampati da un governo centrale, vengono creati risolvendo operazioni matematiche complesse. Una botnet utilizza i computer zombie come unità di calcolo a cui far eseguire queste operazioni complesse.
 \end{verse}
 
-\textit{Network Intrusion Detection System (IDS)} è un sistema di rilevamento delle intrusioni: una tecnologia di sicurezza efficace, che può rilevare, prevenire e possibilmente reagire agli attacchi informatici, uno dei componenti standard nelle infrastrutture di sicurezza. Monitora le fonti di attività del traffico della rete e distribuisce varie tecniche per fornire servizi di sicurezza. L'obiettivo principale degli \textit{IDS} è quello di rilevare tutte le intrusioni in modo efficiente, l'implementazione consente agli amministratori di rete di rilevare violazioni degli obiettivi di sicurezza.
+\section{Intrusion Detection System}
+I sistemi di rilevamento delle intrusioni sono gli "allarmi antifurto" del campo della sicurezza informatica. L'obiettivo è difendere un sistema un allarme che viene emesso ogni volta che la sicurezza del sito è stata compromessa. \cite{IDS} \newline
+
+Un IDS è un dispositivo software o hardware utilizzato per identificare intrusioni a computer o reti locali.
+
+Ci sono varie classi di intrusione che vanno rilevate: si possono verificare situazioni in cui un utente ruba una password, utenti legittimi che abusano dei loro privilegi o hacker che usano script trovati in rete per attaccare il sistema. Le intrusioni sono varie e non è possibile elencarle tutte.
+
+Un IDS è composto da quattro componenti \cite{idsbook}:
+
+\begin{itemize}
+				\item \textbf{Sensori} sono utilizzati per ricevere informazioni dalla rete o dai computer.
+
+				\item \textbf{Console} utilizzata per monitorare lo stato della rete e dei computer.
+
+				\item \textbf{Motore} analizza i dati prelevati dai sensori e provvede a individuare eventuali falle nella sicurezza.
+
+				\item \textbf{Database} memorizza le regole utilizzate per identificare violazioni di sicurezza.
+\end{itemize}
+
+Di seguito è presente un'immagine che descrive i componenti di un IDS. I pacchetti in entrata e uscita dalla rete sono ricevuti da un sensore che raccoglie il traffico dati, successivamente il motore analizza i dati prelevati dai sensori con le regole presenti nel database.
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{IDS.png}
+				\caption{Esempio di un IDS}
+\end{figure}
+
+Un IDS puó essere classificato in base al contesto a cui è applicato:
+
+\begin{verse}
+				\textbf{Network Intrusion Detection System (NIDS)} Il software è installato in punti che si interfacciano tra l'ambiente esterno e il segmento di rete da proteggere. In questo modo si fornisce una protezione su tutti i dispositivi presenti all'interno della stessa rete.
+\end{verse}
+
+\begin{verse}
+				\textbf{Host Intrusion Detection System (HIDS)} Il software è installato su host singoli e monitora il traffico in entrata e uscita, se rileva un'attività sospetta avvisa l'utente.
+\end{verse}
+
+Le regole utilizzate per identificare le violazioni possono essere:
+
+\begin{verse}
+				\textbf{Signature detection} La decisione di rilevamento delle intrusioni è formata sulla base di un modello del processo intrusivo e di quali tracce dovrebbe lasciare nel sistema osservato. Questo metodo si basa sul presupposto che in qualsiasi caso riusciamo a definire un comportamento legale o illegale e confrontare di conseguenza il comportamento osservato.
+\end{verse}
+
+
+
+
 
 Esistono diversi tipi di tecniche per rilevare le intrusioni. In questa tesi si è fatto uso di un \textit{IDS} che utilizza algoritmi di \textit{machine learning}.
 
 \textit{Machine learning} può essere definito come la capacità di un programma per computer di apprendere e migliorare le prestazioni su una serie di attività nel tempo. Le tecniche di \textit{machine learning} si concentrano sulla costruzione di un modello, \textit{behavioral model}, di sistema che migliora le sue prestazioni in base ai risultati precedenti. \newline
 
-Una \textit{botnet} è una rete di computer compromessi sotto il controllo di un attore malintenzionato. Un bot si forma quando un computer viene infettato da un malware che ne consente il controllo da terze parti. I computer infetti sono noti anche come \textit{zombie} per la loro capacità di operare in direzione remota senza la conoscenza dei loro proprietari. Negli ultimi anni il \textit{botnet detection} è stato un tema caldo a causa dell'aumento dell'attività malevola.
 
 L'utilizzo di \textit{IDS} è un approccio utile per fare \textit{botnet detection} sul traffico di rete, si osserva il traffico di dati nella rete e si cercano comunicazioni sospette che possono essere fornite da \textit{bot}. \newline
 

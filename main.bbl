@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Botnet}
 {Anatomy} of a botnet.
@@ -43,5 +43,16 @@ What is a trojan virus? - definition.
 \bibitem{Spyware1}
 What is spyware? - definition.
 \newblock \url{https://www.kaspersky.com/resource-center/threats/spyware}.
+
+\bibitem{IDS}
+Stefan Axelsson.
+\newblock Intrusion detection systems: A survey and taxonomy.
+\newblock Technical report, University of Technology Goteborg Sweden, 14 March
+  2000.
+
+\bibitem{idsbook}
+Robert Newman.
+\newblock {\em Computer Security: Protecting Digital Resources}.
+\newblock 2009.
 
 \end{thebibliography}
