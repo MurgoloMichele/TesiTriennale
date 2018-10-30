@@ -1,0 +1,31 @@
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Stato dell'arte}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Malware}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Botnet}{chapter.2}% 4
+\BOOKMARK [0][-]{chapter.3}{Analisi del problema}{}% 5
+\BOOKMARK [1][-]{section.3.1}{Analisi traffico di rete}{chapter.3}% 6
+\BOOKMARK [2][-]{subsection.3.1.1}{Network Flow}{section.3.1}% 7
+\BOOKMARK [2][-]{subsection.3.1.2}{Packet Capture}{section.3.1}% 8
+\BOOKMARK [2][-]{subsection.3.1.3}{NetFlow}{section.3.1}% 9
+\BOOKMARK [1][-]{section.3.2}{Strumenti software utilizzati}{chapter.3}% 10
+\BOOKMARK [2][-]{subsection.3.2.1}{Audit Record Generation and Utilization System}{section.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.2.2}{nProbe}{section.3.2}% 12
+\BOOKMARK [1][-]{section.3.3}{Stratosphere IPS}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.3.1}{Architettura}{section.3.3}% 14
+\BOOKMARK [2][-]{subsection.3.3.2}{Modelli comportamentali}{section.3.3}% 15
+\BOOKMARK [1][-]{section.3.4}{Problematiche dovute all'utilizzo di due diversi formati}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.5}{Presentazione del problema}{chapter.3}% 17
+\BOOKMARK [0][-]{chapter.4}{Soluzione proposta}{}% 18
+\BOOKMARK [1][-]{section.4.1}{Installazione Stratosphere IPS}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.2}{Installazione di Argus}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.3}{Utilizzo del programma stf}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.4}{Conversione}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.5}{Automatizzazione conversione}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.6}{Rendere efficiente la conversione}{chapter.4}% 24
+\BOOKMARK [2][-]{subsection.4.6.1}{Possibili soluzioni}{section.4.6}% 25
+\BOOKMARK [2][-]{subsection.4.6.2}{Scelta effettuata}{section.4.6}% 26
+\BOOKMARK [0][-]{chapter.5}{Esperimenti e risultati}{}% 27
+\BOOKMARK [1][-]{section.5.1}{benchmark single core}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.2}{Benchmark multi core}{chapter.5}% 29
+\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 30
+\BOOKMARK [1][-]{section.6.1}{Prestazioni}{chapter.6}% 31
