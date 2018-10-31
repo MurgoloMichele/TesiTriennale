@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  30 OCT 2018 18:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  31 OCT 2018 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1219,26 +1219,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 90.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 89.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 90.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
 
 <pictures/IDS.png, id=287, 642.4pt x 675.52374pt>
 File: pictures/IDS.png Graphic file (type png)
  <use pictures/IDS.png>
-Package pdftex.def Info: pictures/IDS.png used on input line 103.
+Package pdftex.def Info: pictures/IDS.png used on input line 102.
 (pdftex.def)             Requested size: 321.19922pt x 337.76105pt.
 
 [15] [16 <./pictures/IDS.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--133
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
@@ -1246,7 +1246,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
 ]
 Capitolo 3.
-[19] <pictures/netflowgraph.png, id=314, 684.5575pt x 502.87875pt>
+[19] <pictures/netflowgraph.png, id=315, 684.5575pt x 502.87875pt>
 File: pictures/netflowgraph.png Graphic file (type png)
 
 <use pictures/netflowgraph.png>
@@ -1257,7 +1257,7 @@ Overfull \hbox (30.03978pt too wide) in paragraph at lines 50--51
  [][] 
  []
 
-[20] <pictures/netflowexporter.png, id=321, 854.19125pt x 447.6725pt>
+[20] <pictures/netflowexporter.png, id=322, 854.19125pt x 447.6725pt>
 File: pictures/netflowexporter.png Graphic file (type png)
 
 <use pictures/netflowexporter.png>
@@ -1269,7 +1269,7 @@ Overfull \hbox (46.39671pt too wide) in paragraph at lines 67--68
  []
 
 [21 <./pictures/netflowgraph.png>]
-<pictures/netflowreport.jpg, id=328, 702.625pt x 398.48875pt>
+<pictures/netflowreport.jpg, id=329, 702.625pt x 398.48875pt>
 File: pictures/netflowreport.jpg Graphic file (type jpg)
 
 <use pictures/netflowreport.jpg>
@@ -1310,7 +1310,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
-<pictures/modello-comportamentale.png, id=356, 752.8125pt x 396.48125pt>
+<pictures/modello-comportamentale.png, id=357, 752.8125pt x 396.48125pt>
 File: pictures/modello-comportamentale.png Graphic file (type png)
 
 <use pictures/modello-comportamentale.png>
@@ -1324,7 +1324,7 @@ ATI \OT1/cmr/m/n/10.95 27
  []
 
 [27 <./pictures/modello-comportamentale.png>]
-<pictures/folderstructure.png, id=365, 352.31625pt x 382.42876pt>
+<pictures/folderstructure.png, id=366, 352.31625pt x 382.42876pt>
 File: pictures/folderstructure.png Graphic file (type png)
 
 <use pictures/folderstructure.png>
@@ -1361,7 +1361,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--95
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 95.
 
-<pictures/homestf.png, id=405, 901.3675pt x 348.30125pt>
+<pictures/homestf.png, id=406, 901.3675pt x 348.30125pt>
 File: pictures/homestf.png Graphic file (type png)
 
 <use pictures/homestf.png>
@@ -1372,7 +1372,7 @@ Overfull \hbox (69.98476pt too wide) in paragraph at lines 100--101
 [] 
  []
 
-<pictures/stfmodels.png, id=406, 901.3675pt x 189.70876pt>
+<pictures/stfmodels.png, id=407, 901.3675pt x 189.70876pt>
 File: pictures/stfmodels.png Graphic file (type png)
 
 <use pictures/stfmodels.png>
@@ -1392,7 +1392,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 175.
  [33] [34]
-[35] <pictures/multicore.jpeg, id=445, 409.53pt x 334.24875pt>
+[35] <pictures/multicore.jpeg, id=446, 409.53pt x 334.24875pt>
 File: pictures/multicore.jpeg Graphic file (type jpg)
 
 <use pictures/multicore.jpeg>
@@ -1472,7 +1472,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
 Here is how much of TeX's memory you used:
  36721 strings out of 493029
  761403 string characters out of 6136234
- 857707 words of memory out of 5000000
+ 857703 words of memory out of 5000000
  39558 multiletter control sequences out of 15000+600000
  12572 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1490,10 +1490,10 @@ s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 l10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (41 pages, 701102 bytes).
+Output written on main.pdf (41 pages, 702494 bytes).
 PDF statistics:
- 591 PDF objects out of 1000 (max. 8388607)
- 509 compressed objects within 6 object streams
+ 592 PDF objects out of 1000 (max. 8388607)
+ 510 compressed objects within 6 object streams
  157 named destinations out of 1000 (max. 500000)
  324 words of extra memory for PDF output out of 10000 (max. 10000000)
 

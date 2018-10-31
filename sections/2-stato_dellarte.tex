@@ -2,7 +2,7 @@
 \begin{document}
 \chapter{Stato dell'arte}
 
-In questo capitolo verranno discussi i principali lavori che sono stati fatti durante l'ultimo decennio in letteratura. Si procede col fornire un'introduzione preliminare sui concetti che vengono utilizzati durante questa tesi.
+In questo capitolo verranno discussi i principali lavori che sono stati fatti durante l'ultimo decennio in letteratura. Si procede col fornire un'introduzione preliminare sui concetti che verranno utilizzati durante questa tesi.
 
 \section{Malware}
 Il termine malware è una combinazione delle parole \textit{malicious} e \textit{software}. Il malware rappresenta quei programmi software progettati per danneggiare o effettuare azioni indesiderate su un sistema informatico. \cite{MalwareDef}
@@ -24,7 +24,7 @@ Gli obiettivi che può avere un malware sono molteplici e sono in continua evolu
 \end{verse}
 
 \begin{verse}
-				\textbf{Trojan} Il cavallo di Troia è una macchina da guerra che, secondo la leggenda, fu usata dai greci per espugnare la citta di Troia. Questo termine è entrato nel linguaggio comune per indicare uno stratagemma con cui penetrare le difese. Nell'ambito dei malware il trojan è un software che si nasconde all'interno di un altro programma all'apparenza innocuo e che, se eseguito, esegue anche il codice del trojan \cite{TrojanDef}.
+				\textbf{Trojan} Il cavallo di Troia fu una macchina da guerra che, secondo la leggenda, fu usata dai greci per espugnare la citta di Troia. Questo termine è entrato nel linguaggio comune per indicare uno stratagemma con cui penetrare le difese. Nell'ambito dei malware il trojan è un software che si nasconde all'interno di un altro programma all'apparenza innocuo e che, se eseguito, esegue anche il codice del trojan \cite{TrojanDef}.
 				Oggi col termine trojan ci si riferisce principalmente ai malware ad accesso remoto. Spesso vengono utilizzati per installare backdoor sui sistemi bersaglio. \cite{TrojanPurpose}
 \end{verse}
 
@@ -41,7 +41,7 @@ Il master ha così accesso ad un sistema gigantesco di computer zombie pronti ad
 I componenti di una botnet sono i seguenti:
 
 \begin{verse}
-				\textbf{Master} Il master è il computer che ha creato la botnet e che ne ha il controllo remoto. È detto C\&C (Command and Control) il programma che dà i comandi tramite un canale nascosto sul computer della vittima.
+				\textbf{Master} Il master è il computer che ha creato la botnet e che ne ha il controllo remoto. È detto C\&C (Command and Control) il programma che dà i comandi da eseguire tramite un canale nascosto sul computer della vittima.
 \end{verse}
 
 \begin{verse}
@@ -59,7 +59,7 @@ Nella figura seguente viene rappresentato una possibile architettura di una botn
 				\caption{Esempio architettura botnet}
 \end{figure}
 
-I principali attacchi informatici effettuati attraverso le botnet variano dallo spam, DDoS, click fraud al bitcoin mining. È quindi evidente come l'utilizzo delle botnet sia al fine di un guadagno economico.
+I principali attacchi informatici effettuati attraverso l'utilizzo delle botnet sono vari: possono essere spam, DDoS, click fraud e bitcoin mining per citarne alcuni. È quindi evidente come l'utilizzo delle botnet sia al fine di un guadagno economico.
 
 \begin{verse}
 				\textbf{Spam} È l'invio tramite posta elettronica di messaggi ad alta frequenza contenenti truffe o pubblicità.
@@ -74,26 +74,25 @@ I principali attacchi informatici effettuati attraverso le botnet variano dallo 
 \end{verse}
 
 \begin{verse}
-				\textbf{Bitcoin mining} I bitcoin sono una criptovaluta che a differenza dei soldi che vengono stampati da un governo centrale, vengono creati risolvendo operazioni matematiche complesse. Una botnet utilizza i computer zombie come unità di calcolo a cui far eseguire queste operazioni complesse.
+				\textbf{Bitcoin mining} I bitcoin sono una criptovaluta che a differenza dei soldi, che vengono stampati da un governo centrale, vengono creati risolvendo operazioni matematiche complesse. Una botnet utilizza i computer zombie come unità di calcolo a cui far eseguire queste operazioni complesse.
 \end{verse}
 
 \section{Intrusion Detection System}
-I sistemi di rilevamento delle intrusioni sono gli "allarmi antifurto" del campo della sicurezza informatica. L'obiettivo è difendere un sistema un allarme che viene emesso ogni volta che la sicurezza del sito è stata compromessa. \cite{IDS} \newline
+I sistemi di rilevamento delle intrusioni sono gli "allarmi antifurto" del campo della sicurezza informatica. L'obiettivo è difendere un sistema con un allarme che viene emesso ogni volta che la sicurezza del sito è stata compromessa. \cite{IDS} \newline
 
 Un IDS è un dispositivo software o hardware utilizzato per identificare intrusioni a computer o reti locali.
-
 Ci sono varie classi di intrusione che vanno rilevate: si possono verificare situazioni in cui un utente ruba una password, utenti legittimi che abusano dei loro privilegi o hacker che usano script trovati in rete per attaccare il sistema. Le intrusioni sono varie e non è possibile elencarle tutte.
 
 Un IDS è composto da quattro componenti \cite{idsbook}:
 
 \begin{itemize}
-				\item \textbf{Sensori} sono utilizzati per ricevere informazioni dalla rete o dai computer.
+				\item \textbf{Sensori}, sono utilizzati per ricevere informazioni dalla rete o dai computer.
 
-				\item \textbf{Console} utilizzata per monitorare lo stato della rete e dei computer.
+				\item \textbf{Console}, utilizzata per monitorare lo stato della rete e dei computer.
 
-				\item \textbf{Motore} analizza i dati prelevati dai sensori e provvede a individuare eventuali falle nella sicurezza.
+				\item \textbf{Motore}, analizza i dati prelevati dai sensori e provvede a individuare eventuali falle nella sicurezza.
 
-				\item \textbf{Database} memorizza le regole utilizzate per identificare violazioni di sicurezza.
+				\item \textbf{Database}, memorizza le regole utilizzate per identificare violazioni di sicurezza.
 \end{itemize}
 
 Di seguito è presente un'immagine che descrive i componenti di un IDS. I pacchetti in entrata e uscita dalla rete sono ricevuti da un sensore che raccoglie il traffico dati, successivamente il motore analizza i dati prelevati dai sensori con le regole presenti nel database.
@@ -114,13 +113,21 @@ Un IDS puó essere classificato in base al contesto a cui è applicato:
 				\textbf{Host Intrusion Detection System (HIDS)} Il software è installato su host singoli e monitora il traffico in entrata e uscita, se rileva un'attività sospetta avvisa l'utente.
 \end{verse}
 
-Le regole utilizzate per identificare le violazioni possono essere:
+Le regole utilizzate per identificare le violazioni possono essere \cite{IDS}:
 
 \begin{verse}
 				\textbf{Signature detection} La decisione di rilevamento delle intrusioni è formata sulla base di un modello del processo intrusivo e di quali tracce dovrebbe lasciare nel sistema osservato. Questo metodo si basa sul presupposto che in qualsiasi caso riusciamo a definire un comportamento legale o illegale e confrontare di conseguenza il comportamento osservato.
+
+				Un vantaggio di questo approccio è che avendo un modello con cui confrontare il comportamento che si sta osservando non esistono falsi positivi, ovvero quando si considera dannoso un comportamento innocuo generando un falso allarme, questo perchè i modelli comportamentali all'interno del database sono comportamenti per certo dannosi. È inoltre veloce e semplice in quanto si tratta soltanto di effettuare confronti con modelli illegali già noti.
+
+				Uno svantaggio di questo approccio è che si possono verificare molti falsi negativi, cioè i comportamenti dannosi che non vengono segnalati. Questo si verifica perchè questi sistemi sfruttano regole per rilevare le intrusioni salvate su di un database, è quindi estremamente importante tenere aggiornato il database con tutti i possibili comportamenti dannosi.
 \end{verse}
 
+\begin{verse}
+				\textbf{Anomaly detection} In questo tipo di rilevamento si parte con il presupposto che qualcosa di anormale sia molto probabilmente sospetto, si cercano quindi anomalie nel traffico. È quindi necessario uno studio anticipato della rete per capire cosa sia normale per il soggetto osservato. Si decide poi quanto è possibile discostarsi dal tipo di attività normale. Questo tipo di rilevamento guarda comportamenti che sono improbabili che si verifichino dallo studio effettuato sul traffico normale.  
 
+				Il vantaggio di questo metodo è che indipendente dal tipo di intrusione ed è possibile utilizzare algoritmi di \textit{self learning} che apprendono da soli cosa è normale osservando il traffico per un lungo periodo di tempo.
+\end{verse}
 
 
 
