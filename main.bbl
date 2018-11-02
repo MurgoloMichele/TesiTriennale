@@ -22,6 +22,10 @@ Malware revolution: A change in target.
   \url{https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc512596(v=technet.10)}.
 \newblock Published: 05/20/2008.
 
+\bibitem{phishingdef}
+Phishing definition - urban dictionary.
+\newblock \url{https://www.urbandictionary.com/define.php?term=phishing}.
+
 \bibitem{VirusDef}
 Sicurezza: Virus, worm, trojan...
 \newblock \url{http://www.bloomriot.org/91/sicurezza-virus-worm-trojan.html}.
@@ -59,6 +63,11 @@ Herbert J.~Mattord Michael E.~Whitman.
 Robert Newman.
 \newblock {\em Computer Security: Protecting Digital Resources}.
 \newblock 2009.
+
+\bibitem{phishing}
+Mark~Stamp Peter~Stavroulakis.
+\newblock {\em Handbook of Information and Communication Security}.
+\newblock Springer, 1st edition. edition, 2010.
 
 \bibitem{botnetdetection}
 David~Dagon Wenke~Lee, Cliff~Wang.

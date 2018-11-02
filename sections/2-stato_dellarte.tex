@@ -59,7 +59,7 @@ Nella figura seguente viene rappresentato una possibile architettura di una botn
 				\caption{Esempio architettura botnet}
 \end{figure}
 
-I principali attacchi informatici effettuati attraverso l'utilizzo delle botnet sono vari: possono essere spam, DDoS, click fraud e bitcoin mining per citarne alcuni. È quindi evidente come l'utilizzo delle botnet sia al fine di un guadagno economico.
+I principali attacchi informatici effettuati attraverso l'utilizzo delle botnet sono vari: possono essere spam, DDoS, click fraud, phishing e bitcoin mining per citarne alcuni. È quindi evidente come l'utilizzo delle botnet sia al fine di un guadagno economico.
 
 \begin{verse}
 				\textbf{Spam} È l'invio tramite posta elettronica di messaggi ad alta frequenza contenenti truffe o pubblicità.
@@ -74,8 +74,33 @@ I principali attacchi informatici effettuati attraverso l'utilizzo delle botnet 
 \end{verse}
 
 \begin{verse}
+				\textbf{Phishing} Con l'aumento di transazioni effettuate su internet il phishing è diventato sempre più comune \cite{phishing}. Il phishing è un tipo di truffa utilizzato per ottenere informazioni da utenti non esperti attraverso l'impesonazione di fonti attendibili \cite{phishingdef}.
+\end{verse}
+
+\begin{verse}
 				\textbf{Bitcoin mining} I bitcoin sono una criptovaluta che a differenza dei soldi, che vengono stampati da un governo centrale, vengono creati risolvendo operazioni matematiche complesse. Una botnet utilizza i computer zombie come unità di calcolo a cui far eseguire queste operazioni complesse.
 \end{verse}
+
+\section{Botnet Detection}
+Le botnet sono diventate il metodo preferito per lanciare attacchi su internet, sono una seria minaccia poichè possono inviare malware in modo coordinato e istantaneo da numerosi bot \cite{botnetdetection}.
+Gli attacchi perpetrati dalle botnet si distinguono per il volume del traffico dati e per la velocità con cui sono commessi, questi attacchi riducono in modo significativo i tempi di risposta per difendersi.
+
+È stimato che ci sono milioni di bot su internet ogni giorno, è quindi chiaro che le botnet sono diventate la minaccia più seria per la sicurezza su internet \cite{botnetdetection}.
+
+Sono vari i metodi per cercare di individuare botnet su internet, quello che si è visto in questa tesi è basato sul modello comportamentale.
+\begin{verse}
+				\textbf{Botnet detection based on Network Behavior} Presenta un approccio per identificare le attività di C\&C delle botnet utilizzando le statistiche dei flow di rete come la larghezza di banda e la tempistica dei pacchetti \cite{botnetdetection}.
+\end{verse}
+
+Le botnet sono difficili da individuare siccome l'host che lancia l'attacco non è visibile direttamente dalla vittima perchè nascosto da un layer di zombie. L'attacco, inoltre, viene diviso nell'insieme dei bot in un periodo di tempo. 
+
+Come descritto in figura 2.2, il computer vittima non vede un attacco unico, ma un insieme di attacchi da una moltitudine di computer diversi che nascondono il botmaster.
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{zombielayer.png}
+				\caption{Zombie layer}
+\end{figure}
 
 \section{Intrusion Detection and Prevention System}
 Un'intrusione si verifica quando un aggressore tenta di entrare o interrompere le normali operazioni di un sistema informativo, quasi sempre con l'intento di fare del male \cite{idsbook}.
@@ -83,6 +108,29 @@ In questa sezione verranno presentati dei dispositivi utilizzati per identificar
 
 
 I sistemi di rilevamento delle intrusioni sono gli "allarmi antifurto" del campo della sicurezza informatica. L'obiettivo è difendere un sistema con un allarme che viene emesso ogni volta che la sicurezza del sito è stata compromessa \cite{IDS}. 
+
+Un IDPS è un dispositivo software o hardware utilizzato per identificare intrusioni a computer o reti locali.
+Ci sono varie classi di intrusione che vanno rilevate: si possono verificare situazioni in cui un utente ruba una password, utenti legittimi che abusano dei loro privilegi o hacker che usano script trovati in rete per attaccare il sistema. Le intrusioni sono varie e non è possibile elencarle tutte.
+
+Un IDPS è composto da quattro componenti \cite{idsbook}:
+
+\begin{itemize}
+				\item \textbf{Sensori}, sono utilizzati per ricevere informazioni dalla rete o dai computer.
+
+				\item \textbf{Console}, utilizzata per monitorare lo stato della rete e dei computer.
+
+				\item \textbf{Motore}, analizza i dati prelevati dai sensori e provvede a individuare eventuali falle nella sicurezza.
+
+				\item \textbf{Database}, memorizza le regole utilizzate per identificare violazioni di sicurezza.
+\end{itemize}
+
+Di seguito è presente un'immagine che descrive i componenti di un IDPS. I pacchetti in entrata e uscita dalla rete sono ricevuti da un sensore che raccoglie il traffico dati, successivamente il motore analizza i dati prelevati dai sensori con le regole presenti nel database.
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{IDS.png}
+				\caption{Esempio di un IDS}
+\end{figure}
 
 Un'attuale estensione degli IDS sono i sistemi di prevenzione delle intrusioni detti IPS, che possono rilevare un'intrusione e impedire che l'intrusione attacchi con successo tramite una risposta attiva. Gli IPS usano diverse tecniche di risposte attive, che possono essere suddivise nei seguenti gruppi \cite{IPS}:
 
@@ -126,46 +174,20 @@ Gli IDPS basati su host sono focalizzate sulla protezione dei server o dei singo
 
 \subsection{Metodi di rilevamento}
 
-Le regole utilizzate per identificare le violazioni possono essere \cite{IDS}:
+Gli IDPS utilizzano vari metodi di rilevamento per monitorare e valutare il traffico di rete. I metodi principali sono \cite{IDS}:
 
 \begin{verse}
-				\textbf{Signature detection} La decisione di rilevamento delle intrusioni è formata sulla base di un modello del processo intrusivo e di quali tracce dovrebbe lasciare nel sistema osservato. Questo metodo si basa sul presupposto che in qualsiasi caso riusciamo a definire un comportamento legale o illegale e confrontare di conseguenza il comportamento osservato.
-
-				Un vantaggio di questo approccio è che avendo un modello con cui confrontare il comportamento che si sta osservando non esistono falsi positivi, ovvero quando si considera dannoso un comportamento innocuo generando un falso allarme, questo perchè i modelli comportamentali all'interno del database sono comportamenti per certo dannosi. È inoltre veloce e semplice in quanto si tratta soltanto di effettuare confronti con modelli illegali già noti.
-
+				\textbf{Signature detection} Questo metodo di rilevamento delle intrusioni esamina il traffico di rete alla ricerca di modelli che corrispondono a firme note, ovvero modelli di attacco preconfigurati e predeterminati. Questo metodo si basa sul presupposto che in qualsiasi caso riusciamo a definire un comportamento legale o illegale e a confrontarlo di conseguenza il comportamento osservato.
+				Un vantaggio di questo approccio è che, avendo un modello con cui confrontare il comportamento che si sta osservando, non esistono falsi positivi. È inoltre veloce e semplice in quanto deve soltanto effettuare confronti con modelli illegali già noti.
 				Uno svantaggio di questo approccio è che si possono verificare molti falsi negativi, cioè i comportamenti dannosi che non vengono segnalati. Questo si verifica perchè questi sistemi sfruttano regole per rilevare le intrusioni salvate su di un database, è quindi estremamente importante tenere aggiornato il database con tutti i possibili comportamenti dannosi.
 \end{verse}
 
 \begin{verse}
 				\textbf{Anomaly detection} In questo tipo di rilevamento si parte con il presupposto che qualcosa di anormale sia molto probabilmente sospetto, si cercano quindi anomalie nel traffico. È quindi necessario uno studio anticipato della rete per capire cosa sia normale per il soggetto osservato. Si decide poi quanto è possibile discostarsi dal tipo di attività normale. Questo tipo di rilevamento guarda comportamenti che sono improbabili che si verifichino dallo studio effettuato sul traffico normale.  
-
 				Il vantaggio di questo metodo è che indipendente dal tipo di intrusione ed è possibile utilizzare algoritmi di \textit{machine learning} che apprendono da soli cosa è normale osservando il traffico per un lungo periodo di tempo.
-
 				Gli svantaggi sono la difficoltà di creare modelli e l'imprecisione che hanno questi modelli che danno vita a molti falsi positivi e falsi negativi.
 \end{verse}
 
-Un IDPS è un dispositivo software o hardware utilizzato per identificare intrusioni a computer o reti locali.
-Ci sono varie classi di intrusione che vanno rilevate: si possono verificare situazioni in cui un utente ruba una password, utenti legittimi che abusano dei loro privilegi o hacker che usano script trovati in rete per attaccare il sistema. Le intrusioni sono varie e non è possibile elencarle tutte.
-
-Un IDPS è composto da quattro componenti \cite{idsbook}:
-
-\begin{itemize}
-				\item \textbf{Sensori}, sono utilizzati per ricevere informazioni dalla rete o dai computer.
-
-				\item \textbf{Console}, utilizzata per monitorare lo stato della rete e dei computer.
-
-				\item \textbf{Motore}, analizza i dati prelevati dai sensori e provvede a individuare eventuali falle nella sicurezza.
-
-				\item \textbf{Database}, memorizza le regole utilizzate per identificare violazioni di sicurezza.
-\end{itemize}
-
-Di seguito è presente un'immagine che descrive i componenti di un IDS. I pacchetti in entrata e uscita dalla rete sono ricevuti da un sensore che raccoglie il traffico dati, successivamente il motore analizza i dati prelevati dai sensori con le regole presenti nel database.
-
-\begin{figure}[H]
-				\centering
-				\includegraphics[scale=0.5]{IDS.png}
-				\caption{Esempio di un IDS}
-\end{figure}
 
 
 

@@ -4,35 +4,36 @@
 \contentsline {chapter}{\numberline {2}Stato dell'arte}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Malware}{11}{section.2.1}
 \contentsline {section}{\numberline {2.2}Botnet}{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}Intrusion Detection and Prevention System}{15}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Perch\IeC {\`e} usare IDPS}{15}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Tipi di IDPS}{16}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Metodi di rilevamento}{17}{subsection.2.3.3}
-\contentsline {chapter}{\numberline {3}Analisi del problema}{21}{chapter.3}
-\contentsline {section}{\numberline {3.1}Analisi traffico di rete}{21}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Network Flow}{21}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Packet Capture}{22}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}NetFlow}{22}{subsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.3.1}Componenti di NetFlow}{22}{subsubsection.3.1.3.1}
-\contentsline {section}{\numberline {3.2}Strumenti software utilizzati}{25}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Audit Record Generation and Utilization System}{25}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}nProbe}{26}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Stratosphere IPS}{27}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Architettura}{28}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Modelli comportamentali}{28}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Problematiche dovute all'utilizzo di due diversi formati}{29}{section.3.4}
-\contentsline {section}{\numberline {3.5}Presentazione del problema}{30}{section.3.5}
-\contentsline {chapter}{\numberline {4}Soluzione proposta}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{31}{section.4.1}
-\contentsline {section}{\numberline {4.2}Installazione di Argus}{32}{section.4.2}
-\contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{33}{section.4.3}
-\contentsline {section}{\numberline {4.4}Conversione}{34}{section.4.4}
-\contentsline {section}{\numberline {4.5}Automatizzazione conversione}{35}{section.4.5}
-\contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{35}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{36}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{38}{subsection.4.6.2}
-\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{39}{chapter.5}
-\contentsline {section}{\numberline {5.1}benchmark single core}{39}{section.5.1}
-\contentsline {section}{\numberline {5.2}Benchmark multi core}{39}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusioni}{41}{chapter.6}
-\contentsline {section}{\numberline {6.1}Prestazioni}{41}{section.6.1}
+\contentsline {section}{\numberline {2.3}Botnet Detection}{15}{section.2.3}
+\contentsline {section}{\numberline {2.4}Intrusion Detection and Prevention System}{16}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Perch\IeC {\`e} usare IDPS}{19}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Tipi di IDPS}{19}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Metodi di rilevamento}{20}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Analisi del problema}{23}{chapter.3}
+\contentsline {section}{\numberline {3.1}Analisi traffico di rete}{23}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Network Flow}{23}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Packet Capture}{24}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}NetFlow}{24}{subsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.3.1}Componenti di NetFlow}{24}{subsubsection.3.1.3.1}
+\contentsline {section}{\numberline {3.2}Strumenti software utilizzati}{27}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Audit Record Generation and Utilization System}{27}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}nProbe}{28}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Stratosphere IPS}{29}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Architettura}{30}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Modelli comportamentali}{30}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Problematiche dovute all'utilizzo di due diversi formati}{32}{section.3.4}
+\contentsline {section}{\numberline {3.5}Presentazione del problema}{32}{section.3.5}
+\contentsline {chapter}{\numberline {4}Soluzione proposta}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{35}{section.4.1}
+\contentsline {section}{\numberline {4.2}Installazione di Argus}{36}{section.4.2}
+\contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{37}{section.4.3}
+\contentsline {section}{\numberline {4.4}Conversione}{38}{section.4.4}
+\contentsline {section}{\numberline {4.5}Automatizzazione conversione}{39}{section.4.5}
+\contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{40}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{40}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{42}{subsection.4.6.2}
+\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}benchmark single core}{45}{section.5.1}
+\contentsline {section}{\numberline {5.2}Benchmark multi core}{46}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusioni}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Prestazioni}{47}{section.6.1}
