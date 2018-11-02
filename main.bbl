@@ -50,9 +50,20 @@ Stefan Axelsson.
 \newblock Technical report, University of Technology Goteborg Sweden, 14 March
   2000.
 
+\bibitem{IPS}
+Herbert J.~Mattord Michael E.~Whitman.
+\newblock {\em Principles of Information Security}.
+\newblock Course Technology, 4 edition, 2011.
+
 \bibitem{idsbook}
 Robert Newman.
 \newblock {\em Computer Security: Protecting Digital Resources}.
 \newblock 2009.
+
+\bibitem{botnetdetection}
+David~Dagon Wenke~Lee, Cliff~Wang.
+\newblock {\em Botnet Detection: Countering the Largest Security Threat
+  (Advances in Information Security)}.
+\newblock Springer, softcover reprint of hardcover 1st ed. 2008 edition, 2010.
 
 \end{thebibliography}

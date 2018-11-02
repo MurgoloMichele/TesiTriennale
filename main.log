@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  31 OCT 2018 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  2 NOV 2018 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1141,7 +1141,7 @@ LaTeX Info: Redefining \nameref on input line 50.
 \openout5 = `main.out'.
 
  (./sections/copertina.tex
-<main-frn.pdf, id=135, 597.50829pt x 845.0471pt>
+<main-frn.pdf, id=139, 597.50829pt x 845.0471pt>
 File: main-frn.pdf Graphic file (type pdf)
  <use main-frn.pdf>
 Package pdftex.def Info: main-frn.pdf used on input line 4.
@@ -1208,45 +1208,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--67
 
 ]
 Capitolo 2.
-[11] [12] <pictures/botnet.png, id=272, 683.55376pt x 573.14125pt>
+[11] [12] <pictures/botnet.png, id=277, 683.55376pt x 573.14125pt>
 File: pictures/botnet.png Graphic file (type png)
 
 <use pictures/botnet.png>
 Package pdftex.def Info: pictures/botnet.png used on input line 58.
 (pdftex.def)             Requested size: 341.77605pt x 286.56992pt.
  [13] [14 <./pictures/botnet.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
 
- []
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 89.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
-
-<pictures/IDS.png, id=287, 642.4pt x 675.52374pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
+ [15]
+<pictures/IDS.png, id=306, 642.4pt x 675.52374pt>
 File: pictures/IDS.png Graphic file (type png)
  <use pictures/IDS.png>
-Package pdftex.def Info: pictures/IDS.png used on input line 102.
+Package pdftex.def Info: pictures/IDS.png used on input line 119.
 (pdftex.def)             Requested size: 321.19922pt x 337.76105pt.
 
-[15] [16 <./pictures/IDS.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+[16] [17 <./pictures/IDS.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-) (./sections/3-analisi_del_problema.tex [17] [18
+[18]) (./sections/3-analisi_del_problema.tex [19] [20
 
 ]
 Capitolo 3.
-[19] <pictures/netflowgraph.png, id=315, 684.5575pt x 502.87875pt>
+[21] <pictures/netflowgraph.png, id=336, 684.5575pt x 502.87875pt>
 File: pictures/netflowgraph.png Graphic file (type png)
 
 <use pictures/netflowgraph.png>
@@ -1257,7 +1254,7 @@ Overfull \hbox (30.03978pt too wide) in paragraph at lines 50--51
  [][] 
  []
 
-[20] <pictures/netflowexporter.png, id=322, 854.19125pt x 447.6725pt>
+[22] <pictures/netflowexporter.png, id=342, 854.19125pt x 447.6725pt>
 File: pictures/netflowexporter.png Graphic file (type png)
 
 <use pictures/netflowexporter.png>
@@ -1268,19 +1265,19 @@ Overfull \hbox (46.39671pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
-[21 <./pictures/netflowgraph.png>]
-<pictures/netflowreport.jpg, id=329, 702.625pt x 398.48875pt>
+[23 <./pictures/netflowgraph.png>]
+<pictures/netflowreport.jpg, id=349, 702.625pt x 398.48875pt>
 File: pictures/netflowreport.jpg Graphic file (type jpg)
 
 <use pictures/netflowreport.jpg>
 Package pdftex.def Info: pictures/netflowreport.jpg used on input line 87.
 (pdftex.def)             Requested size: 351.31163pt x 199.24388pt.
- [22 <./pictures/netflowexporter.png>]
+ [24 <./pictures/netflowexporter.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
-[23 <./pictures/netflowreport.jpg>]
+[25 <./pictures/netflowreport.jpg>]
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 127.
 
 
@@ -1294,7 +1291,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
-[24] [25] [26] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+[26] [27] [28] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1310,7 +1307,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--216
 
  []
 
-<pictures/modello-comportamentale.png, id=357, 752.8125pt x 396.48125pt>
+<pictures/modello-comportamentale.png, id=377, 752.8125pt x 396.48125pt>
 File: pictures/modello-comportamentale.png Graphic file (type png)
 
 <use pictures/modello-comportamentale.png>
@@ -1320,25 +1317,25 @@ e 220.
 
 Overfull \hbox (28.45016pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 3.4.  PROBLEMATICHE DOVUTE ALL'UTILIZZO DI DUE DIVERSI FORM
-ATI \OT1/cmr/m/n/10.95 27
+ATI \OT1/cmr/m/n/10.95 29
  []
 
-[27 <./pictures/modello-comportamentale.png>]
-<pictures/folderstructure.png, id=366, 352.31625pt x 382.42876pt>
+[29 <./pictures/modello-comportamentale.png>]
+<pictures/folderstructure.png, id=386, 352.31625pt x 382.42876pt>
 File: pictures/folderstructure.png Graphic file (type png)
 
 <use pictures/folderstructure.png>
 Package pdftex.def Info: pictures/folderstructure.png used on input line 236.
 (pdftex.def)             Requested size: 211.39137pt x 229.45901pt.
 ) (./sections/4-soluzione_proposta.tex
-[28 <./pictures/folderstructure.png>]
+[30 <./pictures/folderstructure.png>]
 Capitolo 4.
 
 Overfull \hbox (139.43231pt too wide) in paragraph at lines 26--27
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[29
+[31
 
 ]
 Overfull \hbox (91.61272pt too wide) in paragraph at lines 89--90
@@ -1352,7 +1349,7 @@ Overfull \hbox (121.1169pt too wide) in paragraph at lines 91--92
 0.8.2 dal si-to http://qosient.com/argus/dev/argus-
  []
 
-[30]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
@@ -1361,7 +1358,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--95
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 95.
 
-<pictures/homestf.png, id=406, 901.3675pt x 348.30125pt>
+<pictures/homestf.png, id=427, 901.3675pt x 348.30125pt>
 File: pictures/homestf.png Graphic file (type png)
 
 <use pictures/homestf.png>
@@ -1372,7 +1369,7 @@ Overfull \hbox (69.98476pt too wide) in paragraph at lines 100--101
 [] 
  []
 
-<pictures/stfmodels.png, id=407, 901.3675pt x 189.70876pt>
+<pictures/stfmodels.png, id=428, 901.3675pt x 189.70876pt>
 File: pictures/stfmodels.png Graphic file (type png)
 
 <use pictures/stfmodels.png>
@@ -1388,11 +1385,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
-[31 <./pictures/homestf.png>] [32 <./pictures/stfmodels.png>]
+[33 <./pictures/homestf.png>] [34 <./pictures/stfmodels.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 175.
- [33] [34]
-[35] <pictures/multicore.jpeg, id=446, 409.53pt x 334.24875pt>
+ [35] [36]
+[37] <pictures/multicore.jpeg, id=467, 409.53pt x 334.24875pt>
 File: pictures/multicore.jpeg Graphic file (type jpg)
 
 <use pictures/multicore.jpeg>
@@ -1403,15 +1400,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
  []
 
-) (./sections/5-esperimenti.tex [36 <./pictures/multicore.jpeg>]
+) (./sections/5-esperimenti.tex [38 <./pictures/multicore.jpeg>]
 Capitolo 5.
-[37
+[39
 
-]) (./sections/6-conclusioni.tex [38]
+]) (./sections/6-conclusioni.tex [40]
 Capitolo 6.
-) (./main.bbl [39
+) (./main.bbl [41
 
-] [40
+] [42
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 4--8
@@ -1455,14 +1452,14 @@ Underfull \hbox (badness 4569) in paragraph at lines 44--46
  https : / / www . kaspersky . com /
  []
 
-) [41]
+[43]) [44]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 81.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 707B3603D632A3BBE54D5EA9D959F5BF;2139.
+(rerunfilecheck)             Checksum: AB20B56FB2BE9758AB9717DA72914294;2228.
 
 
 LaTeX Warning: There were undefined references.
@@ -1470,10 +1467,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 36721 strings out of 493029
- 761403 string characters out of 6136234
- 857703 words of memory out of 5000000
- 39558 multiletter control sequences out of 15000+600000
+ 36735 strings out of 493029
+ 761562 string characters out of 6136234
+ 857770 words of memory out of 5000000
+ 39566 multiletter control sequences out of 15000+600000
  12572 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,100p,10391b,1311s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1490,10 +1487,10 @@ s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 l10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (41 pages, 702494 bytes).
+Output written on main.pdf (44 pages, 706964 bytes).
 PDF statistics:
- 592 PDF objects out of 1000 (max. 8388607)
- 510 compressed objects within 6 object streams
- 157 named destinations out of 1000 (max. 500000)
- 324 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 618 PDF objects out of 1000 (max. 8388607)
+ 533 compressed objects within 6 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 332 words of extra memory for PDF output out of 10000 (max. 10000000)
 
