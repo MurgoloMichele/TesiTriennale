@@ -5,12 +5,12 @@
 \section{Analisi traffico di rete}
 
 Nell'era digitale il traffico di rete è aumentato notevolmente e con esso gli attacchi di tipo informatico, per questo motivo è necessario trovare soluzioni per analizzare questo grande quantitativo di pacchetti che attraversano i dispositivi di rete delle aziende di grosse dimensioni. Nel mondo informatico di oggi è molto importante poter determinare rapidamente e con precisione l'origine e la portata di un potenziale attacco su una rete al fine di poterlo contrastare in modo efficace.
-Per fare ciò viene costruito un \textit{audit trail} di informazioni collezionate dal traffico di rete usando una combinazione di network flow e PCAP. 
+Per fare ciò viene costruito un \textit{audit trail} di informazioni collezionate dal traffico di rete usando una combinazione di network flow e PCAP.
 
-Un audit trail è un file che contiene una registrazione cronologica di attività relative alla sicurezza per consentire la ricostruzione e l'esame di eventi.
+Un audit trail è un file che contiene una registrazione cronologica di attività relative alla sicurezza per consentire la ricostruzione e l'esame di eventi \cite{auditTrail}.
 
 \subsection{Network Flow}
-Un flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione che hanno degli attributi in comune:
+Un flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione che hanno degli attributi in comune \cite{trafficflow}:
 \begin{itemize}
 				\item indirizzo IP sorgente
 				\item indirizzo IP destinazione
@@ -22,12 +22,12 @@ Un flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione
 Se i pacchetti che attraversano un dispositivo di rete hanno questi attributi in comune possono essere raggruppati in un flow.
 
 \subsection{Packet Capture}
-Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete. Un packet capture intercetta i singoli pacchetti e li archivia. Nei sistemi operativi Unix è utilizzata la libreria \textbf{libpcap} mentre nei sistemi Windows si fa utilizzo di \textbf{WinPcap}
+Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete. Un packet capture intercetta i singoli pacchetti e li archivia. Nei sistemi operativi Unix è utilizzata la libreria \textbf{libpcap} mentre nei sistemi Windows si fa utilizzo di \textbf{WinPcap} \cite{pcap}.
 
 \subsection{NetFlow}
-NetFlow è un protocollo di analisi di rete ---- proprietario --- di Cisco che offre la possibilità di raccogliere informazioni dettagliate sul traffico mentre attraversa un'interfaccia. I dispositivi di rete --- conformi ---- a NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
+NetFlow è un protocollo di analisi di rete introdotto da Cisco che offre la possibilità di raccogliere informazioni dettagliate sul traffico mentre attraversa un'interfaccia. I dispositivi di rete che supportano NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
 
-Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condividono tutti i seguenti 7 valori:
+Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condividono tutti i seguenti 7 valori \cite{netflowDef}.
 
 \begin{itemize}
 				\item interfaccia di ingresso
@@ -39,11 +39,8 @@ Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condiv
 \end{itemize}
 
 
---- fare sezione netflow vs pcap -----
-
 \subsubsection{Componenti di NetFlow}
----- Una architettura NetFlow (network flow) ha i seguenti componenti ----
-introdurre la figura
+La figura 3.1 descrive un esempio di architettura dei network flow. 
 
 \begin{figure}[H]
 \centering
@@ -53,7 +50,7 @@ introdurre la figura
 
 \begin{verse}
 \textbf{NetFlow monitor}
-un componente applicato a un'interfaccia che raccoglie informazioni sui flow. I NetFlow monitor sono costituiti da un record e una cache.
+Un componente applicato a un'interfaccia che raccoglie informazioni sui flow. I NetFlow monitor sono costituiti da un record e una cache.
 \end{verse}
 
 \begin{verse}
@@ -75,12 +72,11 @@ Dopo aver esaminato questi attributi, il NetFlow exporter li aggrega in record d
 \textbf{NetFlow collector}
 Responsabile della ricezione, conservazione e pre-elaborazione dei dati di un flow ricevuti da un \textit{flow exporter}. Solitamente è un software separato in esecuzione su un server di rete. I record NetFlow vengono esportati in un NetFlow collector tramite protocollo UDP.
 \end{verse}
- ----
- si possono utilizzare ids
+
 \begin{verse}
 \textbf{Analysis application} 
-Analizza i dati dei flows ricevuti nel contesto del rilevamento delle intrusioni o del profilo di traffico.
------
+Analizza i dati dei flows ricevuti nel contesto del rilevamento delle intrusioni o del profilo di traffico. Un esempio di Analysis application possono essere degli IDPS.
+Di seguito un'immagine di SolarWinds NetFlow Traffic Analyzer, un esempio di analysis application.
 
 \begin{figure}[H]
 \centering
@@ -99,9 +95,8 @@ Argus (Audit Record Generation and Utilization System) è stato la prima impleme
 Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, tra i quali Windows, MaxOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina, argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. \newline
 
 Argus viene utilizzato da molte università e aziende per registrare dei flow che vengono utilizzati sia nell'analisi immediata dell'utilizzo della rete, sia nell'analisi storica.
-----
-I record Netflow di Argus offrono un rapporto fino a 10.000:1 dalla dimensione del pacchetto al record scritto sul disco, che consente alle installazioni di salvare i record per molto più tempo rispetto alle acquisizioni di pacchetti completi. \newline
-------
+
+I file di Argus sono compressi con algoritmi che offrono un rapporto di compressione fino 10.000:1. La compressione di questi file è molto importante perchè sono file molto grandi e possono raggiungere dimensioni difficili da gestire. \newline
 
 
 La seguente tabella descrive i campi dei flow che argus salva su file.
@@ -133,7 +128,7 @@ Label          & metadata label                          \\ \hline
 
 \subsection{nProbe}
 
-Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la ----- contabilità e la fatturazione ---- del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow. È disponibile per la maggior parte dei sistemi operativi sul mercato. \newline
+Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la gestione del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow. È disponibile per la maggior parte dei sistemi operativi sul mercato. \newline
 
 La tabella seguente descrive i campi dei flow che il software nProbe salva su file.
 
@@ -191,7 +186,11 @@ insieme di metodi di calcolo che utilizzano l'esperienza per migliorare le prest
 Slips si occupa della parte di rilevazione attraverso machine learning. Il traffico di rete viene letto da e salvato da Argus che rimane in ascolto su una porta. Slips legge poi i flows passati da standard input dal client di Argus. 
 In questo modo è possibile analizzare il traffico del proprio computer o di qualsiasi altra rete su cui sia in esecuzione Argus.
 
---- mettere un disegno dell'architettura ----
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{slips.png}
+\caption{Architettura Stratosphere}
+\end{figure}
 
 \subsection{Modelli comportamentali}
 Slips fa utilizzo di modelli comportamentali creati da Stratosphere Testing Framework.
@@ -237,6 +236,4 @@ I file prodotti da nProbe hanno una struttura gerarchica fissa ben definita: ci 
 \caption{Folder Structure}
 \end{figure}
 
----- togliere ----
-I file dei minuti sono compressi usando il programma \textit{gzip}, pertanto c'è da tenerne conto nella soluzione per la conversione.
 \end{document}

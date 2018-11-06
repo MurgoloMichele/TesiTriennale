@@ -1,10 +1,18 @@
 \begin{thebibliography}{10}
 
+\bibitem{netflowDef}
+\url{https://pliki.ip-sa.pl/wiki/Wiki.jsp?page=NetFlow}.
+
 \bibitem{Botnet}
 {Anatomy} of a botnet.
 \newblock
   \url{https://web.archive.org/web/20170201233855/https://www.scribd.com/document/179124526/Anatomy-of-a-Botnet-WP-pdf}.
 \newblock Accessed: 2017-02-01.
+
+\bibitem{auditTrail}
+Atis telecom glossary - audit trail.
+\newblock
+  \url{https://web.archive.org/web/20130313232104/http://www.atis.org/glossary/definition.aspx?id=5572}.
 
 \bibitem{ScopoMalware}
 Federal trade commission- consumer information, "malware".
@@ -48,6 +56,10 @@ What is a trojan virus? - definition.
 What is spyware? - definition.
 \newblock \url{https://www.kaspersky.com/resource-center/threats/spyware}.
 
+\bibitem{pcap}
+Wikipedia, the free encyclopedia - pcap.
+\newblock \url{https://en.wikipedia.org/wiki/Pcap}.
+
 \bibitem{IDS}
 Stefan Axelsson.
 \newblock Intrusion detection systems: A survey and taxonomy.
@@ -59,6 +71,16 @@ Herbert J.~Mattord Michael E.~Whitman.
 \newblock {\em Principles of Information Security}.
 \newblock Course Technology, 4 edition, 2011.
 
+\bibitem{mldef}
+Tom~M. Mitchell.
+\newblock {\em Machine Learning}.
+\newblock McGraw-Hill series in computer science. McGraw-Hill, 1 edition, 1997.
+
+\bibitem{trafficflow}
+G.~Ruth N.~Brownlee, C.~Mills.
+\newblock Traffic flow measurement: Architecture.
+\newblock Technical report, University of Auckland, October 1999.
+
 \bibitem{idsbook}
 Robert Newman.
 \newblock {\em Computer Security: Protecting Digital Resources}.
@@ -68,6 +90,11 @@ Robert Newman.
 Mark~Stamp Peter~Stavroulakis.
 \newblock {\em Handbook of Information and Communication Security}.
 \newblock Springer, 1st edition. edition, 2010.
+
+\bibitem{ai}
+Peter~Norvig Stuart~Russell.
+\newblock {\em Artificial Intelligence: A Modern Approach}.
+\newblock Prentice Hall, 2nd edition, 2002.
 
 \bibitem{botnetdetection}
 David~Dagon Wenke~Lee, Cliff~Wang.

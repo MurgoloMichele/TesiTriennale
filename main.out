@@ -7,30 +7,33 @@
 \BOOKMARK [2][-]{subsection.2.4.1}{Perch\350 usare IDPS}{section.2.4}% 7
 \BOOKMARK [2][-]{subsection.2.4.2}{Tipi di IDPS}{section.2.4}% 8
 \BOOKMARK [2][-]{subsection.2.4.3}{Metodi di rilevamento}{section.2.4}% 9
-\BOOKMARK [0][-]{chapter.3}{Analisi del problema}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Analisi traffico di rete}{chapter.3}% 11
-\BOOKMARK [2][-]{subsection.3.1.1}{Network Flow}{section.3.1}% 12
-\BOOKMARK [2][-]{subsection.3.1.2}{Packet Capture}{section.3.1}% 13
-\BOOKMARK [2][-]{subsection.3.1.3}{NetFlow}{section.3.1}% 14
-\BOOKMARK [1][-]{section.3.2}{Strumenti software utilizzati}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.2.1}{Audit Record Generation and Utilization System}{section.3.2}% 16
-\BOOKMARK [2][-]{subsection.3.2.2}{nProbe}{section.3.2}% 17
-\BOOKMARK [1][-]{section.3.3}{Stratosphere IPS}{chapter.3}% 18
-\BOOKMARK [2][-]{subsection.3.3.1}{Architettura}{section.3.3}% 19
-\BOOKMARK [2][-]{subsection.3.3.2}{Modelli comportamentali}{section.3.3}% 20
-\BOOKMARK [1][-]{section.3.4}{Problematiche dovute all'utilizzo di due diversi formati}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.5}{Presentazione del problema}{chapter.3}% 22
-\BOOKMARK [0][-]{chapter.4}{Soluzione proposta}{}% 23
-\BOOKMARK [1][-]{section.4.1}{Installazione Stratosphere IPS}{chapter.4}% 24
-\BOOKMARK [1][-]{section.4.2}{Installazione di Argus}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.3}{Utilizzo del programma stf}{chapter.4}% 26
-\BOOKMARK [1][-]{section.4.4}{Conversione}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.5}{Automatizzazione conversione}{chapter.4}% 28
-\BOOKMARK [1][-]{section.4.6}{Rendere efficiente la conversione}{chapter.4}% 29
-\BOOKMARK [2][-]{subsection.4.6.1}{Possibili soluzioni}{section.4.6}% 30
-\BOOKMARK [2][-]{subsection.4.6.2}{Scelta effettuata}{section.4.6}% 31
-\BOOKMARK [0][-]{chapter.5}{Esperimenti e risultati}{}% 32
-\BOOKMARK [1][-]{section.5.1}{benchmark single core}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.2}{Benchmark multi core}{chapter.5}% 34
-\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 35
-\BOOKMARK [1][-]{section.6.1}{Prestazioni}{chapter.6}% 36
+\BOOKMARK [1][-]{section.2.5}{Machine learning}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.5.1}{Apprendimento supervisionato}{section.2.5}% 11
+\BOOKMARK [2][-]{subsection.2.5.2}{Apprendimento non supervisionato}{section.2.5}% 12
+\BOOKMARK [0][-]{chapter.3}{Analisi del problema}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Analisi traffico di rete}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.1.1}{Network Flow}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.2}{Packet Capture}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.3}{NetFlow}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{Strumenti software utilizzati}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Audit Record Generation and Utilization System}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{nProbe}{section.3.2}% 20
+\BOOKMARK [1][-]{section.3.3}{Stratosphere IPS}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Architettura}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.2}{Modelli comportamentali}{section.3.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Problematiche dovute all'utilizzo di due diversi formati}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.5}{Presentazione del problema}{chapter.3}% 25
+\BOOKMARK [0][-]{chapter.4}{Soluzione proposta}{}% 26
+\BOOKMARK [1][-]{section.4.1}{Installazione Stratosphere IPS}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.2}{Installazione di Argus}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.3}{Utilizzo del programma stf}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.4}{Conversione}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.5}{Automatizzazione conversione}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.6}{Rendere efficiente la conversione}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.6.1}{Possibili soluzioni}{section.4.6}% 33
+\BOOKMARK [2][-]{subsection.4.6.2}{Scelta effettuata}{section.4.6}% 34
+\BOOKMARK [0][-]{chapter.5}{Esperimenti e risultati}{}% 35
+\BOOKMARK [1][-]{section.5.1}{benchmark single core}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.2}{Benchmark multi core}{chapter.5}% 37
+\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 38
+\BOOKMARK [1][-]{section.6.1}{Prestazioni}{chapter.6}% 39

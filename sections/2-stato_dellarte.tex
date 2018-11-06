@@ -188,16 +188,100 @@ Gli IDPS utilizzano vari metodi di rilevamento per monitorare e valutare il traf
 				Gli svantaggi sono la difficoltà di creare modelli e l'imprecisione che hanno questi modelli che danno vita a molti falsi positivi e falsi negativi.
 \end{verse}
 
+\section{Machine learning}
+Il machine learning è un campo dell'intelligenza artificiale che si occupa di costruire programmi che migliorano con l'esperienza nell'eseguire un certo compito \cite{mldef}.
+
+Questi tipi di algoritmi possono imparare e prendere decisioni in moto autonomo costruendo dei modelli dai dati passati in input.
+
+
+Algoritmi di machine learning sono impiegati per compiti in cui la progettazione e la programmazione di algoritmi classici con buone prestazioni risultino difficili o addirittura impossibili. Per problemi come il riconoscimento vocale gli algoritmi basati sul machine learning superano tutti gli approcci che sono stati tentati fino ad oggi \cite{mldef}.
+Applicazioni di esempio in cui è utilizzato il machine learning sono il filtro di mail considerate spam o il rilevamento di intrusi di rete.
+
+
+
+
+I tipi di apprendimento automatico vengono classificati a seconda del segnale utilizzato per l'apprendimento o del feedback disponibile al sistema di apprendimento \cite{ai}.
+
+\begin{verse}
+				\textbf{Apprendimento supervisionato} Al computer vengono forniti degli esempi nella forma di possibili input e un valore di output, si vuole trovare quella funzione che dato un input non conosciuto calcola l'output. L'obiettivo è quello di fare una previsione basata su proprietà conosciute apprese dai dati in input.
+\end{verse}
+
+\begin{verse}
+				\textbf{Apprendimento non supervisionato} Vengono forniti esempi con relative feature in input, ma non viene fornito alcun valore di output. L'obiettivo è scoprire nuove proprietà nei dati forniti in input.
+\end{verse}
+
+\begin{verse}
+				\textbf{Apprendimento per rinforzo} Il computer impara interagendo con un ambiente dinamico nel quale cerca di raggiungere un obiettivo. L'insegnante gli dice solamente se ha raggiunto l'obiettivo. 
+\end{verse}
+
+\subsection{Apprendimento supervisionato}
+In questa categoria di apprendimento vengono forniti esempi con relative feature in input e un valore di output. In base al valore di output si distinguono due diversi problemi:
+
+\begin{itemize}
+				\item \textbf{Classificazione} Se il valore di output è discreto, ad esempio l'appartenenza o la non appartenenza ad una determinata classe.
+				\item \textbf{Regressione} Se il valore dell'output è un valore reale continuo in un determinato range.
+\end{itemize}
+
+In entrambi i problemi si vuole trovare una funzione \textit{h}, che dato un input non conosciuto stima il valore dell'output. L'obiettivo dei problemi di apprendimento supervisionato è quello di fare una predizione basata su proprietà conosciute apprese dai dai in input.
+I dati in input vengono chiamati \textit{training set} e sono composti da un numero \textit{n} di esempi. Il valore di output è chiamato \textit{target value}.
+
+La figura seguente descrive un problema di apprendimento supervisionato, dove l'algoritmo di apprendimento automatico prende in input un insieme di esempi da cui impara una funzione che gli permette di fare previsioni.
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{apprendimentosupervisionato.png}
+				\caption{Apprendimento supervisionato}
+\end{figure}
+
+\subsection{Apprendimento non supervisionato}
+In questa categoria vengono forniti esempi con relative feature in input, ma non viene fornito alcun valore di output, quindi si hanno a disposizione dati non etichettati. L'obiettivo di questi algoritmi è quello di trovare delle strutture all'interno di questi dati non etichettati. Se si vogliono identificare dei raggruppamenti di elementi simili, è un problema di Clustering.
+
+\begin{verse}
+				\textbf{Clustering} È un tipico esempio di apprendimento non supervisionato in cui, dato un insieme di dati non etichettati, l'obiettivo è quello di individuare dei raggruppamenti, detti cluster, quanto più possibile coerenti.
+\end{verse}	
+
+\subsubsection{K-Means}
+L'algoritmo K-Means è l'algoritmo di clustering più conosciuto e più utilizzato. Permette di suddividere un insieme di oggetti in $K$ gruppi sulla base dei loro attributi.
+
+Si assume che gli attributi degli oggetti possano essere rappresentati come vettori, e che quindi formino uno spazio vettoriale. Dal \textit{dataset} fornito vengono inizializzati $n$ punti detti centroidi per ogni cluster che è necessario identificare.
+
+Nell'esempio in figura vengono inizializzati due centroidi con una croce rossa e blu.
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.3]{k-means1.png}
+				\caption{Algoritmo k-means - Inizializzazione}
+\end{figure}
+
+L'algoritmo segue una procedura iterativa che ripete due passi, il primo è il passo di assegnazione ai cluster, mentre il secondo è il passo di spostamento dei centroidi.
+Il primo passo di assegnazione ai cluster controlla la distanza di ogni punto del dataset dai centroidi e assegna ciascun punto al centroide che gli è più vicino. 
+L'esempio in figura rappresenta questo primo passo: i punti più vicini al centroide rosso sono stati colorati di rosso, mentre quelli più vicini al centroide blu sono stati colorati di blu.
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.3]{k-means2.png}
+				\caption{Algoritmo k-means - Passo 1}
+\end{figure}
+
+Il secondo passo consiste nel calcolare la media di tutti i punti nel dataset che appartendono ad un cluster e muovere in quella posizione il centroide del cluster.
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.3]{k-means3.png}
+				\caption{Algoritmo k-means - Passo 2}
+\end{figure}
+
+L'algoritmo continua a ripetere questi due passi fino a quando i centroidi non si spostano più, il che significa che l'algoritmo ha raggiunto la convergenza e i due cluster sono stati individuati.
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.3]{k-means4.png}
+				\caption{Algoritmo k-means - Convergenza}
+\end{figure}
 
 
 
 
 
-Esistono diversi tipi di tecniche per rilevare le intrusioni. In questa tesi si è fatto uso di un \textit{IDS} che utilizza algoritmi di \textit{machine learning}.
-
-\textit{Machine learning} può essere definito come la capacità di un programma per computer di apprendere e migliorare le prestazioni su una serie di attività nel tempo. Le tecniche di \textit{machine learning} si concentrano sulla costruzione di un modello, \textit{behavioral model}, di sistema che migliora le sue prestazioni in base ai risultati precedenti. \newline
-
-
-L'utilizzo di \textit{IDS} è un approccio utile per fare \textit{botnet detection} sul traffico di rete, si osserva il traffico di dati nella rete e si cercano comunicazioni sospette che possono essere fornite da \textit{bot}. \newline
 
 \end{document}
