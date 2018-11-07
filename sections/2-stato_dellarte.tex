@@ -189,33 +189,30 @@ Gli IDPS utilizzano vari metodi di rilevamento per monitorare e valutare il traf
 \end{verse}
 
 \section{Machine learning}
-Il machine learning è un campo dell'intelligenza artificiale che si occupa di costruire programmi che migliorano con l'esperienza nell'eseguire un certo compito \cite{mldef}.
+Il machine learning, tradotto in italiano come apprendimento automatico, rappresenta uno degli sviluppi più prolifici dell'intelligenza artificiale moderna \cite{compIntelligence}. L'enfasi dell'apprendimento automatico è sulla capacità del sistema di adattarsi o cambiare, in genere in risposta a qualche forma di esperienza fornita al sistema. Dopo l'apprendimento ci si aspetta che il sistema migliori le prestazioni future sullo stesso compito o lavori simili. 
 
-Questi tipi di algoritmi possono imparare e prendere decisioni in moto autonomo costruendo dei modelli dai dati passati in input.
-
-
-Algoritmi di machine learning sono impiegati per compiti in cui la progettazione e la programmazione di algoritmi classici con buone prestazioni risultino difficili o addirittura impossibili. Per problemi come il riconoscimento vocale gli algoritmi basati sul machine learning superano tutti gli approcci che sono stati tentati fino ad oggi \cite{mldef}.
-Applicazioni di esempio in cui è utilizzato il machine learning sono il filtro di mail considerate spam o il rilevamento di intrusi di rete.
+Negli ultimi anni l'apprendimento automatico ha preso sempre più piede ed è ormai utilizzato quasi ovunque \cite{compIntelligence}. Alcuni esempi di applicazioni di machine learning nel mondo reale sono il controllo di robot autonomi in grado di navigare da soli, si pensi alle macchine con pilota automatico che stanno entrando in commercio negli ultimi anni come la Tesla di Elon Musk; il filtro dello spam nelle email, il riconoscimento della calligrafia impiegato da software OCR, il riconoscimento vocale degli assistenti presenti su dispositivi come Google Home, Amazon Alexa o Apple HomePod; il rilevamento dei volti nelle fotocamere digitali e così via.
+Per problemi come il riconoscimento vocale gli algoritmi basati sul machine learning superano tutti gli approcci che sono stati tentati fino ad oggi \cite{mldef}.
 
 
-
-
-I tipi di apprendimento automatico vengono classificati a seconda del segnale utilizzato per l'apprendimento o del feedback disponibile al sistema di apprendimento \cite{ai}.
+Generalmente esistono tre paradigmi di apprendimento \cite{ai}.
 
 \begin{verse}
-				\textbf{Apprendimento supervisionato} Al computer vengono forniti degli esempi nella forma di possibili input e un valore di output, si vuole trovare quella funzione che dato un input non conosciuto calcola l'output. L'obiettivo è quello di fare una previsione basata su proprietà conosciute apprese dai dati in input.
+				\textbf{Apprendimento supervisionato} Al computer vengono forniti una serie di input insieme ai corrispondenti output desiderati. Si vuole trovare quella funzione che dato un input non conosciuto calcola l'output. L'obiettivo è quello di fare una previsione basata su proprietà conosciute apprese dai dati in input.
 \end{verse}
 
 \begin{verse}
-				\textbf{Apprendimento non supervisionato} Vengono forniti esempi con relative feature in input, ma non viene fornito alcun valore di output. L'obiettivo è scoprire nuove proprietà nei dati forniti in input.
+				\textbf{Apprendimento non supervisionato} Vengono forniti esempi che consistono di soli input, ma non viene fornito alcun valore di output. L'obiettivo è scoprire nuove proprietà nei dati forniti in input attraverso l'ottimizzazione di un principio di apprendimento.
 \end{verse}
 
 \begin{verse}
-				\textbf{Apprendimento per rinforzo} Il computer impara interagendo con un ambiente dinamico nel quale cerca di raggiungere un obiettivo. L'insegnante gli dice solamente se ha raggiunto l'obiettivo. 
+				\textbf{Apprendimento per rinforzo} Osservando l'ambiente corrente e ottenendo qualche input, il computer compie un'azione che cambia l'ambiente, riceve poi una valutazione positiva o negativa sull'azione compiuta. L'obiettivo è compiere una serie di azioni tali da massimizzare la valutazione ricevuta.
 \end{verse}
 
 \subsection{Apprendimento supervisionato}
-In questa categoria di apprendimento vengono forniti esempi con relative feature in input e un valore di output. In base al valore di output si distinguono due diversi problemi:
+Al computer supervisionato vengono forniti dei dati chiamati \textit{training data}. Questi dati sono dei campioni, ognuno dei quali consiste in un input insieme all'output desiderato.
+
+In base al valore di output si distinguono due diversi problemi:
 
 \begin{itemize}
 				\item \textbf{Classificazione} Se il valore di output è discreto, ad esempio l'appartenenza o la non appartenenza ad una determinata classe.
@@ -223,7 +220,6 @@ In questa categoria di apprendimento vengono forniti esempi con relative feature
 \end{itemize}
 
 In entrambi i problemi si vuole trovare una funzione \textit{h}, che dato un input non conosciuto stima il valore dell'output. L'obiettivo dei problemi di apprendimento supervisionato è quello di fare una predizione basata su proprietà conosciute apprese dai dai in input.
-I dati in input vengono chiamati \textit{training set} e sono composti da un numero \textit{n} di esempi. Il valore di output è chiamato \textit{target value}.
 
 La figura seguente descrive un problema di apprendimento supervisionato, dove l'algoritmo di apprendimento automatico prende in input un insieme di esempi da cui impara una funzione che gli permette di fare previsioni.
 
@@ -235,6 +231,7 @@ La figura seguente descrive un problema di apprendimento supervisionato, dove l'
 
 \subsection{Apprendimento non supervisionato}
 In questa categoria vengono forniti esempi con relative feature in input, ma non viene fornito alcun valore di output, quindi si hanno a disposizione dati non etichettati. L'obiettivo di questi algoritmi è quello di trovare delle strutture all'interno di questi dati non etichettati. Se si vogliono identificare dei raggruppamenti di elementi simili, è un problema di Clustering.
+
 
 \begin{verse}
 				\textbf{Clustering} È un tipico esempio di apprendimento non supervisionato in cui, dato un insieme di dati non etichettati, l'obiettivo è quello di individuare dei raggruppamenti, detti cluster, quanto più possibile coerenti.
@@ -279,9 +276,22 @@ L'algoritmo continua a ripetere questi due passi fino a quando i centroidi non s
 				\caption{Algoritmo k-means - Convergenza}
 \end{figure}
 
+\subsection{Apprendimento per rinforzo}
+A differenza dell'apprendimento non supervisionato l'apprendimento per rinforzo viene indirizzato dalla valutazione esterna. Inoltre a differenza dell'apprendimento supervisionato in cui viene specificato l'output corrispondente ad un input, nell'apprendimento per rinforzo viene fornita solo una valutazione sull'azione compiuta.
 
+In aggiunta, questo tipo di apprendimento è caratterizzato da un processo dinamico in fasi discrete: ad ogni passo, osservando l'ambiente circostante e ottenendo qualche input, il computer compie un'azione e si sposta in un nuovo stato, venendo premiato o punito in base all'azione effettuata \cite{compIntelligence}.
 
+\subsubsection{Processo decisionale di Markov}
 
+\subsubsection{Catena di Markov}
+Si definisce processo di Markov un modello stocastico che descrive una sequenza di eventi possibili in uci la probabilità di ciascun evento dipende solo dallo stato raggiunto nell'evento precedente. Un processo di Markov può essere descritto come condizione di assenza di memoria:
+\begin{center}
+\begin{math}
+				P \left( X \left( t _ { n + 1 } \right) = x _ { n + 1 } | X \left( t _ { n } \right) = x _ { n } , X \left( t _ { n - 1 } \right) = x _ { n - 1 } , \ldots , X \left( t _ { 0 } \right) = x _ { 0 } \right) = P \left( X \left( t _ { n + 1 } \right) = x _ { n + 1 } | X \left( t _ { n } \right) = x _ { n } \right)
+\end{math}
+\end{center}
+
+Una catena di Markov è un tipo di processo di Markov che ha uno spazio di stato discreto o un set di indici discreti. 
 
 
 \end{document}

@@ -28,45 +28,45 @@ Warning--to sort, need author or key in auditTrail
 Warning--to sort, need author or key in pcap
 Warning--to sort, need author or key in netflowDef
 Warning--empty publisher in idsbook
-You've used 21 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            596 strings with 6502 characters,
-and the built_in function-call counts, 3859 in all, are:
-= -- 372
-> -- 69
+            602 strings with 6656 characters,
+and the built_in function-call counts, 4082 in all, are:
+= -- 393
+> -- 76
 < -- 0
-+ -- 37
-- -- 16
-* -- 142
-:= -- 554
-add.period$ -- 55
-call.type$ -- 21
-change.case$ -- 71
++ -- 40
+- -- 18
+* -- 152
+:= -- 593
+add.period$ -- 58
+call.type$ -- 22
+change.case$ -- 75
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 179
-empty$ -- 462
-format.name$ -- 16
-if$ -- 896
+cite$ -- 36
+duplicate$ -- 191
+empty$ -- 484
+format.name$ -- 18
+if$ -- 944
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 12
-newline$ -- 99
-num.names$ -- 16
-pop$ -- 163
+int.to.str$ -- 22
+missing$ -- 14
+newline$ -- 104
+num.names$ -- 18
+pop$ -- 170
 preamble$ -- 1
-purify$ -- 50
+purify$ -- 53
 quote$ -- 0
-skip$ -- 135
+skip$ -- 141
 stack$ -- 0
-substring$ -- 105
-swap$ -- 19
+substring$ -- 110
+swap$ -- 20
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 72
+type$ -- 74
 warning$ -- 14
-while$ -- 16
-width$ -- 23
-write$ -- 188
+while$ -- 18
+width$ -- 24
+write$ -- 199
 (There were 2 error messages)
