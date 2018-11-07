@@ -282,16 +282,42 @@ A differenza dell'apprendimento non supervisionato l'apprendimento per rinforzo 
 In aggiunta, questo tipo di apprendimento è caratterizzato da un processo dinamico in fasi discrete: ad ogni passo, osservando l'ambiente circostante e ottenendo qualche input, il computer compie un'azione e si sposta in un nuovo stato, venendo premiato o punito in base all'azione effettuata \cite{compIntelligence}.
 
 \subsubsection{Processo decisionale di Markov}
+L'apprendimento per rinforzo è strettamente correlato con il processo decisionale di Markov \cite{compIntelligence}, che consiste in una serie di stati $s _ { 0 } , s _ { 1 } , \ldots , s _ { t } , s _ { t + 1 } , \ldots$. Allo stato ${ s } _ { t }$, un'azione $a _ { t } = \pi \left( s _ { t } \right)$ è selezionata da un insieme $A$ di azioni intraprese in funzione dello stato $\pi$, che fa muovere l'ambiente per raggiungere lo stato successivo $s _ { t  + 1}$ e la valutazione $v _ {t + 1}$ associata con la transizione $\left( s _ { t } , a _ { t } , s _ { t + 1 } \right)$ viene assegnata. L'obiettivo è ottenere la valutazione più alta possibile, cioè di massimizzare 
 
-\subsubsection{Catena di Markov}
-Si definisce processo di Markov un modello stocastico che descrive una sequenza di eventi possibili in uci la probabilità di ciascun evento dipende solo dallo stato raggiunto nell'evento precedente. Un processo di Markov può essere descritto come condizione di assenza di memoria:
 \begin{center}
-\begin{math}
-				P \left( X \left( t _ { n + 1 } \right) = x _ { n + 1 } | X \left( t _ { n } \right) = x _ { n } , X \left( t _ { n - 1 } \right) = x _ { n - 1 } , \ldots , X \left( t _ { 0 } \right) = x _ { 0 } \right) = P \left( X \left( t _ { n + 1 } \right) = x _ { n + 1 } | X \left( t _ { n } \right) = x _ { n } \right)
-\end{math}
+				\begin{math}
+								R = \sum _ { t = 0 } ^ { N - 1 } r _ { t + 1 }
+				\end{math}
 \end{center}
 
-Una catena di Markov è un tipo di processo di Markov che ha uno spazio di stato discreto o un set di indici discreti. 
+con $N$ istante di tempo in cui lo stato finale è raggiunto.
+
+\subsection{Modelli probabilistici}
+I metodi probabilistici sono fondamentali per l'apprendimento automatico \cite{compIntelligence}.
+
+\subsubsection{Modelli di Markov}
+Le serie temporali e, più in generale le sequenze, sono una forma di dati strutturati che rappresenta un elenco di osservazioni per le quali è possibile definire un ordine completo, come ad esempio il tempo in una sequenza temporale.
+
+Sia una sequenza di lunghezza $T$, $ { y } _ { n } = y _ { 1 } , \dots , y _ { T }$. Il termine ${y} _ {t}$ indica l'osservazione $t$-esima rispetto all'ordine totale. Siccome gli elementi che compongono la sequenza non sono indipendenti e identicamente distribuiti, la distribuzione congiunta di un modello probabilistico per $y$ è $P \left( Y _ { 1 } , \ldots , Y _ { T } \right)$.
+
+Per osservazioni ${y} _ {t}$ a valore discreto la distribuzione congiunta cresce esponenzialmente con le dimensioni del dominio di osservazione. Per ridurre la parametrizzazione si usano le \textit{Catene di Markov}. Le Catene di Markov semplificano assumendo che un'osservazione che si verifica in una posizione $t$ della sequenza dipende solo da un numero limitato di predecessori rispetto all'ordine completo.
+Ciò significa che in una serie temporale un'osservazione al tempo presente tiene conto soltanto di un numero limitato di osservazioni del passato.
+
+Le Catene di Markov stanno alla base dei \textit{Modelli di Markov nascosti} (HMM).
+
+\subsubsection{Catena di Markov}
+Una Catena di Markov è un processo stocastico per sequenze. Presuppone che un'osservazione ${y} _ {t}$ a tempo $t$ dipenda solo da un insieme finito di predecessori $L \geq 1$. Il numero di predecessori $L$ che influenzano la nuova osservazione è detto ordine della Catena di Markov.
+
+Una catena di Markov di ordine $L$ è una sequenza di variabili casuali $\mathbf { Y } = Y _ { 1 } , \ldots , Y _ { T }$ tali che $\forall t \in \{ 1 , \ldots , T \}$
+
+\begin{center}
+				\begin{math}
+								P \left( Y _ { t } = y _ { t } | Y _ { 1 } , \ldots , Y _ { t - 1 } , Y _ { t + 1 } , \ldots , Y _ { T } \right) = P \left( Y _ { t } = y _ { t } | Y _ { t - L } , \ldots , Y _ { t - 1 } \right)
+				\end{math}
+\end{center}
+
+\subsubsection{Modelli di Markov nascosti}
+Le Catene di Markov modellano i dati sequenziali assumendo che gli elementi della sequenza siano generati da un processo stocastico completamente osservabile. Nella maggior parte dei sistemi reali l'unica informazione disponibile può essere il risultato del processo stocastico ad ogni osservazione ${y} _ {t}$ mentre lo stato del sistema rimane nascosto. 
 
 
 \end{document}

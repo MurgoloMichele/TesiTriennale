@@ -14,8 +14,11 @@
 \contentsline {subsection}{\numberline {2.5.2}Apprendimento non supervisionato}{25}{subsection.2.5.2}
 \contentsline {subsubsection}{\numberline {2.5.2.1}K-Means}{25}{subsubsection.2.5.2.1}
 \contentsline {subsection}{\numberline {2.5.3}Apprendimento per rinforzo}{28}{subsection.2.5.3}
-\contentsline {subsubsection}{\numberline {2.5.3.1}Processo decisionale di Markov}{29}{subsubsection.2.5.3.1}
-\contentsline {subsubsection}{\numberline {2.5.3.2}Catena di Markov}{29}{subsubsection.2.5.3.2}
+\contentsline {subsubsection}{\numberline {2.5.3.1}Processo decisionale di Markov}{28}{subsubsection.2.5.3.1}
+\contentsline {subsection}{\numberline {2.5.4}Modelli probabilistici}{29}{subsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.4.1}Modelli di Markov}{29}{subsubsection.2.5.4.1}
+\contentsline {subsubsection}{\numberline {2.5.4.2}Catena di Markov}{29}{subsubsection.2.5.4.2}
+\contentsline {subsubsection}{\numberline {2.5.4.3}Modelli di Markov nascosti}{30}{subsubsection.2.5.4.3}
 \contentsline {chapter}{\numberline {3}Analisi del problema}{31}{chapter.3}
 \contentsline {section}{\numberline {3.1}Analisi traffico di rete}{31}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Network Flow}{31}{subsection.3.1.1}

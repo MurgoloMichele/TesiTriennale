@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  7 NOV 2018 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  7 NOV 2018 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1141,7 +1141,7 @@ LaTeX Info: Redefining \nameref on input line 50.
 \openout5 = `main.out'.
 
  (./sections/copertina.tex
-<main-frn.pdf, id=167, 597.50829pt x 845.0471pt>
+<main-frn.pdf, id=171, 597.50829pt x 845.0471pt>
 File: main-frn.pdf Graphic file (type pdf)
  <use main-frn.pdf>
 Package pdftex.def Info: main-frn.pdf used on input line 4.
@@ -1208,14 +1208,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--67
 
 ]
 Capitolo 2.
-[13] [14] <pictures/botnet.png, id=320, 683.55376pt x 573.14125pt>
+[13] [14] <pictures/botnet.png, id=325, 683.55376pt x 573.14125pt>
 File: pictures/botnet.png Graphic file (type png)
 
 <use pictures/botnet.png>
 Package pdftex.def Info: pictures/botnet.png used on input line 58.
 (pdftex.def)             Requested size: 341.77605pt x 286.56992pt.
  [15] [16 <./pictures/botnet.png>]
-<pictures/zombielayer.png, id=339, 773.89125pt x 652.4375pt>
+<pictures/zombielayer.png, id=344, 773.89125pt x 652.4375pt>
 File: pictures/zombielayer.png Graphic file (type png)
 
 <use pictures/zombielayer.png>
@@ -1231,14 +1231,14 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
 
-<pictures/IDS.png, id=359, 642.4pt x 675.52374pt>
+<pictures/IDS.png, id=364, 642.4pt x 675.52374pt>
 File: pictures/IDS.png Graphic file (type png)
  <use pictures/IDS.png>
 Package pdftex.def Info: pictures/IDS.png used on input line 131.
 (pdftex.def)             Requested size: 321.19922pt x 337.76105pt.
 
 [19] [20 <./pictures/IDS.png>] [21] [22] [23]
-<pictures/apprendimentosupervisionato.png, id=398, 492.84125pt x 242.9075pt>
+<pictures/apprendimentosupervisionato.png, id=403, 492.84125pt x 242.9075pt>
 File: pictures/apprendimentosupervisionato.png Graphic file (type png)
 
 <use pictures/apprendimentosupervisionato.png>
@@ -1246,46 +1246,46 @@ Package pdftex.def Info: pictures/apprendimentosupervisionato.png used on input
  line 228.
 (pdftex.def)             Requested size: 246.42001pt x 121.45345pt.
  [24 <./pictures/apprendimentosupervisionato.png>] <pictures/k-means1.png, id=4
-05, 865.2325pt x 704.6325pt>
+10, 865.2325pt x 704.6325pt>
 File: pictures/k-means1.png Graphic file (type png)
 
 <use pictures/k-means1.png>
 Package pdftex.def Info: pictures/k-means1.png used on input line 249.
 (pdftex.def)             Requested size: 259.57175pt x 211.39139pt.
  [25 <./pictures/k-means1.png>]
-<pictures/k-means2.png, id=415, 865.2325pt x 704.6325pt>
+<pictures/k-means2.png, id=420, 865.2325pt x 704.6325pt>
 File: pictures/k-means2.png Graphic file (type png)
 
 <use pictures/k-means2.png>
 Package pdftex.def Info: pictures/k-means2.png used on input line 259.
 (pdftex.def)             Requested size: 259.57175pt x 211.39139pt.
 
-<pictures/k-means3.png, id=416, 865.2325pt x 704.6325pt>
+<pictures/k-means3.png, id=421, 865.2325pt x 704.6325pt>
 File: pictures/k-means3.png Graphic file (type png)
 
 <use pictures/k-means3.png>
 Package pdftex.def Info: pictures/k-means3.png used on input line 267.
 (pdftex.def)             Requested size: 259.57175pt x 211.39139pt.
  [26 <./pictures/k-means2.png>]
-<pictures/k-means4.png, id=423, 1059.96pt x 961.5925pt>
+<pictures/k-means4.png, id=428, 1059.96pt x 961.5925pt>
 File: pictures/k-means4.png Graphic file (type png)
 
 <use pictures/k-means4.png>
 Package pdftex.def Info: pictures/k-means4.png used on input line 275.
 (pdftex.def)             Requested size: 317.99045pt x 288.47997pt.
- [27 <./pictures/k-means3.png>] [28 <./pictures/k-means4.png>]) (./sections/3-a
-nalisi_del_problema.tex [29] [30
-
-]
+ [27 <./pictures/k-means3.png>] [28 <./pictures/k-means4.png>] [29]) (./section
+s/3-analisi_del_problema.tex [30]
 Capitolo 3.
-[31] <pictures/netflowgraph.png, id=461, 684.5575pt x 502.87875pt>
+[31
+
+] <pictures/netflowgraph.png, id=472, 684.5575pt x 502.87875pt>
 File: pictures/netflowgraph.png Graphic file (type png)
 
 <use pictures/netflowgraph.png>
 Package pdftex.def Info: pictures/netflowgraph.png used on input line 47.
 (pdftex.def)             Requested size: 410.73766pt x 301.72957pt.
  [32]
-<pictures/netflowexporter.png, id=470, 854.19125pt x 447.6725pt>
+<pictures/netflowexporter.png, id=480, 854.19125pt x 447.6725pt>
 File: pictures/netflowexporter.png Graphic file (type png)
 
 <use pictures/netflowexporter.png>
@@ -1302,7 +1302,7 @@ Overfull \hbox (24.70407pt too wide) in paragraph at lines 72--74
 el-la ri-ce-zio-ne, con-ser-va-zio-ne e pre-elaborazione
  []
 
-<pictures/netflowreport.jpg, id=477, 702.625pt x 398.48875pt>
+<pictures/netflowreport.jpg, id=487, 702.625pt x 398.48875pt>
 File: pictures/netflowreport.jpg Graphic file (type jpg)
 
 <use pictures/netflowreport.jpg>
@@ -1330,7 +1330,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
-[36] [37] <pictures/slips.png, id=500, 592.2125pt x 571.13374pt>
+[36] [37] <pictures/slips.png, id=510, 592.2125pt x 571.13374pt>
 File: pictures/slips.png Graphic file (type png)
 
 <use pictures/slips.png>
@@ -1347,7 +1347,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
-<pictures/modello-comportamentale.png, id=511, 752.8125pt x 396.48125pt>
+<pictures/modello-comportamentale.png, id=521, 752.8125pt x 396.48125pt>
 File: pictures/modello-comportamentale.png Graphic file (type png)
 
 <use pictures/modello-comportamentale.png>
@@ -1355,7 +1355,7 @@ Package pdftex.def Info: pictures/modello-comportamentale.png used on input lin
 e 219.
 (pdftex.def)             Requested size: 376.40532pt x 198.24013pt.
  [40 <./pictures/modello-comportamentale.png>] <pictures/folderstructure.png, i
-d=520, 352.31625pt x 382.42876pt>
+d=530, 352.31625pt x 382.42876pt>
 File: pictures/folderstructure.png Graphic file (type png)
 
 <use pictures/folderstructure.png>
@@ -1392,7 +1392,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--95
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 95.
 
-<pictures/homestf.png, id=563, 901.3675pt x 348.30125pt>
+<pictures/homestf.png, id=573, 901.3675pt x 348.30125pt>
 File: pictures/homestf.png Graphic file (type png)
 
 <use pictures/homestf.png>
@@ -1404,7 +1404,7 @@ Overfull \hbox (32.42896pt too wide) in paragraph at lines 100--101
  []
 
 [45 <./pictures/homestf.png>]
-<pictures/stfmodels.png, id=579, 901.3675pt x 189.70876pt>
+<pictures/stfmodels.png, id=590, 901.3675pt x 189.70876pt>
 File: pictures/stfmodels.png Graphic file (type png)
 
 <use pictures/stfmodels.png>
@@ -1424,7 +1424,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 175.
  [48] [49]
-<pictures/multicore.jpeg, id=605, 409.53pt x 334.24875pt>
+<pictures/multicore.jpeg, id=615, 409.53pt x 334.24875pt>
 File: pictures/multicore.jpeg Graphic file (type jpg)
 
 <use pictures/multicore.jpeg>
@@ -1476,7 +1476,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 81.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 81.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 81.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1F25772CDF55802DC61FDF08432EA42A;2743.
+(rerunfilecheck)             Checksum: C2D472DD3C18E412DFBF4A3FDF60E6F9;2819.
 
 
 LaTeX Warning: There were undefined references.
@@ -1484,10 +1484,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 81.
  ) 
 Here is how much of TeX's memory you used:
- 36825 strings out of 493029
- 763169 string characters out of 6136234
- 859812 words of memory out of 5000000
- 39609 multiletter control sequences out of 15000+600000
+ 36829 strings out of 493029
+ 763245 string characters out of 6136234
+ 859861 words of memory out of 5000000
+ 39610 multiletter control sequences out of 15000+600000
  12572 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,100p,10377b,1315s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1495,20 +1495,21 @@ Here is how much of TeX's memory you used:
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-l10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (58 pages, 914765 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (58 pages, 929211 bytes).
 PDF statistics:
- 775 PDF objects out of 1000 (max. 8388607)
- 660 compressed objects within 7 object streams
- 203 named destinations out of 1000 (max. 500000)
- 423 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 789 PDF objects out of 1000 (max. 8388607)
+ 673 compressed objects within 7 object streams
+ 206 named destinations out of 1000 (max. 500000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 
