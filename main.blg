@@ -3,12 +3,12 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 18 of file references.bib
+I was expecting a `,' or a `}'---line 27 of file references.bib
  : 
  : @misc{netflowDef,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 90 of file references.bib
+I was expecting a `,' or a `}'---line 99 of file references.bib
  : 
  : @book{idsBook,
 (Error may have been on previous line)
@@ -27,46 +27,48 @@ Warning--to sort, need author or key in phishingdef
 Warning--to sort, need author or key in auditTrail
 Warning--to sort, need author or key in pcap
 Warning--to sort, need author or key in netflowDef
+Warning--to sort, need author or key in nProbe
+Warning--to sort, need author or key in Argus
 Warning--empty publisher in idsbook
-You've used 22 entries,
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            602 strings with 6656 characters,
-and the built_in function-call counts, 4082 in all, are:
-= -- 393
-> -- 76
+            608 strings with 6761 characters,
+and the built_in function-call counts, 4400 in all, are:
+= -- 423
+> -- 78
 < -- 0
-+ -- 40
++ -- 42
 - -- 18
-* -- 152
-:= -- 593
-add.period$ -- 58
-call.type$ -- 22
-change.case$ -- 75
+* -- 162
+:= -- 627
+add.period$ -- 62
+call.type$ -- 24
+change.case$ -- 81
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 191
-empty$ -- 484
+cite$ -- 40
+duplicate$ -- 205
+empty$ -- 530
 format.name$ -- 18
-if$ -- 944
+if$ -- 1024
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 24
 missing$ -- 14
-newline$ -- 104
+newline$ -- 112
 num.names$ -- 18
-pop$ -- 170
+pop$ -- 186
 preamble$ -- 1
-purify$ -- 53
+purify$ -- 57
 quote$ -- 0
-skip$ -- 141
+skip$ -- 157
 stack$ -- 0
-substring$ -- 110
-swap$ -- 20
+substring$ -- 120
+swap$ -- 22
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 74
-warning$ -- 14
+type$ -- 82
+warning$ -- 16
 while$ -- 18
-width$ -- 24
-write$ -- 199
+width$ -- 26
+write$ -- 213
 (There were 2 error messages)

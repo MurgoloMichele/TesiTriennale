@@ -9,6 +9,10 @@
   \url{https://web.archive.org/web/20170201233855/https://www.scribd.com/document/179124526/Anatomy-of-a-Botnet-WP-pdf}.
 \newblock Accessed: 2017-02-01.
 
+\bibitem{Argus}
+Argus.
+\newblock \url{https://qosient.com/argus/}.
+
 \bibitem{auditTrail}
 Atis telecom glossary - audit trail.
 \newblock
@@ -29,6 +33,10 @@ Malware revolution: A change in target.
 \newblock
   \url{https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc512596(v=technet.10)}.
 \newblock Published: 05/20/2008.
+
+\bibitem{nProbe}
+nprobe.
+\newblock \url{https://www.ntop.org/products/netflow/nprobe/}.
 
 \bibitem{phishingdef}
 Phishing definition - urban dictionary.

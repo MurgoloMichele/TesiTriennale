@@ -25,7 +25,7 @@ Se i pacchetti che attraversano un dispositivo di rete hanno questi attributi in
 Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete. Un packet capture intercetta i singoli pacchetti e li archivia. Nei sistemi operativi Unix è utilizzata la libreria \textbf{libpcap} mentre nei sistemi Windows si fa utilizzo di \textbf{WinPcap} \cite{pcap}.
 
 \subsection{NetFlow}
-NetFlow è un protocollo di analisi di rete introdotto da Cisco che offre la possibilità di raccogliere informazioni dettagliate sul traffico mentre attraversa un'interfaccia. I dispositivi di rete che supportano NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
+NetFlow è un protocollo di analisi di rete introdotto da Cisco che offre la possibilità di raccogliere informazioni dettagliate sul traffico che attraversa un'interfaccia. I dispositivi di rete che supportano NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
 
 Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condividono tutti i seguenti 7 valori \cite{netflowDef}.
 
@@ -57,7 +57,9 @@ Un componente applicato a un'interfaccia che raccoglie informazioni sui flow. I 
 \textbf{NetFlow exporter}
 Aggrega i pacchetti in flows e ne esporta i record verso uno o più \textit{flow collectors}.
 Quando dei pacchetti arrivano al NetFlow exporter, vengono ispezionati singolarmente per uno o più attributi che vengono utilizzati per determinare se il pachetto è univoco o è simile agli altri pacchetti. Se il pacchetto presenta attributi simili viene classificato nello stesso flow.
+Dopo aver esaminato questi attributi, il NetFlow exporter li aggrega in record di flow e li salva in un database che può essere una cache NetFlow o un NetFlow collector. 
 
+La figura seguente rappresenta il funzionamento di un NetFlow exporter.
 
 \begin{figure}[H]
 \centering
@@ -65,7 +67,6 @@ Quando dei pacchetti arrivano al NetFlow exporter, vengono ispezionati singolarm
 \caption{NetFlow exporter}
 \end{figure}
 
-Dopo aver esaminato questi attributi, il NetFlow exporter li aggrega in record di flow e li salva in un database che può essere una cache NetFlow o un NetFlow collector.
 \end{verse}
 
 \begin{verse}
@@ -76,7 +77,7 @@ Responsabile della ricezione, conservazione e pre-elaborazione dei dati di un fl
 \begin{verse}
 \textbf{Analysis application} 
 Analizza i dati dei flows ricevuti nel contesto del rilevamento delle intrusioni o del profilo di traffico. Un esempio di Analysis application possono essere degli IDPS.
-Di seguito un'immagine di SolarWinds NetFlow Traffic Analyzer, un esempio di analysis application.
+Di seguito un'immagine di SolarWinds NetFlow Traffic Analyzer, un software per l'analisi dei flows.
 
 \begin{figure}[H]
 \centering
@@ -85,24 +86,22 @@ Di seguito un'immagine di SolarWinds NetFlow Traffic Analyzer, un esempio di ana
 \end{figure}
 \end{verse}
 
----- il nome della sezione va cambiato ---
-\section{Strumenti software utilizzati}
----- riscrivere meglio ----
-Verranno ora descritti i software utilizzati in questa tesi. I software utilizzati sono multipiattaforma, in questa tesi sono stati adoperati su sistema operativo basato su una distribuzione GNU/Linux.
+\section{Strumenti di monitoraggio e analisi del traffico di rete}
+In questa sezione verrano presentati i software utilizzati per la cattura dei network flows. Questi software sono Open Source e sono stati usati su una distribuzione GNU/Linux.
 
 \subsection{Audit Record Generation and Utilization System}
 Argus (Audit Record Generation and Utilization System) è stato la prima implementazione del monitoraggio dei flow, è un progetto open source e multipiattaforma.
-Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, tra i quali Windows, MaxOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina, argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. \newline
+Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, tra i quali Windows, MaxOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina e Argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. 
 
 Argus viene utilizzato da molte università e aziende per registrare dei flow che vengono utilizzati sia nell'analisi immediata dell'utilizzo della rete, sia nell'analisi storica.
 
-I file di Argus sono compressi con algoritmi che offrono un rapporto di compressione fino 10.000:1. La compressione di questi file è molto importante perchè sono file molto grandi e possono raggiungere dimensioni difficili da gestire. \newline
+I file di Argus sono compressi con algoritmi che offrono un rapporto di compressione fino 10.000:1. La compressione di questi file è molto importante perchè tendono ad essere molto grandi e possono raggiungere dimensioni difficili da gestire.
 
 
-La seguente tabella descrive i campi dei flow che argus salva su file.
----- introdurre tabella ----
+La seguente tabella descrive i campi dei flow che argus salva su file. La prima colonna rappresenta il nome del campo del pacchetto di rete, la seconda colonna è una descrizione del campo.
 
 \begin{table}[h]
+				\centering
 \begin{tabular}{|l|l|}
 \hline
 \textbf{campo} & \textbf{descrizione}                    \\ \hline
@@ -123,16 +122,19 @@ SrcBytes       & src -\textgreater dst transaction bytes \\ \hline
 srcUdata       & source user data buffer                 \\ \hline
 dstUdata       & destination user data buffer            \\ \hline
 Label          & metadata label                          \\ \hline
-\end{tabular}
+\end{tabular}\par
+\bigskip
+Campi di Argus
 \end{table}
 
 \subsection{nProbe}
 
 Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la gestione del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow. È disponibile per la maggior parte dei sistemi operativi sul mercato. \newline
 
-La tabella seguente descrive i campi dei flow che il software nProbe salva su file.
+La seguente tabella descrive i campi dei flow che nProbe salva su file. La prima colonna rappresenta il nome del campo del pacchetto di rete, la seconda colonna è una descrizione del campo.
 
 \begin{table}[H]
+				\centering
 \begin{tabular}{|l|l|}
 \hline
 \multicolumn{1}{|c|}{\textbf{campo}} & \multicolumn{1}{c|}{\textbf{descrizione}}     \\ \hline
@@ -165,15 +167,22 @@ FLOW\_ACTIVE\_TIMEOUT                & activity timeout of flow cache entries   
 FLOW\_INACTIVE\_TIMEOUT              & inactivity timeout of flow cache entries      \\ \hline
 IN\_SRC\_MAC                         & source MAC address                            \\ \hline
 OUT\_DST\_MAC                        & destination MAC address                       \\ \hline
-\end{tabular}
+\end{tabular}\par
+\bigskip
+Campi di nProbe
 \end{table}
 
----- argus vs nprobe ----
+\subsection{Confronto tra i network flow}
+nProbe è un software scalabile ed è stato progettato per restare al passo con le velocità multi-Gbit su hardware comune. Usando una CPU dual-core nProbe può essere usato per catturare pacchetti a 1 Gbit con perdita di pacchetti inferiore al 1\%. Inoltre nProbe permette una configurazione più dettagliata e personalizzabile, permette di scegliere molti campi per l'analisi dei network flow \cite{nProbe}.
+
+Mentre nProbe è disponibile solo per Unix, Windows o MacOs X, Argus funziona su MacOS X, Linux, FreeBSD, OpenBSD, NetBSD, AIX, HP-UX, VxWorks, IRIS, Windows e OpenWrt, inoltre è stato portato su molte piattaforme hardware accelerate come Bivio, Pluribus, Arista, Tilera \cite{Argus}. 
 
 \section{Stratosphere IPS}
 In questa tesi si è utilizzato Stratosphere IPS, un software open source disponibile per sistemi operativi Windows e distribuzioni GNU/Linux. In questa tesi si è fatto utilizzo esclusivo della versione per distribuzioni GNU/Linux.
-Stratosphere Linux IPS (slips), al ---corrente----pubblicato come alpha, è un sistema di rilevazione e prevenzione delle intrusioni comportamentale che utilizza algoritmi di machine learning per rilevare comportamenti dannosi. 
+Stratosphere Linux IPS (slips), alla pubblicazione di questa tesi, è in alpha. È un sistema di rilevazione e prevenzione delle intrusioni comportamentale che utilizza algoritmi di machine learning per rilevare comportamenti dannosi. 
 L'obiettivo di Stratosphere IPS è quello di creare un Intrusion Prevention System che può rilevare e bloccare comportamenti malevoli all'interno di una rete.
+
+Fa parte di una più ampia suite di programmi che include Stratospehre Testing Framework (stf). Stf analizza i modelli comportamentali della rete alla ricerca di malware.
 
 ---- introdurre nello stato dell'arte e descrivere qui in dettaglio il tipo ---
 \begin{verse}
@@ -181,10 +190,10 @@ L'obiettivo di Stratosphere IPS è quello di creare un Intrusion Prevention Syst
 insieme di metodi di calcolo che utilizzano l'esperienza per migliorare le prestazioni o per effettuare delle previsioni accurate.
 \end{verse}
 
----- riscrivere ----
 \subsection{Architettura}
-Slips si occupa della parte di rilevazione attraverso machine learning. Il traffico di rete viene letto da e salvato da Argus che rimane in ascolto su una porta. Slips legge poi i flows passati da standard input dal client di Argus. 
-In questo modo è possibile analizzare il traffico del proprio computer o di qualsiasi altra rete su cui sia in esecuzione Argus.
+Slips si occupa della parte di rilevazione attraverso machine learning. La parte di rilevazione e cattura del traffico viene fatta attraverso attraverso Argus che cattura i pacchetti e li rende disponibili a chiunque si connetta alla sua porta. L'idea di base è quella di leggere i flow da Argus e di inviarli a Slips. In questo modo è possibile analizzare il traffico del proprio pc e di tutte le reti su cui è in esecuzione Argus. 
+
+La figura seguente descrive l'architettura. Argus è attivo sul computer o sulla rete su cui si vuole analizzare il traffico in entrata. Questo traffico è poi salvato su un file che può essere dato in input a Slips.
 
 \begin{figure}[H]
 \centering
@@ -195,7 +204,6 @@ In questo modo è possibile analizzare il traffico del proprio computer o di qua
 \subsection{Modelli comportamentali}
 Slips fa utilizzo di modelli comportamentali creati da Stratosphere Testing Framework.
 
---- dire all'inizio della sezione la divisione del software in slips e stf ----
 \begin{verse}
 \textbf{Stratosphere Testing Framework}
 è un framework di ricerca sulla sicurezza della rete per analizzare i modelli comportamentali delle connessioni di rete. Il suo obiettivo è aiutare i ricercatori a trovare nuovi comportamenti malware, etichettare tali comportamenti, creare i loro modelli di traffico e verificare gli algoritmi di rilevamento. Una volta creati e verificati i migliori modelli comportamentali di malware, questi verranno utilizzati da slips per il rilevamento. Stratosphere Testing Framework usa algoritmi di machine learning sui modelli comportamentali.
@@ -203,17 +211,16 @@ Slips fa utilizzo di modelli comportamentali creati da Stratosphere Testing Fram
 
 Il nucleo di \textit{Stratosphere IPS} è composto dai modelli comportamentali di reti e algoritmi di rilevamento. I modelli comportamentali rappresentano ciò che una connessione specifica fa nella rete durante la sua vita. Il comportamento è costuito analizzando la sua periodicità, le dimensioni e la durata di ciascun flusso. Sulla base di queste caratteristiche a ciascun flusso viene assegnata una lettera e il gruppo di lettere caratterizza il comportamento della connessione.
 
---- dire i campi che influenzano i modelli ---
-
 Prendiamo come esempio una connessione generata da una botnet che ha il seguente modello comportamentale
 \begin{lstlisting}[language=bash]
 88*y*y*i*H*H*H*y*0yy*H*H*H*y*y*y*y*H*h*y*h*h*H*H*h*H*y*y*y*H*
 \end{lstlisting}
 
 In questo caso ci dice che i flussi sono altamente periodici (lettere \textit{h}, \textit{i}), con qualche periodicità persa vicino all'inizio (lettere \textit{y}). I flussi hanno anche una grande dimensione con una durata media. I simboli tra le lettere sono correlati al tempo trascorso tra i flussi. In questo caso il simbolo '\textit{*}' significa che il flusso è separato da meno di un'ora.
-Con l'utilizzo di questo tipo di modelli siamo in grado di generare le caratteristiche comportamentali di un gran numero di azioni dannose. L'immagine seguente mostra i criteri di assegnazione delle lettere per i modelli comportamentali \newline
+Con l'utilizzo di questo tipo di modelli siamo in grado di generare le caratteristiche comportamentali di un gran numero di azioni dannose. 
 
---- introdurre l'immagine ----
+L'immagine seguente mostra i criteri di assegnazione delle lettere per i modelli comportamentali.
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{modello-comportamentale.png}
@@ -229,7 +236,8 @@ Questa incompatibilità ha portato alla necessità di una conversione: i file pr
 \section{Presentazione del problema}
 I file prodotti da nProbe hanno una struttura gerarchica fissa ben definita: ci sono 4 livelli di subdir, in cui il primo livello indica l'anno, il secondo il mese, il terzo il giorno e il quarto l'ora. All'interno dell'ultima subdir, quella delle ore, ci sono 60 file uno per ogni minuto della giornata.
 
---- introdurre l'immagine ----
+La seguente immagine descrive la struttura gerarchica dei file.
+
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{folderstructure.png}
