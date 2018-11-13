@@ -35,16 +35,18 @@
 \contentsline {section}{\numberline {3.4}Problematiche dovute all'utilizzo di due diversi formati}{41}{section.3.4}
 \contentsline {section}{\numberline {3.5}Presentazione del problema}{41}{section.3.5}
 \contentsline {chapter}{\numberline {4}Soluzione proposta}{43}{chapter.4}
-\contentsline {section}{\numberline {4.1}Installazione Stratosphere IPS}{43}{section.4.1}
-\contentsline {section}{\numberline {4.2}Installazione di Argus}{44}{section.4.2}
-\contentsline {section}{\numberline {4.3}Utilizzo del programma stf\\}{45}{section.4.3}
-\contentsline {section}{\numberline {4.4}Conversione}{46}{section.4.4}
-\contentsline {section}{\numberline {4.5}Automatizzazione conversione}{47}{section.4.5}
-\contentsline {section}{\numberline {4.6}Rendere efficiente la conversione}{48}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Possibili soluzioni}{48}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Scelta effettuata}{50}{subsection.4.6.2}
-\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{53}{chapter.5}
-\contentsline {section}{\numberline {5.1}benchmark single core}{53}{section.5.1}
-\contentsline {section}{\numberline {5.2}Benchmark multi core}{54}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclusioni}{55}{chapter.6}
-\contentsline {section}{\numberline {6.1}Prestazioni}{55}{section.6.1}
+\contentsline {section}{\numberline {4.1}Conversione}{43}{section.4.1}
+\contentsline {section}{\numberline {4.2}Automatizzazione conversione}{44}{section.4.2}
+\contentsline {section}{\numberline {4.3}Rendere efficiente la conversione}{45}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Possibili soluzioni}{45}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Scelta effettuata}{47}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{49}{chapter.5}
+\contentsline {section}{\numberline {5.1}Software utilizzati}{49}{section.5.1}
+\contentsline {section}{\numberline {5.2}Installazione Stratosphere IPS}{50}{section.5.2}
+\contentsline {section}{\numberline {5.3}Installazione di Argus}{51}{section.5.3}
+\contentsline {section}{\numberline {5.4}Utilizzo del programma stf\\}{51}{section.5.4}
+\contentsline {section}{\numberline {5.5}Prestazioni}{53}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Benchmark}{53}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Benchmark multi core}{54}{subsection.5.5.2}
+\contentsline {chapter}{\numberline {6}Conclusioni}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}Prestazioni}{57}{section.6.1}

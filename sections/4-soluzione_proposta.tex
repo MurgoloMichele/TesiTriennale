@@ -2,124 +2,7 @@
 \begin{document}
 \chapter{Soluzione proposta}
 
---- outline del capitolo ----
-
-Per lo sviluppo del programma per la conversione dei file e per l'utilizzo di Stratosphere IPS è stata creata una piattaforma dedicata alla Security Analytics tramite l'utilizzo di \textit{VirtualBox} con una installazione del sistema operativo Ubuntu 16.04 LTS.
-
---- mettere nei software utilizzati ---
-\begin{verse}
-				\textbf{VirtualBox} è un software gratuito e open source per l'esecuzione di macchine virtuali che supporta Windows, GNU/Linux e macOS come sistemi operativi host ed è in grado di eseguire Windows, GNU/Linux, OS/2 Warp, BSD come ad esempio OpenBSD, FreeBSD e infine Solaris e OpenSolaris come sistemi operativi guest. 
-\end{verse}
-
---- mettere nella sezione 5 ----
-\section{Installazione Stratosphere IPS}
-Sulla macchina virtuale è stato installato il framework di Stratospehere IPS. Per l'installazione si sono seguiti i seguenti passaggi:
-
-\begin{itemize}
-				\item Installazione del programma git 2.7.4
-\begin{lstlisting}[language=bash]
-$ sudo apt install git
-\end{lstlisting}
-
-				\item Clonazione repository github del framework
-\begin{lstlisting}[language=bash]
-$ git clone https://github.com/stratosphereips/StratosphereTestingFramework
-\end{lstlisting}
-
-				\item Installazione del programma python-pip
-\begin{lstlisting}[language=bash]
-$ sudo apt install python-pip
-\end{lstlisting}
-\end{itemize}
-				
-\begin{itemize}
-				\paragraph{Installazione dipendenze per Stratosphere IPS}
-
-				\item prettytable 0.7.2-3
-\begin{lstlisting}[language=bash]
-$ sudo apt install python-prettytable
-\end{lstlisting}
-
-				\item transaction 1.4.3-3
-\begin{lstlisting}[language=bash]
-$ sudo apt install python-transaction
-\end{lstlisting}
-
-				\item persistent 4.1.1-1build2
-\begin{lstlisting}[language=bash]
-$ sudo apt install python-persistent
-\end{lstlisting}
-
-				\item zodb 5.4.0
-\begin{lstlisting}[language=bash]
-$ sudo pip install zodb
-\end{lstlisting}
-
-				\item sparse 1.1-1.3build1
-\begin{lstlisting}[language=bash]
-$ sudo apt install python-sparse
-\end{lstlisting}
-
-				\item dateutil 2.4.2-1
-\begin{lstlisting}[language=bash]
-$ sudo apt install python-dateutil
-\end{lstlisting}
-
-
-\end{itemize}
-
-\section{Installazione di Argus}
-
-\begin{itemize}
-				\item libpcap 1.7.4-2
-\begin{lstlisting}[language=bash]
-$ sudo apt install libpcab-dev
-\end{lstlisting}
-
-\item bison 3.0.4
-\begin{lstlisting}[language=bash]
-$ sudo apt install bison
-\end{lstlisting}
-
-\item flex 2.6.0-11
-\begin{lstlisting}[language=bash]
-$ sudo apt install flex
-\end{lstlisting}
-
-\item Installazione dell'ultima versione di argus 3.0.8.2 dal sito http://qosient.com/argus/dev/argus-latest.tar.gz
-
-\item Installazione dell'ultima versione di argus-client 3.0.8.2 dal sito http://qosient.com/argus/dev/argus-clients-latest.tar.gz
-
-\end{itemize}
-
-\section{Utilizzo del programma stf\\}
-Per eseguire il programma lo si esegue con
-\begin{lstlisting}[language=bash]
-	./stf.py
-\end{lstlisting}
-\includegraphics[scale=0.5]{homestf.png}
-
-Per caricare un dataset si utilizza il comando
-\begin{lstlisting}[language=bash]
-	datasets -c /absolute/path/file.binetflow	
-\end{lstlisting}
-
-Per generare la connessione si utilizza il comando
-\begin{lstlisting}[language=bash]
-	connections -g	
-\end{lstlisting}
-
-Infine, per generare i modelli, il comando
-\begin{lstlisting}[language=bash]
-	models -g	
-\end{lstlisting}
-
-Per visualizzare il behavioral model si utilizza il comando
-\begin{lstlisting}[language=bash]
-	models -L [id]	
-\end{lstlisting}
-\includegraphics[scale=0.5]{stfmodels.png}
-\end{document}
+In questo capitolo viene presentato il programma di conversione. La prima parte descrive le scelte effettuate per convertire i campi nell'altro formato e come automatizzare la procedura. La seconda parte introduce il concetto di programmazione parallela e le possibili soluzioni per rendere efficiente la conversione.
 
 
 \section{Conversione}
@@ -164,13 +47,12 @@ La conversione è stata automatizzata con la scrittura di uno script in Python. 
 
 Il problema richiede lo sviluppo di un programma che converte file in modalità batch.
 I file hanno una struttura gerarchica per data organizzata per sottocartelle, si esegue quindi un ciclo \textit{for} che prende tutti i file in modo ricorsivo.
-
 Dopodichè si apre il file in lettura leggendo una riga per volta, si converte il contenuto e lo si salva in una lista. Una volta terminata la lettura del file si scrive la lista contente i dati convertiti su un nuovo file.
 
-Si è scelto di leggere il file una riga alla volta perchè le grandi dimensioni dei file non permettono un approccio diverso. Un approccio più veloce sarebbe stato quello di leggere i file per intero nella memoria principale ma non è possibile per le grandi dimensioni dei file.
+Si è scelto di leggere il file una riga alla volta perchè le grandi dimensioni dei file non permettono un approccio diverso. Un approccio più veloce sarebbe stato quello di leggere i file per intero nella memoria principale ma non è un approccio possibile perchè possono presentarsi casi in cui la dimensione della RAM, soprattutto nei computer più datati, è più piccola rispetto a quella dei file.
 
+A seguire il programma scritto in pseudocodice
 
-Pseudocodice del programma 
 \begin{algorithm}
 \caption{Single core version}\label{single core version}
 \begin{algorithmic}[1]
@@ -187,14 +69,14 @@ Pseudocodice del programma
 
 \section{Rendere efficiente la conversione}
 
-Nel programma descritto in precendenza viene generato un solo file di output in cui vengono convertiti tutti i file dati in input. Questa soluzione è comoda perchè da migliaia di file si ha un solo file con i dati convertiti, ma presenta il problema di creare un file con dimensioni enormi e di difficile gestione (il file può raggiungere dimensioni tali da rendere difficile anche solo aprirlo in lettura) su cui crearci i modelli comportamentali.
+Nel programma descritto in precendenza viene generato un solo file di output in cui vengono convertiti tutti i file dati in input. Questa soluzione è comoda perchè da migliaia di file si ottiene un solo file con i dati convertiti, ma presenta il problema di creare un file con dimensioni enormi e di difficile gestione (il file può raggiungere dimensioni tali da rendere difficile anche solo aprirlo in lettura).
 
-Il programma è inoltre inefficiente poichè è single core e ha come collo di bottiglia la scrittura su un unico file.
 
+Il programma è inoltre inefficiente poichè è single core e ha come collo di bottiglia la scrittura su un unico file. 
 La soluzione proposta seppure sia teoricamente corretta non può avere un'applicazione nel mondo reale. Bisogna cambiare quindi strategia per rendere la conversione più veloce sfruttando le macchine multi core e per avere in output file di dimensioni accettabili.
 
 \subsection{Possibili soluzioni}
-Si possono pensare diverse soluzioni che migliorerebbero in modo significativo il programma visto in precedenza. 
+Si possono pensare diverse soluzioni che migliorerebbero in modo significativo il programma visto in precedenza:
 
 \begin{itemize}
 				\item Lavorare su chunk di file
@@ -205,25 +87,21 @@ Si possono pensare diverse soluzioni che migliorerebbero in modo significativo i
 \begin{verse}
 \textbf{Lavorare su chunk di file}
 Per velocizzare il programma e sfruttare i processori disponibili si potrebbe assegnare ad ogni processore un file da leggere e convertire. Quando il processore termina la conversione dei dati scrive sul file in output. In questo modo si dividrebbe il tempo di esecuzione sul numero di processori disponibili. 
-Questa soluzione rende il più veloce possibile la conversione dei file ma i processori finiscono per scrivere sullo stesso file senza avere nessuna regola di precedenza, questo crea problemi perchè le scritture in output non sono ordinate e non è possibile creare modelli comportamentali affidabili. Le scritture su file devono essere ordinate e sequenziali. Inoltre questa soluzione ha il problema di scrivere sempre su unico file e come detto in precedenza questo tipo di soluzione non è possibile.
+Questa soluzione rende il più veloce possibile la conversione dei file ma i processori finiscono per scrivere sullo stesso file senza avere nessuna regola di precedenza, questo crea problemi perchè le scritture in output non sono ordinate e non è possibile creare modelli comportamentali affidabili. Le scritture su file devono essere ordinate e sequenziali, inoltre questa soluzione ha il problema di scrivere sempre su unico file e come detto in precedenza questo tipo di soluzione non è possibile.
 \end{verse}
 
 \begin{verse}
 \textbf{Meccanismi di lock}
-un modo per risolvere i problemi precedenti è quello di utilizzare il concetto di semaforo. 
-
+Un modo per risolvere i problemi precedenti è quello di utilizzare il concetto di semaforo. 
 In informatica un semaforo è un tipo di dato astratto gestito da un sistema operativo multitasking per sincronizzare l'accesso a risorse condivise tra processi. È composto da una variabile intera e da una coda di processi. Quando un processo apre il file per scriverci viene impostato un semaforo che segnala che la risorsa è occupata, se un altro processore prova ad aprire lo stesso file per scriverci gli sarà negato l'accesso dal semaforo fino a quando l'altro processo non rilascerà la risorsa.
-
-In questo modo si risolve il problema delle scritture ordinate, ma c'è da tener conto che i semafori riducono la velocità di esecuzione dell'algoritmo poichè mentre un processore occupa la risorsa tutti gli altri processori devono mettersi in coda per aspettarne il rilascio. Questa soluzione sebbene rallenti l'esecuzione del programma rispetto alla soluzione precedente è comunque molto più veloce della versione single core perchè si guadagna comunque molto tempo nella lettura e conversione dei dati che viene effettuata alla massima velocità possibile. Questa soluzione risolve anche il problema dell'ordinamento delle scritture.
-
+In questo modo si risolve il problema delle scritture ordinate, ma c'è da tener conto che i semafori riducono la velocità di esecuzione dell'algoritmo poichè mentre un processore occupa la risorsa tutti gli altri processori devono mettersi in coda per aspettarne il rilascio. Nonostante questa soluzione rallenti l'esecuzione del programma rispetto alla soluzione precedente è comunque molto più veloce della versione single core perchè, sebbene la scrittura su file sia rallentata dai semafori, si guadagna molto tempo nella lettura e conversione dei dati dove non ne è necessario l'utilizzo, e che quindi viene effettuata alla massima velocità possibile. Questa soluzione risolve anche il problema dell'ordinamento delle scritture.
 Rimane il problema della scrittura su un unico file che però può essere risolto facilmente decidendo di scrivere su un nuovo file quando raggiunge una dimensione specificata.
-
 Se si implementa la divisione del file di output questa soluzione può considerarsi efficiente anche se rimane il collo di bottiglia introdotto dai semafori che costringe i processi ad aspettare in coda quando una risorsa è impegnata.
 \end{verse}
 
 \begin{verse}
 \textbf{Scrittura su file 1:1}
-in questa soluzione ogni processore apre un file, lo legge. lo converte e scrive la conversione su un proprio file.
+In questa soluzione ogni processore apre un file, lo legge, lo converte e scrive su un proprio file.
 Questa soluzione è decisamente la più semplice tra quelle proposte ed è anche la più efficiente poichè i processori non entrano mai in conflitto tra di loro cosicchè da effettuare letture, conversioni e scritture alla massima velocità possibile dalla macchina.
 Un problema che può creare questa soluzione è la produzione di una grande quantità di file in output. Si pensi che una sola settimana di traffico di rete, sono circa 10 mila file.
 \end{verse}
@@ -232,6 +110,7 @@ Un problema che può creare questa soluzione è la produzione di una grande quan
 
 Si è scelto di procedere con l'ultima soluzione presentata perchè data la grande quantità di informazioni da convertire si preferisce l'approccio più veloce a discapito dell'ordinamento finale.
 
+Il programma, dato in input la root directory dei file, cerca ricorsivamente tutti i file e li inserisce in una coda, chiama poi una funzione a cui assegna 4 processori. La funzione ha un ciclo while che si ripete fino a quando la coda popolata da tutti i file non è vuota. Ogni processore che entra in questa funzione toglie un file dalla coda e lo elabora. \newline
 
 Pseudocodice del programma multi core
 \begin{algorithm}
@@ -253,9 +132,12 @@ Pseudocodice del programma multi core
 \end{algorithm}
 \end{document}
 
-\begin{center}
-\includegraphics[scale=0.5]{multicore}
-\end{center}
+La figura 4.1 descrive lo pseudocodice del programma parallelo. Ogni file da convertire è inserito in una coda a cui accedono i processori, ogni processore lavora individualmente sul proprio file da cui legge e converte i dati. La scrittura su file rimane indipendente perchè ogni processore lavora sul proprio file.
 
-Il programma, dato in input la root directory dei file, cerca ricorsivamente tutti i file e li inserisce in una coda, chiama poi una funzione a cui assegna 4 processori. La funzione ha un ciclo while che si ripete fino a quando la coda popolata da tutti i file non è vuota. Ogni processore che entra in questa funzione toglie un file dalla coda e lo elabora. \newline
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.22]{hydra.png}
+				\caption{Multi core version}
+\end{figure}
+
 

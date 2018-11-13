@@ -51,9 +51,16 @@ spyware.
 \newblock \url{https://searchsecurity.techtarget.com/definition/spyware}.
 \newblock Accessed: september 2016.
 
+\bibitem{stf}
+Stratospheretestingframework - github.
+
 \bibitem{TrojanDef}
 Tojan horse definition.
 \newblock \url{https://techterms.com/definition/trojanhorse}.
+
+\bibitem{virtualbox}
+Virtualbox.
+\newblock \url{https://www.virtualbox.org/}.
 
 \bibitem{TrojanPurpose}
 What is a trojan virus? - definition.

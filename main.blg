@@ -3,12 +3,17 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 27 of file references.bib
+I was expecting a `,' or a `}'---line 9 of file references.bib
+ :     
+ :     howpublished = {\url{https://github.com/stratosphereips/StratosphereTestingFramework#installation-and-dependencies}}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 37 of file references.bib
  : 
  : @misc{netflowDef,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 99 of file references.bib
+I was expecting a `,' or a `}'---line 109 of file references.bib
  : 
  : @book{idsBook,
 (Error may have been on previous line)
@@ -29,46 +34,48 @@ Warning--to sort, need author or key in pcap
 Warning--to sort, need author or key in netflowDef
 Warning--to sort, need author or key in nProbe
 Warning--to sort, need author or key in Argus
+Warning--to sort, need author or key in virtualbox
+Warning--to sort, need author or key in stf
 Warning--empty publisher in idsbook
-You've used 24 entries,
+You've used 26 entries,
             2118 wiz_defined-function locations,
-            608 strings with 6761 characters,
-and the built_in function-call counts, 4400 in all, are:
-= -- 423
-> -- 78
+            613 strings with 6854 characters,
+and the built_in function-call counts, 4707 in all, are:
+= -- 450
+> -- 80
 < -- 0
-+ -- 42
++ -- 44
 - -- 18
-* -- 162
-:= -- 627
-add.period$ -- 62
-call.type$ -- 24
-change.case$ -- 81
+* -- 172
+:= -- 658
+add.period$ -- 65
+call.type$ -- 26
+change.case$ -- 87
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 205
-empty$ -- 530
+cite$ -- 44
+duplicate$ -- 219
+empty$ -- 576
 format.name$ -- 18
-if$ -- 1024
+if$ -- 1101
 int.to.chr$ -- 0
-int.to.str$ -- 24
+int.to.str$ -- 26
 missing$ -- 14
-newline$ -- 112
+newline$ -- 119
 num.names$ -- 18
-pop$ -- 186
+pop$ -- 202
 preamble$ -- 1
-purify$ -- 57
+purify$ -- 61
 quote$ -- 0
-skip$ -- 157
+skip$ -- 175
 stack$ -- 0
-substring$ -- 120
-swap$ -- 22
+substring$ -- 130
+swap$ -- 24
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
-warning$ -- 16
+type$ -- 90
+warning$ -- 18
 while$ -- 18
-width$ -- 26
-write$ -- 213
-(There were 2 error messages)
+width$ -- 28
+write$ -- 225
+(There were 3 error messages)
