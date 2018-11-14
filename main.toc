@@ -47,6 +47,7 @@
 \contentsline {section}{\numberline {5.4}Utilizzo del programma stf\\}{51}{section.5.4}
 \contentsline {section}{\numberline {5.5}Prestazioni}{53}{section.5.5}
 \contentsline {subsection}{\numberline {5.5.1}Benchmark}{53}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Benchmark multi core}{54}{subsection.5.5.2}
-\contentsline {chapter}{\numberline {6}Conclusioni}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Prestazioni}{57}{section.6.1}
+\contentsline {subsection}{\numberline {5.5.2}Metrica delle prestazioni parallele}{54}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Modelli comportamentali}{57}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusioni}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Prestazioni}{59}{section.6.1}

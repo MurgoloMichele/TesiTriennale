@@ -137,55 +137,92 @@ Per visualizzare il behavioral model si utilizza il comando
 
 \section{Prestazioni}
 
-Come visto nel capitolo 4, il programma di conversione proposto è efficiente. In questa sezione vengono effettuati dei \textit{benchmark} per analizzare quanto è efficiente e studiare la scalabilità di una soluzione che prevede l'utilizzo di più CPU in parallelo.
+Come visto nel capitolo 4, il programma di conversione proposto è efficiente. In questa sezione vengono effettuati dei \textit{benchmark} per analizzarne le prestazioni e studiare la scalabilità di una soluzione che prevede l'utilizzo di più CPU in parallelo.
 
 \subsection{Benchmark}
 
-Per misurare la velocità del programma si è usato come dataset un intero mese di flows. La dimensione del dataset è di 4,4 Gb per un totale di 43200 file. Le misure sono state realizzate con il programma /usr/bin/time.
+Per misurare la velocità del programma si è usato come dataset 10 giorni di flows. La dimensione del dataset è di 1,7 Gb per un totale di 14400 file. Le misure sono state realizzate con il programma /usr/bin/time.
 
-Il primo benchmark è stato effettuato su una versione del programma in single core, ovvero che sfrutta la potenza di una sola CPU. I risultati vengono riportati a seguire.
+Il computer su cui sono stati effettuati i benchmark ha le seguenti caratteristiche:
+\begin{itemize}
+				\item Linux Mint 19 Cinnamon
+				\item Kernel 4.15.0-20-generic
+				\item Processore Intel Core i7-3770 @ 3.40GHz 
+				\item RAM 8 Gb
+				\item HDD 2 Tb
+				\item AMD HD7870
+\end{itemize}
 
-Come si è visto nel capitolo 4, utilizzare una sola CPU oltre a essere estremamente inefficiente, crea anche un file unico in cui vengono salvati tutti i file. La dimensione di questo file è !*!*!
-È possibile risolvere il problema della grandezza del file utilizzando un approccio 1:1, cioè di creare un file in output per ogni file in input, ma siccome stiamo utilizzando una sola CPU questo approccia allunga significativamente i tempi di conversione in quanto per ogni file deve essere chiamata una funzione di sistema per la scrittura su file che è la più pesante. Scrivendo solo su un file la chiamata di sistema viene invocata solamente una volta.
-\begin{enumerate}
-				\item 2:28:03 98\%CPU
-				\item 2:27:98 98\%CPU
-				\item 2:28:86 98\%CPU
-				\item 2:28:97 95\%CPU
-				\item 2:24:52 99\%CPU
-				\item 2:34:21 94\%CPU
-				\item 2:28:36 98\%CPU
-				\item 2:35:02 93\%CPU
-				\item 2:25:59 99\%CPU
-				\item 2:28:75 96\%CPU
-\end{enumerate}
+È stato effettuato un benchmark per ogni core disponibile sulla CPU, a seguire i risultati:
+\begin{itemize}
+				\item 1 core: 11.35.46
+				\item 2 core: 6.02.65
+				\item 3 core: 4.12.62
+				\item 4 core: 3.09.79
+				\item 5 core: 3.04.47
+				\item 6 core: 3.04.66
+				\item 7 core: 2.59.22
+				\item 8 core: 2.59.33
+\end{itemize}
 
-La media calcolata è quindi di \textbf{2:28:38 97\%CPU}
+La CPU su cui sono stati effettuati i benchmark ha 4 core fisici e 4 virtuali, si ha quindi un guadagno lineare per i primi 4 core, dopodichè il guadagno non è più lineare.
 
-
-\subsection{Benchmark multi core}
-
-Sono stati effettuati 10 test in entrambe le modalità. I risultati vengono riportati a seguire.
-Tutti i benchmark sono stati effettuati con \textit{/usr/bin/time}
-
-\begin{enumerate}
-				\item 0:54:82 265\%CPU
-				\item 0:36:13 375\%CPU
-				\item 0:38:24 367\%CPU
-				\item 0:40:25 377\%CPU
-				\item 0:40:14 368\%CPU
-				\item 0:44:28 351\%CPU
-				\item 0:41:67 368\%CPU
-				\item 0:40:72 383\%CPU
-				\item 0:40:83 381\%CPU
-				\item 0:41:19 382\%CPU
-\end{enumerate}
-La media calcolata è quindi di \textbf{0:41:83 362\%CPU}
+L'immagine seguente ha sull'asse delle $x$ il numero di core e sull'asse delle $y$ il tempo impiegato per convertire 14400 file. Come si può vedere il tempo impiegato scende in modo quasi lineare per i primi quattro core.
 
 \begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.3]{graph1.png}
-				\caption{prestazioni}
+				\includegraphics[scale=0.7]{graph1.png}
+				\caption{Tempo impiegato per la conversione rispetto al numero di core}
 \end{figure}
 
+\subsection{Metrica delle prestazioni parallele}
+
+Sia $T$(p) il tempo di esecuzione in secondi di un certo algoritmo su $p$ processori. Di conseguenza sia $T$(1) il tempo di esecuzione del codice parallelo su 1 processore.
+La \textit{misura di scalabilità} o \textit{speedup} relativo di un algoritmo parallelo eseguito su \textit{p} processori si calcola come:
+
+\begin{center}
+\begin{math}
+S(p) = \frac{T(1)}{T(p)}
+\end{math}
+\end{center}
+
+In un sistema ideale, in cui il carico di lavoro potrebbe essere perfettamente partizionato su $p$ processori, lo speedup relativo dovrebbe essere uguale a $p$. In questo caso si parla di speedup lineare.
+
+Con i risultati ottenuti in precedenza si è calcolato lo speedup per ogni numero di core. La figura seguente mostra lo speedup relativo per numero di core. È possibile notare come lo speedup sia lineare per i primi quattro core e quindi ottimale, mentre aggiungendo più core si ha comunque un guadagno ma minimo.
+
+!*!*!*! Devo mostrare le formule per ogni numero o lascio solo il grafico !*!*!*!
+
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.7]{graph2.png}
+				\caption{Speedup relativo per ogni core}
+\end{figure}
+
+Si definisce \textit{efficienza} il rapporto
+\begin{center}
+\begin{math}
+E(p) = \frac{S(p)}{p}
+\end{math}
+\end{center}
+
+Idealmente, se l'algoritmo avesse uno speedup lineare, si avrebbe 
+\begin{math}
+E(p) = 1
+\end{math}
+
+Più l'efficienza si allontana da 1, peggio stiamo sfruttando le risorse di calcolo disponibili nel sistema parallelo.
+
+La figura seguente mostra l'efficienza del programma di conversione. Usando quattro core si ha un'efficienza leggermente maggiore di 0.9 mentre con l'aggiunta di altri core in questo grafico si può notare chiaramente come l'efficienza cali.
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.7]{graph3.png}
+				\caption{Efficienza per numero di core}
+\end{figure}
+
+La conversione in parallelo risulta molto efficiente, intorno allo 0.9. Con gli esperimenti effettuati ci si aspetta uno speedup lineare sui core fisici.
+Utilizzando un solo core la conversione impiega 12 minuti, mentre con quattro core si divide in quattro il tempo arrivando a 3 minuti. Le CPU di nuova generazione come AMD Ryzen vantano 32 core fisici e 32 virtuali, con questo numero di core fisici ci si può aspettare di dividere il tempo per 32, arrivando ad effettuare la conversione in 23 secondi.
+
+\section{Modelli comportamentali}
+
 \end{document}
+
