@@ -3,22 +3,23 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 9 of file references.bib
+I was expecting a `,' or a `}'---line 64 of file references.bib
  :     
  :     howpublished = {\url{https://github.com/stratosphereips/StratosphereTestingFramework#installation-and-dependencies}}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 37 of file references.bib
+I was expecting a `,' or a `}'---line 92 of file references.bib
  : 
  : @misc{netflowDef,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 109 of file references.bib
+I was expecting a `,' or a `}'---line 164 of file references.bib
  : 
  : @book{idsBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Stratosphere"
+Warning--to sort, need author or key in bigdata
 Warning--to sort, need author or key in MalwareDef
 Warning--to sort, need author or key in VirusDef
 Warning--to sort, need author or key in Spyware2
@@ -29,53 +30,63 @@ Warning--to sort, need author or key in ScopoMalware
 Warning--to sort, need author or key in MalwareRevolution
 Warning--to sort, need author or key in Botnet
 Warning--to sort, need author or key in phishingdef
+Warning--to sort, need author or key in tesla
+Warning--to sort, need author or key in spamemail
+Warning--to sort, need author or key in ocr
+Warning--to sort, need author or key in googlehome
+Warning--to sort, need author or key in amazonalexa
+Warning--to sort, need author or key in applehomepod
+Warning--to sort, need author or key in facialrecognition
 Warning--to sort, need author or key in auditTrail
 Warning--to sort, need author or key in pcap
 Warning--to sort, need author or key in netflowDef
-Warning--to sort, need author or key in nProbe
+Warning--to sort, need author or key in solarwinds
 Warning--to sort, need author or key in Argus
+Warning--to sort, need author or key in nProbe
 Warning--to sort, need author or key in virtualbox
 Warning--to sort, need author or key in stf
+Warning--to sort, need author or key in octave
+Warning--to sort, need author or key in slips
 Warning--empty publisher in idsbook
-You've used 26 entries,
+You've used 37 entries,
             2118 wiz_defined-function locations,
-            613 strings with 6854 characters,
-and the built_in function-call counts, 4707 in all, are:
-= -- 450
-> -- 80
+            646 strings with 8435 characters,
+and the built_in function-call counts, 6456 in all, are:
+= -- 615
+> -- 91
 < -- 0
-+ -- 44
++ -- 55
 - -- 18
-* -- 172
-:= -- 658
-add.period$ -- 65
-call.type$ -- 26
-change.case$ -- 87
+* -- 227
+:= -- 845
+add.period$ -- 87
+call.type$ -- 37
+change.case$ -- 120
 chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 219
-empty$ -- 576
+cite$ -- 66
+duplicate$ -- 296
+empty$ -- 829
 format.name$ -- 18
-if$ -- 1101
+if$ -- 1541
 int.to.chr$ -- 0
-int.to.str$ -- 26
+int.to.str$ -- 37
 missing$ -- 14
-newline$ -- 119
+newline$ -- 163
 num.names$ -- 18
-pop$ -- 202
+pop$ -- 290
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 83
 quote$ -- 0
-skip$ -- 175
+skip$ -- 263
 stack$ -- 0
-substring$ -- 130
-swap$ -- 24
+substring$ -- 185
+swap$ -- 35
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 90
-warning$ -- 18
+type$ -- 134
+warning$ -- 29
 while$ -- 18
-width$ -- 28
-write$ -- 225
+width$ -- 39
+write$ -- 302
 (There were 3 error messages)

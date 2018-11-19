@@ -55,7 +55,7 @@ I componenti di una botnet sono i seguenti:
 Nella figura seguente viene rappresentato una possibile architettura di una botnet. Il master è il computer che controlla in modo remoto i computer zombie attraverso dei server C\&C.
 \begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.5]{botnet.png}
+				\includegraphics[scale=0.4]{botnet.png}
 				\caption{Esempio architettura botnet}
 \end{figure}
 
@@ -112,6 +112,21 @@ I sistemi di rilevamento delle intrusioni sono gli "allarmi antifurto" del campo
 Un IDPS è un dispositivo software o hardware utilizzato per identificare intrusioni a computer o reti locali.
 Ci sono varie classi di intrusione che vanno rilevate: si possono verificare situazioni in cui un utente ruba una password, utenti legittimi che abusano dei loro privilegi o hacker che usano script trovati in rete per attaccare il sistema. Le intrusioni sono varie e non è possibile elencarle tutte.
 
+\subsection{Tipi di IDPS}
+Gli IDPS possono essere di due tipi in base al target su cui vengono applicati: possono essere basati su rete o su host.
+\begin{verse}
+				\textbf{Network-Based IDPS} Un IDPS basato sulla rete, detto NIDPS, è installato su un computer o dispositivo collegato ad un segmento della rete e ne monitora il traffico alla ricerca di indicazioni di attacchi. Un IDPS basato su rete può rilevare molti più attacchi rispetto ad un IDPS basato su host, ma richiede una configurazione e manutenzione più complessa. 
+\end{verse}
+\begin{verse}
+				\textbf{Host-Based IDPS} Un IDPS basato su host, detto HIDPS, risiede su un particolare computer o server e monitora l'attività solo su quel sistema.
+\end{verse}
+
+Due sottotipi di IDPS basati su rete sono \cite{IPS}:
+\begin{itemize}
+				\item \textbf{wireless IDPS}, si concentra sulle reti wireless
+				\item \textbf{network behavior analysis}, analizza i flow di traffico sulla rete nel tentativo di riconoscere dei modelli comportamentali anomali
+\end{itemize}
+
 Un IDPS è composto da quattro componenti \cite{idsbook}:
 
 \begin{itemize}
@@ -154,24 +169,6 @@ Dispositivi di tipo IDPS sono utili per le difese di sistemi informatici per mol
 
 Il miglior motivo per installare un IDPS è per la loro funzione di deterrente. Se gli utenti esterni e interni sanno che un'organizzazione ha un sistema di rilevamento e prevenzione delle intrusioni sono meno propensi a sondare o tentare di comprometterla \cite{IPS}.
 
-\subsection{Tipi di IDPS}
-Gli IDPS possono essere di due tipi in base al target su cui vengono applicati: possono essere basati su rete o su host. Un IDPS basato su rete è focalizzato sulla protezione delle risore di rete. Due sottotipi di IDPS basati su rete sono \cite{IPS}:
-
-\begin{itemize}
-				\item \textbf{wireless IDPS}, si concentra sulle reti wireless
-				\item \textbf{network behavior analysis}, analizza i flow di traffico sulla rete nel tentativo di riconoscere dei modelli comportamentali anomali
-\end{itemize}
-
-Gli IDPS basati su host sono focalizzate sulla protezione dei server o dei singoli host.
-
-\begin{verse}
-				\textbf{Network-Based IDPS} Un IDPS basato sulla rete, detto NIDPS, è installato su un computer o dispositivo collegato ad un segmento della rete e ne monitora il traffico alla ricerca di indicazioni di attacchi. Un IDPS basato su rete può rilevare molti più attacchi rispetto ad un IDPS basato su host, ma richiede una configurazione e manutenzione più complessa. 
-\end{verse}
-
-\begin{verse}
-				\textbf{Host-Based IDPS} Un IDPS basato su host, detto HIDPS, risiede su un particolare computer o server e monitora l'attività solo su quel sistema.
-\end{verse}
-
 \subsection{Metodi di rilevamento}
 
 Gli IDPS utilizzano vari metodi di rilevamento per monitorare e valutare il traffico di rete. I metodi principali sono \cite{IDS}:
@@ -189,27 +186,43 @@ Gli IDPS utilizzano vari metodi di rilevamento per monitorare e valutare il traf
 \end{verse}
 
 \section{Machine learning}
-Il machine learning, tradotto in italiano come apprendimento automatico, rappresenta uno degli sviluppi più prolifici dell'intelligenza artificiale moderna \cite{compIntelligence}. L'enfasi dell'apprendimento automatico è sulla capacità del sistema di adattarsi o cambiare, in genere in risposta a qualche forma di esperienza fornita al sistema. Dopo l'apprendimento ci si aspetta che il sistema migliori le prestazioni future sullo stesso compito o lavori simili. 
+Il machine learning, tradotto in italiano come apprendimento automatico, rappresenta uno degli sviluppi più prolifici dell'intelligenza artificiale moderna \cite{compIntelligence}. L'enfasi del machine learning è sulla capacità del sistema di adattarsi o cambiare, in genere in risposta a qualche forma di esperienza fornita al sistema. Dopo l'apprendimento ci si aspetta che il sistema migliori le prestazioni future sullo stesso compito o lavori simili. 
 
-Negli ultimi anni l'apprendimento automatico ha preso sempre più piede ed è ormai utilizzato quasi ovunque \cite{compIntelligence}. Alcuni esempi di applicazioni di machine learning nel mondo reale sono il controllo di robot autonomi in grado di navigare da soli, si pensi alle macchine con pilota automatico che stanno entrando in commercio negli ultimi anni come la Tesla di Elon Musk; il filtro dello spam nelle email, il riconoscimento della calligrafia impiegato da software OCR, il riconoscimento vocale degli assistenti presenti su dispositivi come Google Home, Amazon Alexa o Apple HomePod; il rilevamento dei volti nelle fotocamere digitali e così via.
+Negli ultimi anni il machine learning ha preso sempre più piede ed è ormai utilizzato quasi ovunque \cite{compIntelligence}. Alcuni esempi di applicazioni di machine learning nel mondo reale sono il controllo di robot autonomi in grado di navigare da soli, si pensi alle macchine con pilota automatico che stanno entrando in commercio negli ultimi anni come la Tesla di Elon Musk \cite{tesla}; il filtro dello spam nelle email \cite{spamemail}, il riconoscimento della calligrafia impiegato da software \textit{Optical Character Recognition} \cite{ocr}, il riconoscimento vocale degli assistenti presenti su dispositivi come Google Home \cite{googlehome}, Amazon Alexa \cite{amazonalexa} o Apple HomePod \cite{applehomepod}; il rilevamento dei volti nelle fotocamere digitali \cite{facialrecognition} e così via.
 Per problemi come il riconoscimento vocale gli algoritmi basati sul machine learning superano tutti gli approcci che sono stati tentati fino ad oggi \cite{mldef}.
 
+In un contesto di machine learning si dice feature un dato in input che rappresenta una proprietà osservabile. Dalle feature, attraverso un paradigma di apprendimento, viene creato un modello. Si dice label un dato in output che corrisponde ad una feature in input. In base alla gestione delle features e delle labels si hanno differenti paradigmi di apprendimento.
 
 Generalmente esistono tre paradigmi di apprendimento \cite{ai}.
-
 \begin{verse}
-				\textbf{Apprendimento supervisionato} Al computer vengono forniti una serie di input insieme ai corrispondenti output desiderati. Si vuole trovare quella funzione che dato un input non conosciuto calcola l'output. L'obiettivo è quello di fare una previsione basata su proprietà conosciute apprese dai dati in input.
+				\textbf{Supervised learning} Al computer vengono forniti una serie di features insieme alle corrispondenti label. Si vuole trovare quella funzione che dato una feature non conosciuta calcola la corrispettiva label. L'obiettivo è quello di fare una previsione basata su proprietà conosciute apprese dai dati in input.
 \end{verse}
 
 \begin{verse}
-				\textbf{Apprendimento non supervisionato} Vengono forniti esempi che consistono di soli input, ma non viene fornito alcun valore di output. L'obiettivo è scoprire nuove proprietà nei dati forniti in input attraverso l'ottimizzazione di un principio di apprendimento.
+				\textbf{Unsupervised learning} Vengono forniti dei samples che consistono di sole features, ma non viene fornita alcun label. L'obiettivo è scoprire nuove proprietà nei dati forniti in input attraverso l'ottimizzazione di un principio di apprendimento.
 \end{verse}
 
 \begin{verse}
-				\textbf{Apprendimento per rinforzo} Osservando l'ambiente corrente e ottenendo qualche input, il computer compie un'azione che cambia l'ambiente, riceve poi una valutazione positiva o negativa sull'azione compiuta. L'obiettivo è compiere una serie di azioni tali da massimizzare la valutazione ricevuta.
+				\textbf{Reinforced learning} Osservando l'ambiente corrente e ottenendo qualche features, il computer compie un'azione che cambia l'ambiente, riceve poi una valutazione positiva o negativa sull'azione compiuta. L'obiettivo è compiere una serie di azioni tali da massimizzare la valutazione ricevuta.
 \end{verse}
 
-\subsection{Apprendimento supervisionato}
+\subsection{Reinforced learning}
+A differenza dell'unsupervised learning, il reinforced learning viene indirizzato dalla valutazione esterna. Inoltre a differenza del supervised learning in cui viene specificato l'output corrispondente ad un input, nel reinforced learning viene fornita solo una valutazione sull'azione compiuta.
+
+In aggiunta, questo tipo di apprendimento è caratterizzato da un processo dinamico in fasi discrete: ad ogni passo, osservando l'ambiente circostante e ottenendo qualche input, il computer compie un'azione e si sposta in un nuovo stato, venendo premiato o punito in base all'azione effettuata \cite{compIntelligence}.
+
+\subsubsection{Processo decisionale di Markov}
+Il reinforced learning è strettamente correlato con il processo decisionale di Markov \cite{compIntelligence}, che consiste in una serie di stati $s _ { 0 } , s _ { 1 } , \ldots , s _ { t } , s _ { t + 1 } , \ldots$. Allo stato ${ s } _ { t }$, un'azione $a _ { t } = \pi \left( s _ { t } \right)$ è selezionata da un insieme $A$ di azioni intraprese in funzione dello stato $\pi$, che fa muovere l'ambiente per raggiungere lo stato successivo $s _ { t  + 1}$ e la valutazione $v _ {t + 1}$ associata con la transizione $\left( s _ { t } , a _ { t } , s _ { t + 1 } \right)$ viene assegnata. L'obiettivo è ottenere la valutazione più alta possibile, cioè di massimizzare 
+
+\begin{center}
+				\begin{math}
+								R = \sum _ { t = 0 } ^ { N - 1 } r _ { t + 1 }
+				\end{math}
+\end{center}
+
+con $N$ istante di tempo in cui lo stato finale è raggiunto.
+
+\subsection{Supervised learning}
 Al computer supervisionato vengono forniti dei dati chiamati \textit{training data}. Questi dati sono dei campioni, ognuno dei quali consiste in un input insieme all'output desiderato.
 
 In base al valore di output si distinguono due diversi problemi:
@@ -219,27 +232,53 @@ In base al valore di output si distinguono due diversi problemi:
 				\item \textbf{Regressione} Se il valore dell'output è un valore reale continuo in un determinato range.
 \end{itemize}
 
-In entrambi i problemi si vuole trovare una funzione \textit{h}, che dato un input non conosciuto stima il valore dell'output. L'obiettivo dei problemi di apprendimento supervisionato è quello di fare una predizione basata su proprietà conosciute apprese dai dai in input.
+In entrambi i problemi si vuole trovare una funzione \textit{h}, che dato un input non conosciuto stima il valore dell'output. L'obiettivo dei problemi di supervised learning è quello di fare una predizione basata su proprietà conosciute apprese dai dai in input.
 
-La figura seguente descrive un problema di apprendimento supervisionato, dove l'algoritmo di apprendimento automatico prende in input un insieme di esempi da cui impara una funzione che gli permette di fare previsioni.
+La figura seguente descrive un problema di supervised learning, dove l'algoritmo di machine learning prende in input un insieme di esempi da cui impara una funzione che gli permette di fare previsioni.
 
 \begin{figure}[H]
 				\centering
 				\includegraphics[scale=0.5]{apprendimentosupervisionato.png}
-				\caption{Apprendimento supervisionato}
+				\caption{Supervised learning}
 \end{figure}
 
-\subsection{Apprendimento non supervisionato}
-In questa categoria vengono forniti esempi con relative feature in input, ma non viene fornito alcun valore di output, quindi si hanno a disposizione dati non etichettati. L'obiettivo di questi algoritmi è quello di trovare delle strutture all'interno di questi dati non etichettati. Se si vogliono identificare dei raggruppamenti di elementi simili, è un problema di Clustering.
+\subsubsection{Modelli probabilistici}
+I metodi probabilistici sono fondamentali per il machine learning \cite{compIntelligence}.
+
+\subsubsection{Modelli di Markov}
+Le serie temporali e, più in generale le sequenze, sono una forma di dati strutturati che rappresenta un elenco di osservazioni per le quali è possibile definire un ordine completo, come ad esempio il tempo in una sequenza temporale.
+
+Sia una sequenza di lunghezza $T$, $ { y } _ { n } = y _ { 1 } , \dots , y _ { T }$. Il termine ${y} _ {t}$ indica l'osservazione $t$-esima rispetto all'ordine totale. Siccome gli elementi che compongono la sequenza non sono indipendenti e identicamente distribuiti, la distribuzione congiunta di un modello probabilistico per $y$ è $P \left( Y _ { 1 } , \ldots , Y _ { T } \right)$.
+
+Per osservazioni ${y} _ {t}$ a valore discreto la distribuzione congiunta cresce esponenzialmente con le dimensioni del dominio di osservazione. Per ridurre la parametrizzazione si usano le \textit{Catene di Markov}. Le Catene di Markov semplificano assumendo che un'osservazione che si verifica in una posizione $t$ della sequenza dipende solo da un numero limitato di predecessori rispetto all'ordine completo.
+Ciò significa che in una serie temporale un'osservazione al tempo presente tiene conto soltanto di un numero limitato di osservazioni del passato.
+
+Le Catene di Markov stanno alla base dei \textit{Modelli di Markov nascosti} (HMM).
+
+\subsubsection{Catena di Markov}
+Una Catena di Markov è un processo stocastico per sequenze. Presuppone che un'osservazione ${y} _ {t}$ a tempo $t$ dipenda solo da un insieme finito di predecessori $L \geq 1$. Il numero di predecessori $L$ che influenzano la nuova osservazione è detto ordine della Catena di Markov.
+
+Una catena di Markov di ordine $L$ è una sequenza di variabili casuali $\mathbf { Y } = Y _ { 1 } , \ldots , Y _ { T }$ tali che $\forall t \in \{ 1 , \ldots , T \}$
+
+\begin{center}
+				\begin{math}
+								P \left( Y _ { t } = y _ { t } | Y _ { 1 } , \ldots , Y _ { t - 1 } , Y _ { t + 1 } , \ldots , Y _ { T } \right) = P \left( Y _ { t } = y _ { t } | Y _ { t - L } , \ldots , Y _ { t - 1 } \right)
+				\end{math}
+\end{center}
+
+\subsubsection{Modelli di Markov nascosti}
+Le Catene di Markov modellano i dati sequenziali assumendo che gli elementi della sequenza siano generati da un processo stocastico completamente osservabile. Nella maggior parte dei sistemi reali l'unica informazione disponibile può essere il risultato del processo stocastico ad ogni osservazione ${y} _ {t}$ mentre lo stato del sistema rimane nascosto. 
+
+\subsection{Unsupervised learning}
+In questa categoria vengono forniti dei samples con relative feature in input, ma non viene fornito alcun valore di output, quindi si hanno a disposizione dati non etichettati. L'obiettivo di questi algoritmi è quello di trovare delle strutture all'interno di questi dati non etichettati. Se si vogliono identificare dei raggruppamenti di elementi simili, è un problema di Clustering.
 
 
 \begin{verse}
-				\textbf{Clustering} È un tipico esempio di apprendimento non supervisionato in cui, dato un insieme di dati non etichettati, l'obiettivo è quello di individuare dei raggruppamenti, detti cluster, quanto più possibile coerenti.
+				\textbf{Clustering} È un tipico esempio di unsupervised learning in cui, dato un insieme di features senza labels, l'obiettivo è quello di individuare dei raggruppamenti, detti cluster, quanto più possibile coerenti. Viene ora descritto un esempio di algoritmo di Clustering, l'algoritmo K-Means.
 \end{verse}	
 
 \subsubsection{K-Means}
-L'algoritmo K-Means è l'algoritmo di clustering più conosciuto e più utilizzato. Permette di suddividere un insieme di oggetti in $K$ gruppi sulla base dei loro attributi.
-
+L'algoritmo K-Means è uno degli algoritmi di clustering più conosciuti e più utilizzati. Permette di suddividere un insieme di oggetti in $K$ gruppi sulla base dei loro attributi.
 Si assume che gli attributi degli oggetti possano essere rappresentati come vettori, e che quindi formino uno spazio vettoriale. Dal \textit{dataset} fornito vengono inizializzati $n$ punti detti centroidi per ogni cluster che è necessario identificare.
 
 Nell'esempio in figura vengono inizializzati due centroidi con una croce rossa e blu.
@@ -276,48 +315,6 @@ L'algoritmo continua a ripetere questi due passi fino a quando i centroidi non s
 				\caption{Algoritmo k-means - Convergenza}
 \end{figure}
 
-\subsection{Apprendimento per rinforzo}
-A differenza dell'apprendimento non supervisionato l'apprendimento per rinforzo viene indirizzato dalla valutazione esterna. Inoltre a differenza dell'apprendimento supervisionato in cui viene specificato l'output corrispondente ad un input, nell'apprendimento per rinforzo viene fornita solo una valutazione sull'azione compiuta.
-
-In aggiunta, questo tipo di apprendimento è caratterizzato da un processo dinamico in fasi discrete: ad ogni passo, osservando l'ambiente circostante e ottenendo qualche input, il computer compie un'azione e si sposta in un nuovo stato, venendo premiato o punito in base all'azione effettuata \cite{compIntelligence}.
-
-\subsubsection{Processo decisionale di Markov}
-L'apprendimento per rinforzo è strettamente correlato con il processo decisionale di Markov \cite{compIntelligence}, che consiste in una serie di stati $s _ { 0 } , s _ { 1 } , \ldots , s _ { t } , s _ { t + 1 } , \ldots$. Allo stato ${ s } _ { t }$, un'azione $a _ { t } = \pi \left( s _ { t } \right)$ è selezionata da un insieme $A$ di azioni intraprese in funzione dello stato $\pi$, che fa muovere l'ambiente per raggiungere lo stato successivo $s _ { t  + 1}$ e la valutazione $v _ {t + 1}$ associata con la transizione $\left( s _ { t } , a _ { t } , s _ { t + 1 } \right)$ viene assegnata. L'obiettivo è ottenere la valutazione più alta possibile, cioè di massimizzare 
-
-\begin{center}
-				\begin{math}
-								R = \sum _ { t = 0 } ^ { N - 1 } r _ { t + 1 }
-				\end{math}
-\end{center}
-
-con $N$ istante di tempo in cui lo stato finale è raggiunto.
-
-\subsection{Modelli probabilistici}
-I metodi probabilistici sono fondamentali per l'apprendimento automatico \cite{compIntelligence}.
-
-\subsubsection{Modelli di Markov}
-Le serie temporali e, più in generale le sequenze, sono una forma di dati strutturati che rappresenta un elenco di osservazioni per le quali è possibile definire un ordine completo, come ad esempio il tempo in una sequenza temporale.
-
-Sia una sequenza di lunghezza $T$, $ { y } _ { n } = y _ { 1 } , \dots , y _ { T }$. Il termine ${y} _ {t}$ indica l'osservazione $t$-esima rispetto all'ordine totale. Siccome gli elementi che compongono la sequenza non sono indipendenti e identicamente distribuiti, la distribuzione congiunta di un modello probabilistico per $y$ è $P \left( Y _ { 1 } , \ldots , Y _ { T } \right)$.
-
-Per osservazioni ${y} _ {t}$ a valore discreto la distribuzione congiunta cresce esponenzialmente con le dimensioni del dominio di osservazione. Per ridurre la parametrizzazione si usano le \textit{Catene di Markov}. Le Catene di Markov semplificano assumendo che un'osservazione che si verifica in una posizione $t$ della sequenza dipende solo da un numero limitato di predecessori rispetto all'ordine completo.
-Ciò significa che in una serie temporale un'osservazione al tempo presente tiene conto soltanto di un numero limitato di osservazioni del passato.
-
-Le Catene di Markov stanno alla base dei \textit{Modelli di Markov nascosti} (HMM).
-
-\subsubsection{Catena di Markov}
-Una Catena di Markov è un processo stocastico per sequenze. Presuppone che un'osservazione ${y} _ {t}$ a tempo $t$ dipenda solo da un insieme finito di predecessori $L \geq 1$. Il numero di predecessori $L$ che influenzano la nuova osservazione è detto ordine della Catena di Markov.
-
-Una catena di Markov di ordine $L$ è una sequenza di variabili casuali $\mathbf { Y } = Y _ { 1 } , \ldots , Y _ { T }$ tali che $\forall t \in \{ 1 , \ldots , T \}$
-
-\begin{center}
-				\begin{math}
-								P \left( Y _ { t } = y _ { t } | Y _ { 1 } , \ldots , Y _ { t - 1 } , Y _ { t + 1 } , \ldots , Y _ { T } \right) = P \left( Y _ { t } = y _ { t } | Y _ { t - L } , \ldots , Y _ { t - 1 } \right)
-				\end{math}
-\end{center}
-
-\subsubsection{Modelli di Markov nascosti}
-Le Catene di Markov modellano i dati sequenziali assumendo che gli elementi della sequenza siano generati da un processo stocastico completamente osservabile. Nella maggior parte dei sistemi reali l'unica informazione disponibile può essere il risultato del processo stocastico ad ogni osservazione ${y} _ {t}$ mentre lo stato del sistema rimane nascosto. 
 
 
 \end{document}

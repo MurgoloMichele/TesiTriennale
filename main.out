@@ -4,42 +4,40 @@
 \BOOKMARK [1][-]{section.2.2}{Botnet}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Botnet Detection}{chapter.2}% 5
 \BOOKMARK [1][-]{section.2.4}{Intrusion Detection and Prevention System}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.4.1}{Perch\350 usare IDPS}{section.2.4}% 7
-\BOOKMARK [2][-]{subsection.2.4.2}{Tipi di IDPS}{section.2.4}% 8
+\BOOKMARK [2][-]{subsection.2.4.1}{Tipi di IDPS}{section.2.4}% 7
+\BOOKMARK [2][-]{subsection.2.4.2}{Perch\350 usare IDPS}{section.2.4}% 8
 \BOOKMARK [2][-]{subsection.2.4.3}{Metodi di rilevamento}{section.2.4}% 9
 \BOOKMARK [1][-]{section.2.5}{Machine learning}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.5.1}{Apprendimento supervisionato}{section.2.5}% 11
-\BOOKMARK [2][-]{subsection.2.5.2}{Apprendimento non supervisionato}{section.2.5}% 12
-\BOOKMARK [2][-]{subsection.2.5.3}{Apprendimento per rinforzo}{section.2.5}% 13
-\BOOKMARK [2][-]{subsection.2.5.4}{Modelli probabilistici}{section.2.5}% 14
-\BOOKMARK [0][-]{chapter.3}{Analisi del problema}{}% 15
-\BOOKMARK [1][-]{section.3.1}{Analisi traffico di rete}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.1.1}{Network Flow}{section.3.1}% 17
-\BOOKMARK [2][-]{subsection.3.1.2}{Packet Capture}{section.3.1}% 18
-\BOOKMARK [2][-]{subsection.3.1.3}{NetFlow}{section.3.1}% 19
-\BOOKMARK [1][-]{section.3.2}{Strumenti di monitoraggio e analisi del traffico di rete}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.2.1}{Audit Record Generation and Utilization System}{section.3.2}% 21
-\BOOKMARK [2][-]{subsection.3.2.2}{nProbe}{section.3.2}% 22
-\BOOKMARK [2][-]{subsection.3.2.3}{Confronto tra i network flow}{section.3.2}% 23
-\BOOKMARK [1][-]{section.3.3}{Stratosphere IPS}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.3.1}{Architettura}{section.3.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.2}{Modelli comportamentali}{section.3.3}% 26
-\BOOKMARK [1][-]{section.3.4}{Problematiche dovute all'utilizzo di due diversi formati}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.5}{Presentazione del problema}{chapter.3}% 28
-\BOOKMARK [0][-]{chapter.4}{Soluzione proposta}{}% 29
-\BOOKMARK [1][-]{section.4.1}{Conversione}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.2}{Automatizzazione conversione}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.3}{Rendere efficiente la conversione}{chapter.4}% 32
-\BOOKMARK [2][-]{subsection.4.3.1}{Possibili soluzioni}{section.4.3}% 33
-\BOOKMARK [2][-]{subsection.4.3.2}{Scelta effettuata}{section.4.3}% 34
-\BOOKMARK [0][-]{chapter.5}{Esperimenti e risultati}{}% 35
-\BOOKMARK [1][-]{section.5.1}{Software utilizzati}{chapter.5}% 36
-\BOOKMARK [1][-]{section.5.2}{Installazione Stratosphere IPS}{chapter.5}% 37
-\BOOKMARK [1][-]{section.5.3}{Installazione di Argus}{chapter.5}% 38
-\BOOKMARK [1][-]{section.5.4}{Utilizzo del programma stf}{chapter.5}% 39
-\BOOKMARK [1][-]{section.5.5}{Prestazioni}{chapter.5}% 40
-\BOOKMARK [2][-]{subsection.5.5.1}{Benchmark}{section.5.5}% 41
-\BOOKMARK [2][-]{subsection.5.5.2}{Metrica delle prestazioni parallele}{section.5.5}% 42
-\BOOKMARK [1][-]{section.5.6}{Modelli comportamentali}{chapter.5}% 43
-\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 44
-\BOOKMARK [1][-]{section.6.1}{Prestazioni}{chapter.6}% 45
+\BOOKMARK [2][-]{subsection.2.5.1}{Reinforced learning}{section.2.5}% 11
+\BOOKMARK [2][-]{subsection.2.5.2}{Supervised learning}{section.2.5}% 12
+\BOOKMARK [2][-]{subsection.2.5.3}{Unsupervised learning}{section.2.5}% 13
+\BOOKMARK [0][-]{chapter.3}{Analisi del problema}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Analisi traffico di rete}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{Packet Capture}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.2}{Network Flow}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{Strumenti di monitoraggio e analisi del traffico di rete}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Audit Record Generation and Utilization System}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{nProbe}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.3}{Confronto tra i network flow}{section.3.2}% 21
+\BOOKMARK [1][-]{section.3.3}{Stratosphere}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.1}{IPS}{section.3.3}% 23
+\BOOKMARK [2][-]{subsection.3.3.2}{Stratosphere Testing Framework}{section.3.3}% 24
+\BOOKMARK [1][-]{section.3.4}{Problematiche dovute all'utilizzo di due diversi formati}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.5}{Presentazione del problema}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{Soluzione proposta}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Conversione}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Automatizzazione conversione}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Rendere efficiente la conversione}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.3.1}{Possibili soluzioni}{section.4.3}% 31
+\BOOKMARK [2][-]{subsection.4.3.2}{Scelta effettuata}{section.4.3}% 32
+\BOOKMARK [0][-]{chapter.5}{Esperimenti e risultati}{}% 33
+\BOOKMARK [1][-]{section.5.1}{Software utilizzati}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.2}{Installazione Stratosphere IPS}{chapter.5}% 35
+\BOOKMARK [1][-]{section.5.3}{Installazione di Argus}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.4}{Utilizzo del programma stf}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.5}{Prestazioni}{chapter.5}% 38
+\BOOKMARK [2][-]{subsection.5.5.1}{Benchmark}{section.5.5}% 39
+\BOOKMARK [2][-]{subsection.5.5.2}{Metrica delle prestazioni parallele}{section.5.5}% 40
+\BOOKMARK [1][-]{section.5.6}{Conversione}{chapter.5}% 41
+\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 42
+\BOOKMARK [1][-]{section.6.1}{Prestazioni}{chapter.6}% 43

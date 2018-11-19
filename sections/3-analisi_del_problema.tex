@@ -5,9 +5,12 @@
 \section{Analisi traffico di rete}
 
 Nell'era digitale il traffico di rete è aumentato notevolmente e con esso gli attacchi di tipo informatico, per questo motivo è necessario trovare soluzioni per analizzare questo grande quantitativo di pacchetti che attraversano i dispositivi di rete delle aziende di grosse dimensioni. Nel mondo informatico di oggi è molto importante poter determinare rapidamente e con precisione l'origine e la portata di un potenziale attacco su una rete al fine di poterlo contrastare in modo efficace.
-Per fare ciò viene costruito un \textit{audit trail} di informazioni collezionate dal traffico di rete usando una combinazione di network flow e PCAP.
+Per fare ciò viene costruito un \textit{audit trail} di informazioni collezionate dal traffico di rete usando una combinazione di network flow e packet capture.
 
 Un audit trail è un file che contiene una registrazione cronologica di attività relative alla sicurezza per consentire la ricostruzione e l'esame di eventi \cite{auditTrail}.
+
+\subsection{Packet Capture}
+Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete. Un packet capture intercetta i singoli pacchetti e li archivia. Nei sistemi operativi Unix è utilizzata la libreria \textbf{libpcap} mentre nei sistemi Windows si fa utilizzo di \textbf{WinPcap} \cite{pcap}.
 
 \subsection{Network Flow}
 Un flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione che hanno degli attributi in comune \cite{trafficflow}:
@@ -21,10 +24,7 @@ Un flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione
 
 Se i pacchetti che attraversano un dispositivo di rete hanno questi attributi in comune possono essere raggruppati in un flow.
 
-\subsection{Packet Capture}
-Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete. Un packet capture intercetta i singoli pacchetti e li archivia. Nei sistemi operativi Unix è utilizzata la libreria \textbf{libpcap} mentre nei sistemi Windows si fa utilizzo di \textbf{WinPcap} \cite{pcap}.
-
-\subsection{NetFlow}
+\subsubsection{NetFlow}
 NetFlow è un protocollo di analisi di rete introdotto da Cisco che offre la possibilità di raccogliere informazioni dettagliate sul traffico che attraversa un'interfaccia. I dispositivi di rete che supportano NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
 
 Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condividono tutti i seguenti 7 valori \cite{netflowDef}.
@@ -38,8 +38,6 @@ Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condiv
 				\item IP Type of Service
 \end{itemize}
 
-
-\subsubsection{Componenti di NetFlow}
 La figura 3.1 descrive un esempio di architettura dei network flow. 
 
 \begin{figure}[H]
@@ -77,7 +75,7 @@ Responsabile della ricezione, conservazione e pre-elaborazione dei dati di un fl
 \begin{verse}
 \textbf{Analysis application} 
 Analizza i dati dei flows ricevuti nel contesto del rilevamento delle intrusioni o del profilo di traffico. Un esempio di Analysis application possono essere degli IDPS.
-Di seguito un'immagine di SolarWinds NetFlow Traffic Analyzer, un software per l'analisi dei flows.
+Di seguito un'immagine di SolarWinds NetFlow Traffic Analyzer, un software per l'analisi dei flows \cite{solarwinds}.
 
 \begin{figure}[H]
 \centering
@@ -90,8 +88,8 @@ Di seguito un'immagine di SolarWinds NetFlow Traffic Analyzer, un software per l
 In questa sezione verrano presentati i software utilizzati per la cattura dei network flows. Questi software sono Open Source e sono stati usati su una distribuzione GNU/Linux.
 
 \subsection{Audit Record Generation and Utilization System}
-Argus (Audit Record Generation and Utilization System) è stato la prima implementazione del monitoraggio dei flow, è un progetto open source e multipiattaforma.
-Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, tra i quali Windows, MaxOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina e Argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. 
+Argus (Audit Record Generation and Utilization System) è stato la prima implementazione del monitoraggio dei flow, è un progetto open source e multipiattaforma \cite{Argus}.
+Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, tra i quali Windows, MacOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina e Argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. 
 
 Argus viene utilizzato da molte università e aziende per registrare dei flow che vengono utilizzati sia nell'analisi immediata dell'utilizzo della rete, sia nell'analisi storica.
 
@@ -129,7 +127,7 @@ Campi di Argus
 
 \subsection{nProbe}
 
-Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la gestione del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow. È disponibile per la maggior parte dei sistemi operativi sul mercato. \newline
+Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la gestione del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow \cite{nProbe}. È disponibile per la maggior parte dei sistemi operativi sul mercato. 
 
 La seguente tabella descrive i campi dei flow che nProbe salva su file. La prima colonna rappresenta il nome del campo del pacchetto di rete, la seconda colonna è una descrizione del campo.
 
@@ -177,37 +175,28 @@ nProbe è un software scalabile ed è stato progettato per restare al passo con 
 
 Mentre nProbe è disponibile solo per Unix, Windows o MacOs X, Argus funziona su MacOS X, Linux, FreeBSD, OpenBSD, NetBSD, AIX, HP-UX, VxWorks, IRIS, Windows e OpenWrt, inoltre è stato portato su molte piattaforme hardware accelerate come Bivio, Pluribus, Arista, Tilera \cite{Argus}. 
 
-\section{Stratosphere IPS}
+\section{Stratosphere}
 In questa tesi si è utilizzato Stratosphere IPS, un software open source disponibile per sistemi operativi Windows e distribuzioni GNU/Linux. In questa tesi si è fatto utilizzo esclusivo della versione per distribuzioni GNU/Linux.
 Stratosphere Linux IPS (slips), alla pubblicazione di questa tesi, è in alpha. È un sistema di rilevazione e prevenzione delle intrusioni comportamentale che utilizza algoritmi di machine learning per rilevare comportamenti dannosi. 
 L'obiettivo di Stratosphere IPS è quello di creare un Intrusion Prevention System che può rilevare e bloccare comportamenti malevoli all'interno di una rete.
 
 Fa parte di una più ampia suite di programmi che include Stratospehre Testing Framework (stf). Stf analizza i modelli comportamentali della rete alla ricerca di malware.
 
----- introdurre nello stato dell'arte e descrivere qui in dettaglio il tipo ---
-\begin{verse}
-\textbf{Algoritmi di machine learning}
-insieme di metodi di calcolo che utilizzano l'esperienza per migliorare le prestazioni o per effettuare delle previsioni accurate.
-\end{verse}
-
-\subsection{Architettura}
+\subsection{IPS}
 Slips si occupa della parte di rilevazione attraverso machine learning. La parte di rilevazione e cattura del traffico viene fatta attraverso attraverso Argus che cattura i pacchetti e li rende disponibili a chiunque si connetta alla sua porta. L'idea di base è quella di leggere i flow da Argus e di inviarli a Slips. In questo modo è possibile analizzare il traffico del proprio pc e di tutte le reti su cui è in esecuzione Argus. 
 
 La figura seguente descrive l'architettura. Argus è attivo sul computer o sulla rete su cui si vuole analizzare il traffico in entrata. Questo traffico è poi salvato su un file che può essere dato in input a Slips.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{slips.png}
+\includegraphics[scale=0.6]{archslips.png}
 \caption{Architettura Stratosphere}
 \end{figure}
 
-\subsection{Modelli comportamentali}
 Slips fa utilizzo di modelli comportamentali creati da Stratosphere Testing Framework.
 
-\begin{verse}
-\textbf{Stratosphere Testing Framework}
-è un framework di ricerca sulla sicurezza della rete per analizzare i modelli comportamentali delle connessioni di rete. Il suo obiettivo è aiutare i ricercatori a trovare nuovi comportamenti malware, etichettare tali comportamenti, creare i loro modelli di traffico e verificare gli algoritmi di rilevamento. Una volta creati e verificati i migliori modelli comportamentali di malware, questi verranno utilizzati da slips per il rilevamento. Stratosphere Testing Framework usa algoritmi di machine learning sui modelli comportamentali.
-\end{verse}
+\subsection{Stratosphere Testing Framework}
+Stf è un framework di ricerca sulla sicurezza della rete per analizzare i modelli comportamentali delle connessioni di rete. Il suo obiettivo è aiutare i ricercatori a trovare nuovi comportamenti malware, etichettare tali comportamenti, creare i loro modelli di traffico e verificare gli algoritmi di rilevamento. Una volta creati e verificati i migliori modelli comportamentali di malware, questi verranno utilizzati da slips per il rilevamento. Stratosphere Testing Framework usa algoritmi di machine learning sui modelli comportamentali.
 
 Il nucleo di \textit{Stratosphere IPS} è composto dai modelli comportamentali di reti e algoritmi di rilevamento. I modelli comportamentali rappresentano ciò che una connessione specifica fa nella rete durante la sua vita. Il comportamento è costuito analizzando la sua periodicità, le dimensioni e la durata di ciascun flusso. Sulla base di queste caratteristiche a ciascun flusso viene assegnata una lettera e il gruppo di lettere caratterizza il comportamento della connessione.
 

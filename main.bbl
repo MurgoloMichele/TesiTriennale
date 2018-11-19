@@ -9,6 +9,12 @@
   \url{https://web.archive.org/web/20170201233855/https://www.scribd.com/document/179124526/Anatomy-of-a-Botnet-WP-pdf}.
 \newblock Accessed: 2017-02-01.
 
+\bibitem{applehomepod}
+Apple explains 'hey siri' speaker recognition in latest machine learning
+  journal update.
+\newblock
+  \url{https://appleinsider.com/articles/18/04/16/apple-explains-hey-siri-speaker-recognition-in-latest-machine-learning-journal-update}.
+
 \bibitem{Argus}
 Argus.
 \newblock \url{https://qosient.com/argus/}.
@@ -18,10 +24,43 @@ Atis telecom glossary - audit trail.
 \newblock
   \url{https://web.archive.org/web/20130313232104/http://www.atis.org/glossary/definition.aspx?id=5572}.
 
+\bibitem{bigdata}
+Big data security analytics: A weapon against rising cyber security attacks?
+\newblock \url{https://bi-survey.com/big-data-security-analytics}.
+
+\bibitem{spamemail}
+Comparison of machine learning techniques in email spam detection.
+\newblock
+  \url{https://dev.to/matchilling/comparison-of-machine-learning-techniques-in-email-spam-detection--2p0h}.
+
 \bibitem{ScopoMalware}
 Federal trade commission- consumer information, "malware".
 \newblock \url{https://www.consumer.ftc.gov/articles/0011-malware}.
 \newblock Accessed: November 2015.
+
+\bibitem{octave}
+Gnu octave.
+\newblock \url{https://www.gnu.org/software/octave/}.
+
+\bibitem{googlehome}
+Google assistant and artificial intelligence – the future of simulated
+  communication.
+\newblock
+  \url{https://campaignsoftheworld.com/digital/google-assistant-and-artificial-intelligence/}.
+
+\bibitem{tesla}
+How tesla is ushering in the age of the learning car.
+\newblock \url{http://fortune.com/2015/10/16/how-tesla-autopilot-learns/}.
+
+\bibitem{amazonalexa}
+Machine learning in practice: How does amazon's alexa really work?
+\newblock
+  \url{https://www.forbes.com/sites/bernardmarr/2018/10/05/how-does-amazons-alexa-really-work/#227507bf1937}.
+
+\bibitem{facialrecognition}
+Making facial recognition smarter with artificial intelligence.
+\newblock
+  \url{https://www.forbes.com/sites/jenniferhicks/2018/09/30/making-facial-recognition-smarter-with-artificial-intelligence/#565964e1c8f1}.
 
 \bibitem{MalwareDef}
 {Malware} definition.
@@ -38,6 +77,10 @@ Malware revolution: A change in target.
 nprobe.
 \newblock \url{https://www.ntop.org/products/netflow/nprobe/}.
 
+\bibitem{ocr}
+Optical character recognition.
+\newblock \url{https://en.wikipedia.org/wiki/Optical_character_recognition}.
+
 \bibitem{phishingdef}
 Phishing definition - urban dictionary.
 \newblock \url{https://www.urbandictionary.com/define.php?term=phishing}.
@@ -46,10 +89,18 @@ Phishing definition - urban dictionary.
 Sicurezza: Virus, worm, trojan...
 \newblock \url{http://www.bloomriot.org/91/sicurezza-virus-worm-trojan.html}.
 
+\bibitem{solarwinds}
+Solarwinds.
+\newblock \url{https://www.solarwinds.com/network-performance-monitor}.
+
 \bibitem{Spyware2}
 spyware.
 \newblock \url{https://searchsecurity.techtarget.com/definition/spyware}.
 \newblock Accessed: september 2016.
+
+\bibitem{slips}
+Stratosphere ips for linux.
+\newblock \url{https://github.com/stratosphereips/StratosphereLinuxIPS}.
 
 \bibitem{stf}
 Stratospheretestingframework - github.
