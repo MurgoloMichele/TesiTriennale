@@ -3,6 +3,10 @@
 \bibitem{netflowDef}
 \url{https://pliki.ip-sa.pl/wiki/Wiki.jsp?page=NetFlow}.
 
+\bibitem{alpha}
+Alpha software definition.
+\newblock \url{https://techterms.com/definition/alpha_software}.
+
 \bibitem{Botnet}
 {Anatomy} of a botnet.
 \newblock
@@ -98,9 +102,18 @@ spyware.
 \newblock \url{https://searchsecurity.techtarget.com/definition/spyware}.
 \newblock Accessed: september 2016.
 
+\bibitem{stratosphereSuite}
+Stratosphere ips - protecting the civil society through high quality research.
+\newblock \url{https://www.stratosphereips.org/stratosphere-ips-suite}.
+
 \bibitem{slips}
 Stratosphere ips for linux.
 \newblock \url{https://github.com/stratosphereips/StratosphereLinuxIPS}.
+
+\bibitem{slipscurrent}
+Stratosphere linux ips latest commit.
+\newblock
+  \url{https://github.com/stratosphereips/StratosphereLinuxIPS/tree/d9f42edf728dc7be21a5f441b6851e24071b966a}.
 
 \bibitem{stf}
 Stratospheretestingframework - github.

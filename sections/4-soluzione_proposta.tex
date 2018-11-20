@@ -8,12 +8,10 @@ In questo capitolo viene presentato il programma di conversione. La prima parte 
 \section{Conversione}
 Per convertire i file di nProbe nel formato utilizzato da Argus si è fatto per prima cosa uno studio sui campi degli header per individuarne le differenze. Alcuni campi sono presenti in entrambi i formati seppure con nome diverso, altri sono stati ottenuti come combinazione, mentre quelli che nProbe utilizza in più rispetto ad Argus sono stati scartati. 
 
-Di seguito è rappresentata una tabella che mostra sulla colonna di sinistra i campi dell'header di Argus, mentre sulla destra la scelta dei campi di nProbe per rappresentare i dati nello stesso formato scelto da Argus.
+La tabella ~\ref{table:tabellaConversione} mostra sulla colonna di sinistra i campi dell'header di Argus, mentre sulla destra la scelta dei campi di nProbe per rappresentare i dati nello stesso formato scelto da Argus.
 
 \begin{table}[H]
 				\centering
-				\caption{Tabella di conversione}
-				\label{Tabella di conversione}
 				\begin{tabular}{|l|l|}
 								\hline
 								binetflow												 & flow																								 \\ \hline
@@ -36,6 +34,8 @@ Di seguito è rappresentata una tabella che mostra sulla colonna di sinistra i c
 								label														 & -																									 \\ \hline
 
 				\end{tabular}
+				\caption{Tabella di conversione}
+								\label{table:tabellaConversione}
 \end{table}
 
 nProbe e Argus, oltre le differenze degli header presentano anche differenze nel formato con cui sono scritti i file.
@@ -51,10 +51,11 @@ Dopodichè si apre il file in lettura leggendo una riga per volta, si converte i
 
 Si è scelto di leggere il file una riga alla volta perchè le grandi dimensioni dei file non permettono un approccio diverso. Un approccio più veloce sarebbe stato quello di leggere i file per intero nella memoria principale ma non è un approccio possibile perchè possono presentarsi casi in cui la dimensione della RAM, soprattutto nei computer più datati, è più piccola rispetto a quella dei file.
 
-A seguire il programma scritto in pseudocodice
+L'algoritmo ~\ref{alg:singleCore} scritto in pseudocodice descrive una soluzione single core al problema
 
 \begin{algorithm}
-\caption{Single core version}\label{single core version}
+\caption{Single core version}
+				\label{alg:singleCore}
 \begin{algorithmic}[1]
 \Procedure{Hydra}{}
 \ForAll{\textit{file} in path}
@@ -110,11 +111,12 @@ Un problema che può creare questa soluzione è la produzione di una grande quan
 
 Si è scelto di procedere con l'ultima soluzione presentata perchè data la grande quantità di informazioni da convertire si preferisce l'approccio più veloce a discapito dell'ordinamento finale.
 
-Il programma, dato in input la root directory dei file, cerca ricorsivamente tutti i file e li inserisce in una coda, chiama poi una funzione a cui assegna 4 processori. La funzione ha un ciclo while che si ripete fino a quando la coda popolata da tutti i file non è vuota. Ogni processore che entra in questa funzione toglie un file dalla coda e lo elabora. \newline
+Il programma, dato in input la root directory dei file, cerca ricorsivamente tutti i file e li inserisce in una coda, chiama poi una funzione a cui assegna 4 processori. La funzione ha un ciclo while che si ripete fino a quando la coda popolata da tutti i file non è vuota. Ogni processore che entra in questa funzione toglie un file dalla coda e lo elabora.
 
-Pseudocodice del programma multi core
+Il programma ~\ref{alg:multiCore} descrive una soluzione multi core
 \begin{algorithm}
-\caption{Multi core version}\label{multi core version}
+\caption{Multi core version}
+				\label{alg:multiCore}
 \begin{algorithmic}[1]
 \Procedure{Hydra}{}
 \ForAll{\textit{file} in path}
@@ -132,12 +134,13 @@ Pseudocodice del programma multi core
 \end{algorithm}
 \end{document}
 
-La figura 4.1 descrive lo pseudocodice del programma parallelo. Ogni file da convertire è inserito in una coda a cui accedono i processori, ogni processore lavora individualmente sul proprio file da cui legge e converte i dati. La scrittura su file rimane indipendente perchè ogni processore lavora sul proprio file.
+La figura ~\ref{fig:multiCore} descrive lo pseudocodice del programma parallelo. Ogni file da convertire è inserito in una coda a cui accedono i processori, ogni processore lavora individualmente sul proprio file da cui legge e converte i dati. La scrittura su file rimane indipendente perchè ogni processore lavora sul proprio file.
 
 \begin{figure}[H]
 				\centering
 \includegraphics[scale=0.22]{hydra.png}
 				\caption{Multi core version}
+				\label{fig:multiCore}
 \end{figure}
 
 

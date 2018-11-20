@@ -19,7 +19,7 @@
 \contentsline {subsubsection}{\numberline {2.5.2.4}Modelli di Markov nascosti}{23}{subsubsection.2.5.2.4}
 \contentsline {subsection}{\numberline {2.5.3}Unsupervised learning}{23}{subsection.2.5.3}
 \contentsline {subsubsection}{\numberline {2.5.3.1}K-Means}{23}{subsubsection.2.5.3.1}
-\contentsline {chapter}{\numberline {3}Analisi del problema}{27}{chapter.3}
+\contentsline {chapter}{\numberline {3}Analisi del software}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}Analisi traffico di rete}{27}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Packet Capture}{27}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Network Flow}{27}{subsection.3.1.2}
@@ -28,25 +28,27 @@
 \contentsline {subsection}{\numberline {3.2.1}Audit Record Generation and Utilization System}{31}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}nProbe}{32}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Confronto tra i network flow}{33}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Stratosphere}{34}{section.3.3}
+\contentsline {section}{\numberline {3.3}Stratosphere Suite}{34}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}IPS}{34}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Stratosphere Testing Framework}{35}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Problematiche dovute all'utilizzo di due diversi formati}{36}{section.3.4}
-\contentsline {section}{\numberline {3.5}Presentazione del problema}{37}{section.3.5}
-\contentsline {chapter}{\numberline {4}Soluzione proposta}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Conversione}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Automatizzazione conversione}{40}{section.4.2}
-\contentsline {section}{\numberline {4.3}Rendere efficiente la conversione}{41}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Possibili soluzioni}{41}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Scelta effettuata}{43}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{45}{chapter.5}
-\contentsline {section}{\numberline {5.1}Software utilizzati}{45}{section.5.1}
-\contentsline {section}{\numberline {5.2}Installazione Stratosphere IPS}{45}{section.5.2}
-\contentsline {section}{\numberline {5.3}Installazione di Argus}{46}{section.5.3}
-\contentsline {section}{\numberline {5.4}Utilizzo del programma stf\\}{47}{section.5.4}
-\contentsline {section}{\numberline {5.5}Prestazioni}{48}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Benchmark}{48}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Metrica delle prestazioni parallele}{50}{subsection.5.5.2}
-\contentsline {section}{\numberline {5.6}Conversione}{53}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclusioni}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Prestazioni}{57}{section.6.1}
+\contentsline {section}{\numberline {3.4}Analisi del problema}{36}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Deployment di Stratosphere IPS}{36}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Problematiche dovute all'utilizzo di due diversi formati}{38}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Presentazione del problema}{38}{subsection.3.4.3}
+\contentsline {chapter}{\numberline {4}Soluzione proposta}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Conversione}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Automatizzazione conversione}{42}{section.4.2}
+\contentsline {section}{\numberline {4.3}Rendere efficiente la conversione}{43}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Possibili soluzioni}{43}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Scelta effettuata}{45}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Software utilizzati}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}Installazione Stratosphere IPS}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}Installazione di Argus}{48}{section.5.3}
+\contentsline {section}{\numberline {5.4}Utilizzo del programma stf\\}{49}{section.5.4}
+\contentsline {section}{\numberline {5.5}Prestazioni}{50}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Benchmark}{50}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Metrica delle prestazioni parallele}{52}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Conversione}{55}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusioni}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Prestazioni}{59}{section.6.1}

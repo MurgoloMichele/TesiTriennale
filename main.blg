@@ -3,17 +3,17 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 64 of file references.bib
+I was expecting a `,' or a `}'---line 79 of file references.bib
  :     
  :     howpublished = {\url{https://github.com/stratosphereips/StratosphereTestingFramework#installation-and-dependencies}}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 92 of file references.bib
+I was expecting a `,' or a `}'---line 107 of file references.bib
  : 
  : @misc{netflowDef,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 164 of file references.bib
+I was expecting a `,' or a `}'---line 179 of file references.bib
  : 
  : @book{idsBook,
 (Error may have been on previous line)
@@ -43,50 +43,53 @@ Warning--to sort, need author or key in netflowDef
 Warning--to sort, need author or key in solarwinds
 Warning--to sort, need author or key in Argus
 Warning--to sort, need author or key in nProbe
+Warning--to sort, need author or key in stratosphereSuite
+Warning--to sort, need author or key in alpha
+Warning--to sort, need author or key in slipscurrent
 Warning--to sort, need author or key in virtualbox
 Warning--to sort, need author or key in stf
 Warning--to sort, need author or key in octave
 Warning--to sort, need author or key in slips
 Warning--empty publisher in idsbook
-You've used 37 entries,
+You've used 40 entries,
             2118 wiz_defined-function locations,
-            646 strings with 8435 characters,
-and the built_in function-call counts, 6456 in all, are:
-= -- 615
-> -- 91
+            656 strings with 8844 characters,
+and the built_in function-call counts, 6933 in all, are:
+= -- 660
+> -- 94
 < -- 0
-+ -- 55
++ -- 58
 - -- 18
-* -- 227
-:= -- 845
-add.period$ -- 87
-call.type$ -- 37
-change.case$ -- 120
+* -- 242
+:= -- 896
+add.period$ -- 93
+call.type$ -- 40
+change.case$ -- 129
 chr.to.int$ -- 0
-cite$ -- 66
-duplicate$ -- 296
-empty$ -- 829
+cite$ -- 72
+duplicate$ -- 317
+empty$ -- 898
 format.name$ -- 18
-if$ -- 1541
+if$ -- 1661
 int.to.chr$ -- 0
-int.to.str$ -- 37
+int.to.str$ -- 40
 missing$ -- 14
-newline$ -- 163
+newline$ -- 175
 num.names$ -- 18
-pop$ -- 290
+pop$ -- 314
 preamble$ -- 1
-purify$ -- 83
+purify$ -- 89
 quote$ -- 0
-skip$ -- 263
+skip$ -- 287
 stack$ -- 0
-substring$ -- 185
-swap$ -- 35
+substring$ -- 200
+swap$ -- 38
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 134
-warning$ -- 29
+type$ -- 146
+warning$ -- 32
 while$ -- 18
-width$ -- 39
-write$ -- 302
+width$ -- 42
+write$ -- 323
 (There were 3 error messages)

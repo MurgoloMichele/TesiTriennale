@@ -1,6 +1,6 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\chapter{Analisi del problema}
+\chapter{Analisi del software}
 
 \section{Analisi traffico di rete}
 
@@ -38,12 +38,13 @@ Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condiv
 				\item IP Type of Service
 \end{itemize}
 
-La figura 3.1 descrive un esempio di architettura dei network flow. 
+La figura ~\ref{fig:architetturaNetflow} descrive un esempio di architettura dei network flow. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{netflowgraph.png}
 \caption{Architettura NetFlow}
+\label{fig:architetturaNetflow}
 \end{figure}
 
 \begin{verse}
@@ -57,12 +58,13 @@ Aggrega i pacchetti in flows e ne esporta i record verso uno o più \textit{flow
 Quando dei pacchetti arrivano al NetFlow exporter, vengono ispezionati singolarmente per uno o più attributi che vengono utilizzati per determinare se il pachetto è univoco o è simile agli altri pacchetti. Se il pacchetto presenta attributi simili viene classificato nello stesso flow.
 Dopo aver esaminato questi attributi, il NetFlow exporter li aggrega in record di flow e li salva in un database che può essere una cache NetFlow o un NetFlow collector. 
 
-La figura seguente rappresenta il funzionamento di un NetFlow exporter.
+La figura ~\ref{fig:netflowExporter} rappresenta il funzionamento di un NetFlow exporter.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{netflowexporter.png}
 \caption{NetFlow exporter}
+\label{fig:netflowExporter}
 \end{figure}
 
 \end{verse}
@@ -75,12 +77,13 @@ Responsabile della ricezione, conservazione e pre-elaborazione dei dati di un fl
 \begin{verse}
 \textbf{Analysis application} 
 Analizza i dati dei flows ricevuti nel contesto del rilevamento delle intrusioni o del profilo di traffico. Un esempio di Analysis application possono essere degli IDPS.
-Di seguito un'immagine di SolarWinds NetFlow Traffic Analyzer, un software per l'analisi dei flows \cite{solarwinds}.
+L'immagine ~\ref{fig:solarwinds} rappresenta SolarWinds NetFlow Traffic Analyzer, un software per l'analisi dei flows \cite{solarwinds}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{netflowreport.jpg}
 \caption{SolarWinds NetFlow Traffic Analyzer}
+\label{fig:solarwinds}
 \end{figure}
 \end{verse}
 
@@ -96,7 +99,7 @@ Argus viene utilizzato da molte università e aziende per registrare dei flow ch
 I file di Argus sono compressi con algoritmi che offrono un rapporto di compressione fino 10.000:1. La compressione di questi file è molto importante perchè tendono ad essere molto grandi e possono raggiungere dimensioni difficili da gestire.
 
 
-La seguente tabella descrive i campi dei flow che argus salva su file. La prima colonna rappresenta il nome del campo del pacchetto di rete, la seconda colonna è una descrizione del campo.
+La tabella ~\ref{table:campiArgus} descrive i campi dei flow che argus salva su file. La prima colonna rappresenta il nome del campo del pacchetto di rete, la seconda colonna è una descrizione del campo.
 
 \begin{table}[h]
 				\centering
@@ -121,15 +124,15 @@ srcUdata       & source user data buffer                 \\ \hline
 dstUdata       & destination user data buffer            \\ \hline
 Label          & metadata label                          \\ \hline
 \end{tabular}\par
-\bigskip
-Campi di Argus
+				\caption{Campi di Argus}
+\label{table:campiArgus}
 \end{table}
 
 \subsection{nProbe}
 
 Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la gestione del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow \cite{nProbe}. È disponibile per la maggior parte dei sistemi operativi sul mercato. 
 
-La seguente tabella descrive i campi dei flow che nProbe salva su file. La prima colonna rappresenta il nome del campo del pacchetto di rete, la seconda colonna è una descrizione del campo.
+La tabella ~\ref{table:campiNprobe} descrive i campi dei flow che nProbe salva su file. La prima colonna rappresenta il nome del campo del pacchetto di rete, la seconda colonna è una descrizione del campo.
 
 \begin{table}[H]
 				\centering
@@ -166,8 +169,8 @@ FLOW\_INACTIVE\_TIMEOUT              & inactivity timeout of flow cache entries 
 IN\_SRC\_MAC                         & source MAC address                            \\ \hline
 OUT\_DST\_MAC                        & destination MAC address                       \\ \hline
 \end{tabular}\par
-\bigskip
-Campi di nProbe
+				\caption{Campi di nProbe}
+\label{table:campiNprobe}
 \end{table}
 
 \subsection{Confronto tra i network flow}
@@ -175,9 +178,9 @@ nProbe è un software scalabile ed è stato progettato per restare al passo con 
 
 Mentre nProbe è disponibile solo per Unix, Windows o MacOs X, Argus funziona su MacOS X, Linux, FreeBSD, OpenBSD, NetBSD, AIX, HP-UX, VxWorks, IRIS, Windows e OpenWrt, inoltre è stato portato su molte piattaforme hardware accelerate come Bivio, Pluribus, Arista, Tilera \cite{Argus}. 
 
-\section{Stratosphere}
+\section{Stratosphere Suite}
 In questa tesi si è utilizzato Stratosphere IPS, un software open source disponibile per sistemi operativi Windows e distribuzioni GNU/Linux. In questa tesi si è fatto utilizzo esclusivo della versione per distribuzioni GNU/Linux.
-Stratosphere Linux IPS (slips), alla pubblicazione di questa tesi, è in alpha. È un sistema di rilevazione e prevenzione delle intrusioni comportamentale che utilizza algoritmi di machine learning per rilevare comportamenti dannosi. 
+Stratosphere Linux IPS (slips), alla pubblicazione di questa tesi, è in alpha \cite{stratosphereSuite}. È un sistema di rilevazione e prevenzione delle intrusioni comportamentale che utilizza algoritmi di machine learning per rilevare comportamenti dannosi. 
 L'obiettivo di Stratosphere IPS è quello di creare un Intrusion Prevention System che può rilevare e bloccare comportamenti malevoli all'interno di una rete.
 
 Fa parte di una più ampia suite di programmi che include Stratospehre Testing Framework (stf). Stf analizza i modelli comportamentali della rete alla ricerca di malware.
@@ -185,12 +188,13 @@ Fa parte di una più ampia suite di programmi che include Stratospehre Testing F
 \subsection{IPS}
 Slips si occupa della parte di rilevazione attraverso machine learning. La parte di rilevazione e cattura del traffico viene fatta attraverso attraverso Argus che cattura i pacchetti e li rende disponibili a chiunque si connetta alla sua porta. L'idea di base è quella di leggere i flow da Argus e di inviarli a Slips. In questo modo è possibile analizzare il traffico del proprio pc e di tutte le reti su cui è in esecuzione Argus. 
 
-La figura seguente descrive l'architettura. Argus è attivo sul computer o sulla rete su cui si vuole analizzare il traffico in entrata. Questo traffico è poi salvato su un file che può essere dato in input a Slips.
+La figura ~\ref{fig:architetturaStratosphere} descrive l'architettura. Argus è attivo sul computer o sulla rete su cui si vuole analizzare il traffico in entrata. Questo traffico è poi salvato su un file che può essere dato in input a Slips.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{archslips.png}
 \caption{Architettura Stratosphere}
+\label{fig:architetturaStratosphere}
 \end{figure}
 
 Slips fa utilizzo di modelli comportamentali creati da Stratosphere Testing Framework.
@@ -208,29 +212,53 @@ Prendiamo come esempio una connessione generata da una botnet che ha il seguente
 In questo caso ci dice che i flussi sono altamente periodici (lettere \textit{h}, \textit{i}), con qualche periodicità persa vicino all'inizio (lettere \textit{y}). I flussi hanno anche una grande dimensione con una durata media. I simboli tra le lettere sono correlati al tempo trascorso tra i flussi. In questo caso il simbolo '\textit{*}' significa che il flusso è separato da meno di un'ora.
 Con l'utilizzo di questo tipo di modelli siamo in grado di generare le caratteristiche comportamentali di un gran numero di azioni dannose. 
 
-L'immagine seguente mostra i criteri di assegnazione delle lettere per i modelli comportamentali.
+L'immagine ~\ref{fig:modelliComportamentali} mostra i criteri di assegnazione delle lettere per i modelli comportamentali.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.5]{modello-comportamentale.png}
 				\caption{Tabella modelli comportamentali}
+				\label{fig:modelliComportamentali}
 \end{figure}
 
-\section{Problematiche dovute all'utilizzo di due diversi formati}
+\section{Analisi del problema}
+
+\subsection{Deployment di Stratosphere IPS}
+La suite di Stratosphere è attualmente pubblicata in alpha \cite{stratosphereSuite}. Un programma in alpha è un programma che è ancora nelle prime fasi di test e in genere include bug significativi e problemi di usabilità e non viene rilasciato al pubblico \cite{alpha}.
+
+Per l'installazione e l'utilizzo di questo software è stato necessario scaricare il codice sorgente da GitHub. Il codice sorgente è stato poi modificato per poter effettuare una installazione funzionante.
+Per la scrittura di questa tesi si è scaricata la versione più aggiornata disponibile sulla pagine GitHub di slips \cite{slipscurrent}. Questa versione non funziona \textit{out of the box}, è stato perciò necessario apportare delle modifiche al codice.
+
+Per provare il corretto funzionamento di slips si è passato per prima cosa un file di flows in input per verificarne il corretto funzionamento. Qualsiasi file passato in input non produce però nessun risultato atteso in output. Si è quindi ispezionato il codice con tecniche di debug alla ricerca di una possibile soluzione.
+
+Il codice ~\ref{lst:slipsRun} rappresenta la funzione \textit{run} del file \textit{slips.py}. Questo pezzo di codice viene eseguito su più processori: ogni core prende una riga dalla coda fino a quando non si svuota ed esegue il codice all'interno del while.
+
+La riga numero 5 del codice ~\ref{lst:slipsRun} prende una riga dalla coda e alla riga numero 7 controlla se il contenuto della riga letta è diverso da \textit{stop} per continuare. Il controllo alla riga 7 è stato inserito per eseguire la funzione su pezzi di codice prestabiliti, è stato quindi sostituito con un controllo che esegue il codice solo se la riga non è vuota.
+
+Questo pezzo di codice ha dei controlli di debug che eseguono la funzione solamente se la riga letta ha un particolare indirizzo IP o una porta. Alla riga numero 8 c'è un controllo sugli indirizzi IP 10.0.2.15 e 31.13.91.6 e alla riga numero 11 un controllo sulla porta 80 e indirizzo IP 10.0.2.15. Questi controlli sono stati tolti per permettere alla funzione di eseguire su qualsiasi indirizzo IP e porta.
+
+\lstinputlisting[language=Python, label={lst:slipsRun}, caption={codice di originale}]{slips.py}
+
+Il codice ~\ref{lst:slips2Run} mostra le modifiche apportate al codice ~\ref{lst:slipsRun}. È stato risolto anche un bug che lascia in esecuzione il programma anche quando finisce di eseguire. La riga numero 3 del codice ~\ref{lst:slipsRun} non permetteva alla funzione di uscire dal ciclo \textit{while}, è stato risolto con la riga numero 3 del codice ~\ref{lst:slips2Run}.
+
+\lstinputlisting[language=Python, firstline=517, lastline=526, label={lst:slips2Run}, caption={codice modificato}]{slips2.py}
+
+\subsection{Problematiche dovute all'utilizzo di due diversi formati}
 I file prodotti da nProbe e Argus, oltre ad avere formati diversi, hanno anche campi eterogenei. Stratosphere IPS si appoggia ad Argus per la cattura di file e di conseguenza può leggere file solo in formato binetflow. 
 Se una azienda si appoggia a Cisco utilizzando nProbe non può quindi fare utilizzo di questo software, poichè non riesce a leggere file in formato differente.
 
 Questa incompatibilità ha portato alla necessità di una conversione: i file prodotti da nProbe devono essere convertiti in file con formato usato da Argus. Questa conversione deve essere precisa ed efficiente.
 
-\section{Presentazione del problema}
+\subsection{Presentazione del problema}
 I file prodotti da nProbe hanno una struttura gerarchica fissa ben definita: ci sono 4 livelli di subdir, in cui il primo livello indica l'anno, il secondo il mese, il terzo il giorno e il quarto l'ora. All'interno dell'ultima subdir, quella delle ore, ci sono 60 file uno per ogni minuto della giornata.
 
-La seguente immagine descrive la struttura gerarchica dei file.
+La immagine ~\ref{fig:folderStructure} descrive la struttura gerarchica dei file.
 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{folderstructure.png}
 \caption{Folder Structure}
+				\label{fig:folderStructure}
 \end{figure}
 
 \end{document}
