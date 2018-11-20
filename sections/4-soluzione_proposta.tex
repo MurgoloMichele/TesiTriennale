@@ -8,6 +8,67 @@ In questo capitolo viene presentato il programma di conversione. La prima parte 
 \section{Conversione}
 Per convertire i file di nProbe nel formato utilizzato da Argus si è fatto per prima cosa uno studio sui campi degli header per individuarne le differenze. Alcuni campi sono presenti in entrambi i formati seppure con nome diverso, altri sono stati ottenuti come combinazione, mentre quelli che nProbe utilizza in più rispetto ad Argus sono stati scartati. 
 
+Il primo campo di Argus è il campo \textit{StartTime}. Il corrispondente campo usato da nProbe è \textit{FIRST\_SWITCHED}. In figura ~\ref{fig:starttime} vengono descritte le formattazione dei due campi.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.36]{starttime.png}
+				\caption{Formattazione delle date}
+				\label{fig:starttime}
+\end{figure}
+Argus salva la data seguita da uno spazio bianco, le ore i minuti e i secondi e i microsecondi. nProbe invece non salva la data ma soltanto i secondi nel formato $10^{10}$ con i microsecondi. Per effettuare una conversione precisa dei due campi la data nel formato YYYY/MM/DD è stata presa dalla struttura gerarchica delle cartelle guardando in modo ricorsivo la posizione del file all'interno del file system. Per i secondi si è convertito i 10 gigasecondi in secondi, mentre per i microsecondi non c'è stato bisogno di conversione.
+
+Il secondo campo di Argus è \textit{Duration}. Non esistendo un campo di nProbe che indica la durata si è usata la differenza tra i campi \textit{LAST\_SWITCHED} e \textit{FIRST\_SWITCHED}. In figura ~\ref{fig:duration} viene mostrata l'operazione di differenza.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.33]{duration.png}
+				\caption{Durata}
+				\label{fig:duration}
+\end{figure}
+Dopo aver fatto la differenza tra i due campi si converte il risultato in secondi e microsecondi per rispettare il formato di Argus.
+
+Il terzo campo di Argus è \textit{Proto} che indica il protocollo usato dalla connessione. Argus salva in questo campo la keyword del protocollo mentre nProbe salva il numero decimale. La figura ~\ref{fig:protocol} mostra la differenza tra i due formati.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.33]{protocol.png}
+				\caption{Protocolli}
+				\label{fig:protocol}
+\end{figure}
+Per effettuare la conversione tra numeri e keyword si è usato un \textit{dictionary}, un costrutto del linguaggio Python. Questa particolare struttura dati è un array associativo in cui una chiave viene associata ad un valore. Come chiave si è usato il numero decimale del protocollo e come valore la keyword. Il costo medio di accesso ad un valore con questa struttura dati è $\mathcal{O}(1)$. La figura ~\ref{lst:dictionary} rappresenta la sintassi di un dictionary in Python.
+\lstinputlisting[language=Python, firstline=32, lastline=43, label={lst:dictionary}, caption={Esempio di dictionary}]{singlecore.py}
+
+Il quarto campo di Argus è \textit{SrcAddr} che indica l'indirizzo IP sorgente. Questo campo è presente nei campi di nProbe, di conseguenza non è necessario effettuare una conversione. La figura ~\ref{fig:srcaddr} mette in evidenza i due formati.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.33]{srcaddr.png}
+				\caption{Indirizzo IP sorgente}
+				\label{fig:srcaddr}
+\end{figure}
+
+Il quinto campo di Argus è \textit{Sport} che indica la porta di origine della connessione. Il campo corrispettivo di nProbe è \textit{L4\_SRC\_PORT} e condividono entrambi lo stesso formato, non è pertanto necessario alcun tipo di conversione per questi due campi. La figura ~\ref{fig:sport} mostra i campi della porta sorgente nei due formati.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.33]{sport.png}
+				\caption{Porta sorgente}
+				\label{fig:sport}
+\end{figure}
+
+Il sesto campo di Argus si chiama \textit{Dir} e rappresenta la direzione della connessione. Per la conversione si è utilizzato il campo di nProbe \textit{BIFLOW\_DIRECTION}. In nProbe si ha come valore del campo BIFLOW\_DIRECTION solo 1 e 2. Il numero 1 indica un flow monodirezionale che va dall'indirizzo sorgente al indirizzo destinazione, mentre il valore 2 indica un flow bidirezionale. In Argus si hanno più valori:
+\begin{itemize}
+				\item \textbf{-} la connessione è normale
+				\item $\boldsymbol|$ la connessione è stata resettata
+				\item \textbf{o} la connessione è scaduta
+				\item \textbf{?} la direzione della connessione è sconosciuta
+\end{itemize}
+
+La figura ~\ref{fig:direction} mostra come è stata effettuata la conversione.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.36]{direction.png}
+				\caption{Direzione connessione}
+				\label{fig:direction}
+\end{figure}
+Nel primo caso si può convertire con 1 ma bisogna invertire i campi src e dst perchè la connessione viene inizializzata a sinistra. Nel secondo caso si converte con due perchè il flow è bidirezionale. Nel terzo caso la direzione della connessione è sconosciuta, si è scelto di convertire con 1 per sicurezza e non lasciare il campo vuoto. Nel quarto caso il flow è monodirezionale e quindi si converte con 1. Nell'ultimo caso \textit{who} è una keyword che indica una comunicazione \textit{icmp} che non viene utilizzata da Stratosphere, si è scelto di convertire con 1 per sicurezza.
+
 La tabella ~\ref{table:tabellaConversione} mostra sulla colonna di sinistra i campi dell'header di Argus, mentre sulla destra la scelta dei campi di nProbe per rappresentare i dati nello stesso formato scelto da Argus.
 
 \begin{table}[H]

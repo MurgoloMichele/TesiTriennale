@@ -227,19 +227,22 @@ L'immagine ~\ref{fig:modelliComportamentali} mostra i criteri di assegnazione de
 La suite di Stratosphere è attualmente pubblicata in alpha \cite{stratosphereSuite}. Un programma in alpha è un programma che è ancora nelle prime fasi di test e in genere include bug significativi e problemi di usabilità e non viene rilasciato al pubblico \cite{alpha}.
 
 Per l'installazione e l'utilizzo di questo software è stato necessario scaricare il codice sorgente da GitHub. Il codice sorgente è stato poi modificato per poter effettuare una installazione funzionante.
-Per la scrittura di questa tesi si è scaricata la versione più aggiornata disponibile sulla pagine GitHub di slips \cite{slipscurrent}. Questa versione non funziona \textit{out of the box}, è stato perciò necessario apportare delle modifiche al codice.
+Per la scrittura di questa tesi si è scaricata la versione più aggiornata disponibile sulla pagina GitHub di slips \cite{slipscurrent}. Questa versione, essendo in alpha, non funziona \textit{out of the box}. È stato perciò necessario apportare delle modifiche al codice.
 
-Per provare il corretto funzionamento di slips si è passato per prima cosa un file di flows in input per verificarne il corretto funzionamento. Qualsiasi file passato in input non produce però nessun risultato atteso in output. Si è quindi ispezionato il codice con tecniche di debug alla ricerca di una possibile soluzione.
+Per provare il corretto funzionamento di slips si è passato per prima cosa un file di flows in input per verificarne il corretto funzionamento. Il codice ~\ref{lst:catslips} mostra il comando utilizzato 
+\begin{lstlisting}[language=Bash, label={lst:catslips}, caption={comando per eseguire slips}]
+cat file.binetflow | ./slips.py -f models -d
+\end{lstlisting}
+L'output generato dal comando ~\ref{lst:catslips} è vuoto per qualsiasi tipo di file. Si è quindi ispezionato il codice con tecniche di debug alla ricerca di una possibile soluzione.
 
-Il codice ~\ref{lst:slipsRun} rappresenta la funzione \textit{run} del file \textit{slips.py}. Questo pezzo di codice viene eseguito su più processori: ogni core prende una riga dalla coda fino a quando non si svuota ed esegue il codice all'interno del while.
+Il codice ~\ref{lst:slipsRun} rappresenta la funzione \textit{run} del file \textit{slips.py}. Questo pezzo di codice viene eseguito su più processori: ogni core prende una riga dalla coda fino a quando non si svuota ed esegue il codice all'interno del try.
+La riga numero 5 prende una riga del file dalla coda e alla riga numero 7 controlla se il contenuto della riga letta è diverso da \textit{stop} per continuare. Questo controllo, inserito probabilmente in fase di test per eseguire la funzione su pezzi di codice prestabiliti, va sostituito con un controllo che esegue il codice solo se la riga non è vuota.
 
-La riga numero 5 del codice ~\ref{lst:slipsRun} prende una riga dalla coda e alla riga numero 7 controlla se il contenuto della riga letta è diverso da \textit{stop} per continuare. Il controllo alla riga 7 è stato inserito per eseguire la funzione su pezzi di codice prestabiliti, è stato quindi sostituito con un controllo che esegue il codice solo se la riga non è vuota.
+Questo pezzo di codice ha inoltre dei controlli di debug che eseguono la funzione solamente se la riga letta ha un particolare indirizzo IP o una porta. Alla riga numero 8 c'è un controllo sugli indirizzi IP 10.0.2.15 e 31.13.91.6 e alla riga numero 11 un controllo sulla porta 80 e indirizzo IP 10.0.2.15. Questi controlli sono stati tolti per permettere alla funzione di eseguire su qualsiasi indirizzo IP e porta.
 
-Questo pezzo di codice ha dei controlli di debug che eseguono la funzione solamente se la riga letta ha un particolare indirizzo IP o una porta. Alla riga numero 8 c'è un controllo sugli indirizzi IP 10.0.2.15 e 31.13.91.6 e alla riga numero 11 un controllo sulla porta 80 e indirizzo IP 10.0.2.15. Questi controlli sono stati tolti per permettere alla funzione di eseguire su qualsiasi indirizzo IP e porta.
+\lstinputlisting[language=Python, label={lst:slipsRun}, caption={codice originale}]{slips.py}
 
-\lstinputlisting[language=Python, label={lst:slipsRun}, caption={codice di originale}]{slips.py}
-
-Il codice ~\ref{lst:slips2Run} mostra le modifiche apportate al codice ~\ref{lst:slipsRun}. È stato risolto anche un bug che lascia in esecuzione il programma anche quando finisce di eseguire. La riga numero 3 del codice ~\ref{lst:slipsRun} non permetteva alla funzione di uscire dal ciclo \textit{while}, è stato risolto con la riga numero 3 del codice ~\ref{lst:slips2Run}.
+Il codice ~\ref{lst:slips2Run} mostra le modifiche apportate al codice ~\ref{lst:slipsRun}. È stato risolto anche un bug che lascia in esecuzione il programma quando finisce di eseguire. La riga numero 3 del codice ~\ref{lst:slipsRun} non permetteva alla funzione di uscire dal ciclo \textit{while}, è stato risolto con la riga numero 3 del codice ~\ref{lst:slips2Run}.
 
 \lstinputlisting[language=Python, firstline=517, lastline=526, label={lst:slips2Run}, caption={codice modificato}]{slips2.py}
 
