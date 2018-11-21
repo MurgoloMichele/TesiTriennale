@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  20 NOV 2018 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  21 NOV 2018 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1391,26 +1391,95 @@ File: pictures/direction.png Graphic file (type png)
 <use pictures/direction.png>
 Package pdftex.def Info: pictures/direction.png used on input line 66.
 (pdftex.def)             Requested size: 347.61844pt x 116.3546pt.
- [44 <./pictures/direction.png>] [45]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 118.
- [46] [47]
-<pictures/hydra.png, id=713, 1788.6825pt x 1168.365pt>
-File: pictures/hydra.png Graphic file (type png)
 
-<use pictures/hydra.png>
-Package pdftex.def Info: pictures/hydra.png used on input line 202.
-(pdftex.def)             Requested size: 393.51137pt x 257.04109pt.
+<pictures/dstaddr.png, id=688, 945.5325pt x 319.1925pt>
+File: pictures/dstaddr.png Graphic file (type png)
 
-Overfull \hbox (12.81349pt too wide) in paragraph at lines 202--203
+<use pictures/dstaddr.png>
+Package pdftex.def Info: pictures/dstaddr.png used on input line 75.
+(pdftex.def)             Requested size: 340.39143pt x 114.90921pt.
+ [44 <./pictures/direction.png>]
+<pictures/dport.png, id=698, 684.5575pt x 319.1925pt>
+File: pictures/dport.png Graphic file (type png)
+ <use pictures/dport.png>
+Package pdftex.def Info: pictures/dport.png used on input line 83.
+(pdftex.def)             Requested size: 246.4405pt x 114.90921pt.
+
+<pictures/state.png, id=700, 784.9325pt x 363.3575pt>
+File: pictures/state.png Graphic file (type png)
+ <use pictures/state.png>
+Package pdftex.def Info: pictures/state.png used on input line 91.
+(pdftex.def)             Requested size: 282.57547pt x 130.8086pt.
+
+[45 <./pictures/dstaddr.png> <./pictures/dport.png>]
+<pictures/srctos.png, id=710, 784.9325pt x 323.2075pt>
+File: pictures/srctos.png Graphic file (type png)
+
+<use pictures/srctos.png>
+Package pdftex.def Info: pictures/srctos.png used on input line 99.
+(pdftex.def)             Requested size: 282.57547pt x 116.3546pt.
+
+<pictures/totpkts.png, id=712, 1025.8325pt x 333.245pt>
+File: pictures/totpkts.png Graphic file (type png)
+
+<use pictures/totpkts.png>
+Package pdftex.def Info: pictures/totpkts.png used on input line 107.
+(pdftex.def)             Requested size: 369.29942pt x 119.9681pt.
+ [46 <./pictures/state.png> <./pictures/srctos.png>]
+<pictures/totbytes.png, id=722, 1025.8325pt x 343.2825pt>
+File: pictures/totbytes.png Graphic file (type png)
+
+<use pictures/totbytes.png>
+Package pdftex.def Info: pictures/totbytes.png used on input line 115.
+(pdftex.def)             Requested size: 369.29942pt x 123.58159pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 125.
+
+[47 <./pictures/totpkts.png> <./pictures/totbytes.png>]
+<pictures/lettura.png, id=734, 1349.04pt x 847.165pt>
+File: pictures/lettura.png Graphic file (type png)
+
+<use pictures/lettura.png>
+Package pdftex.def Info: pictures/lettura.png used on input line 158.
+(pdftex.def)             Requested size: 404.71512pt x 254.15146pt.
+
+Overfull \hbox (24.01724pt too wide) in paragraph at lines 158--159
  [][] 
  []
 
-[48]) (./sections/5-esperimenti.tex [49 <./pictures/hydra.png>] [50
+[48]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 165.
+ <pictures/letturarighe.png, id=743, 2150.0325pt x 1493.58pt>
+File: pictures/letturarighe.png Graphic file (type png)
+
+<use pictures/letturarighe.png>
+Package pdftex.def Info: pictures/letturarighe.png used on input line 180.
+(pdftex.def)             Requested size: 429.99889pt x 298.71071pt.
+
+Overfull \hbox (49.30101pt too wide) in paragraph at lines 180--181
+ [][] 
+ []
+
+[49 <./pictures/lettura.png>] [50 <./pictures/letturarighe.png>] [51] [52]
+<pictures/hydra.png, id=772, 1788.6825pt x 1168.365pt>
+File: pictures/hydra.png Graphic file (type png)
+
+<use pictures/hydra.png>
+Package pdftex.def Info: pictures/hydra.png used on input line 274.
+(pdftex.def)             Requested size: 393.51137pt x 257.04109pt.
+
+Overfull \hbox (12.81349pt too wide) in paragraph at lines 274--275
+ [][] 
+ []
+
+) (./sections/5-esperimenti.tex [53 <./pictures/hydra.png>] [54
 
 ]
 Capitolo 5.
-[51] [52]
+[55] [56]
 Overfull \hbox (91.61272pt too wide) in paragraph at lines 93--94
 []\OT1/cmr/m/n/10.95 Installazione del-l'ul-ti-ma ver-sio-ne di ar-gus 3.0.8.2 
 dal si-to http://qosient.com/argus/dev/argus-
@@ -1436,7 +1505,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-<pictures/homestf.png, id=765, 901.3675pt x 348.30125pt>
+<pictures/homestf.png, id=819, 901.3675pt x 348.30125pt>
 File: pictures/homestf.png Graphic file (type png)
 
 <use pictures/homestf.png>
@@ -1447,8 +1516,8 @@ Overfull \hbox (69.98476pt too wide) in paragraph at lines 105--106
 [] 
  []
 
-[53 <./pictures/homestf.png>]
-<pictures/stfmodels.png, id=781, 901.3675pt x 189.70876pt>
+[57 <./pictures/homestf.png>]
+<pictures/stfmodels.png, id=835, 901.3675pt x 189.70876pt>
 File: pictures/stfmodels.png Graphic file (type png)
 
 <use pictures/stfmodels.png>
@@ -1464,8 +1533,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--128
 
  []
 
-[54 <./pictures/stfmodels.png>]
-<pictures/graph1.png, id=794, 578.16pt x 433.62pt>
+[58 <./pictures/stfmodels.png>]
+<pictures/graph1.png, id=848, 578.16pt x 433.62pt>
 File: pictures/graph1.png Graphic file (type png)
  <use pictures/graph1.png>
 Package pdftex.def Info: pictures/graph1.png used on input line 165.
@@ -1475,8 +1544,8 @@ Overfull \hbox (24.01137pt too wide) in paragraph at lines 165--166
  [][] 
  []
 
-[55] [56 <./pictures/graph1.png>]
-<pictures/graph2.png, id=806, 578.16pt x 433.62pt>
+[59] [60 <./pictures/graph1.png>]
+<pictures/graph2.png, id=859, 578.16pt x 433.62pt>
 File: pictures/graph2.png Graphic file (type png)
  <use pictures/graph2.png>
 Package pdftex.def Info: pictures/graph2.png used on input line 191.
@@ -1486,7 +1555,7 @@ Overfull \hbox (24.01137pt too wide) in paragraph at lines 191--192
  [][] 
  []
 
-<pictures/graph3.png, id=808, 578.16pt x 433.62pt>
+<pictures/graph3.png, id=861, 578.16pt x 433.62pt>
 File: pictures/graph3.png Graphic file (type png)
  <use pictures/graph3.png>
 Package pdftex.def Info: pictures/graph3.png used on input line 213.
@@ -1496,8 +1565,8 @@ Overfull \hbox (24.01137pt too wide) in paragraph at lines 213--214
  [][] 
  []
 
-[57 <./pictures/graph2.png>] [58 <./pictures/graph3.png>]
-<pictures/graph4.png, id=820, 578.16pt x 433.62pt>
+[61 <./pictures/graph2.png>] [62 <./pictures/graph3.png>]
+<pictures/graph4.png, id=875, 578.16pt x 433.62pt>
 File: pictures/graph4.png Graphic file (type png)
  <use pictures/graph4.png>
 Package pdftex.def Info: pictures/graph4.png used on input line 237.
@@ -1507,26 +1576,26 @@ Overfull \hbox (24.01137pt too wide) in paragraph at lines 237--238
  [][] 
  []
 
-[59 <./pictures/graph4.png>]
-<pictures/conversion.png, id=827, 623.32875pt x 81.30376pt>
+[63 <./pictures/graph4.png>]
+<pictures/conversion.png, id=882, 623.32875pt x 81.30376pt>
 File: pictures/conversion.png Graphic file (type png)
 
 <use pictures/conversion.png>
 Package pdftex.def Info: pictures/conversion.png used on input line 251.
 (pdftex.def)             Requested size: 311.6636pt x 40.65176pt.
 
-<pictures/slips.png, id=830, 610.28pt x 485.815pt>
+<pictures/slips.png, id=885, 610.28pt x 485.815pt>
 File: pictures/slips.png Graphic file (type png)
  <use pictures/slips.png>
 Package pdftex.def Info: pictures/slips.png used on input line 265.
 (pdftex.def)             Requested size: 305.13925pt x 242.9069pt.
 
-[60 <./pictures/conversion.png>]) (./sections/6-conclusioni.tex [61 <./pictures
-/slips.png>] [62
+[64 <./pictures/conversion.png>]) (./sections/6-conclusioni.tex [65 <./pictures
+/slips.png>] [66
 
 ]
 Capitolo 6.
-) (./main.bbl [63] [64
+) (./main.bbl [67] [68
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 11--15
@@ -1601,7 +1670,7 @@ Underfull \hbox (badness 2042) in paragraph at lines 60--63
  / sites / bernardmarr / 2018 / 10 / 05 /
  []
 
-[65]
+[69]
 Underfull \hbox (badness 10000) in paragraph at lines 65--68
 []\OT1/cmr/m/n/10.95 Making fa-cial re-co-gni-tion smar-ter with ar-ti-fi-cial 
 in-tel-li-gen-ce.
@@ -1679,13 +1748,13 @@ Underfull \hbox (badness 4569) in paragraph at lines 135--137
  https : / / www . kaspersky . com /
  []
 
-[66]
+[70]
 Underfull \hbox (badness 4686) in paragraph at lines 174--177
 []\OT1/cmr/m/n/10.95 Mark Stamp Pe-ter Sta-vrou-la-kis.  \OT1/cmr/m/it/10.95 Ha
 nd-book of In-for-ma-tion and
  []
 
-) [67]
+) [71]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
  (./main.aux)
@@ -1697,14 +1766,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 112.
  ) 
 Here is how much of TeX's memory you used:
- 37446 strings out of 493029
- 771415 string characters out of 6136234
- 949126 words of memory out of 5000000
- 40125 multiletter control sequences out of 15000+600000
- 16095 words of font info for 56 fonts, out of 8000000 for 9000
+ 37512 strings out of 493029
+ 772648 string characters out of 6136234
+ 949692 words of memory out of 5000000
+ 40169 multiletter control sequences out of 15000+600000
+ 16263 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,100p,10391b,1464s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
@@ -1713,22 +1785,23 @@ re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (67 pages, 1323353 bytes).
+nts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (71 pages, 1652869 bytes).
 PDF statistics:
- 1047 PDF objects out of 1200 (max. 8388607)
- 896 compressed objects within 9 object streams
- 273 named destinations out of 1000 (max. 500000)
- 523 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1105 PDF objects out of 1200 (max. 8388607)
+ 932 compressed objects within 10 object streams
+ 286 named destinations out of 1000 (max. 500000)
+ 563 words of extra memory for PDF output out of 10000 (max. 10000000)
 

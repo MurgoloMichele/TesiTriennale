@@ -69,46 +69,118 @@ La figura ~\ref{fig:direction} mostra come è stata effettuata la conversione.
 \end{figure}
 Nel primo caso si può convertire con 1 ma bisogna invertire i campi src e dst perchè la connessione viene inizializzata a sinistra. Nel secondo caso si converte con due perchè il flow è bidirezionale. Nel terzo caso la direzione della connessione è sconosciuta, si è scelto di convertire con 1 per sicurezza e non lasciare il campo vuoto. Nel quarto caso il flow è monodirezionale e quindi si converte con 1. Nell'ultimo caso \textit{who} è una keyword che indica una comunicazione \textit{icmp} che non viene utilizzata da Stratosphere, si è scelto di convertire con 1 per sicurezza.
 
-La tabella ~\ref{table:tabellaConversione} mostra sulla colonna di sinistra i campi dell'header di Argus, mentre sulla destra la scelta dei campi di nProbe per rappresentare i dati nello stesso formato scelto da Argus.
-
-\begin{table}[H]
+Il settimo campo di Argus è \textit{DstAddr} e rappresenta l'indirizzo IP di destinazione. Il campo corrispondente di nProbe si chiama \textit{IPV4\_DST\_ADDR}. La figura ~\ref{fig:dstaddr} mostra la formattazione dei dati. Come nel caso dell'indirizzo IP sorgente anche qui non è necessaria la conversione.
+\begin{figure}[H]
 				\centering
-				\begin{tabular}{|l|l|}
-								\hline
-								binetflow												 & flow																								 \\ \hline
-								start time											 & first switched																			 \\ \hline
-								duration												 & last switched - first switched											 \\ \hline
-								protocol												 & protocol																						 \\ \hline
-								source address                   & ipv4 source address                                 \\ \hline
-								source port                      & source port                                         \\ \hline
-								direction                        & biflow direction                                    \\ \hline
-								destination address              & ipv4 destination address                            \\ \hline
-								destination port                 & destination port                                    \\ \hline
-								state                            & -                                                   \\ \hline
-								source tos                       & source tos                                          \\ \hline
-								destination tos                  & -                                                   \\ \hline
-								tot packets                      & input packets + output packets                      \\ \hline
-								tot bytes                        & input bytes + output bytes                          \\ \hline
-								source bytes                     & input bytes                                         \\ \hline
-								source data											 & -																									 \\ \hline
-								destination data								 & -																									 \\ \hline
-								label														 & -																									 \\ \hline
+\includegraphics[scale=0.36]{dstaddr.png}
+				\caption{Indirizzo IP destinazione}
+				\label{fig:dstaddr}
+\end{figure}
 
-				\end{tabular}
+L'ottavo campo di Argus è \textit{Dport} e indica la porta di destinazione. Argus usa una formattazione decimale, stessa cosa il campo \textit{DST\_PORT} di nProbe. La figura ~\ref{fig:dport} mostra la formattazione dei campi. 
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.36]{dport.png}
+				\caption{Porta di destinazione}
+				\label{fig:dport}
+\end{figure}
+
+Il nono campo di Argus è \textit{State} e denota lo stato della connessione. Questo campo non è generabile a partire dai file di nProbe. Per effettuare questa conversione si è prima verificato l'impatto di questo campo nella generazione dei modelli di STF inserendo un valore non corretto. I modelli generati cambiando i valori di questo campo con valori non corretti restano invariati, pertanto il campo State non ne influenza la generazione. Per la conversione si è quindi inserito un valore costante "CON" per sicurezza. La figura ~\ref{fig:state} mostra esempi di valori del campo State di Argus.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.36]{state.png}
+				\caption{Stato connessione}
+				\label{fig:state}
+\end{figure}
+
+Il decimo e undicesimo campo di Argus sono \textit{sTos} \textit{dTos} e rappresentano il \textit{Type of Service} sorgente e destinazione di un pacchetto. Questi campi sono presenti in nProbe e condividono la stessa formattazione di Argus, non è pertanto necessaria una conversione. La figura ~\ref{fig:srctos} mostra esempi di valori di Type of Service.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.36]{srctos.png}
+				\caption{Type of Service sorgente}
+				\label{fig:srctos}
+\end{figure}
+
+Il dodicesimo campo di Argus è \textit{TotPkts} e rappresenta i pacchetti totali transitati nella connessione. Questo campo non compare in nProbe che ha però i campi \textit{IN\_PKTS} e \textit{OUT\_PKTS}. Per fare la conversione da nProbe ad Argus si sono sommati questi due valori per ottenere il totale dei pacchetti. La figura ~\ref{fig:totpkts} mostra l'operazione di somma e la formattazione dei dati.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.36]{totpkts.png}
+				\caption{Pacchetti totali transitati nella connessione}
+				\label{fig:totpkts}
+\end{figure}
+
+Il tredicesimo campo di Argus è \textit{TotBytes} e rappresenta i bytes totali transitati nella connessione. Come visto per il campo TotPkts, in nProbe questo campo non campare direttamente ma sono presenti \textit{IN\_BYTES} e \textit{OUT\_BYTES}. Per fare la conversione questi due campi vengono sommati per ottenere il totale. La figura ~\ref{fig:totbytes} mostra l'operazione di somma e la formattazione dei dati.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.36]{totbytes.png}
+				\caption{Bytes totali transitati nella connessione}
+				\label{fig:totbytes}
+\end{figure}
+
+Il quattordicesimo campo di Argus è \textit{SrcBytes} che indica i bytes in entrata dal sorgente. Per fare questa conversione si è usato il campo di nProbe \textit{IN\_BYTES} in figura ~\ref{fig:totbytes}.
+
+Il quindicesimo e ultimo campo di Argus è il campo label che serve per i metadata. Questo campo non è presente in nProbe e non è necessario per la generazione dei modelli, viene quindi lasciato vuoto.
+
+La tabella ~\ref{table:tabellaConversione} riassume le scelte di conversione, mostra sulla colonna di sinistra i campi dell'header di Argus, mentre sulla destra i campi di nProbe. 
+				\begin{table}[]
+								\centering
+								\begin{tabular}{|l|l|}
+												\hline
+												\multicolumn{1}{|c|}{\textbf{Argus}} & \multicolumn{1}{c|}{\textbf{nProbe}} \\ \hline
+												StartTime                            & FIRST\_SWITCHED                      \\ \hline
+												Duration                             & LAST\_SWITCHED - FIRST\_SWITCHED     \\ \hline
+												Proto                                & PROTOCOL                             \\ \hline
+												SrcAddr                              & IPv4\_SRC\_ADDR                      \\ \hline
+												Sport                                & L4\_SRC\_PORT                        \\ \hline
+												Dir                                  & BIFLOW\_DIRECTION                    \\ \hline
+												DstAddr                              & IPv4\_DST\_ADDR                      \\ \hline
+												Dport                                & DST\_PORT                            \\ \hline
+												State                                & -                                    \\ \hline
+												sTos                                 & SRC\_TOS                             \\ \hline
+												dTos                                 & DST\_TOS                             \\ \hline
+												TotPkts                              & IN\_PKTS + OUT\_PKTS                 \\ \hline
+												TotBytes                             & IN\_BYTES + OUT\_BYTES               \\ \hline
+												SrcBytes                             & IN\_BYTES                            \\ \hline
+												Label                                & -                                    \\ \hline
+								\end{tabular}
 				\caption{Tabella di conversione}
 								\label{table:tabellaConversione}
 \end{table}
-
-nProbe e Argus, oltre le differenze degli header presentano anche differenze nel formato con cui sono scritti i file.
-
 
 
 \section{Automatizzazione conversione}
 La conversione è stata automatizzata con la scrittura di uno script in Python. Si è scelto di scrivere un programma usando questo linguaggio per la facilità di utilizzo nel lavorare con i file e per le performance.
 
 Il problema richiede lo sviluppo di un programma che converte file in modalità batch.
-I file hanno una struttura gerarchica per data organizzata per sottocartelle, si esegue quindi un ciclo \textit{for} che prende tutti i file in modo ricorsivo.
-Dopodichè si apre il file in lettura leggendo una riga per volta, si converte il contenuto e lo si salva in una lista. Una volta terminata la lettura del file si scrive la lista contente i dati convertiti su un nuovo file.
+La figura ~\ref{fig:lettura} rappresenta l'operazione da eseguire per la lettura dei file. I file, che sono organizzati in cartelle per data, sono presi in modo ricorsivo e inseriti in una coda. Al termine della lettura dei file si ha una coda con l'insieme dei path dei file da leggere.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.3]{lettura.png}
+				\caption{Lettura dei file ricorsiva}
+				\label{fig:lettura}
+\end{figure}
+
+Lo pseudocodice ~\ref{alg:ricorsione} descrive l'immagine ~\ref{fig:lettura}. Alla riga 1 si assegna ad una variabile il path della cartella in cui sono contenuti i file e nella seconda riga si crea un oggetto coda. Si creano poi due cicli for annidati che scorrono la struttura gerarchica della cartella e per ogni ogni file all'interno della cartella \textit{minuti} si mette in coda il file. Quando l'esecuzione dei due cicli for finisce rimane una coda con all'interno tutti i path dei file.
+\begin{algorithm}
+\caption{Inserimento file in una coda}
+				\label{alg:ricorsione}
+\begin{algorithmic}[1]
+				\State $\textit{cartellaRoot} =  $\textit{pathCartella}
+				\State $\textit{Coda} = $\textit{Queue()}
+				\For{\texttt{mesi, giorni, minuti in \textit{cartellaRoot}}}
+						\For{\texttt{file in minuti}}
+						\State $\textit{Coda}.append() = $\textit{file}
+						\EndFor
+				\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.2]{letturarighe.png}
+				\caption{Lettura dei file ricorsiva}
+				\label{fig:letturarighe}
+\end{figure}
 
 Si è scelto di leggere il file una riga alla volta perchè le grandi dimensioni dei file non permettono un approccio diverso. Un approccio più veloce sarebbe stato quello di leggere i file per intero nella memoria principale ma non è un approccio possibile perchè possono presentarsi casi in cui la dimensione della RAM, soprattutto nei computer più datati, è più piccola rispetto a quella dei file.
 
