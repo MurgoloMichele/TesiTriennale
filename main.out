@@ -29,17 +29,22 @@
 \BOOKMARK [0][-]{chapter.4}{Soluzione proposta}{}% 29
 \BOOKMARK [1][-]{section.4.1}{Conversione}{chapter.4}% 30
 \BOOKMARK [1][-]{section.4.2}{Automatizzazione conversione}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.3}{Rendere efficiente la conversione}{chapter.4}% 32
-\BOOKMARK [2][-]{subsection.4.3.1}{Possibili soluzioni}{section.4.3}% 33
-\BOOKMARK [2][-]{subsection.4.3.2}{Scelta effettuata}{section.4.3}% 34
-\BOOKMARK [0][-]{chapter.5}{Esperimenti e risultati}{}% 35
-\BOOKMARK [1][-]{section.5.1}{Software utilizzati}{chapter.5}% 36
-\BOOKMARK [1][-]{section.5.2}{Installazione Stratosphere IPS}{chapter.5}% 37
-\BOOKMARK [1][-]{section.5.3}{Installazione di Argus}{chapter.5}% 38
-\BOOKMARK [1][-]{section.5.4}{Utilizzo del programma stf}{chapter.5}% 39
-\BOOKMARK [1][-]{section.5.5}{Prestazioni}{chapter.5}% 40
-\BOOKMARK [2][-]{subsection.5.5.1}{Benchmark}{section.5.5}% 41
-\BOOKMARK [2][-]{subsection.5.5.2}{Metrica delle prestazioni parallele}{section.5.5}% 42
-\BOOKMARK [1][-]{section.5.6}{Conversione}{chapter.5}% 43
-\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 44
-\BOOKMARK [1][-]{section.6.1}{Prestazioni}{chapter.6}% 45
+\BOOKMARK [2][-]{subsection.4.2.1}{Lettura dei file}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.2}{Lettura righe dei file}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.3}{Conversione dei dati}{section.4.2}% 34
+\BOOKMARK [2][-]{subsection.4.2.4}{Scrittura su file}{section.4.2}% 35
+\BOOKMARK [2][-]{subsection.4.2.5}{Algoritmo completo}{section.4.2}% 36
+\BOOKMARK [1][-]{section.4.3}{Rendere efficiente la conversione}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.3.1}{Possibili soluzioni}{section.4.3}% 38
+\BOOKMARK [2][-]{subsection.4.3.2}{Scelta effettuata}{section.4.3}% 39
+\BOOKMARK [0][-]{chapter.5}{Esperimenti e risultati}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Software utilizzati}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Installazione Stratosphere IPS}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.3}{Installazione di Argus}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.4}{Utilizzo del programma stf}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.5}{Prestazioni}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.5.1}{Benchmark}{section.5.5}% 46
+\BOOKMARK [2][-]{subsection.5.5.2}{Metrica delle prestazioni parallele}{section.5.5}% 47
+\BOOKMARK [1][-]{section.5.6}{Conversione}{chapter.5}% 48
+\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Prestazioni}{chapter.6}% 50

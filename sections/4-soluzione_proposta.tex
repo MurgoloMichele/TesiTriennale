@@ -151,6 +151,7 @@ La tabella ~\ref{table:tabellaConversione} riassume le scelte di conversione, mo
 \section{Automatizzazione conversione}
 La conversione è stata automatizzata con la scrittura di uno script in Python. Si è scelto di scrivere un programma usando questo linguaggio per la facilità di utilizzo nel lavorare con i file e per le performance.
 
+\subsection{Lettura dei file}
 Il problema richiede lo sviluppo di un programma che converte file in modalità batch.
 La figura ~\ref{fig:lettura} rappresenta l'operazione da eseguire per la lettura dei file. I file, che sono organizzati in cartelle per data, sono presi in modo ricorsivo e inseriti in una coda. Al termine della lettura dei file si ha una coda con l'insieme dei path dei file da leggere.
 \begin{figure}[H]
@@ -175,29 +176,139 @@ Lo pseudocodice ~\ref{alg:ricorsione} descrive l'immagine ~\ref{fig:lettura}. Al
 \end{algorithmic}
 \end{algorithm}
 
+\subsection{Lettura righe dei file} 
+Una volta che la coda è completa si passa alla lettura dei file. Per questa operazione si prende un file file dalla coda e si legge una riga alla volta. Da ogni riga vengono estratti i campi utili alla conversione.
+La figura ~\ref{fig:letturarighe} descrive questa operazione. Si è scelto di leggere i file per righe e non per intero perchè sono troppo grandi e rischiano di saturare la RAM, soprattutto leggendo più file in contemporanea. La soluzione scelta permette di eseguire l'algoritmo anche su computer con poca RAM.
+
 \begin{figure}[H]
 				\centering
-\includegraphics[scale=0.2]{letturarighe.png}
-				\caption{Lettura dei file ricorsiva}
+\includegraphics[scale=0.27]{letturarighe.png}
+				\caption{Lettura delle righe}
 				\label{fig:letturarighe}
 \end{figure}
 
-Si è scelto di leggere il file una riga alla volta perchè le grandi dimensioni dei file non permettono un approccio diverso. Un approccio più veloce sarebbe stato quello di leggere i file per intero nella memoria principale ma non è un approccio possibile perchè possono presentarsi casi in cui la dimensione della RAM, soprattutto nei computer più datati, è più piccola rispetto a quella dei file.
 
-L'algoritmo ~\ref{alg:singleCore} scritto in pseudocodice descrive una soluzione single core al problema
+Lo pseudocodice ~\ref{alg:pseudocodicelettura} descrive l'immagine ~\ref{fig:letturarighe}. Si inizializza una lista per ogni campo di nProbe da leggere e si prende un file dalla coda. Per ogni riga del file si aggiunge il campo letto alla lista. Finito il ciclo for le liste contengono tutti i campi del file.
 
-\begin{algorithm}
-\caption{Single core version}
-				\label{alg:singleCore}
+\begin{algorithm}[H]
+\caption{Lettura righe file}
+				\label{alg:pseudocodicelettura}
 \begin{algorithmic}[1]
-\Procedure{Hydra}{}
-\ForAll{\textit{file} in path}
-\State read data from \textit{file}
-\State convert data into new format
-\State append data into new file
-\EndFor
+				\State \textit{ipv4\_src\_addr} = [ ]
+				\State \textit{ipv4\_dst\_addr} = [ ]
+				\State \textit{first\_switched} = [ ]
+				\State \textit{last\_switched} = [ ]
+				\State \textit{protocol} = [ ]
+				\State \textit{src\_port} = [ ]
+				\State \textit{dst\_port} = [ ]
+				\State \textit{biflow} = [ ]
+				\State \textit{src\_tos} = [ ]
+				\State \textit{dst\_tos} = [ ]
+				\State \textit{in\_pkts} = [ ]
+				\State \textit{out\_pkts} = [ ]
+				\State \textit{in\_bytes} = [ ]
+				\State \textit{out\_bytes} = [ ]
+				\State \textit{file} = Coda.get()
 
-\EndProcedure
+				\For{\texttt{riga in \textit{file}}}
+						\State \textit{Assegna ad ogni lista il valore letto dalla riga}
+				\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Conversione dei dati}
+Lo pseudocodice ~\ref{alg:pseudocodiceconversione} descrive il processo di conversione che si effettua sui valori letti nel codice ~\ref{alg:pseudocodicelettura}.La data si ricava dal nome delle cartelle scomponendo il path, la figura ~\ref{fig:conversioneschema} mostra l'acquisizione della data partendo dal percorso del file. Per ogni riga viene poi fatta una addizione dei pacchetti e dei byte in entrata e in uscita.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.27]{conversioneschema.png}
+				\caption{Acquisizione data dal percorso del file}
+				\label{fig:conversioneschema}
+\end{figure}
+
+\begin{algorithm}[H]
+				\caption{Conversione dei campi}
+				\label{alg:pseudocodiceconversione}
+\begin{algorithmic}[1]
+				\State \textit{year, month, day, hour, minute} = file.split("/") 
+				\While {$i < lunghezza del file$}
+				\State \textit{last} = last\_switched[i]
+				\State \textit{first} = first\_switched[i]
+				\State \textit{tot\_pkts} = in\_pkts[i] + out\_pkts[i]
+				\State \textit{tot\_bytes} = in\_bytes[i] + out\_bytes[i]
+				\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Scrittura su file}
+La figura ~\ref{fig:conversionetonprobe} mostra il procedimento di scrittura su file. Questo passaggio viene effettuato finita la conversione dei file.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.27]{conversionetonprobe.png}
+				\caption{Scrittura su file nProbe}
+				\label{fig:conversionetonprobe}
+\end{figure}
+
+Lo pseudocodice ~\ref{alg:pseudocodicescrittura} descrive il processo di scrittura su file. All'interno di un ciclo \textit{while} si effettua una scrittura di tutti i campi convertiti nel passaggio precedente.
+\begin{algorithm}[H]
+				\caption{Scrittura su file}
+				\label{alg:pseudocodicescrittura}
+\begin{algorithmic}[1]
+				\While {$i < lunghezza del file$}
+				\State \textit{file}.write(year + "/" + month + "/" + day + " " + hour + ":" + minute + ":" + first\_switched[i] + "," + (last - first) + "," + dict\_protocols.get(protocol[i]) + "," + ipv4\_src\_addr[i] + "," + src\_port[i] + "," + flow\_direction.get(biflow[i]) + "," + ipv4\_dst\_addr[i] + "," + dst\_port[i] + "," + "CON" "," + src\_tos[i] + "," + "," + tot\_pkts + "," + tot\_bytes + "," + in\_bytes[i])
+				\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Algoritmo completo}
+La figura ~\ref{fig:soluzioneproposta} mostra lo schema completo per la risoluzione dell'algoritmo.
+\begin{figure}[H]
+				\centering
+\includegraphics[scale=0.35]{soluzioneproposta.png}
+				\caption{Schema completo}
+				\label{fig:soluzioneproposta}
+\end{figure}
+
+L'algoritmo ~\ref{alg:pseudocodicecompleto} scritto in pseudocodice descrive una soluzione single core al problema
+
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+				\caption{Pseudocodice completo}
+				\label{alg:pseudocodicecompleto}
+				\State $\textit{cartellaRoot} =  $\textit{pathCartella}
+				\State $\textit{Coda} = $\textit{Queue()}
+				\For{\texttt{mesi, giorni, minuti in \textit{cartellaRoot}}}
+						\For{\texttt{file in minuti}}
+						\State $\textit{Coda}.append() = $\textit{file}
+						\EndFor
+				\EndFor
+				\State \textit{ipv4\_src\_addr} = [ ]
+				\State \textit{ipv4\_dst\_addr} = [ ]
+				\State \textit{first\_switched} = [ ]
+				\State \textit{last\_switched} = [ ]
+				\State \textit{protocol} = [ ]
+				\State \textit{src\_port} = [ ]
+				\State \textit{dst\_port} = [ ]
+				\State \textit{biflow} = [ ]
+				\State \textit{src\_tos} = [ ]
+				\State \textit{dst\_tos} = [ ]
+				\State \textit{in\_pkts} = [ ]
+				\State \textit{out\_pkts} = [ ]
+				\State \textit{in\_bytes} = [ ]
+				\State \textit{out\_bytes} = [ ]
+				\State \textit{file} = Coda.get()
+
+				\For{\texttt{riga in \textit{file}}}
+						\State \textit{Assegna ad ogni lista il valore letto dalla riga}
+				\EndFor
+				\State \textit{year, month, day, hour, minute} = file.split("/") 
+				\While {$i < lunghezza del file$}
+				\State \textit{last} = last\_switched[i]
+				\State \textit{first} = first\_switched[i]
+				\State \textit{tot\_pkts} = in\_pkts[i] + out\_pkts[i]
+				\State \textit{tot\_bytes} = in\_bytes[i] + out\_bytes[i]
+				\State \textit{file}.write(year + "/" + month + "/" + day + " " + hour + ":" + minute + ":" + first\_switched[i] + "," + (last - first) + "," + dict\_protocols.get(protocol[i]) + "," + ipv4\_src\_addr[i] + "," + src\_port[i] + "," + flow\_direction.get(biflow[i]) + "," + ipv4\_dst\_addr[i] + "," + dst\_port[i] + "," + "CON" "," + src\_tos[i] + "," + "," + tot\_pkts + "," + tot\_bytes + "," + in\_bytes[i])
+				\EndWhile
+				
 \end{algorithmic}
 \end{algorithm}
 

@@ -38,17 +38,22 @@
 \contentsline {chapter}{\numberline {4}Soluzione proposta}{41}{chapter.4}
 \contentsline {section}{\numberline {4.1}Conversione}{41}{section.4.1}
 \contentsline {section}{\numberline {4.2}Automatizzazione conversione}{48}{section.4.2}
-\contentsline {section}{\numberline {4.3}Rendere efficiente la conversione}{51}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Possibili soluzioni}{51}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Scelta effettuata}{52}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{55}{chapter.5}
-\contentsline {section}{\numberline {5.1}Software utilizzati}{55}{section.5.1}
-\contentsline {section}{\numberline {5.2}Installazione Stratosphere IPS}{55}{section.5.2}
-\contentsline {section}{\numberline {5.3}Installazione di Argus}{56}{section.5.3}
-\contentsline {section}{\numberline {5.4}Utilizzo del programma stf\\}{57}{section.5.4}
-\contentsline {section}{\numberline {5.5}Prestazioni}{58}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Benchmark}{58}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Metrica delle prestazioni parallele}{60}{subsection.5.5.2}
-\contentsline {section}{\numberline {5.6}Conversione}{63}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclusioni}{67}{chapter.6}
-\contentsline {section}{\numberline {6.1}Prestazioni}{67}{section.6.1}
+\contentsline {subsection}{\numberline {4.2.1}Lettura dei file}{48}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Lettura righe dei file}{49}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Conversione dei dati}{51}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Scrittura su file}{52}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Algoritmo completo}{53}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Rendere efficiente la conversione}{54}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Possibili soluzioni}{55}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Scelta effettuata}{56}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Esperimenti e risultati}{59}{chapter.5}
+\contentsline {section}{\numberline {5.1}Software utilizzati}{59}{section.5.1}
+\contentsline {section}{\numberline {5.2}Installazione Stratosphere IPS}{59}{section.5.2}
+\contentsline {section}{\numberline {5.3}Installazione di Argus}{60}{section.5.3}
+\contentsline {section}{\numberline {5.4}Utilizzo del programma stf\\}{61}{section.5.4}
+\contentsline {section}{\numberline {5.5}Prestazioni}{62}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Benchmark}{62}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Metrica delle prestazioni parallele}{64}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Conversione}{67}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusioni}{71}{chapter.6}
+\contentsline {section}{\numberline {6.1}Prestazioni}{71}{section.6.1}
