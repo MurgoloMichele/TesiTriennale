@@ -37,14 +37,13 @@
 \BOOKMARK [1][-]{section.4.3}{Rendere efficiente la conversione}{chapter.4}% 37
 \BOOKMARK [2][-]{subsection.4.3.1}{Possibili soluzioni}{section.4.3}% 38
 \BOOKMARK [2][-]{subsection.4.3.2}{Scelta effettuata}{section.4.3}% 39
-\BOOKMARK [0][-]{chapter.5}{Esperimenti e risultati}{}% 40
-\BOOKMARK [1][-]{section.5.1}{Software utilizzati}{chapter.5}% 41
+\BOOKMARK [0][-]{chapter.5}{Sperimentazioni}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Realizzazione di una piattaforma dedicata}{chapter.5}% 41
 \BOOKMARK [1][-]{section.5.2}{Installazione Stratosphere IPS}{chapter.5}% 42
 \BOOKMARK [1][-]{section.5.3}{Installazione di Argus}{chapter.5}% 43
-\BOOKMARK [1][-]{section.5.4}{Utilizzo del programma stf}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.4}{Utilizzo del programma STF}{chapter.5}% 44
 \BOOKMARK [1][-]{section.5.5}{Prestazioni}{chapter.5}% 45
 \BOOKMARK [2][-]{subsection.5.5.1}{Benchmark}{section.5.5}% 46
 \BOOKMARK [2][-]{subsection.5.5.2}{Metrica delle prestazioni parallele}{section.5.5}% 47
 \BOOKMARK [1][-]{section.5.6}{Conversione}{chapter.5}% 48
 \BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 49
-\BOOKMARK [1][-]{section.6.1}{Prestazioni}{chapter.6}% 50

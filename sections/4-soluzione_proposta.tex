@@ -151,7 +151,7 @@ La tabella ~\ref{table:tabellaConversione} riassume le scelte di conversione, mo
 \section{Automatizzazione conversione}
 La conversione è stata automatizzata con la scrittura di uno script in Python. Si è scelto di scrivere un programma usando questo linguaggio per la facilità di utilizzo nel lavorare con i file e per le performance.
 
-\subsection{Lettura dei file}
+\subsection{Lettura dei file}\label{letturafilesec}
 Il problema richiede lo sviluppo di un programma che converte file in modalità batch.
 La figura ~\ref{fig:lettura} rappresenta l'operazione da eseguire per la lettura dei file. I file, che sono organizzati in cartelle per data, sono presi in modo ricorsivo e inseriti in una coda. Al termine della lettura dei file si ha una coda con l'insieme dei path dei file da leggere.
 \begin{figure}[H]
@@ -332,7 +332,7 @@ Si possono pensare diverse soluzioni che migliorerebbero in modo significativo i
 \begin{verse}
 \textbf{Lavorare su chunk di file}
 Per velocizzare il programma e sfruttare i processori disponibili si potrebbe assegnare ad ogni processore un file da leggere e convertire. Quando il processore termina la conversione dei dati scrive sul file in output. In questo modo si dividrebbe il tempo di esecuzione sul numero di processori disponibili. 
-Questa soluzione rende il più veloce possibile la conversione dei file ma i processori finiscono per scrivere sullo stesso file senza avere nessuna regola di precedenza, questo crea problemi perchè le scritture in output non sono ordinate e non è possibile creare modelli comportamentali affidabili. Le scritture su file devono essere ordinate e sequenziali, inoltre questa soluzione ha il problema di scrivere sempre su unico file e come detto in precedenza questo tipo di soluzione non è possibile.
+Questa soluzione rende il più veloce possibile la conversione dei file ma i processori finiscono per scrivere sullo stesso file senza avere nessuna regola di precedenza, questo crea problemi perchè le scritture in output non sono ordinate e non è possibile creare modelli comportamentali affidabili. Le scritture su file devono essere ordinate e sequenziali, inoltre questa soluzione ha il problema di scrivere sempre su unico file e, come detto in precedenza, questo tipo di soluzione non è possibile.
 \end{verse}
 
 \begin{verse}
@@ -355,30 +355,8 @@ Un problema che può creare questa soluzione è la produzione di una grande quan
 
 Si è scelto di procedere con l'ultima soluzione presentata perchè data la grande quantità di informazioni da convertire si preferisce l'approccio più veloce a discapito dell'ordinamento finale.
 
-Il programma, dato in input la root directory dei file, cerca ricorsivamente tutti i file e li inserisce in una coda, chiama poi una funzione a cui assegna 4 processori. La funzione ha un ciclo while che si ripete fino a quando la coda popolata da tutti i file non è vuota. Ogni processore che entra in questa funzione toglie un file dalla coda e lo elabora.
-
-Il programma ~\ref{alg:multiCore} descrive una soluzione multi core
-\begin{algorithm}
-\caption{Multi core version}
-				\label{alg:multiCore}
-\begin{algorithmic}[1]
-\Procedure{Hydra}{}
-\ForAll{\textit{file} in path}
-\State $\textit{Queue[]} \gets \textit{file}$
-\State read data from $\textit{file}$
-\State spawn 4 process
-\While{\textit{Queue[]} $\textbf{not empty}$}
-\State $\textit{filename} \gets $\textit{Queue.get()}
-\State convert data into new format
-\State append data into new file
-\EndWhile
-\EndFor
-\EndProcedure
-\end{algorithmic}
-\end{algorithm}
-\end{document}
-
-La figura ~\ref{fig:multiCore} descrive lo pseudocodice del programma parallelo. Ogni file da convertire è inserito in una coda a cui accedono i processori, ogni processore lavora individualmente sul proprio file da cui legge e converte i dati. La scrittura su file rimane indipendente perchè ogni processore lavora sul proprio file.
+Per realizzare questa soluzione si effettua una lettura analoga dei file vista nella sezione ~\ref{letturafilesec} per creare una coda che contiene il percorso di tutti i file presenti in un cartella. Si chiama poi una funzione che prende un numero designato di core da assegnare ad una funzione. Ogni core prende un file all'interno della coda, lo legge, lo converte e scrive su un file in modo indipendente dagli altri.
+La figura ~\ref{fig:multiCore} mostra la parallelizzazione dell'algoritmo.
 
 \begin{figure}[H]
 				\centering
@@ -386,5 +364,27 @@ La figura ~\ref{fig:multiCore} descrive lo pseudocodice del programma parallelo.
 				\caption{Multi core version}
 				\label{fig:multiCore}
 \end{figure}
+
+Lo pseudocodice ~\ref{alg:multiCore} descrive questa soluzione.
+\begin{algorithm}[H]
+\caption{Multi core version}
+				\label{alg:multiCore}
+\begin{algorithmic}[1]
+\Procedure{Hydra}{}
+\ForAll{\textit{file} in path}
+\State $\textit{Queue[]} \gets \textit{file}$
+\State legge i dati dal $\textit{file}$
+\State prende $n$-core
+\While{\textit{Queue[]} $\textbf{not empty}$}
+\State $\textit{filename} \gets $\textit{Queue.get()}
+\State converte i dati nel nuovo formato
+\State scrive i dati in un nuovo file
+\EndWhile
+\EndFor
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\end{document}
+
 
 

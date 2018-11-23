@@ -1,10 +1,10 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\chapter{Esperimenti e risultati}
+\chapter{Sperimentazioni}
 
 In questo capitolo vengono presentati gli esperimenti effettuati e le prestazioni ottenuti dallo script di conversione, successivamente i test fatti con Stratosphere IPS sulla creazione di modelli comportamentali per verificare l'accuratezza della conversione dei flows.
 
-\section{Software utilizzati}
+\section{Realizzazione di una piattaforma dedicata}
 
 Per lo sviluppo del programma per la conversione dei file e per l'utilizzo di Stratosphere IPS è stata creata una piattaforma dedicata alla Security Analytics tramite l'utilizzo di \textit{VirtualBox} con una installazione del sistema operativo Ubuntu 16.04 LTS.
 
@@ -16,55 +16,44 @@ Per lo sviluppo del programma per la conversione dei file e per l'utilizzo di St
 
 \section{Installazione Stratosphere IPS}
 Sulla macchina virtuale è stato installato il framework di Stratospehere IPS. Di seguito i passaggi effettuati per l'installazione \cite{stf}.
-
 \begin{itemize}
 				\item Installazione del programma git 2.7.4
 \begin{lstlisting}[language=bash]
-$ sudo apt install git
+ sudo apt install git
 \end{lstlisting}
-
 				\item Clonazione repository github del framework
 \begin{lstlisting}[language=bash]
-$ git clone https://github.com/stratosphereips/StratosphereTestingFramework
+ git clone https://github.com/stratosphereips/StratosphereTestingFramework
 \end{lstlisting}
-
 				\item Installazione del programma python-pip
 \begin{lstlisting}[language=bash]
-$ sudo apt install python-pip
+ sudo apt install python-pip
 \end{lstlisting}
 \end{itemize}
-				
 \begin{itemize}
-				\paragraph{Installazione dipendenze per Stratosphere IPS}
-
 				\item prettytable 0.7.2-3
 \begin{lstlisting}[language=bash]
-$ sudo apt install python-prettytable
+ sudo apt install python-prettytable
 \end{lstlisting}
-
 				\item transaction 1.4.3-3
 \begin{lstlisting}[language=bash]
-$ sudo apt install python-transaction
+ sudo apt install python-transaction
 \end{lstlisting}
-
 				\item persistent 4.1.1-1build2
 \begin{lstlisting}[language=bash]
-$ sudo apt install python-persistent
+ sudo apt install python-persistent
 \end{lstlisting}
-
 				\item zodb 5.4.0
 \begin{lstlisting}[language=bash]
-$ sudo pip install zodb
+ sudo pip install zodb
 \end{lstlisting}
-
 				\item sparse 1.1-1.3build1
 \begin{lstlisting}[language=bash]
-$ sudo apt install python-sparse
+ sudo apt install python-sparse
 \end{lstlisting}
-
 				\item dateutil 2.4.2-1
 \begin{lstlisting}[language=bash]
-$ sudo apt install python-dateutil
+ sudo apt install python-dateutil
 \end{lstlisting}
 
 
@@ -73,36 +62,37 @@ $ sudo apt install python-dateutil
 \section{Installazione di Argus}
 
 Per generare i netflow dal traffico di rete è necessario avere una istanza di Argus sul computer. I seguenti passaggi sono necessari per la corretta installazione di Argus \cite{stf}.
-
 \begin{itemize}
 				\item libpcap 1.7.4-2
 \begin{lstlisting}[language=bash]
-$ sudo apt install libpcab-dev
+ sudo apt install libpcab-dev
 \end{lstlisting}
-
 \item bison 3.0.4
 \begin{lstlisting}[language=bash]
-$ sudo apt install bison
+ sudo apt install bison
 \end{lstlisting}
-
 \item flex 2.6.0-11
 \begin{lstlisting}[language=bash]
-$ sudo apt install flex
+ sudo apt install flex
 \end{lstlisting}
-
 \item Installazione dell'ultima versione di argus 3.0.8.2 dal sito http://qosient.com/argus/dev/argus-latest.tar.gz
-
 \item Installazione dell'ultima versione di argus-client 3.0.8.2 dal sito http://qosient.com/argus/dev/argus-clients-latest.tar.gz
-
 \end{itemize}
-\section{Utilizzo del programma stf\\}
-*!*!*!*!*!*!*!*!* Questa parte mi sembra brutta, per ogni riga dovrei caricare un'immagine presa da github, la caption è direttamente la riga sopra !*!*!*!*!*!*!*\newline
 
-Per eseguire il programma lo si esegue con
+\section{Utilizzo del programma STF\\}
+In questa sezione viene presentato il framework di Stratoshpere le la creazione dei modelli comportamentali, STF. 
+
+Per eseguire il programma si usa il comando
 \begin{lstlisting}[language=bash]
 	./stf.py
 \end{lstlisting}
-\includegraphics[scale=0.5]{homestf.png}
+La figura ~\ref{fig:homestf} mostra l'interfaccia a console del programma STF
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{homestf.png}
+				\caption{Interfaccia a console di STF}
+				\label{fig:homestf}
+\end{figure}
 
 Per caricare un dataset si utilizza il comando
 \begin{lstlisting}[language=bash]
@@ -123,7 +113,7 @@ Per visualizzare il behavioral model si utilizza il comando
 \begin{lstlisting}[language=bash]
 	models -L [id]	
 \end{lstlisting}
-\includegraphics[scale=0.5]{stfmodels.png}
+
 \end{document}
 
 \section{Prestazioni}
@@ -132,16 +122,15 @@ Come visto nel capitolo 4, il programma di conversione proposto è efficiente. I
 
 \subsection{Benchmark}
 
-Per misurare la velocità del programma si è usato come dataset 10 giorni di flows. La dimensione del dataset è di 1,7 Gb per un totale di 14400 file. Le misure sono state realizzate con il programma /usr/bin/time. I grafici sono stati creati con il programma GNU Octave per GNU/Linux \cite{octave}.
+Per misurare la velocità del programma si è usato come dataset 10 giorni di flows. La dimensione del dataset è di 1,7 GB per un totale di 14400 file. Le misure sono state realizzate con il programma /usr/bin/time. I grafici sono stati creati con il programma GNU Octave per GNU/Linux \cite{octave}.
 
 Il computer su cui sono stati effettuati i benchmark ha le seguenti caratteristiche:
 \begin{itemize}
 				\item Linux Mint 19 Cinnamon
 				\item Kernel 4.15.0-20-generic
 				\item Processore Intel Core i7-3770 @ 3.40GHz 
-				\item RAM 8 Gb
-				\item HDD 2 Tb
-				\item AMD HD7870
+				\item RAM 8 GB
+				\item HDD 2 TB 7200 RPM
 \end{itemize}
 
 I benchmark sono stati effettuati convertendo il dataset con l'algoritmo visto nel capitolo 4. I benchmark sono stati ripetuti in funzione del numero di core disponibili sulla CPU.

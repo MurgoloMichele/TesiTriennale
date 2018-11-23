@@ -1,7 +1,12 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \chapter{Conclusioni}
-\section{Prestazioni}
+In questa tesi si è analizzato un software di Intrusion Detection System basato su machine learning. Per prima cosa si sono studiati dei programmi che catturano il traffico internet e lo salvano in network flow. Si è visto come diversi programmi hanno diversi formati e campi in questi file, quindi si è studiato come è possibile estendere questi formati. Successivamente si è creato un programma che effettui in automatico la conversione di grosse quantità di dati. La correttezza della conversione è stata controllata utilizzando lo stesso file convertito tra due formati per fare anomaly detection.
+Dimostrando la fattibilità di una conversione tra standard differenti si è ricercato un approccio per rendere efficiente il programma di conversione, pertanto sono stati introdotti concetti di calcolo parallelo che hanno reso possibile l'estensione di un Intrusion Detection System a diversi formati, che altrimenti non sarebbe stato possibile effettuare a causa delle considerevoli risorse richieste.
+
+Le prestazioni raggiunte introducendo concetti di calcolo parallelo sono ottime e hanno permesso di ottenere uno speedup lineare.
+
+L'Intrusion Detection System utilizzato in questa tesi è pubblicato come alpha  Il codice sorgente pubblicato è ancora in fase di testing e presenta dei bug e delle limitazioni che sono state rimossi per effettuare l'installazione e le sperimentazioni.
 
 
 \end{document}
