@@ -1,0 +1,18 @@
+capitolo 4 cambiare le immagini: mettere argus e nprobe
+pagina 44 mettere 2 in numero
+i numeri sempre in cifra
+pseudocodice uniforme (corsivo)
+mettere freccia invece di uguale
+oggetto coda riferimento
+mettere in corsivo il nome delle variabili e cicli
+mettere input e output negli algoritmi
+capitolo 2 mettere in ordine supervised -> unsupervised -> reinforced
+supervised learning non scrivere "al computer" e scrivere meglio delle features
+le features sono scritte meglio in unsupervised
+togliere la P in IDPS e fare una sezione in cui dico che esistono anche gli idps
+pagina 15 invertire network e host based e togliere i bullet points su wireless e network behavior analysis per metterli dentro network based
+Nell'introduzione scrivere meglio cosa ho fatto a pagina 8 (importante) almeno il doppio
+capitolo 5 mettere riferimento ai pacchetti
+capitolo 5 mettere due righe per scrivere perchè serve quella dipendenza
+nell'introduzione mettere l'ultima parte della conclusione
+nell'introduzione mettere delle citazioni (ibmwatson, qradar)

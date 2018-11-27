@@ -3,14 +3,14 @@
 \BOOKMARK [1][-]{section.2.1}{Malware}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{Botnet}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Botnet Detection}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.4}{Intrusion Detection and Prevention System}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.4.1}{Tipi di IDPS}{section.2.4}% 7
-\BOOKMARK [2][-]{subsection.2.4.2}{Perch\350 usare IDPS}{section.2.4}% 8
+\BOOKMARK [1][-]{section.2.4}{Intrusion Detection System}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.4.1}{Tipi di IDS}{section.2.4}% 7
+\BOOKMARK [2][-]{subsection.2.4.2}{Perch\350 usare IDS}{section.2.4}% 8
 \BOOKMARK [2][-]{subsection.2.4.3}{Metodi di rilevamento}{section.2.4}% 9
 \BOOKMARK [1][-]{section.2.5}{Machine learning}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.5.1}{Reinforced learning}{section.2.5}% 11
-\BOOKMARK [2][-]{subsection.2.5.2}{Supervised learning}{section.2.5}% 12
-\BOOKMARK [2][-]{subsection.2.5.3}{Unsupervised learning}{section.2.5}% 13
+\BOOKMARK [2][-]{subsection.2.5.1}{Supervised learning}{section.2.5}% 11
+\BOOKMARK [2][-]{subsection.2.5.2}{Unsupervised learning}{section.2.5}% 12
+\BOOKMARK [2][-]{subsection.2.5.3}{Reinforced learning}{section.2.5}% 13
 \BOOKMARK [0][-]{chapter.3}{Analisi del software}{}% 14
 \BOOKMARK [1][-]{section.3.1}{Analisi traffico di rete}{chapter.3}% 15
 \BOOKMARK [2][-]{subsection.3.1.1}{Packet Capture}{section.3.1}% 16

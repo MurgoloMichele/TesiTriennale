@@ -3,22 +3,22 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 79 of file references.bib
+I was expecting a `,' or a `}'---line 134 of file references.bib
  :     
  :     howpublished = {\url{https://github.com/stratosphereips/StratosphereTestingFramework#installation-and-dependencies}}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 107 of file references.bib
+I was expecting a `,' or a `}'---line 162 of file references.bib
  : 
  : @misc{netflowDef,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 179 of file references.bib
+I was expecting a `,' or a `}'---line 234 of file references.bib
  : 
  : @book{idsBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Stratosphere"
+Warning--to sort, need author or key in intro
 Warning--to sort, need author or key in bigdata
 Warning--to sort, need author or key in MalwareDef
 Warning--to sort, need author or key in VirusDef
@@ -46,50 +46,60 @@ Warning--to sort, need author or key in nProbe
 Warning--to sort, need author or key in stratosphereSuite
 Warning--to sort, need author or key in alpha
 Warning--to sort, need author or key in slipscurrent
+Warning--to sort, need author or key in queuedef
 Warning--to sort, need author or key in virtualbox
 Warning--to sort, need author or key in stf
+Warning--to sort, need author or key in gitdef
+Warning--to sort, need author or key in pipdef
+Warning--to sort, need author or key in prettytabledef
+Warning--to sort, need author or key in transactiondef
+Warning--to sort, need author or key in persistentdef
+Warning--to sort, need author or key in zodbdef
+Warning--to sort, need author or key in sparsedef
+Warning--to sort, need author or key in dateutildef
 Warning--to sort, need author or key in octave
+Warning--to sort, need author or key in hyperthreading
 Warning--to sort, need author or key in slips
 Warning--empty publisher in idsbook
-You've used 40 entries,
+You've used 51 entries,
             2118 wiz_defined-function locations,
-            656 strings with 8844 characters,
-and the built_in function-call counts, 6933 in all, are:
-= -- 660
-> -- 94
+            687 strings with 9651 characters,
+and the built_in function-call counts, 8682 in all, are:
+= -- 825
+> -- 105
 < -- 0
-+ -- 58
++ -- 69
 - -- 18
-* -- 242
-:= -- 896
-add.period$ -- 93
-call.type$ -- 40
-change.case$ -- 129
+* -- 297
+:= -- 1083
+add.period$ -- 115
+call.type$ -- 51
+change.case$ -- 162
 chr.to.int$ -- 0
-cite$ -- 72
-duplicate$ -- 317
-empty$ -- 898
+cite$ -- 94
+duplicate$ -- 394
+empty$ -- 1151
 format.name$ -- 18
-if$ -- 1661
+if$ -- 2101
 int.to.chr$ -- 0
-int.to.str$ -- 40
+int.to.str$ -- 51
 missing$ -- 14
-newline$ -- 175
+newline$ -- 219
 num.names$ -- 18
-pop$ -- 314
+pop$ -- 402
 preamble$ -- 1
-purify$ -- 89
+purify$ -- 111
 quote$ -- 0
-skip$ -- 287
+skip$ -- 375
 stack$ -- 0
-substring$ -- 200
-swap$ -- 38
+substring$ -- 255
+swap$ -- 49
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 146
-warning$ -- 32
+type$ -- 190
+warning$ -- 43
 while$ -- 18
-width$ -- 42
-write$ -- 323
+width$ -- 53
+write$ -- 400
 (There were 3 error messages)

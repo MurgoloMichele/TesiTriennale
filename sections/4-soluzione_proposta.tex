@@ -8,14 +8,14 @@ In questo capitolo viene presentato il programma di conversione. La prima parte 
 \section{Conversione}
 Per convertire i file di nProbe nel formato utilizzato da Argus si è fatto per prima cosa uno studio sui campi degli header per individuarne le differenze. Alcuni campi sono presenti in entrambi i formati seppure con nome diverso, altri sono stati ottenuti come combinazione, mentre quelli che nProbe utilizza in più rispetto ad Argus sono stati scartati. 
 
-Il primo campo di Argus è il campo \textit{StartTime}. Il corrispondente campo usato da nProbe è \textit{FIRST\_SWITCHED}. In figura ~\ref{fig:starttime} vengono descritte le formattazione dei due campi.
+Il primo campo di Argus è il campo \textit{StartTime}. Il corrispondente campo usato da nProbe è \textit{FIRST\_SWITCHED}. In figura ~\ref{fig:starttime} vengono descritte le formattazione dei 2 campi.
 \begin{figure}[H]
 				\centering
-\includegraphics[scale=0.36]{starttime.png}
+\includegraphics[scale=0.32]{starttime.png}
 				\caption{Formattazione delle date}
 				\label{fig:starttime}
 \end{figure}
-Argus salva la data seguita da uno spazio bianco, le ore i minuti e i secondi e i microsecondi. nProbe invece non salva la data ma soltanto i secondi nel formato $10^{10}$ con i microsecondi. Per effettuare una conversione precisa dei due campi la data nel formato YYYY/MM/DD è stata presa dalla struttura gerarchica delle cartelle guardando in modo ricorsivo la posizione del file all'interno del file system. Per i secondi si è convertito i 10 gigasecondi in secondi, mentre per i microsecondi non c'è stato bisogno di conversione.
+Argus salva la data seguita da uno spazio bianco, le ore i minuti e i secondi e i microsecondi. nProbe invece non salva la data ma soltanto i secondi nel formato $10^{10}$ con i microsecondi. Per effettuare una conversione precisa dei 2 campi la data nel formato YYYY/MM/DD è stata presa dalla struttura gerarchica delle cartelle guardando in modo ricorsivo la posizione del file all'interno del file system. Per i secondi si è convertito i 10 gigasecondi in secondi, mentre per i microsecondi non c'è stato bisogno di conversione.
 
 Il secondo campo di Argus è \textit{Duration}. Non esistendo un campo di nProbe che indica la durata si è usata la differenza tra i campi \textit{LAST\_SWITCHED} e \textit{FIRST\_SWITCHED}. In figura ~\ref{fig:duration} viene mostrata l'operazione di differenza.
 \begin{figure}[H]
@@ -24,9 +24,9 @@ Il secondo campo di Argus è \textit{Duration}. Non esistendo un campo di nProbe
 				\caption{Durata}
 				\label{fig:duration}
 \end{figure}
-Dopo aver fatto la differenza tra i due campi si converte il risultato in secondi e microsecondi per rispettare il formato di Argus.
+Dopo aver fatto la differenza tra i 2 campi si converte il risultato in secondi e microsecondi per rispettare il formato di Argus.
 
-Il terzo campo di Argus è \textit{Proto} che indica il protocollo usato dalla connessione. Argus salva in questo campo la keyword del protocollo mentre nProbe salva il numero decimale. La figura ~\ref{fig:protocol} mostra la differenza tra i due formati.
+Il terzo campo di Argus è \textit{Proto} che indica il protocollo usato dalla connessione. Argus salva in questo campo la keyword del protocollo mentre nProbe salva il numero decimale. La figura ~\ref{fig:protocol} mostra la differenza tra i 2 formati.
 \begin{figure}[H]
 				\centering
 \includegraphics[scale=0.33]{protocol.png}
@@ -36,21 +36,9 @@ Il terzo campo di Argus è \textit{Proto} che indica il protocollo usato dalla c
 Per effettuare la conversione tra numeri e keyword si è usato un \textit{dictionary}, un costrutto del linguaggio Python. Questa particolare struttura dati è un array associativo in cui una chiave viene associata ad un valore. Come chiave si è usato il numero decimale del protocollo e come valore la keyword. Il costo medio di accesso ad un valore con questa struttura dati è $\mathcal{O}(1)$. La figura ~\ref{lst:dictionary} rappresenta la sintassi di un dictionary in Python.
 \lstinputlisting[language=Python, firstline=32, lastline=43, label={lst:dictionary}, caption={Esempio di dictionary}]{singlecore.py}
 
-Il quarto campo di Argus è \textit{SrcAddr} che indica l'indirizzo IP sorgente. Questo campo è presente nei campi di nProbe, di conseguenza non è necessario effettuare una conversione. La figura ~\ref{fig:srcaddr} mette in evidenza i due formati.
-\begin{figure}[H]
-				\centering
-\includegraphics[scale=0.33]{srcaddr.png}
-				\caption{Indirizzo IP sorgente}
-				\label{fig:srcaddr}
-\end{figure}
+Il quarto campo di Argus è \textit{SrcAddr} che indica l'indirizzo IP sorgente. Questo campo è presente nei campi di nProbe, di conseguenza non è necessario effettuare una conversione. 
 
-Il quinto campo di Argus è \textit{Sport} che indica la porta di origine della connessione. Il campo corrispettivo di nProbe è \textit{L4\_SRC\_PORT} e condividono entrambi lo stesso formato, non è pertanto necessario alcun tipo di conversione per questi due campi. La figura ~\ref{fig:sport} mostra i campi della porta sorgente nei due formati.
-\begin{figure}[H]
-				\centering
-\includegraphics[scale=0.33]{sport.png}
-				\caption{Porta sorgente}
-				\label{fig:sport}
-\end{figure}
+Il quinto campo di Argus è \textit{Sport} che indica la porta di origine della connessione. Il campo corrispettivo di nProbe è \textit{L4\_SRC\_PORT} e condividono entrambi lo stesso formato, non è pertanto necessario alcun tipo di conversione per questi 2 campi.
 
 Il sesto campo di Argus si chiama \textit{Dir} e rappresenta la direzione della connessione. Per la conversione si è utilizzato il campo di nProbe \textit{BIFLOW\_DIRECTION}. In nProbe si ha come valore del campo BIFLOW\_DIRECTION solo 1 e 2. Il numero 1 indica un flow monodirezionale che va dall'indirizzo sorgente al indirizzo destinazione, mentre il valore 2 indica un flow bidirezionale. In Argus si hanno più valori:
 \begin{itemize}
@@ -67,23 +55,11 @@ La figura ~\ref{fig:direction} mostra come è stata effettuata la conversione.
 				\caption{Direzione connessione}
 				\label{fig:direction}
 \end{figure}
-Nel primo caso si può convertire con 1 ma bisogna invertire i campi src e dst perchè la connessione viene inizializzata a sinistra. Nel secondo caso si converte con due perchè il flow è bidirezionale. Nel terzo caso la direzione della connessione è sconosciuta, si è scelto di convertire con 1 per sicurezza e non lasciare il campo vuoto. Nel quarto caso il flow è monodirezionale e quindi si converte con 1. Nell'ultimo caso \textit{who} è una keyword che indica una comunicazione \textit{icmp} che non viene utilizzata da Stratosphere, si è scelto di convertire con 1 per sicurezza.
+Nel primo caso si può convertire con 1 ma bisogna invertire i campi src e dst perchè la connessione viene inizializzata a sinistra. Nel secondo caso si converte con 2 perchè il flow è bidirezionale. Nel terzo caso la direzione della connessione è sconosciuta, si è scelto di convertire con 1 per sicurezza e non lasciare il campo vuoto. Nel quarto caso il flow è monodirezionale e quindi si converte con 1. Nell'ultimo caso \textit{who} è una keyword che indica una comunicazione \textit{icmp} che non viene utilizzata da Stratosphere, si è scelto di convertire con 1 per sicurezza.
 
-Il settimo campo di Argus è \textit{DstAddr} e rappresenta l'indirizzo IP di destinazione. Il campo corrispondente di nProbe si chiama \textit{IPV4\_DST\_ADDR}. La figura ~\ref{fig:dstaddr} mostra la formattazione dei dati. Come nel caso dell'indirizzo IP sorgente anche qui non è necessaria la conversione.
-\begin{figure}[H]
-				\centering
-\includegraphics[scale=0.36]{dstaddr.png}
-				\caption{Indirizzo IP destinazione}
-				\label{fig:dstaddr}
-\end{figure}
+Il settimo campo di Argus è \textit{DstAddr} e rappresenta l'indirizzo IP di destinazione. Il campo corrispondente di nProbe si chiama \textit{IPV4\_DST\_ADDR}. Come nel caso dell'indirizzo IP sorgente anche qui non è necessaria la conversione.
 
-L'ottavo campo di Argus è \textit{Dport} e indica la porta di destinazione. Argus usa una formattazione decimale, stessa cosa il campo \textit{DST\_PORT} di nProbe. La figura ~\ref{fig:dport} mostra la formattazione dei campi. 
-\begin{figure}[H]
-				\centering
-\includegraphics[scale=0.36]{dport.png}
-				\caption{Porta di destinazione}
-				\label{fig:dport}
-\end{figure}
+L'ottavo campo di Argus è \textit{Dport} e indica la porta di destinazione. Argus usa una formattazione decimale, stessa cosa il campo \textit{DST\_PORT} di nProbe.
 
 Il nono campo di Argus è \textit{State} e denota lo stato della connessione. Questo campo non è generabile a partire dai file di nProbe. Per effettuare questa conversione si è prima verificato l'impatto di questo campo nella generazione dei modelli di STF inserendo un valore non corretto. I modelli generati cambiando i valori di questo campo con valori non corretti restano invariati, pertanto il campo State non ne influenza la generazione. Per la conversione si è quindi inserito un valore costante "CON" per sicurezza. La figura ~\ref{fig:state} mostra esempi di valori del campo State di Argus.
 \begin{figure}[H]
@@ -93,15 +69,9 @@ Il nono campo di Argus è \textit{State} e denota lo stato della connessione. Qu
 				\label{fig:state}
 \end{figure}
 
-Il decimo e undicesimo campo di Argus sono \textit{sTos} \textit{dTos} e rappresentano il \textit{Type of Service} sorgente e destinazione di un pacchetto. Questi campi sono presenti in nProbe e condividono la stessa formattazione di Argus, non è pertanto necessaria una conversione. La figura ~\ref{fig:srctos} mostra esempi di valori di Type of Service.
-\begin{figure}[H]
-				\centering
-\includegraphics[scale=0.36]{srctos.png}
-				\caption{Type of Service sorgente}
-				\label{fig:srctos}
-\end{figure}
+Il decimo e undicesimo campo di Argus sono \textit{sTos} \textit{dTos} e rappresentano il \textit{Type of Service} sorgente e destinazione di un pacchetto. Questi campi sono presenti in nProbe e condividono la stessa formattazione di Argus, non è pertanto necessaria una conversione.
 
-Il dodicesimo campo di Argus è \textit{TotPkts} e rappresenta i pacchetti totali transitati nella connessione. Questo campo non compare in nProbe che ha però i campi \textit{IN\_PKTS} e \textit{OUT\_PKTS}. Per fare la conversione da nProbe ad Argus si sono sommati questi due valori per ottenere il totale dei pacchetti. La figura ~\ref{fig:totpkts} mostra l'operazione di somma e la formattazione dei dati.
+Il dodicesimo campo di Argus è \textit{TotPkts} e rappresenta i pacchetti totali transitati nella connessione. Questo campo non compare in nProbe che ha però i campi \textit{IN\_PKTS} e \textit{OUT\_PKTS}. Per fare la conversione da nProbe ad Argus si sono sommati questi 2 valori per ottenere il totale dei pacchetti. La figura ~\ref{fig:totpkts} mostra l'operazione di somma e la formattazione dei dati.
 \begin{figure}[H]
 				\centering
 \includegraphics[scale=0.36]{totpkts.png}
@@ -109,7 +79,7 @@ Il dodicesimo campo di Argus è \textit{TotPkts} e rappresenta i pacchetti total
 				\label{fig:totpkts}
 \end{figure}
 
-Il tredicesimo campo di Argus è \textit{TotBytes} e rappresenta i bytes totali transitati nella connessione. Come visto per il campo TotPkts, in nProbe questo campo non campare direttamente ma sono presenti \textit{IN\_BYTES} e \textit{OUT\_BYTES}. Per fare la conversione questi due campi vengono sommati per ottenere il totale. La figura ~\ref{fig:totbytes} mostra l'operazione di somma e la formattazione dei dati.
+Il tredicesimo campo di Argus è \textit{TotBytes} e rappresenta i bytes totali transitati nella connessione. Come visto per il campo TotPkts, in nProbe questo campo non campare direttamente ma sono presenti \textit{IN\_BYTES} e \textit{OUT\_BYTES}. Per fare la conversione questi 2 campi vengono sommati per ottenere il totale. La figura ~\ref{fig:totbytes} mostra l'operazione di somma e la formattazione dei dati.
 \begin{figure}[H]
 				\centering
 \includegraphics[scale=0.36]{totbytes.png}
@@ -121,31 +91,6 @@ Il quattordicesimo campo di Argus è \textit{SrcBytes} che indica i bytes in ent
 
 Il quindicesimo e ultimo campo di Argus è il campo label che serve per i metadata. Questo campo non è presente in nProbe e non è necessario per la generazione dei modelli, viene quindi lasciato vuoto.
 
-La tabella ~\ref{table:tabellaConversione} riassume le scelte di conversione, mostra sulla colonna di sinistra i campi dell'header di Argus, mentre sulla destra i campi di nProbe. 
-				\begin{table}[]
-								\centering
-								\begin{tabular}{|l|l|}
-												\hline
-												\multicolumn{1}{|c|}{\textbf{Argus}} & \multicolumn{1}{c|}{\textbf{nProbe}} \\ \hline
-												StartTime                            & FIRST\_SWITCHED                      \\ \hline
-												Duration                             & LAST\_SWITCHED - FIRST\_SWITCHED     \\ \hline
-												Proto                                & PROTOCOL                             \\ \hline
-												SrcAddr                              & IPv4\_SRC\_ADDR                      \\ \hline
-												Sport                                & L4\_SRC\_PORT                        \\ \hline
-												Dir                                  & BIFLOW\_DIRECTION                    \\ \hline
-												DstAddr                              & IPv4\_DST\_ADDR                      \\ \hline
-												Dport                                & DST\_PORT                            \\ \hline
-												State                                & -                                    \\ \hline
-												sTos                                 & SRC\_TOS                             \\ \hline
-												dTos                                 & DST\_TOS                             \\ \hline
-												TotPkts                              & IN\_PKTS + OUT\_PKTS                 \\ \hline
-												TotBytes                             & IN\_BYTES + OUT\_BYTES               \\ \hline
-												SrcBytes                             & IN\_BYTES                            \\ \hline
-												Label                                & -                                    \\ \hline
-								\end{tabular}
-				\caption{Tabella di conversione}
-								\label{table:tabellaConversione}
-\end{table}
 
 
 \section{Automatizzazione conversione}
@@ -161,16 +106,17 @@ La figura ~\ref{fig:lettura} rappresenta l'operazione da eseguire per la lettura
 				\label{fig:lettura}
 \end{figure}
 
-Lo pseudocodice ~\ref{alg:ricorsione} descrive l'immagine ~\ref{fig:lettura}. Alla riga 1 si assegna ad una variabile il path della cartella in cui sono contenuti i file e nella seconda riga si crea un oggetto coda. Si creano poi due cicli for annidati che scorrono la struttura gerarchica della cartella e per ogni ogni file all'interno della cartella \textit{minuti} si mette in coda il file. Quando l'esecuzione dei due cicli for finisce rimane una coda con all'interno tutti i path dei file.
+Lo pseudocodice ~\ref{alg:ricorsione} descrive l'immagine ~\ref{fig:lettura}. Alla riga 1 si assegna ad una variabile il path della cartella in cui sono contenuti i file e nella seconda riga si crea un oggetto coda \cite{queuedef}. Si creano poi 2 cicli \textit{for} annidati che scorrono la struttura gerarchica della cartella e per ogni ogni file all'interno della cartella \textit{minuti} si mette in coda il file. Quando l'esecuzione dei 2 cicli \textit{for} finisce rimane una coda con all'interno tutti i path dei file.
 \begin{algorithm}
 \caption{Inserimento file in una coda}
 				\label{alg:ricorsione}
+				\hspace*{\algorithmicindent} \textbf{Input}: la variabile pathCartella è il percorso della cartella che fornisce l'utente \\
 \begin{algorithmic}[1]
-				\State $\textit{cartellaRoot} =  $\textit{pathCartella}
-				\State $\textit{Coda} = $\textit{Queue()}
+				\State $\textit{cartellaRoot} \gets $\textit{pathCartella}
+				\State $\textit{Coda} \gets $\textit{Queue()} \Comment{inizializza una coda}
 				\For{\texttt{mesi, giorni, minuti in \textit{cartellaRoot}}}
 						\For{\texttt{file in minuti}}
-						\State $\textit{Coda}.append() = $\textit{file}
+						\State $\textit{Coda}.append() \gets $\textit{file} \Comment{inserisce il file nella coda}
 						\EndFor
 				\EndFor
 \end{algorithmic}
@@ -194,30 +140,17 @@ Lo pseudocodice ~\ref{alg:pseudocodicelettura} descrive l'immagine ~\ref{fig:let
 \caption{Lettura righe file}
 				\label{alg:pseudocodicelettura}
 \begin{algorithmic}[1]
-				\State \textit{ipv4\_src\_addr} = [ ]
-				\State \textit{ipv4\_dst\_addr} = [ ]
-				\State \textit{first\_switched} = [ ]
-				\State \textit{last\_switched} = [ ]
-				\State \textit{protocol} = [ ]
-				\State \textit{src\_port} = [ ]
-				\State \textit{dst\_port} = [ ]
-				\State \textit{biflow} = [ ]
-				\State \textit{src\_tos} = [ ]
-				\State \textit{dst\_tos} = [ ]
-				\State \textit{in\_pkts} = [ ]
-				\State \textit{out\_pkts} = [ ]
-				\State \textit{in\_bytes} = [ ]
-				\State \textit{out\_bytes} = [ ]
-				\State \textit{file} = Coda.get()
+				\State inizializzazione di una lista per ogni campo
+				\State $\textit{file} \gets $Coda.get() \Comment{prende un file dalla coda}
 
 				\For{\texttt{riga in \textit{file}}}
-						\State \textit{Assegna ad ogni lista il valore letto dalla riga}
+						\State Assegna ad ogni lista il valore letto dalla riga
 				\EndFor
 \end{algorithmic}
 \end{algorithm}
 
 \subsection{Conversione dei dati}
-Lo pseudocodice ~\ref{alg:pseudocodiceconversione} descrive il processo di conversione che si effettua sui valori letti nel codice ~\ref{alg:pseudocodicelettura}.La data si ricava dal nome delle cartelle scomponendo il path, la figura ~\ref{fig:conversioneschema} mostra l'acquisizione della data partendo dal percorso del file. Per ogni riga viene poi fatta una addizione dei pacchetti e dei byte in entrata e in uscita.
+Lo pseudocodice ~\ref{alg:pseudocodiceconversione} descrive il processo di conversione che si effettua sui valori letti nel codice ~\ref{alg:pseudocodicelettura}. La data si ricava dal nome delle cartelle scomponendo il path, la figura ~\ref{fig:conversioneschema} mostra l'acquisizione della data partendo dal percorso del file. Per ogni riga viene poi fatta una addizione dei pacchetti e dei byte in entrata e in uscita.
 \begin{figure}[H]
 				\centering
 \includegraphics[scale=0.27]{conversioneschema.png}
@@ -229,12 +162,12 @@ Lo pseudocodice ~\ref{alg:pseudocodiceconversione} descrive il processo di conve
 				\caption{Conversione dei campi}
 				\label{alg:pseudocodiceconversione}
 \begin{algorithmic}[1]
-				\State \textit{year, month, day, hour, minute} = file.split("/") 
-				\While {$i < lunghezza del file$}
-				\State \textit{last} = last\_switched[i]
-				\State \textit{first} = first\_switched[i]
-				\State \textit{tot\_pkts} = in\_pkts[i] + out\_pkts[i]
-				\State \textit{tot\_bytes} = in\_bytes[i] + out\_bytes[i]
+				\State scomposizione del percorso file per ricavare la data
+				\While {i $<$ lunghezza del file}
+				\State $\textit{last} \gets $\textit{last\_switched[i]} \Comment{assegna il valore i-esimo alla variabile}
+				\State $\textit{first} \gets $first\_switched[i]
+				\State $\textit{tot\_pkts} \gets $in\_pkts[i] + out\_pkts[i]
+				\State $\textit{tot\_bytes} \gets $in\_bytes[i] + out\_bytes[i]
 				\EndWhile
 \end{algorithmic}
 \end{algorithm}
@@ -254,7 +187,7 @@ Lo pseudocodice ~\ref{alg:pseudocodicescrittura} descrive il processo di scrittu
 				\label{alg:pseudocodicescrittura}
 \begin{algorithmic}[1]
 				\While {$i < lunghezza del file$}
-				\State \textit{file}.write(year + "/" + month + "/" + day + " " + hour + ":" + minute + ":" + first\_switched[i] + "," + (last - first) + "," + dict\_protocols.get(protocol[i]) + "," + ipv4\_src\_addr[i] + "," + src\_port[i] + "," + flow\_direction.get(biflow[i]) + "," + ipv4\_dst\_addr[i] + "," + dst\_port[i] + "," + "CON" "," + src\_tos[i] + "," + "," + tot\_pkts + "," + tot\_bytes + "," + in\_bytes[i])
+				\State scrive la conversione su file
 				\EndWhile
 \end{algorithmic}
 \end{algorithm}
@@ -274,39 +207,28 @@ L'algoritmo ~\ref{alg:pseudocodicecompleto} scritto in pseudocodice descrive una
 \begin{algorithmic}[1]
 				\caption{Pseudocodice completo}
 				\label{alg:pseudocodicecompleto}
-				\State $\textit{cartellaRoot} =  $\textit{pathCartella}
-				\State $\textit{Coda} = $\textit{Queue()}
+				\State $\textit{cartellaRoot} \gets $\textit{pathCartella}
+				\State $\textit{Coda} \gets $\textit{Queue()} \Comment{inizializza una coda}
 				\For{\texttt{mesi, giorni, minuti in \textit{cartellaRoot}}}
 						\For{\texttt{file in minuti}}
-						\State $\textit{Coda}.append() = $\textit{file}
+						\State $\textit{Coda}.append() \gets $\textit{file} \Comment{inserisce il file nella coda}
 						\EndFor
 				\EndFor
-				\State \textit{ipv4\_src\_addr} = [ ]
-				\State \textit{ipv4\_dst\_addr} = [ ]
-				\State \textit{first\_switched} = [ ]
-				\State \textit{last\_switched} = [ ]
-				\State \textit{protocol} = [ ]
-				\State \textit{src\_port} = [ ]
-				\State \textit{dst\_port} = [ ]
-				\State \textit{biflow} = [ ]
-				\State \textit{src\_tos} = [ ]
-				\State \textit{dst\_tos} = [ ]
-				\State \textit{in\_pkts} = [ ]
-				\State \textit{out\_pkts} = [ ]
-				\State \textit{in\_bytes} = [ ]
-				\State \textit{out\_bytes} = [ ]
-				\State \textit{file} = Coda.get()
+				\State inizializzazione di una lista per ogni campo
+				\State $\textit{file} \gets $Coda.get() \Comment{prende un file dalla coda}
 
 				\For{\texttt{riga in \textit{file}}}
-						\State \textit{Assegna ad ogni lista il valore letto dalla riga}
+						\State Assegna ad ogni lista il valore letto dalla riga
 				\EndFor
-				\State \textit{year, month, day, hour, minute} = file.split("/") 
+				\State scomposizione del percorso file per ricavare la data
+				\While {i $<$ lunghezza del file}
+				\State $\textit{last} \gets $\textit{last\_switched[i]} \Comment{assegna il valore i-esimo alla variabile}
+				\State $\textit{first} \gets $first\_switched[i]
+				\State $\textit{tot\_pkts} \gets $in\_pkts[i] + out\_pkts[i]
+				\State $\textit{tot\_bytes} \gets $in\_bytes[i] + out\_bytes[i]
+				\EndWhile
 				\While {$i < lunghezza del file$}
-				\State \textit{last} = last\_switched[i]
-				\State \textit{first} = first\_switched[i]
-				\State \textit{tot\_pkts} = in\_pkts[i] + out\_pkts[i]
-				\State \textit{tot\_bytes} = in\_bytes[i] + out\_bytes[i]
-				\State \textit{file}.write(year + "/" + month + "/" + day + " " + hour + ":" + minute + ":" + first\_switched[i] + "," + (last - first) + "," + dict\_protocols.get(protocol[i]) + "," + ipv4\_src\_addr[i] + "," + src\_port[i] + "," + flow\_direction.get(biflow[i]) + "," + ipv4\_dst\_addr[i] + "," + dst\_port[i] + "," + "CON" "," + src\_tos[i] + "," + "," + tot\_pkts + "," + tot\_bytes + "," + in\_bytes[i])
+				\State scrive la conversione su file
 				\EndWhile
 				
 \end{algorithmic}

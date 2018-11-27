@@ -37,10 +37,18 @@ Comparison of machine learning techniques in email spam detection.
 \newblock
   \url{https://dev.to/matchilling/comparison-of-machine-learning-techniques-in-email-spam-detection--2p0h}.
 
+\bibitem{dateutildef}
+dateutil - python.
+\newblock \url{https://pypi.org/project/python-dateutil/}.
+
 \bibitem{ScopoMalware}
 Federal trade commission- consumer information, "malware".
 \newblock \url{https://www.consumer.ftc.gov/articles/0011-malware}.
 \newblock Accessed: November 2015.
+
+\bibitem{gitdef}
+git - distributed is the new centralized.
+\newblock \url{https://git-scm.com/about}.
 
 \bibitem{octave}
 Gnu octave.
@@ -55,6 +63,10 @@ Google assistant and artificial intelligence – the future of simulated
 \bibitem{tesla}
 How tesla is ushering in the age of the learning car.
 \newblock \url{http://fortune.com/2015/10/16/how-tesla-autopilot-learns/}.
+
+\bibitem{hyperthreading}
+Hyper - threading.
+\newblock \url{https://it.wikipedia.org/wiki/Hyper-Threading}.
 
 \bibitem{amazonalexa}
 Machine learning in practice: How does amazon's alexa really work?
@@ -77,6 +89,10 @@ Malware revolution: A change in target.
   \url{https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc512596(v=technet.10)}.
 \newblock Published: 05/20/2008.
 
+\bibitem{intro}
+Netflow and pcap (not or).
+\newblock \url{https://blogs.cisco.com/security/netflow-and-pcap-not-or}.
+
 \bibitem{nProbe}
 nprobe.
 \newblock \url{https://www.ntop.org/products/netflow/nprobe/}.
@@ -85,9 +101,25 @@ nprobe.
 Optical character recognition.
 \newblock \url{https://en.wikipedia.org/wiki/Optical_character_recognition}.
 
+\bibitem{persistentdef}
+persistent = python.
+\newblock \url{https://pypi.org/project/persistent/}.
+
 \bibitem{phishingdef}
 Phishing definition - urban dictionary.
 \newblock \url{https://www.urbandictionary.com/define.php?term=phishing}.
+
+\bibitem{pipdef}
+pip - python.
+\newblock \url{https://pypi.org/project/pip/}.
+
+\bibitem{prettytabledef}
+prettytable - python.
+\newblock \url{https://pypi.org/project/PrettyTable/}.
+
+\bibitem{queuedef}
+Queue - python docs.
+\newblock \url{https://docs.python.org/2/library/queue.html}.
 
 \bibitem{VirusDef}
 Sicurezza: Virus, worm, trojan...
@@ -96,6 +128,10 @@ Sicurezza: Virus, worm, trojan...
 \bibitem{solarwinds}
 Solarwinds.
 \newblock \url{https://www.solarwinds.com/network-performance-monitor}.
+
+\bibitem{sparsedef}
+sparse - python.
+\newblock \url{https://pypi.org/project/sparse/}.
 
 \bibitem{Spyware2}
 spyware.
@@ -122,6 +158,10 @@ Stratospheretestingframework - github.
 Tojan horse definition.
 \newblock \url{https://techterms.com/definition/trojanhorse}.
 
+\bibitem{transactiondef}
+transaction - python.
+\newblock \url{https://pypi.org/project/transaction/}.
+
 \bibitem{virtualbox}
 Virtualbox.
 \newblock \url{https://www.virtualbox.org/}.
@@ -138,6 +178,10 @@ What is spyware? - definition.
 \bibitem{pcap}
 Wikipedia, the free encyclopedia - pcap.
 \newblock \url{https://en.wikipedia.org/wiki/Pcap}.
+
+\bibitem{zodbdef}
+Zodb - a native object database for python.
+\newblock \url{http://www.zodb.org/en/latest/}.
 
 \bibitem{IDS}
 Stefan Axelsson.
