@@ -3,47 +3,46 @@
 \BOOKMARK [1][-]{section.2.1}{Malware}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{Botnet}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Botnet Detection}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.4}{Intrusion Detection and Prevention System}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.4.1}{Tipi di IDPS}{section.2.4}% 7
-\BOOKMARK [2][-]{subsection.2.4.2}{Perch\350 usare IDPS}{section.2.4}% 8
+\BOOKMARK [1][-]{section.2.4}{Intrusion Detection System}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.4.1}{Tipi di IDS}{section.2.4}% 7
+\BOOKMARK [2][-]{subsection.2.4.2}{Perch\350 usare IDS}{section.2.4}% 8
 \BOOKMARK [2][-]{subsection.2.4.3}{Metodi di rilevamento}{section.2.4}% 9
 \BOOKMARK [1][-]{section.2.5}{Machine learning}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.5.1}{Reinforced learning}{section.2.5}% 11
-\BOOKMARK [2][-]{subsection.2.5.2}{Supervised learning}{section.2.5}% 12
-\BOOKMARK [2][-]{subsection.2.5.3}{Unsupervised learning}{section.2.5}% 13
-\BOOKMARK [0][-]{chapter.3}{Analisi del software}{}% 14
+\BOOKMARK [2][-]{subsection.2.5.1}{Supervised learning}{section.2.5}% 11
+\BOOKMARK [2][-]{subsection.2.5.2}{Unsupervised learning}{section.2.5}% 12
+\BOOKMARK [2][-]{subsection.2.5.3}{Reinforced learning}{section.2.5}% 13
+\BOOKMARK [0][-]{chapter.3}{Analisi}{}% 14
 \BOOKMARK [1][-]{section.3.1}{Analisi traffico di rete}{chapter.3}% 15
 \BOOKMARK [2][-]{subsection.3.1.1}{Packet Capture}{section.3.1}% 16
 \BOOKMARK [2][-]{subsection.3.1.2}{Network Flow}{section.3.1}% 17
 \BOOKMARK [1][-]{section.3.2}{Strumenti di monitoraggio e analisi del traffico di rete}{chapter.3}% 18
 \BOOKMARK [2][-]{subsection.3.2.1}{Audit Record Generation and Utilization System}{section.3.2}% 19
 \BOOKMARK [2][-]{subsection.3.2.2}{nProbe}{section.3.2}% 20
-\BOOKMARK [2][-]{subsection.3.2.3}{Confronto tra i network flow}{section.3.2}% 21
-\BOOKMARK [1][-]{section.3.3}{Stratosphere Suite}{chapter.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.1}{IPS}{section.3.3}% 23
-\BOOKMARK [2][-]{subsection.3.3.2}{Stratosphere Testing Framework}{section.3.3}% 24
-\BOOKMARK [1][-]{section.3.4}{Analisi del problema}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.4.1}{Deployment di Stratosphere IPS}{section.3.4}% 26
-\BOOKMARK [2][-]{subsection.3.4.2}{Problematiche dovute all'utilizzo di due diversi formati}{section.3.4}% 27
-\BOOKMARK [2][-]{subsection.3.4.3}{Presentazione del problema}{section.3.4}% 28
-\BOOKMARK [0][-]{chapter.4}{Soluzione proposta}{}% 29
-\BOOKMARK [1][-]{section.4.1}{Conversione}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.2}{Automatizzazione conversione}{chapter.4}% 31
-\BOOKMARK [2][-]{subsection.4.2.1}{Lettura dei file}{section.4.2}% 32
-\BOOKMARK [2][-]{subsection.4.2.2}{Lettura righe dei file}{section.4.2}% 33
-\BOOKMARK [2][-]{subsection.4.2.3}{Conversione dei dati}{section.4.2}% 34
-\BOOKMARK [2][-]{subsection.4.2.4}{Scrittura su file}{section.4.2}% 35
-\BOOKMARK [2][-]{subsection.4.2.5}{Algoritmo completo}{section.4.2}% 36
-\BOOKMARK [1][-]{section.4.3}{Rendere efficiente la conversione}{chapter.4}% 37
-\BOOKMARK [2][-]{subsection.4.3.1}{Possibili soluzioni}{section.4.3}% 38
-\BOOKMARK [2][-]{subsection.4.3.2}{Scelta effettuata}{section.4.3}% 39
-\BOOKMARK [0][-]{chapter.5}{Sperimentazioni}{}% 40
-\BOOKMARK [1][-]{section.5.1}{Realizzazione di una piattaforma dedicata}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.2}{Installazione Stratosphere IPS}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.3}{Installazione di Argus}{chapter.5}% 43
-\BOOKMARK [1][-]{section.5.4}{Utilizzo del programma STF}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.5}{Prestazioni}{chapter.5}% 45
-\BOOKMARK [2][-]{subsection.5.5.1}{Benchmark}{section.5.5}% 46
-\BOOKMARK [2][-]{subsection.5.5.2}{Metrica delle prestazioni parallele}{section.5.5}% 47
-\BOOKMARK [1][-]{section.5.6}{Conversione}{chapter.5}% 48
-\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 49
+\BOOKMARK [1][-]{section.3.3}{Stratosphere Suite}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.1}{Stratosphere Linux IPS}{section.3.3}% 22
+\BOOKMARK [2][-]{subsection.3.3.2}{Stratosphere Testing Framework}{section.3.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Analisi del problema}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.4.1}{Deployment di Stratosphere IPS}{section.3.4}% 25
+\BOOKMARK [2][-]{subsection.3.4.2}{Problematiche dovute all'utilizzo di due diversi formati}{section.3.4}% 26
+\BOOKMARK [0][-]{chapter.4}{Soluzione proposta}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Conversione}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Automatizzazione conversione}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.2.1}{Lettura dei file}{section.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.2.2}{Lettura righe dei file}{section.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.2.3}{Conversione dei dati}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.4}{Scrittura su file}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.5}{Algoritmo completo}{section.4.2}% 34
+\BOOKMARK [1][-]{section.4.3}{Rendere efficiente la conversione}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.3.1}{Possibili soluzioni}{section.4.3}% 36
+\BOOKMARK [2][-]{subsection.4.3.2}{Scelta effettuata}{section.4.3}% 37
+\BOOKMARK [1][-]{section.4.4}{Correzione del codice sorgente}{chapter.4}% 38
+\BOOKMARK [0][-]{chapter.5}{Sperimentazioni}{}% 39
+\BOOKMARK [1][-]{section.5.1}{Realizzazione di una piattaforma dedicata}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.2}{Installazione Stratosphere IPS}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.3}{Installazione di Argus}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.4}{Utilizzo del programma STF}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.5}{Tempi di esecuzione}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.5.1}{Benchmark}{section.5.5}% 45
+\BOOKMARK [2][-]{subsection.5.5.2}{Metrica delle prestazioni parallele}{section.5.5}% 46
+\BOOKMARK [1][-]{section.5.6}{Precisione della Conversione}{chapter.5}% 47
+\BOOKMARK [0][-]{chapter.6}{Conclusioni}{}% 48

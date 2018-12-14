@@ -14,14 +14,18 @@ Alpha software definition.
 \newblock Accessed: 2017-02-01.
 
 \bibitem{applehomepod}
-Apple explains 'hey siri' speaker recognition in latest machine learning
-  journal update.
-\newblock
-  \url{https://appleinsider.com/articles/18/04/16/apple-explains-hey-siri-speaker-recognition-in-latest-machine-learning-journal-update}.
+Apple explains how ‘hey siri’ works using a deep neural network and machine
+  learning.
+\newblock \url{https://9to5mac.com/2017/10/18/how-hey-siri-works/}.
 
 \bibitem{Argus}
 Argus.
 \newblock \url{https://qosient.com/argus/}.
+
+\bibitem{argusdef}
+Argus – audit record generation and utilization system.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Argus_\%E2\%80\%93_Audit_Record_Generation_and_Utilization_System}.
 
 \bibitem{auditTrail}
 Atis telecom glossary - audit trail.
@@ -32,15 +36,27 @@ Atis telecom glossary - audit trail.
 Big data security analytics: A weapon against rising cyber security attacks?
 \newblock \url{https://bi-survey.com/big-data-security-analytics}.
 
+\bibitem{bitcoindef}
+Bitcoin.
+\newblock \url{https://bitcoin.org/it}.
+
 \bibitem{spamemail}
 Comparison of machine learning techniques in email spam detection.
 \newblock
-  \url{https://dev.to/matchilling/comparison-of-machine-learning-techniques-in-email-spam-detection--2p0h}.
+  \url{https://dev.to/matchilling/comparison-of-machine-learning-techniques-in-email-spam-detection}.
+
+\bibitem{dateutildef}
+dateutil - python.
+\newblock \url{https://pypi.org/project/python-dateutil/}.
 
 \bibitem{ScopoMalware}
 Federal trade commission- consumer information, "malware".
 \newblock \url{https://www.consumer.ftc.gov/articles/0011-malware}.
 \newblock Accessed: November 2015.
+
+\bibitem{gitdef}
+git - distributed is the new centralized.
+\newblock \url{https://git-scm.com/about}.
 
 \bibitem{octave}
 Gnu octave.
@@ -55,6 +71,19 @@ Google assistant and artificial intelligence – the future of simulated
 \bibitem{tesla}
 How tesla is ushering in the age of the learning car.
 \newblock \url{http://fortune.com/2015/10/16/how-tesla-autopilot-learns/}.
+
+\bibitem{hyperthreading}
+Hyper - threading.
+\newblock \url{https://it.wikipedia.org/wiki/Hyper-Threading}.
+
+\bibitem{ddosbotnet}
+Inside the infamous mirai iot botnet: A retrospective analysis.
+\newblock \url{Inside the infamous Mirai IoT Botnet: A Retrospective Analysis}.
+
+\bibitem{idswithfirewall}
+Intrusion detection and prevention: More than a firewall.
+\newblock
+  \url{https://searchcio.techtarget.com/tip/Intrusion-detection-and-prevention-More-than-a-firewall}.
 
 \bibitem{amazonalexa}
 Machine learning in practice: How does amazon's alexa really work?
@@ -77,6 +106,15 @@ Malware revolution: A change in target.
   \url{https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc512596(v=technet.10)}.
 \newblock Published: 05/20/2008.
 
+\bibitem{botnetspam}
+Mcafee: due sole botnet per (quasi) tutto lo spam del mondo.
+\newblock
+  \url{https://www.punto-informatico.it/mcafee-due-sole-botnet-per-quasi-tutto-lo-spam-del-mondo-2/}.
+
+\bibitem{netflowdef2}
+Netflow - wikipedia.
+\newblock \url{https://en.wikipedia.org/wiki/NetFlow}.
+
 \bibitem{nProbe}
 nprobe.
 \newblock \url{https://www.ntop.org/products/netflow/nprobe/}.
@@ -85,17 +123,41 @@ nprobe.
 Optical character recognition.
 \newblock \url{https://en.wikipedia.org/wiki/Optical_character_recognition}.
 
+\bibitem{persistentdef}
+persistent = python.
+\newblock \url{https://pypi.org/project/persistent/}.
+
 \bibitem{phishingdef}
 Phishing definition - urban dictionary.
 \newblock \url{https://www.urbandictionary.com/define.php?term=phishing}.
+
+\bibitem{pipdef}
+pip - python.
+\newblock \url{https://pypi.org/project/pip/}.
+
+\bibitem{prettytabledef}
+prettytable - python.
+\newblock \url{https://pypi.org/project/PrettyTable/}.
+
+\bibitem{queuedef}
+Queue - python docs.
+\newblock \url{https://docs.python.org/2/library/queue.html}.
 
 \bibitem{VirusDef}
 Sicurezza: Virus, worm, trojan...
 \newblock \url{http://www.bloomriot.org/91/sicurezza-virus-worm-trojan.html}.
 
+\bibitem{snort}
+Snort - network intrusion detection and prevention system.
+\newblock \url{https://www.snort.org/}.
+
 \bibitem{solarwinds}
 Solarwinds.
 \newblock \url{https://www.solarwinds.com/network-performance-monitor}.
+
+\bibitem{sparsedef}
+sparse - python.
+\newblock \url{https://pypi.org/project/sparse/}.
 
 \bibitem{Spyware2}
 spyware.
@@ -118,9 +180,22 @@ Stratosphere linux ips latest commit.
 \bibitem{stf}
 Stratospheretestingframework - github.
 
+\bibitem{suricatadef}
+Suricata - open source ids.
+\newblock \url{https://suricata-ids.org/}.
+
 \bibitem{TrojanDef}
 Tojan horse definition.
 \newblock \url{https://techterms.com/definition/trojanhorse}.
+
+\bibitem{transactiondef}
+transaction - python.
+\newblock \url{https://pypi.org/project/transaction/}.
+
+\bibitem{clickfraudbotnet}
+Video ad fraud botnet bags up to 1.3 million daily.
+\newblock
+  \url{https://www.bankinfosecurity.com/video-ad-fraud-botnet-generated-up-to-13-million-day-a-10470}.
 
 \bibitem{virtualbox}
 Virtualbox.
@@ -135,9 +210,69 @@ What is a trojan virus? - definition.
 What is spyware? - definition.
 \newblock \url{https://www.kaspersky.com/resource-center/threats/spyware}.
 
+\bibitem{zerodaydef}
+What is zero day exploit?
+\newblock
+  \url{https://www.kaspersky.com/resource-center/definitions/zero-day-exploit}.
+
 \bibitem{pcap}
 Wikipedia, the free encyclopedia - pcap.
 \newblock \url{https://en.wikipedia.org/wiki/Pcap}.
+
+\bibitem{zodbdef}
+Zodb - a native object database for python.
+\newblock \url{http://www.zodb.org/en/latest/}.
+
+\bibitem{bitcoinbotnet}
+“mining” botnets are back - infecting thousands of pcs, generating hundreds
+  of thousands of dollars for criminals.
+\newblock
+  \url{https://www.kaspersky.com/about/press-releases/2017_mining-botnets-are-back-infecting-thousands-of-pcs}.
+
+\bibitem{WikiLeaks:Vault7}
+{WikiLeaks Vault7: Archimedes documentation.}
+\newblock \url{https://wikileaks.org/vault7/#Archimedes}, visited in Jun. 2017.
+
+\bibitem{Ukrainian:Report}
+{Analysis of the Cyber Attack on the Ukrainian Power Grid.}
+\newblock
+  \url{http://www.nerc.com/pa/CI/ESISAC/Documents/E-ISAC_SANS_Ukraine_DUC_18Mar2016.pdf},
+  visited in Jun. 2018.
+
+\bibitem{ApacheSpot:URL}
+{Apache Spot.}
+\newblock http://spot.incubator.apache.org/, Jun. 2018.
+
+\bibitem{Darktrace:ML}
+{DarkTrace}.
+\newblock https://www.darktrace.com/en/press/2017/204/, visited in Sep. 2018.
+
+\bibitem{IBM:Watson}
+{IBM Watson}.
+\newblock https://www.ibm.com/security/artificial-intelligence, Visited in Sep.
+  2018.
+
+\bibitem{Symantec:Report18}
+{Internet Security Threat Report 2018.}
+\newblock \url{https://www.symantec.com/security-center/threat-report}, visited
+  in Jun. 2018.
+
+\bibitem{Virustotal:URL}
+{VirusTotal}.
+\newblock https://www.virustotal.com, visited in Aug. 2018.
+
+\bibitem{idswithacl}
+K.~Rajalakshmi A.~Hyils Sharon~Magdalene.
+\newblock Intrusion detection prevention system using acl and aaa.
+\newblock Technical report, ManonmaniamSundaranar University, Tirunelveli
+  India, April 2014.
+
+\bibitem{Apruzzese:Periodic}
+Giovanni Apruzzese, Mirco Marchetti, Michele Colajanni, Gabriele~Gambigliani
+  Zoccoli, and Alessandro Guido.
+\newblock Identifying malicious hosts involved in periodic communications.
+\newblock In {\em Network Computing and Applications (NCA), 2017 IEEE 16th
+  International Symposium on}. IEEE, 2017.
 
 \bibitem{IDS}
 Stefan Axelsson.
@@ -145,10 +280,38 @@ Stefan Axelsson.
 \newblock Technical report, University of Technology Goteborg Sweden, 14 March
   2000.
 
+\bibitem{brown2010resilient}
+Dennis Brown.
+\newblock Resilient botnet command and control with tor.
+\newblock {\em DEF CON}, 18, 2010.
+
+\bibitem{dataminingbotnetdetection}
+D.~Karahoca E.~Alparslan, A.~Karahoca.
+\newblock Botnet detection: Enhancing analysis by using data mining techniques.
+\newblock Technical report, September 2012.
+
+\bibitem{idswithav}
+U.~Aickelin J.~Greensmith.
+\newblock Firewall, intrusion detection systems and anti-virus scanners.
+\newblock Technical report, University of Nottingham, UK, February 2005.
+
 \bibitem{compIntelligence}
 Witold Pedrycz~(eds.) Janusz~Kacprzyk.
 \newblock {\em Springer Handbook of Computational Intelligence}.
 \newblock Springer-Verlag Berlin Heidelberg, 1 edition, 2015.
+
+\bibitem{dnsbotnetdetection}
+A.~Manasrah M.~Kadhum K.~Alieyan, A.~Almomani.
+\newblock A survey of botnet detection based on dns.
+\newblock Technical report, University Sains Malaysia, Al-Balqa' Applied
+  University, December 2015.
+
+\bibitem{reteneuraleids}
+K.~D. R. Assis R. C.~Almeida L.~P.~Dias, J. J. F.~Cerqueira.
+\newblock Using artificial neural network in intrusion detection systems to
+  computer networks.
+\newblock Technical report, Federal University of Bahia, Salvador Brazil,
+  September 2017.
 
 \bibitem{IPS}
 Herbert J.~Mattord Michael E.~Whitman.
@@ -170,15 +333,40 @@ Robert Newman.
 \newblock {\em Computer Security: Protecting Digital Resources}.
 \newblock 2009.
 
+\bibitem{netflowbotnetdetection}
+M.~Araghizadeh P.~Amini, R.~Azmi.
+\newblock Botnet detection using netflow and clustering.
+\newblock Technical report, Malek-Ashtar University of Technology Tehran Iran,
+  Alzahra University Tehran Iran, University of Tehran, March 2014.
+
+\bibitem{honeypotbotnetdetection}
+R.~Cunningham C.~Zou P.~Wang, L.~Wu.
+\newblock Honeypot detection in advanced botnet attacks.
+\newblock Technical report, University of Central Florida, North Carolina State
+  University, February 2010.
+
 \bibitem{phishing}
 Mark~Stamp Peter~Stavroulakis.
 \newblock {\em Handbook of Information and Communication Security}.
 \newblock Springer, 1st edition. edition, 2010.
 
+\bibitem{signaturebotnetdetection}
+A.~Singh~Brar S.~Behal, K. Kumar~Saluja.
+\newblock Signature-based botnet detection and prevention.
+\newblock Technical report, Deptt of CSE Ferozepur India, Deptt of CSE Ludhiana
+  India.
+
 \bibitem{ai}
 Peter~Norvig Stuart~Russell.
 \newblock {\em Artificial Intelligence: A Modern Approach}.
 \newblock Prentice Hall, 2nd edition, 2002.
+
+\bibitem{phishingbotnet}
+Danielle~Anne Veluz.
+\newblock Tequila botnet leads to phishing attack.
+\newblock
+  \url{http://www.trendmicro.com/vinfo/us/threat-encyclopedia/web-attack/48/tequila-botnet-leads-to-phishing-attack},
+  June 2010.
 
 \bibitem{botnetdetection}
 David~Dagon Wenke~Lee, Cliff~Wang.

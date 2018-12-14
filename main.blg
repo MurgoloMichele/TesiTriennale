@@ -3,23 +3,24 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-I was expecting a `,' or a `}'---line 79 of file references.bib
+I was expecting a `,' or a `}'---line 495 of file references.bib
  :     
  :     howpublished = {\url{https://github.com/stratosphereips/StratosphereTestingFramework#installation-and-dependencies}}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 107 of file references.bib
- : 
- : @misc{netflowDef,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 179 of file references.bib
+I was expecting a `,' or a `}'---line 829 of file references.bib
  : 
  : @book{idsBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Stratosphere"
+Warning--to sort, need author or key in Symantec:Report18
+Warning--to sort, need author or key in Ukrainian:Report
+Warning--to sort, need author or key in WikiLeaks:Vault7
 Warning--to sort, need author or key in bigdata
+Warning--to sort, need author or key in IBM:Watson
+Warning--to sort, need author or key in Darktrace:ML
+Warning--to sort, need author or key in ApacheSpot:URL
+Warning--to sort, need author or key in Virustotal:URL
 Warning--to sort, need author or key in MalwareDef
 Warning--to sort, need author or key in VirusDef
 Warning--to sort, need author or key in Spyware2
@@ -29,7 +30,20 @@ Warning--to sort, need author or key in TrojanPurpose
 Warning--to sort, need author or key in ScopoMalware
 Warning--to sort, need author or key in MalwareRevolution
 Warning--to sort, need author or key in Botnet
+Warning--to sort, need author or key in botnetspam
+Warning--to sort, need author or key in ddosbotnet
+Warning--to sort, need author or key in clickfraudbotnet
+Warning--to sort, need author or key in bitcoinbotnet
 Warning--to sort, need author or key in phishingdef
+Warning--to sort, need author or key in bitcoindef
+Too many commas in name 1 of "K. Alieyan, A. Almomani, A. Manasrah, M. Kadhum" for entry dnsbotnetdetection
+while executing---line 1049 of file plain.bst
+Too many commas in name 1 of "P. Wang, L. Wu, R. Cunningham, C. Zou" for entry honeypotbotnetdetection
+while executing---line 1049 of file plain.bst
+Warning--to sort, need author or key in idswithfirewall
+Warning--to sort, need author or key in snort
+Warning--to sort, need author or key in zerodaydef
+Warning--to sort, need author or key in suricatadef
 Warning--to sort, need author or key in tesla
 Warning--to sort, need author or key in spamemail
 Warning--to sort, need author or key in ocr
@@ -37,59 +51,81 @@ Warning--to sort, need author or key in googlehome
 Warning--to sort, need author or key in amazonalexa
 Warning--to sort, need author or key in applehomepod
 Warning--to sort, need author or key in facialrecognition
+Too many commas in name 1 of "L. P. Dias, J. J. F. Cerqueira, K. D. R. Assis, R. C. Almeida" for entry reteneuraleids
+while executing---line 1049 of file plain.bst
 Warning--to sort, need author or key in auditTrail
 Warning--to sort, need author or key in pcap
 Warning--to sort, need author or key in netflowDef
+Warning--to sort, need author or key in netflowdef2
 Warning--to sort, need author or key in solarwinds
 Warning--to sort, need author or key in Argus
+Warning--to sort, need author or key in argusdef
 Warning--to sort, need author or key in nProbe
 Warning--to sort, need author or key in stratosphereSuite
 Warning--to sort, need author or key in alpha
+Warning--to sort, need author or key in queuedef
 Warning--to sort, need author or key in slipscurrent
 Warning--to sort, need author or key in virtualbox
 Warning--to sort, need author or key in stf
+Warning--to sort, need author or key in gitdef
+Warning--to sort, need author or key in pipdef
+Warning--to sort, need author or key in prettytabledef
+Warning--to sort, need author or key in transactiondef
+Warning--to sort, need author or key in persistentdef
+Warning--to sort, need author or key in zodbdef
+Warning--to sort, need author or key in sparsedef
+Warning--to sort, need author or key in dateutildef
 Warning--to sort, need author or key in octave
+Warning--to sort, need author or key in hyperthreading
 Warning--to sort, need author or key in slips
+Warning--empty institution in dataminingbotnetdetection
+Too many commas in name 1 of "K. Alieyan, A. Almomani, A. Manasrah, M. Kadhum" for entry dnsbotnetdetection
+while executing---line 1090 of file plain.bst
+Too many commas in name 1 of "L. P. Dias, J. J. F. Cerqueira, K. D. R. Assis, R. C. Almeida" for entry reteneuraleids
+while executing---line 1090 of file plain.bst
 Warning--empty publisher in idsbook
-You've used 40 entries,
+Too many commas in name 1 of "P. Wang, L. Wu, R. Cunningham, C. Zou" for entry honeypotbotnetdetection
+while executing---line 1090 of file plain.bst
+Warning--empty year in signaturebotnetdetection
+You've used 79 entries,
             2118 wiz_defined-function locations,
-            656 strings with 8844 characters,
-and the built_in function-call counts, 6933 in all, are:
-= -- 660
-> -- 94
+            806 strings with 13703 characters,
+and the built_in function-call counts, 13796 in all, are:
+= -- 1328
+> -- 220
 < -- 0
-+ -- 58
-- -- 18
-* -- 242
-:= -- 896
-add.period$ -- 93
-call.type$ -- 40
-change.case$ -- 129
++ -- 128
+- -- 48
+* -- 507
+:= -- 1838
+add.period$ -- 183
+call.type$ -- 79
+change.case$ -- 269
 chr.to.int$ -- 0
-cite$ -- 72
-duplicate$ -- 317
-empty$ -- 898
-format.name$ -- 18
-if$ -- 1661
+cite$ -- 141
+duplicate$ -- 608
+empty$ -- 1729
+format.name$ -- 48
+if$ -- 3265
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 14
-newline$ -- 175
-num.names$ -- 18
-pop$ -- 314
+int.to.str$ -- 79
+missing$ -- 16
+newline$ -- 342
+num.names$ -- 40
+pop$ -- 587
 preamble$ -- 1
-purify$ -- 89
+purify$ -- 182
 quote$ -- 0
-skip$ -- 287
+skip$ -- 563
 stack$ -- 0
-substring$ -- 200
-swap$ -- 38
+substring$ -- 396
+swap$ -- 70
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 146
-warning$ -- 32
-while$ -- 18
-width$ -- 42
-write$ -- 323
-(There were 3 error messages)
+type$ -- 302
+warning$ -- 62
+while$ -- 40
+width$ -- 81
+write$ -- 644
+(There were 8 error messages)

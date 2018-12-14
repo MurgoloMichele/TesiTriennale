@@ -1,58 +1,58 @@
 \select@language {italian}
 \select@language {italian}
-\contentsline {chapter}{\numberline {1}Introduzione}{9}{chapter.1}
-\contentsline {chapter}{\numberline {2}Stato dell'arte}{13}{chapter.2}
-\contentsline {section}{\numberline {2.1}Malware}{13}{section.2.1}
-\contentsline {section}{\numberline {2.2}Botnet}{15}{section.2.2}
-\contentsline {section}{\numberline {2.3}Botnet Detection}{17}{section.2.3}
-\contentsline {section}{\numberline {2.4}Intrusion Detection and Prevention System}{18}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Tipi di IDPS}{19}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Perch\IeC {\`e} usare IDPS}{21}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Metodi di rilevamento}{21}{subsection.2.4.3}
-\contentsline {section}{\numberline {2.5}Machine learning}{22}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Reinforced learning}{23}{subsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.1.1}Processo decisionale di Markov}{24}{subsubsection.2.5.1.1}
-\contentsline {subsection}{\numberline {2.5.2}Supervised learning}{24}{subsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.2.1}Modelli probabilistici}{25}{subsubsection.2.5.2.1}
-\contentsline {subsubsection}{\numberline {2.5.2.2}Modelli di Markov}{25}{subsubsection.2.5.2.2}
-\contentsline {subsubsection}{\numberline {2.5.2.3}Catena di Markov}{26}{subsubsection.2.5.2.3}
-\contentsline {subsubsection}{\numberline {2.5.2.4}Modelli di Markov nascosti}{26}{subsubsection.2.5.2.4}
-\contentsline {subsection}{\numberline {2.5.3}Unsupervised learning}{26}{subsection.2.5.3}
-\contentsline {subsubsection}{\numberline {2.5.3.1}K-Means}{26}{subsubsection.2.5.3.1}
-\contentsline {chapter}{\numberline {3}Analisi del software}{31}{chapter.3}
-\contentsline {section}{\numberline {3.1}Analisi traffico di rete}{31}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Packet Capture}{31}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Network Flow}{31}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}NetFlow}{32}{subsubsection.3.1.2.1}
-\contentsline {section}{\numberline {3.2}Strumenti di monitoraggio e analisi del traffico di rete}{35}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Audit Record Generation and Utilization System}{35}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}nProbe}{36}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Confronto tra i network flow}{37}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Stratosphere Suite}{38}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}IPS}{38}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Stratosphere Testing Framework}{39}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Analisi del problema}{41}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Deployment di Stratosphere IPS}{41}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Problematiche dovute all'utilizzo di due diversi formati}{42}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Presentazione del problema}{43}{subsection.3.4.3}
-\contentsline {chapter}{\numberline {4}Soluzione proposta}{45}{chapter.4}
-\contentsline {section}{\numberline {4.1}Conversione}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}Automatizzazione conversione}{52}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Lettura dei file}{52}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Lettura righe dei file}{53}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Conversione dei dati}{55}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Scrittura su file}{56}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Algoritmo completo}{57}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Rendere efficiente la conversione}{59}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Possibili soluzioni}{59}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Scelta effettuata}{60}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}Sperimentazioni}{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}Realizzazione di una piattaforma dedicata}{63}{section.5.1}
-\contentsline {section}{\numberline {5.2}Installazione Stratosphere IPS}{63}{section.5.2}
-\contentsline {section}{\numberline {5.3}Installazione di Argus}{64}{section.5.3}
-\contentsline {section}{\numberline {5.4}Utilizzo del programma STF\\}{65}{section.5.4}
-\contentsline {section}{\numberline {5.5}Prestazioni}{66}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Benchmark}{66}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Metrica delle prestazioni parallele}{68}{subsection.5.5.2}
-\contentsline {section}{\numberline {5.6}Conversione}{72}{section.5.6}
-\contentsline {chapter}{\numberline {6}Conclusioni}{75}{chapter.6}
+\contentsline {chapter}{\numberline {1}Introduzione}{4}{chapter.1}
+\contentsline {chapter}{\numberline {2}Stato dell'arte}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Malware}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Botnet}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Botnet Detection}{11}{section.2.3}
+\contentsline {section}{\numberline {2.4}Intrusion Detection System}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Tipi di IDS}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Perch\IeC {\`e} usare IDS}{15}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Metodi di rilevamento}{15}{subsection.2.4.3}
+\contentsline {section}{\numberline {2.5}Machine learning}{16}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Supervised learning}{17}{subsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.1.1}Reti neurali}{18}{subsubsection.2.5.1.1}
+\contentsline {subsubsection}{\numberline {2.5.1.2}Modelli probabilistici}{19}{subsubsection.2.5.1.2}
+\contentsline {subsubsection}{\numberline {2.5.1.3}Modelli di Markov}{19}{subsubsection.2.5.1.3}
+\contentsline {subsubsection}{\numberline {2.5.1.4}Catena di Markov}{20}{subsubsection.2.5.1.4}
+\contentsline {subsubsection}{\numberline {2.5.1.5}Modelli di Markov nascosti}{20}{subsubsection.2.5.1.5}
+\contentsline {subsection}{\numberline {2.5.2}Unsupervised learning}{20}{subsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.2.1}K-Means}{20}{subsubsection.2.5.2.1}
+\contentsline {subsection}{\numberline {2.5.3}Reinforced learning}{23}{subsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.3.1}Processo decisionale di Markov}{23}{subsubsection.2.5.3.1}
+\contentsline {chapter}{\numberline {3}Analisi}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Analisi traffico di rete}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Packet Capture}{25}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Network Flow}{26}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}NetFlow}{26}{subsubsection.3.1.2.1}
+\contentsline {section}{\numberline {3.2}Strumenti di monitoraggio e analisi del traffico di rete}{29}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Audit Record Generation and Utilization System}{29}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}nProbe}{30}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Stratosphere Suite}{32}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Stratosphere Linux IPS}{32}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Stratosphere Testing Framework}{33}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Analisi del problema}{34}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Deployment di Stratosphere IPS}{34}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Problematiche dovute all'utilizzo di due diversi formati}{35}{subsection.3.4.2}
+\contentsline {chapter}{\numberline {4}Soluzione proposta}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Conversione}{37}{section.4.1}
+\contentsline {section}{\numberline {4.2}Automatizzazione conversione}{43}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Lettura dei file}{43}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Lettura righe dei file}{44}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Conversione dei dati}{46}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Scrittura su file}{46}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Algoritmo completo}{47}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Rendere efficiente la conversione}{49}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Possibili soluzioni}{49}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Scelta effettuata}{51}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Correzione del codice sorgente}{52}{section.4.4}
+\contentsline {chapter}{\numberline {5}Sperimentazioni}{55}{chapter.5}
+\contentsline {section}{\numberline {5.1}Realizzazione di una piattaforma dedicata}{55}{section.5.1}
+\contentsline {section}{\numberline {5.2}Installazione Stratosphere IPS}{55}{section.5.2}
+\contentsline {section}{\numberline {5.3}Installazione di Argus}{57}{section.5.3}
+\contentsline {section}{\numberline {5.4}Utilizzo del programma STF\\}{57}{section.5.4}
+\contentsline {section}{\numberline {5.5}Tempi di esecuzione}{58}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Benchmark}{58}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Metrica delle prestazioni parallele}{60}{subsection.5.5.2}
+\contentsline {section}{\numberline {5.6}Precisione della Conversione}{64}{section.5.6}
+\contentsline {chapter}{\numberline {6}Conclusioni}{66}{chapter.6}

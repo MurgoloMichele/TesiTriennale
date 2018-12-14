@@ -1,0 +1,30 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\chapter{Introduzione}
+
+La continua digitalizzazione nel mondo sta mettendo le aziende a rischio di attacchi informatici più che mai. Negli ultimi anni, grazie alla crescente adozione di servizi cloud e mobili, la sicurezza delle informazioni ha subito un profondo cambio di paradigma dai tradizionali strumenti di protezione verso l'individuazione di attività dannose all'interno delle reti aziendali \cite{intro}.
+I metodi di attacco sempre più sofisticati utilizzati dai criminali informatici in diverse recenti violazioni della sicurezza su larga scala indicano chiaramente che gli approcci tradizionali alla sicurezza delle informazioni non possono più tenere il passo. 
+L'analisi dei dati è l'elemento chiave per sfruttare la resilienza informatica. Con attacchi sempre più avanzati e persistenti e il semplice fatto che ogni organizzazione deve proteggersi da tutte le varietà di attacchi mentre un aggressore ha bisogno solo di un tentativo riuscito, le organizzazioni devono ripensare ai propri concetti di sicurezza informatica e andare oltre la pura prevenzione \cite{bigdata}.
+
+\textit{Big data security analytics} è l'approccio alla base di questo miglioramento del rilevamento. Il rilevamento deve essere in grado di identificare i modelli di utilizzo che cambiano ed eseguire analisi complesse su una varietà di fonti di dati che vanno dai registri di server e applicazioni agli eventi di rete e alle attività degli utenti.
+Ciò richiede di eseguire analisi su grandi quantità di dati correnti e storici.
+
+Negli ultimi anni è emersa una nuova generazione di soluzioni di analisi della sicurezza, in grado di raccogliere, archiviare e analizzare enormi quantità di dati. Questi dati vengono analizzati utilizzando vari algoritmi di correlazione per rilevare le anomalie e quindi identificare possibili attività dannose.
+L'industria ha finalmente raggiunto il punto in cui gli algoritmi di intelligenza artificiale per l'elaborazione di dati su larga scala sono diventati accessibili utilizzando framework prontamente disponibili.
+Ciò consente di combinare analisi storiche e in tempo reale e identificare nuovi incidenti che potrebbero essere correlati ad altri che si sono verificati in passato. Insieme a fonti di intelligence di sicurezza esterne che forniscono informazioni aggiornate sulle ultime vulnerabilità, ciò può facilitare notevolmente l'identificazione di attacchi informatici in corso sulla rete.
+
+È con l'intenzione di utilizzare queste tecnologie che viene presentato in questa tesi un software per la cattura, l'archiviazione e l'analisi di enormi quantità di dati per la rilevazione di attività malevoli. Come mostrerò nei seguenti capitoli, l'utilizzo di questi software comporta una organizzazione dei dati notevole e verranno evidenziati in special modo le difficoltà nella gestione dei diversi formati che questi tipi di tecnologie comportano. Questa tesi metterà in evidenza l'eterogeneità dei software che hanno sempre contraddistinto l'informatica e le soluzioni scelte per risolvere tali problemi. 
+Si è scelto di creare un programma per la conversione del traffico di rete tra due formati differenti. Oltre alle difficoltà nel trovare soluzioni adatte per preservare i dati tra le conversioni, per far sì che queste siano corrette; si è dovuto anche tener conto della velocità di conversione di questi file. Si è quindi usato un approccio di calcolo parallelo per sfruttare la potenza dei processori multi core.
+Gli esperimenti effettuati sulle performance di conversione dimostrano che la parallelizzazione nell'esecuzione raggiunge uno speedup lineare grazie al quale è possibile convertire circa 15 mila file in 20 secondi con CPU di nuova generazione.
+I file convertiti verranno poi usati da un \textit{Intrusion Detection System} per individuare traffico malevolo sulla rete descrivendo le operazioni effettuate. L'Intrusione Detection System che si è scelto di utilizzare è Open Source che non è ancora stato pubblicato. 
+
+Nel secondo capitolo verranno in primo luogo presentate le minacce provenienti dalla rete, con particolare enfasi sui tipi di attacchi su larga scala. Successivamente verrà presentato lo stato dell'arte dei sistemi di difesa utilizzati ad oggi per contrastare questi tipi di attacchi. In conclusione sarà fatta una introduzione al machine learning usato da questi sistemi.
+
+Nel terzo capitolo verrà introdotto uno speciale tipo di file che sarà il principale punto di enfasi in questa tesi. Dopo di chè verranno presentati i differenti tipi di formati che questo file può assumere e le problematiche dovute ai diversi standard in uso oggi. Dopo una descrizione dettagliata delle varie differenze tra i formati verrà introdotto il software che farà uso di questi file e le problematiche legate all'utilizzo di software ancora in fase di alpha. Si presenterà poi l'utilizzo che questi file hanno in relazione alle tecnologie utilizzate. Infine troverà spazio la presentazione del problema da affrontare.
+
+
+Nel quarto capitolo si descriveranno le scelte effettuate per risolvere il problema del deployment di un software non ancora pubblicato e come si è modificato il codice sorgente per poterlo adattare alle proprie esigenze. Successivamente verrà analizzato l'uso di diversi formati di file e l'automatizzazione di tale soluzione. Infine saranno presentati i diversi metodi atti a perfezionare l'automatizzazione per renderla efficiente e la scelta che è stata effettuata.
+
+Nel quinto capitolo verranno mostrati i risultati dei test e i benchmark effettuati con lo scopo di confermare al livello pratico quanto mostrato sotto forma teorica nel capitolo precedente. Saranno descritte in modo dettagliato le condizioni sotto le quali sono stati effettuati i test e limiti della scalabilità della soluzione. Il tutto verrà seguito da grafici esplicativi.
+
+Nel sesto capitolo infine, verrà fatto un riassunto della tesi ribadendo l'obiettivo, cosa si è svolto in questa tesi e i risultati ottenuti.

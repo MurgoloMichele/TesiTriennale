@@ -17,45 +17,52 @@ Per lo sviluppo del programma per la conversione dei file e per l'utilizzo di St
 \section{Installazione Stratosphere IPS}
 Sulla macchina virtuale è stato installato il framework di Stratospehere IPS. Di seguito i passaggi effettuati per l'installazione \cite{stf}.
 \begin{itemize}
-				\item Installazione del programma git 2.7.4
+				\item Installazione del programma git 2.7.4 \cite{gitdef}
 \begin{lstlisting}[language=bash]
  sudo apt install git
 \end{lstlisting}
-				\item Clonazione repository github del framework
+								Il pacchetto \textit{git} è necessario per interagire con il repository GitHub su cui è presente Stratosphere.
+				\item Clonazione repository GitHub del framework
 \begin{lstlisting}[language=bash]
  git clone https://github.com/stratosphereips/StratosphereTestingFramework
 \end{lstlisting}
-				\item Installazione del programma python-pip
+				\item Installazione del programma python-pip \cite{pipdef}
 \begin{lstlisting}[language=bash]
  sudo apt install python-pip
 \end{lstlisting}
+Questo pacchetto serve per installare i pacchetti di Python e verrà usato per installare pacchetti successivi.
 \end{itemize}
 \begin{itemize}
-				\item prettytable 0.7.2-3
+				\item prettytable 0.7.2-3 \cite{prettytabledef}
 \begin{lstlisting}[language=bash]
  sudo apt install python-prettytable
 \end{lstlisting}
-				\item transaction 1.4.3-3
+\textit{PrettyTable} è una libreria di Python usata per rappresentare tabelle ASCII.
+				\item transaction 1.4.3-3 \cite{transactiondef}
 \begin{lstlisting}[language=bash]
  sudo apt install python-transaction
 \end{lstlisting}
-				\item persistent 4.1.1-1build2
+								Questo pacchetto contiene l'implementazione delle transazioni per Python ed è usato principalmente da \textit{Zodb}.
+				\item persistent 4.1.1-1build2 \cite{persistentdef}
 \begin{lstlisting}[language=bash]
  sudo apt install python-persistent
 \end{lstlisting}
-				\item zodb 5.4.0
+								Il pacchetto contiene l'implementazione della persistenza dei dati per database come \textit{Zodb}.
+				\item zodb 5.4.0 \cite{zodbdef}
 \begin{lstlisting}[language=bash]
  sudo pip install zodb
 \end{lstlisting}
-				\item sparse 1.1-1.3build1
+È il database ad oggetti utilizzato dal framework.
+				\item sparse 1.1-1.3build1 \cite{sparsedef}
 \begin{lstlisting}[language=bash]
  sudo apt install python-sparse
 \end{lstlisting}
-				\item dateutil 2.4.2-1
+Libreria che fornisce vettori multi dimensionali sparsi.
+				\item dateutil 2.4.2-1 \cite{dateutildef}
 \begin{lstlisting}[language=bash]
  sudo apt install python-dateutil
 \end{lstlisting}
-
+								Modulo che fornisce un'estensione al modulo standard di Python \textit{datetime}.
 
 \end{itemize}
 
@@ -75,8 +82,8 @@ Per generare i netflow dal traffico di rete è necessario avere una istanza di A
 \begin{lstlisting}[language=bash]
  sudo apt install flex
 \end{lstlisting}
-\item Installazione dell'ultima versione di argus 3.0.8.2 dal sito http://qosient.com/argus/dev/argus-latest.tar.gz
-\item Installazione dell'ultima versione di argus-client 3.0.8.2 dal sito http://qosient.com/argus/dev/argus-clients-latest.tar.gz
+\item Installazione dell'ultima versione di argus 3.0.8.2 dal sito\\ http://qosient.com/argus/dev/argus-latest.tar.gz
+\item Installazione dell'ultima versione di argus-client 3.0.8.2 dal sito\\ http://qosient.com/argus/dev/argus-clients-latest.tar.gz
 \end{itemize}
 
 \section{Utilizzo del programma STF\\}
@@ -116,13 +123,20 @@ Per visualizzare il behavioral model si utilizza il comando
 
 \end{document}
 
-\section{Prestazioni}
+\section{Tempi di esecuzione}
 
 Come visto nel capitolo 4, il programma di conversione proposto è efficiente. In questa sezione vengono effettuati dei \textit{benchmark} per analizzarne le prestazioni e studiare la scalabilità di una soluzione che prevede l'utilizzo di più CPU in parallelo.
 
 \subsection{Benchmark}
+Per le analisi sono stati usati dei dataset di network flow generati da una rete di grandi dimensioni con migliaia di host attivi quotidionamente.
+Per misurare i tempi di esecuzione del programma sono stati usati 3 dataset: 
+\begin{itemize}
+				\item 10 giorni di flows di dimensione totale 1,7 GB
+				\item 5 giorni di flows di dimensione totale 700 MB
+				\item 1 giorno di flows di dimensione totale 70 MB
+\end{itemize}
 
-Per misurare la velocità del programma si è usato come dataset 10 giorni di flows. La dimensione del dataset è di 1,7 GB per un totale di 14400 file. Le misure sono state realizzate con il programma /usr/bin/time. I grafici sono stati creati con il programma GNU Octave per GNU/Linux \cite{octave}.
+Le misure sono state realizzate con il programma /usr/bin/time. I grafici sono stati creati con il programma GNU Octave per GNU/Linux \cite{octave}.
 
 Il computer su cui sono stati effettuati i benchmark ha le seguenti caratteristiche:
 \begin{itemize}
@@ -133,21 +147,21 @@ Il computer su cui sono stati effettuati i benchmark ha le seguenti caratteristi
 				\item HDD 2 TB 7200 RPM
 \end{itemize}
 
-I benchmark sono stati effettuati convertendo il dataset con l'algoritmo visto nel capitolo 4. I benchmark sono stati ripetuti in funzione del numero di core disponibili sulla CPU.
+I benchmark sono stati effettuati convertendo il dataset con l'algoritmo proposto nel capitolo 4. I benchmark sono stati ripetuti in funzione del numero di core disponibili sulla CPU. I tempi di esecuzione sul dataset di 1,7 GB sono rappresentati in minuti, secondi e centesimi:
 \begin{itemize}
-				\item 1 core: 11.35.46
-				\item 2 core: 6.02.65
-				\item 3 core: 4.12.62
-				\item 4 core: 3.09.79
-				\item 5 core: 3.04.47
-				\item 6 core: 3.04.66
-				\item 7 core: 2.59.22
-				\item 8 core: 2.59.33
+				\item 1 core: 11:35:46
+				\item 2 core: 6:02:65
+				\item 3 core: 4:12:62
+				\item 4 core: 3:09:79
+				\item 5 core: 3:04:47
+				\item 6 core: 3:04:66
+				\item 7 core: 2:59:22
+				\item 8 core: 2:59:33
 \end{itemize}
 
-Come è possibile constatare dai risultati, per i primi 4 core si ha un guadagno lineare, mentre gli ultimi 4 forniscono un miglioramento non più lineare. Questo è dovuto al numero di core della CPU usata per i benchmark, l'i7-3770 ha 4 core fisici e 4 virtuali sfruttando la tecnologia \textit{Hyper Threading} di Intel.
+Come è possibile constatare dai risultati, per i primi 4 core si ha un guadagno lineare, mentre gli ultimi 4 forniscono un miglioramento non più lineare. Questo è dovuto al numero di core della CPU usata per i benchmark, l'i7-3770 ha 4 core fisici e 4 virtuali sfruttando la tecnologia \textit{Hyper Threading} \cite{hyperthreading} di Intel.
 
-La figura ~\ref{fig:tempoCore} rappresenta il gragico che è stato costruito sui risultati precedenti: ha sull'asse delle $x$ il numero di core e sull'asse delle $y$ il tempo impiegato per convertire 14400 file. Come si può vedere il tempo impiegato scende in modo quasi lineare per i primi quattro core.
+La figura ~\ref{fig:tempoCore} rappresenta il grafico che è stato costruito sui risultati dell'esecuzione dei 3 diversi dataset: ha sull'asse delle $x$ il numero di core e sull'asse delle $y$ il tempo impiegato per convertire i file. Il colore blu identifica il dataset di dimensione 1,7 GB, il colore rosso 700 MB e quello verde 70 MB. Come si può vedere il tempo impiegato scende in modo quasi lineare per i primi quattro core nel dataset più grosso. Il grafico verde rimane quasi costante perchè per dataset di dimensioni molto ridotte aggiungere core è quasi ininfluente.
 
 \begin{figure}[H]
 				\centering
@@ -230,10 +244,10 @@ Nella figura ~\ref{fig:kuck} è rappresentata la funzione di Kuck
 La conversione in parallelo risulta molto efficiente, intorno allo 0.9. Con gli esperimenti effettuati ci si aspetta uno speedup lineare sul numero di core fisici.
 Utilizzando un solo core la conversione impiega 12 minuti, mentre con quattro core si divide in quattro il tempo arrivando a 3 minuti. Le CPU di nuova generazione come AMD Ryzen vantano 32 core fisici e 32 virtuali, con questo numero di core fisici ci si può aspettare di dividere il tempo per 32, arrivando ad effettuare la conversione in 23 secondi.
 
-\section{Conversione}
-Per controllare se la conversione viene effettuata correttamente si è usato il software Stratosphere IPS per creare e utilizzare dei modelli impiegati per fare \textit{anomaly detection} su del traffico di rete. I flows sono stati convertiti nel formato compatibile da Argus ad nProbe e infine di nuovo ad Argus per controllare che non ci siano delle perdite di informazioni vitali che alterino il funzionamento dell'IDPS.
+\section{Precisione della Conversione}
+Per controllare se la conversione viene effettuata correttamente si è usato il software Stratosphere IPS per creare e utilizzare dei modelli impiegati per fare \textit{anomaly detection} su del traffico di rete. I flows sono stati convertiti nel formato compatibile da Argus ad nProbe e infine di nuovo ad Argus per controllare che non ci siano delle perdite di informazioni vitali che alterino il funzionamento dell'IDS.
 
-La figura ~\ref{fig:processoConversione} descrive il processo di conversione. Ad ogni conversione effettuata è prevista una perdita di informazioni dovuta al tipo di campi utilizzati nei diversi formati e alla loro formattazione.
+La figura ~\ref{fig:processoConversione} descrive il processo di conversione. Ad ogni conversione effettuata è prevista una lieve perdita di informazioni dovuta al tipo di campi utilizzati nei diversi formati e alla loro formattazione.
 
 \begin{figure}[H]
 				\centering
@@ -241,20 +255,31 @@ La figura ~\ref{fig:processoConversione} descrive il processo di conversione. Ad
 				\caption{Processo di conversione}
 				\label{fig:processoConversione}
 \end{figure}
-In questa sezione si è utilizzato slips per verificare che la conversione dei file di flows sia corretta. È stato usato un flow dato in input a slips per rilevare del traffico malevolo, successivamente convertito in un altro formato e riconvertito per verificare che l'output sia identico pre e post conversione.
+
+
+Sono stati usati dei flow dati in input a slips per rilevare del traffico malevolo, successivamente convertiti in un altro formato e riconvertiti per verificare che l'output sia identico pre e post conversione.
 I flows e i modelli comportamentali utilizzati per il test sono stati presi dal repository GitHub di slips \cite{slips}.
 
-Nel test effettuato si è utilizzato il file "2016-11-4\_win11.binetflow" con il seguente comando
-\begin{lstlisting}
+Nel test effettuato si è utilizzato il file "2016-11-4\_win11.binetflow" con il comando ~\ref{lst:testslips}
+\begin{lstlisting}[language=Bash, label={lst:testslips}, caption={comando di test}]
 cat test-flows/Malicious/2016-11-4_win11.binetflow | ./slips.py -f models/ -d
 \end{lstlisting}
 l'output di slips è rappresentato in figura ~\ref{fig:outputSlips}. Sono stati rilevati 3 indirizzi IP malevoli dal file di flow dato in input.
 \begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.5]{slips.png}
-				\caption{Output slips}
+				\includegraphics[scale=0.4]{slips.png}
+				\caption{Output slips - file originale}
 				\label{fig:outputSlips}
 \end{figure}
 
+Ci si aspetta quindi di ottenere lo stesso output dopo il processo di conversione, rilevando gli stessi IP malevoli con lo stesso valore di rischio. Per controllare se la perdita di informazioni è significativa o meno si esegue nuovamente il test utilizzando il file convertito con il comando ~\ref{lst:testslips}. L'output di slips è rappresentato in figura~\ref{fig:outputSlips}
+\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.4]{slips.png}
+				\caption{Output slips - file convertito}
+				\label{fig:outputSlips}
+\end{figure}
+
+I due output sono identici, si può quindi dire con certezza che, nonostante sia presente una perdita di informazioni, questa non altera il rilevamento di slips.
 
 \end{document}

@@ -1,19 +1,19 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\chapter{Analisi del software}
+\chapter{Analisi} 
 
 \section{Analisi traffico di rete}
 
 Nell'era digitale il traffico di rete è aumentato notevolmente e con esso gli attacchi di tipo informatico, per questo motivo è necessario trovare soluzioni per analizzare questo grande quantitativo di pacchetti che attraversano i dispositivi di rete delle aziende di grosse dimensioni. Nel mondo informatico di oggi è molto importante poter determinare rapidamente e con precisione l'origine e la portata di un potenziale attacco su una rete al fine di poterlo contrastare in modo efficace.
-Per fare ciò viene costruito un \textit{audit trail} di informazioni collezionate dal traffico di rete usando una combinazione di network flow e packet capture.
+Per fare ciò viene costruito un \textit{audit trail}\footnote{Un audit trail è un file che contiene una registrazione cronologica di attività relative alla sicurezza per consentire la ricostruzione e l'esame di eventi \cite{auditTrail}.
+} di informazioni collezionate dal traffico di rete usando una combinazione di network flow e packet capture.
 
-Un audit trail è un file che contiene una registrazione cronologica di attività relative alla sicurezza per consentire la ricostruzione e l'esame di eventi \cite{auditTrail}.
 
 \subsection{Packet Capture}
-Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete. Un packet capture intercetta i singoli pacchetti e li archivia. Nei sistemi operativi Unix è utilizzata la libreria \textbf{libpcap} mentre nei sistemi Windows si fa utilizzo di \textbf{WinPcap} \cite{pcap}.
+Per packet capture (PCAP) si intende la cattura di traffico internet che attraversa un dispositivo di rete; nel caso la cattura avvenga su un border router, è così possibile ispezionare tutto il traffico di rete generato da un'organizzazione. I software che si occupano di effettuare la cattura del traffico operano intercettando i singoli pacchetti, offrendo anche la possibilità di archiviarli su memoria persistente. Esempi di questi programmi sono la libreria \textbf{libpcap} per i sistemi operativi Unix, mentre sui sistemi Windows si fa utilizzo di \textbf{WinPcap} \cite{pcap}.
 
 \subsection{Network Flow}
-Un flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione che hanno degli attributi in comune \cite{trafficflow}:
+Un network flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione che presentano degli attributi in comune \cite{trafficflow}, quali:
 \begin{itemize}
 				\item indirizzo IP sorgente
 				\item indirizzo IP destinazione
@@ -22,10 +22,10 @@ Un flow è una sequenza di pacchetti inviati da una sorgente ad una destinazione
 				\item protocollo
 \end{itemize}
 
-Se i pacchetti che attraversano un dispositivo di rete hanno questi attributi in comune possono essere raggruppati in un flow.
+Tutti i pacchetti che condividono gli stessi valori di questi attributi possono essere raggruppati in un unico flow. Risulta quindi evidente come le analisi basate sui network flow presentino numerosi vantaggi rispetto a quelle basate sui PCAP. Ad esempio, poichè i flow rappresentano un'aggregazione di pacchetti, è possibile diminuire drasticamente lo spazio richiesto per la memorizzazione. Di conseguenza, anche l'ispezione di tali dati risulterà più rapida e richiederà meno risorse computazionali. Va però sottolineato che i network flow non consentono di salvare il payload dei singoli pacchetti: questa caratteristica li rende da un lato meno dettagliati rispetto ai full packet capture; dall'altro, consente di effettuare l'analisi dei dati senza doversi preoccupare di questioni legate alla privacy degli utenti monitorati.
 
 \subsubsection{NetFlow}
-NetFlow è un protocollo di analisi di rete introdotto da Cisco che offre la possibilità di raccogliere informazioni dettagliate sul traffico che attraversa un'interfaccia. I dispositivi di rete che supportano NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
+NetFlow~\cite{netflowDef} è un protocollo di analisi di rete introdotto da Cisco~\cite{netflowdef2} che offre la possibilità di raccogliere informazioni dettagliate sul traffico che attraversa un'interfaccia. I dispositivi di rete che supportano NetFlow possono raccogliere statistiche sul traffico ed esportarle come record verso un NetFlow collector, un server che esegue l'analisi del traffico.
 
 Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condividono tutti i seguenti 7 valori \cite{netflowDef}.
 
@@ -38,11 +38,11 @@ Cisco definisce un flow come una sequenza unidirezionale di pacchetti che condiv
 				\item IP Type of Service
 \end{itemize}
 
-La figura ~\ref{fig:architetturaNetflow} descrive un esempio di architettura dei network flow. 
+La figura ~\ref{fig:architetturaNetflow} descrive un esempio di architettura basata su NetFlow. 
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{netflowgraph.png}
+\includegraphics[scale=0.5]{netflowgraph.png}
 \caption{Architettura NetFlow}
 \label{fig:architetturaNetflow}
 \end{figure}
@@ -88,13 +88,13 @@ L'immagine ~\ref{fig:solarwinds} rappresenta SolarWinds NetFlow Traffic Analyzer
 \end{verse}
 
 \section{Strumenti di monitoraggio e analisi del traffico di rete}
-In questa sezione verrano presentati i software utilizzati per la cattura dei network flows. Questi software sono Open Source e sono stati usati su una distribuzione GNU/Linux.
+In questa sezione verrano presentati i software per la cattura dei network flows che saranno oggetto di analisi di questa tesi: Argus e nProbe. Questi software sono Open Source e sono stati usati su una distribuzione GNU/Linux.
 
 \subsection{Audit Record Generation and Utilization System}
 Argus (Audit Record Generation and Utilization System) è stato la prima implementazione del monitoraggio dei flow, è un progetto open source e multipiattaforma \cite{Argus}.
 Quest'ultima particolarità lo rende molto interessante poichè supportando molti sistemi operativi, tra i quali Windows, MacOSX, Linux, Solaris, FreeBSD, OpenBSD, IRIX e OpenWrt, può essere adoperato in quasi tutte le reti comprendendo la maggior parte degli host. La sua architettura è di tipo server/client. Il server recupera i pacchetti ricevuti da una o più interfacce di rete disponibili su una una macchina e Argus assembla poi questi pacchetti in dati binari che rappresentano dei flow. Lo scopo dei client è di quello di leggere i dati dei flow. 
 
-Argus viene utilizzato da molte università e aziende per registrare dei flow che vengono utilizzati sia nell'analisi immediata dell'utilizzo della rete, sia nell'analisi storica.
+Argus viene utilizzato da molte università e aziende~\cite{argusdef} per registrare dei flow che vengono utilizzati sia nell'analisi immediata dell'utilizzo della rete, sia nell'analisi storica.
 
 I file di Argus sono compressi con algoritmi che offrono un rapporto di compressione fino 10.000:1. La compressione di questi file è molto importante perchè tendono ad essere molto grandi e possono raggiungere dimensioni difficili da gestire.
 
@@ -132,7 +132,7 @@ Label          & metadata label                          \\ \hline
 
 Negli ambienti commerciali, NetFlow è probabilmente lo standard de facto per la gestione del traffico di rete. nProbe è un software in grado di reccogliere, analizzare ed esportare report sul traffico di rete utilizzando il formato standard Cisco NetFlow \cite{nProbe}. È disponibile per la maggior parte dei sistemi operativi sul mercato. 
 
-La tabella ~\ref{table:campiNprobe} descrive i campi dei flow che nProbe salva su file. La prima colonna rappresenta il nome del campo del pacchetto di rete, la seconda colonna è una descrizione del campo.
+La tabella ~\ref{table:campiNprobe} descrive i principali campi dei flow che nProbe è in grado di collezionare: nella colonna di sinistra si riporta il nome del campo, mentre viene fornita una breve descrizione corrispondente nella colonna di destra.
 
 \begin{table}[H]
 				\centering
@@ -173,36 +173,34 @@ OUT\_DST\_MAC                        & destination MAC address                  
 \label{table:campiNprobe}
 \end{table}
 
-\subsection{Confronto tra i network flow}
-nProbe è un software scalabile ed è stato progettato per restare al passo con le velocità multi-Gbit su hardware comune. Usando una CPU dual-core nProbe può essere usato per catturare pacchetti a 1 Gbit con perdita di pacchetti inferiore al 1\%. Inoltre nProbe permette una configurazione più dettagliata e personalizzabile, permette di scegliere molti campi per l'analisi dei network flow \cite{nProbe}.
+Rispetto ad Argus, nProbe è un software scalabile ed è stato progettato per restare al passo con le velocità multi-Gbit su hardware comune. Usando una CPU dual-core nProbe può essere usato per catturare pacchetti a 1 Gbit con perdita di pacchetti inferiore al 1\%. Inoltre nProbe permette una configurazione più dettagliata e personalizzabile, permette di scegliere molti campi per l'analisi dei network flow \cite{nProbe}.
 
-Mentre nProbe è disponibile solo per Unix, Windows o MacOs X, Argus funziona su MacOS X, Linux, FreeBSD, OpenBSD, NetBSD, AIX, HP-UX, VxWorks, IRIS, Windows e OpenWrt, inoltre è stato portato su molte piattaforme hardware accelerate come Bivio, Pluribus, Arista, Tilera \cite{Argus}. 
+Di contro, Argus è compatibile con un maggiore numero di sistemi: Mentre nProbe è disponibile solo per Unix, Windows o MacOs X, Argus funziona anche su FreeBSD, OpenBSD, NetBSD, AIX, HP-UX, VxWorks, IRIS e OpenWrt. inoltre è stato portato su molte piattaforme hardware accelerate come Bivio, Pluribus, Arista, Tilera \cite{Argus}. 
 
 \section{Stratosphere Suite}
-In questa tesi si è utilizzato Stratosphere IPS, un software open source disponibile per sistemi operativi Windows e distribuzioni GNU/Linux. In questa tesi si è fatto utilizzo esclusivo della versione per distribuzioni GNU/Linux.
-Stratosphere Linux IPS (slips), alla pubblicazione di questa tesi, è in alpha \cite{stratosphereSuite}. È un sistema di rilevazione e prevenzione delle intrusioni comportamentale che utilizza algoritmi di machine learning per rilevare comportamenti dannosi. 
-L'obiettivo di Stratosphere IPS è quello di creare un Intrusion Prevention System che può rilevare e bloccare comportamenti malevoli all'interno di una rete.
+In questa tesi si è analizzata la Stratosphere Suite \cite{stratosphereSuite}, un insieme di software open source disponibile sia per sistemi operativi Windows che per le distribuzioni GNU/Linux. La Stratosphere Suite si compone di due parti distinte: Stratosphere IPS e Stratosphere Testing Framework.
+Stratosphere IPS è un sistema di rilevazione e prevenzione delle intrusioni orientato all'analisi comportamentale basata sui network flow. L'obiettivo di Stratosphere IPS è quello di creare un Intrusion Prevention System in grado di rilevare e bloccare comportamenti malevoli all'interno di una rete. Si sottolinea che, per questa tesi, è stata utilizzata la versione di Stratosphere IPS per sistemi Linux (slips).
+Stratosphere Testing Framework (stf) si occupa della generazione dei modelli comportamentali che saranno poi usati da Stratosphere IPS per effettuare le analisi del traffico e segnalare le possibili intrusioni.
 
-Fa parte di una più ampia suite di programmi che include Stratospehre Testing Framework (stf). Stf analizza i modelli comportamentali della rete alla ricerca di malware.
+\subsection{Stratosphere Linux IPS}
+Slips si occupa della parte di rilevazione delle attività malevole impiegando algoritmi di machine learning che analizzano network flow. Questi algoritmi utilizzano i network flow in ingresso per elaborare dei modelli comportamentali in real-time di ciascun host monitorato: tali modelli comportamentali saranno quindi confrontati con dei modelli predefiniti che includono attività malevole. Nel caso slips riveli somiglianze significative tra i modelli "attuali" e quelli utilizzati per il confronto, genererà un allarme. 
+Il processo di cattura dei network flow è effettuato attraverso Argus. L'idea di base è quella di leggere i flow da Argus e di inviarli a Slips. I modelli comportamentali da fornire a slips per effettuare il confronto vengono creati da Stratosphere Testing Framework.
 
-\subsection{IPS}
-Slips si occupa della parte di rilevazione attraverso machine learning. La parte di rilevazione e cattura del traffico viene fatta attraverso attraverso Argus che cattura i pacchetti e li rende disponibili a chiunque si connetta alla sua porta. L'idea di base è quella di leggere i flow da Argus e di inviarli a Slips. In questo modo è possibile analizzare il traffico del proprio pc e di tutte le reti su cui è in esecuzione Argus. 
-
-La figura ~\ref{fig:architetturaStratosphere} descrive l'architettura. Argus è attivo sul computer o sulla rete su cui si vuole analizzare il traffico in entrata. Questo traffico è poi salvato su un file che può essere dato in input a Slips.
+La figura ~\ref{fig:architetturaStratosphere} descrive l'architettura della suite di Stratosphere. Su una rete interna o host singolo è presente un'istanza di Argus che cattura il traffico e crea dei network flow. La suite di Stratosphere protegge la rete interna tramite Slips che analizza il traffico catturato da Argus e stf che crea dei modelli comportamentali dai flows di Argus.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{archslips.png}
+\includegraphics[scale=0.24]{archslips.png}
 \caption{Architettura Stratosphere}
 \label{fig:architetturaStratosphere}
 \end{figure}
 
-Slips fa utilizzo di modelli comportamentali creati da Stratosphere Testing Framework.
+
 
 \subsection{Stratosphere Testing Framework}
 Stf è un framework di ricerca sulla sicurezza della rete per analizzare i modelli comportamentali delle connessioni di rete. Il suo obiettivo è aiutare i ricercatori a trovare nuovi comportamenti malware, etichettare tali comportamenti, creare i loro modelli di traffico e verificare gli algoritmi di rilevamento. Una volta creati e verificati i migliori modelli comportamentali di malware, questi verranno utilizzati da slips per il rilevamento. Stratosphere Testing Framework usa algoritmi di machine learning sui modelli comportamentali.
 
-Il nucleo di \textit{Stratosphere IPS} è composto dai modelli comportamentali di reti e algoritmi di rilevamento. I modelli comportamentali rappresentano ciò che una connessione specifica fa nella rete durante la sua vita. Il comportamento è costuito analizzando la sua periodicità, le dimensioni e la durata di ciascun flusso. Sulla base di queste caratteristiche a ciascun flusso viene assegnata una lettera e il gruppo di lettere caratterizza il comportamento della connessione.
+Il nucleo di \textit{Stratosphere IPS} è composto dai modelli comportamentali di reti e algoritmi di rilevamento. I modelli comportamentali rappresentano ciò che una connessione specifica fa nella rete durante la sua vita. Per stf una connessione è un singolo flow, ovvero una sequenza di pacchetti che condividono dei valori. Il comportamento è costuito analizzando la sua periodicità, le dimensioni e la durata di ciascun flusso. Sulla base di queste caratteristiche a ciascun flusso viene assegnata una lettera e il gruppo di lettere caratterizza il comportamento della connessione.
 
 Prendiamo come esempio una connessione generata da una botnet che ha il seguente modello comportamentale
 \begin{lstlisting}[language=bash]
@@ -222,46 +220,35 @@ L'immagine ~\ref{fig:modelliComportamentali} mostra i criteri di assegnazione de
 \end{figure}
 
 \section{Analisi del problema}
+Questa tesi si occupa di risolvere un duplice problema: come installare ed utilizzare correttamente la suite di Stratosphere; come poter estendere la suite di Stratosphere utilizzando formati di netflow differenti da quelli prodotti da Argus.
 
 \subsection{Deployment di Stratosphere IPS}
-La suite di Stratosphere è attualmente pubblicata in alpha \cite{stratosphereSuite}. Un programma in alpha è un programma che è ancora nelle prime fasi di test e in genere include bug significativi e problemi di usabilità e non viene rilasciato al pubblico \cite{alpha}.
+La suite di Stratosphere è attualmente pubblicata in alpha \cite{stratosphereSuite}. Un programma in alpha è un programma che è ancora nelle prime fasi di test e in genere include bug significativi e problemi di usabilità, pertanto se ne sconsiglia l'utilizzo in fasi di produzione \cite{alpha}.
 
-Per l'installazione e l'utilizzo di questo software è stato necessario scaricare il codice sorgente da GitHub. Il codice sorgente è stato poi modificato per poter effettuare una installazione funzionante.
-Per la scrittura di questa tesi si è scaricata la versione più aggiornata disponibile sulla pagina GitHub di slips \cite{slipscurrent}. Questa versione, essendo in alpha, non funziona \textit{out of the box}. È stato perciò necessario apportare delle modifiche al codice.
-
-Per provare il corretto funzionamento di slips si è passato per prima cosa un file di flows in input per verificarne il corretto funzionamento. Il codice ~\ref{lst:catslips} mostra il comando utilizzato 
-\begin{lstlisting}[language=Bash, label={lst:catslips}, caption={comando per eseguire slips}]
+Per l'installazione e l'utilizzo di questo software è stato necessario scaricare il codice sorgente da GitHub. Quando si esegue il programma scritto in Python \textit{slips.py} con il comando~\ref{lst:catslips}
+\begin{lstlisting}[language=Bash, label={lst:catslips}, caption={comando per eseguire slips}]                                                                     
 cat file.binetflow | ./slips.py -f models -d
 \end{lstlisting}
-L'output generato dal comando ~\ref{lst:catslips} è vuoto per qualsiasi tipo di file. Si è quindi ispezionato il codice con tecniche di debug alla ricerca di una possibile soluzione.
+L'output generato è vuoto e il programma non termina l'esecuzione. Si è provato con diversi file di netflow con gli stessi risultati, il programma sembra andare in loop senza mostrare alcun tipo di output. Si è quindi ispezionato il codice con tecniche di debug alla ricerca di una possibile soluzione per il corretto deployment del software.
 
-Il codice ~\ref{lst:slipsRun} rappresenta la funzione \textit{run} del file \textit{slips.py}. Questo pezzo di codice viene eseguito su più processori: ogni core prende una riga dalla coda fino a quando non si svuota ed esegue il codice all'interno del try.
-La riga numero 5 prende una riga del file dalla coda e alla riga numero 7 controlla se il contenuto della riga letta è diverso da \textit{stop} per continuare. Questo controllo, inserito probabilmente in fase di test per eseguire la funzione su pezzi di codice prestabiliti, va sostituito con un controllo che esegue il codice solo se la riga non è vuota.
-
-Questo pezzo di codice ha inoltre dei controlli di debug che eseguono la funzione solamente se la riga letta ha un particolare indirizzo IP o una porta. Alla riga numero 8 c'è un controllo sugli indirizzi IP 10.0.2.15 e 31.13.91.6 e alla riga numero 11 un controllo sulla porta 80 e indirizzo IP 10.0.2.15. Questi controlli sono stati tolti per permettere alla funzione di eseguire su qualsiasi indirizzo IP e porta.
-
-\lstinputlisting[language=Python, label={lst:slipsRun}, caption={codice originale}]{slips.py}
-
-Il codice ~\ref{lst:slips2Run} mostra le modifiche apportate al codice ~\ref{lst:slipsRun}. È stato risolto anche un bug che lascia in esecuzione il programma quando finisce di eseguire. La riga numero 3 del codice ~\ref{lst:slipsRun} non permetteva alla funzione di uscire dal ciclo \textit{while}, è stato risolto con la riga numero 3 del codice ~\ref{lst:slips2Run}.
-
-\lstinputlisting[language=Python, firstline=517, lastline=526, label={lst:slips2Run}, caption={codice modificato}]{slips2.py}
 
 \subsection{Problematiche dovute all'utilizzo di due diversi formati}
 I file prodotti da nProbe e Argus, oltre ad avere formati diversi, hanno anche campi eterogenei. Stratosphere IPS si appoggia ad Argus per la cattura di file e di conseguenza può leggere file solo in formato binetflow. 
 Se una azienda si appoggia a Cisco utilizzando nProbe non può quindi fare utilizzo di questo software, poichè non riesce a leggere file in formato differente.
-
-Questa incompatibilità ha portato alla necessità di una conversione: i file prodotti da nProbe devono essere convertiti in file con formato usato da Argus. Questa conversione deve essere precisa ed efficiente.
-
-\subsection{Presentazione del problema}
 I file prodotti da nProbe hanno una struttura gerarchica fissa ben definita: ci sono 4 livelli di subdir, in cui il primo livello indica l'anno, il secondo il mese, il terzo il giorno e il quarto l'ora. All'interno dell'ultima subdir, quella delle ore, ci sono 60 file uno per ogni minuto della giornata.
-
 La immagine ~\ref{fig:folderStructure} descrive la struttura gerarchica dei file.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{folderstructure.png}
+\includegraphics[scale=0.5]{folderstructure.png}
 \caption{Folder Structure}
 				\label{fig:folderStructure}
 \end{figure}
+
+Questa incompatibilità ha portato alla necessità di una conversione: i file prodotti da nProbe devono essere convertiti in file con formato usato da Argus. Questa conversione deve essere precisa (i.e., evitare al più possibile la perdita di informazioni) ed efficiente (i.e., essere eseguita in breve tempo in modo tale da poter utilizzare i flow convertiti per analisi in quasi real-time).
+
+
+
+
 
 \end{document}
