@@ -3,19 +3,36 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
+<<<<<<< HEAD
 I was expecting a `,' or a `}'---line 495 of file references.bib
+=======
+I was expecting a `,' or a `}'---line 134 of file references.bib
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
  :     
  :     howpublished = {\url{https://github.com/stratosphereips/StratosphereTestingFramework#installation-and-dependencies}}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+<<<<<<< HEAD
 I was expecting a `,' or a `}'---line 829 of file references.bib
+=======
+I was expecting a `,' or a `}'---line 162 of file references.bib
+ : 
+ : @misc{netflowDef,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 234 of file references.bib
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
  : 
  : @book{idsBook,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+<<<<<<< HEAD
 Warning--to sort, need author or key in Symantec:Report18
 Warning--to sort, need author or key in Ukrainian:Report
 Warning--to sort, need author or key in WikiLeaks:Vault7
+=======
+Warning--to sort, need author or key in intro
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 Warning--to sort, need author or key in bigdata
 Warning--to sort, need author or key in IBM:Watson
 Warning--to sort, need author or key in Darktrace:ML
@@ -65,6 +82,7 @@ Warning--to sort, need author or key in stratosphereSuite
 Warning--to sort, need author or key in alpha
 Warning--to sort, need author or key in queuedef
 Warning--to sort, need author or key in slipscurrent
+Warning--to sort, need author or key in queuedef
 Warning--to sort, need author or key in virtualbox
 Warning--to sort, need author or key in stf
 Warning--to sort, need author or key in gitdef
@@ -84,6 +102,7 @@ while executing---line 1090 of file plain.bst
 Too many commas in name 1 of "L. P. Dias, J. J. F. Cerqueira, K. D. R. Assis, R. C. Almeida" for entry reteneuraleids
 while executing---line 1090 of file plain.bst
 Warning--empty publisher in idsbook
+<<<<<<< HEAD
 Too many commas in name 1 of "P. Wang, L. Wu, R. Cunningham, C. Zou" for entry honeypotbotnetdetection
 while executing---line 1090 of file plain.bst
 Warning--empty year in signaturebotnetdetection
@@ -129,3 +148,47 @@ while$ -- 40
 width$ -- 81
 write$ -- 644
 (There were 8 error messages)
+=======
+You've used 51 entries,
+            2118 wiz_defined-function locations,
+            687 strings with 9651 characters,
+and the built_in function-call counts, 8682 in all, are:
+= -- 825
+> -- 105
+< -- 0
++ -- 69
+- -- 18
+* -- 297
+:= -- 1083
+add.period$ -- 115
+call.type$ -- 51
+change.case$ -- 162
+chr.to.int$ -- 0
+cite$ -- 94
+duplicate$ -- 394
+empty$ -- 1151
+format.name$ -- 18
+if$ -- 2101
+int.to.chr$ -- 0
+int.to.str$ -- 51
+missing$ -- 14
+newline$ -- 219
+num.names$ -- 18
+pop$ -- 402
+preamble$ -- 1
+purify$ -- 111
+quote$ -- 0
+skip$ -- 375
+stack$ -- 0
+substring$ -- 255
+swap$ -- 49
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 190
+warning$ -- 43
+while$ -- 18
+width$ -- 53
+write$ -- 400
+(There were 3 error messages)
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258

@@ -49,6 +49,10 @@ Comparison of machine learning techniques in email spam detection.
 dateutil - python.
 \newblock \url{https://pypi.org/project/python-dateutil/}.
 
+\bibitem{dateutildef}
+dateutil - python.
+\newblock \url{https://pypi.org/project/python-dateutil/}.
+
 \bibitem{ScopoMalware}
 Federal trade commission- consumer information, "malware".
 \newblock \url{https://www.consumer.ftc.gov/articles/0011-malware}.
@@ -76,6 +80,7 @@ How tesla is ushering in the age of the learning car.
 Hyper - threading.
 \newblock \url{https://it.wikipedia.org/wiki/Hyper-Threading}.
 
+<<<<<<< HEAD
 \bibitem{ddosbotnet}
 Inside the infamous mirai iot botnet: A retrospective analysis.
 \newblock \url{Inside the infamous Mirai IoT Botnet: A Retrospective Analysis}.
@@ -85,6 +90,8 @@ Intrusion detection and prevention: More than a firewall.
 \newblock
   \url{https://searchcio.techtarget.com/tip/Intrusion-detection-and-prevention-More-than-a-firewall}.
 
+=======
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \bibitem{amazonalexa}
 Machine learning in practice: How does amazon's alexa really work?
 \newblock
@@ -106,6 +113,7 @@ Malware revolution: A change in target.
   \url{https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc512596(v=technet.10)}.
 \newblock Published: 05/20/2008.
 
+<<<<<<< HEAD
 \bibitem{botnetspam}
 Mcafee: due sole botnet per (quasi) tutto lo spam del mondo.
 \newblock
@@ -114,6 +122,11 @@ Mcafee: due sole botnet per (quasi) tutto lo spam del mondo.
 \bibitem{netflowdef2}
 Netflow - wikipedia.
 \newblock \url{https://en.wikipedia.org/wiki/NetFlow}.
+=======
+\bibitem{intro}
+Netflow and pcap (not or).
+\newblock \url{https://blogs.cisco.com/security/netflow-and-pcap-not-or}.
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
 \bibitem{nProbe}
 nprobe.
@@ -192,11 +205,14 @@ Tojan horse definition.
 transaction - python.
 \newblock \url{https://pypi.org/project/transaction/}.
 
+<<<<<<< HEAD
 \bibitem{clickfraudbotnet}
 Video ad fraud botnet bags up to 1.3 million daily.
 \newblock
   \url{https://www.bankinfosecurity.com/video-ad-fraud-botnet-generated-up-to-13-million-day-a-10470}.
 
+=======
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \bibitem{virtualbox}
 Virtualbox.
 \newblock \url{https://www.virtualbox.org/}.
@@ -223,6 +239,7 @@ Wikipedia, the free encyclopedia - pcap.
 Zodb - a native object database for python.
 \newblock \url{http://www.zodb.org/en/latest/}.
 
+<<<<<<< HEAD
 \bibitem{bitcoinbotnet}
 “mining” botnets are back - infecting thousands of pcs, generating hundreds
   of thousands of dollars for criminals.
@@ -274,6 +291,8 @@ Giovanni Apruzzese, Mirco Marchetti, Michele Colajanni, Gabriele~Gambigliani
 \newblock In {\em Network Computing and Applications (NCA), 2017 IEEE 16th
   International Symposium on}. IEEE, 2017.
 
+=======
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \bibitem{IDS}
 Stefan Axelsson.
 \newblock Intrusion detection systems: A survey and taxonomy.

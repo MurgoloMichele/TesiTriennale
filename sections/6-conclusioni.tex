@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \chapter{Conclusioni}
@@ -13,3 +14,19 @@ Le principali difficoltà riscontrate durante la realizzazione di questa tesi, h
 Possibili punti su cui basare eventuale lavoro futuro sono l'estensione dell'algoritmo di conversione anche ad altri formati, con possibilità di creare un tool di conversione universale. Inoltre, si ritiene interessante estendere Stratosphere IPS integrando il supporto ad altri algoritmi di machine learning orientati all'analisi comportamentale.
 
 \end{document}
+=======
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\chapter{Conclusioni}
+In questa tesi si è analizzato un software di Intrusion Detection System basato su machine learning. Per prima cosa sono stati studiati dei programmi che catturano il traffico internet e lo usano per generare dei network flow. Si è discusso dei vantaggi che porta la cattura dei pacchetti per monitorare lo stato di una rete e la loro importanza nella prevenzione e risposta ad attacchi di tipo informatico. 
+
+Si è visto come diversi programmi per la cattura del traffico utilizzano diversi formati e campi in questi file, quindi si è studiato come è possibile estendere questi formati per poter semplificare il lavoro di chi fa uso di queste tecnologie. Per fare ciò si è creato un programma che effettua in automatico la conversione di file contenenti network flow cercando di rendere il programma il più efficiente possibile. La correttezza della conversione è stata verificata utilizzando lo stesso file convertito tra due formati per fare anomaly detection.
+
+Dimostrando la fattibilità di una conversione tra standard differenti si è ricercato un approccio per rendere efficiente il programma, pertanto sono stati introdotti concetti di calcolo parallelo che hanno reso possibile l'estensione di Intrusion Detection Systems a diversi formati, che altrimenti non sarebbe stato possibile effettuare.
+
+Le prestazioni raggiunte introducendo concetti di calcolo parallelo sono ottime e si è dimostrato che è possibile raggiungere uno speedup lineare sui core fisici della macchina, che nello sviluppo di programmi in parallelo è un'obiettivo importante in quanto dimostra che il numero di core è sfruttato bene e in modo efficiente. Con il rapido sviluppo e miglioramento della tecnologia ci si aspetta che le CPU diventino sempre più veloci e potenti, rendendo l'esecuzione dell'algoritmo proposto in questa tesi sempre più veloce. 
+
+Le principali difficoltà riscontrate durante la realizzazione di questa tesi, hanno avuto a che fare con l'analisi di Stratosphere. Questo software infatti, essendo pubblicato come alpha e quindi in fase ancora sperimentale ha richiesto un'analisi approfondita per capirne il funzionamento e il debugging.
+
+\end{document}
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258

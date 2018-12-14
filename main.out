@@ -11,7 +11,11 @@
 \BOOKMARK [2][-]{subsection.2.5.1}{Supervised learning}{section.2.5}% 11
 \BOOKMARK [2][-]{subsection.2.5.2}{Unsupervised learning}{section.2.5}% 12
 \BOOKMARK [2][-]{subsection.2.5.3}{Reinforced learning}{section.2.5}% 13
+<<<<<<< HEAD
 \BOOKMARK [0][-]{chapter.3}{Analisi}{}% 14
+=======
+\BOOKMARK [0][-]{chapter.3}{Analisi del software}{}% 14
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \BOOKMARK [1][-]{section.3.1}{Analisi traffico di rete}{chapter.3}% 15
 \BOOKMARK [2][-]{subsection.3.1.1}{Packet Capture}{section.3.1}% 16
 \BOOKMARK [2][-]{subsection.3.1.2}{Network Flow}{section.3.1}% 17

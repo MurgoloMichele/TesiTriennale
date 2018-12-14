@@ -74,7 +74,11 @@ I principali attacchi informatici effettuati attraverso l'utilizzo delle botnet 
 \end{verse}
 
 \begin{verse}
+<<<<<<< HEAD
 				\textbf{Click fraud} Questo tipo di frode si verifica sulla pubblicità su internet di tipo pay per click. Questo tipo di pubblicità genera quantità di denaro in base al numero di click effettuati sull'annuncio pubblicitario. Le botnet sfruttano questo tipo di pubblicità utilizzando computer zombie per cliccare in massa gli annunci pubblicitari.
+=======
+				\textbf{Phishing} Con l'aumento di transazioni effettuate su internet il phishing è diventato sempre più comune \cite{phishing}. Il phishing è un tipo di truffa utilizzato per ottenere informazioni da utenti non esperti attraverso l'impersonazione di fonti attendibili \cite{phishingdef}.
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \end{verse}
 
 \begin{verse}
@@ -88,21 +92,37 @@ Le botnet sono difficili da individuare dal momento che l'host autore dell'attac
 
 \begin{figure}[H]
 				\centering
+<<<<<<< HEAD
 				\includegraphics[scale=0.36]{zombielayer.png}
+=======
+				\includegraphics[scale=0.4]{zombielayer.png}
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 				\caption{Zombie layer}
 				\label{fig:zombieLayer}
 \end{figure}
 
+<<<<<<< HEAD
 Esistono in letteratura diversi metodi per la rilevazione delle botnet. Ad esempio, gli autori di~\cite{netflowbotnetdetection} utilizzano tecniche di clustering dei network flow per rilevare il traffico di rete prodotto dalle botnet, ma ottenendo un consistente quantitativo di falsi positivi. L'approccio descritto in~\cite{signaturebotnetdetection} è orientato al rilevamento delle botnet tramite l'utilizzo di signature, di fatto impedendo di identificare le botnet di nuova generazione di cui non si conoscono le caratteristiche. Esistono anche numerosi metodi basati sul data mining~\cite{dataminingbotnetdetection}, che sebbene siano teoricamente in grado di individuare nuove botnet, hanno la tendenza ad essere molto imprecisi. Un altro articolo~\cite{dnsbotnetdetection} presenta un elenco di metodi per il rilevamento delle botnet basato sui DNS; tuttavia non tutte le botnet fanno uso del DNS per comunicare con il rispettivo CnC server~\cite{brown2010resilient}. Infine, si segnalano gli approcci basati sugli honeypot~\cite{honeypotbotnetdetection}, che possono essere utili in caso di attaccanti poco esperti, ma che sono facilmente aggirabili in caso di avversari più competenti. In questa tesi ci si è focalizzato su tecniche basate sull'analisi dei modelli comportamentali.
+=======
+\section{Intrusion Detection System}
+Un'intrusione si verifica quando un aggressore tenta di entrare o interrompere le normali operazioni di un sistema informativo, quasi sempre con l'intento di fare del male \cite{idsbook}.
+In questa sezione verranno presentati dei dispositivi utilizzati per identificare accessi non autorizzati ai computer o alle reti locali. Questi dispositivi possono essere utili per il rilevamento di botnet \cite{botnetdetection}.
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
 
 \section{Intrusion Detection System}
 In questa sezione verranno presentati i meccanismi utilizzati per identificare accessi non autorizzati ai sistemi informatici, che trovano anche impiego come strumenti per la rilevazione di botnet \cite{botnetdetection}.
 
+<<<<<<< HEAD
 Un'intrusione si verifica quando un aggressore tenta di entrare o interrompere le normali operazioni di un sistema informativo\cite{idsbook}. Esistono varie classi di intrusione che vanno rilevate: si possono verificare situazioni in cui un utente ruba una password, utenti legittimi che abusano dei loro privilegi o hacker che usano script trovati in rete per attaccare il sistema.
 
 I sistemi di rilevamento delle intrusioni sono gli "allarmi antifurto" del campo della sicurezza informatica. L'obiettivo è difendere un sistema attraverso la segnalazione di allarmi, che vengono emessi ogni volta che viene rilevata un'attività sospetta \cite{IDS}. Tali sistemi prendono il nome di \textit{Intrusion Detection System} (IDS). Un IDS è un dispositivo software o hardware utilizzato per identificare intrusioni a singoli host o reti locali.
 
+=======
+Un IDS è un dispositivo software o hardware utilizzato per identificare intrusioni a computer o reti locali.
+Ci sono varie classi di intrusione che vanno rilevate: si possono verificare situazioni in cui un utente ruba una password, utenti legittimi che abusano dei loro privilegi o hacker che usano script trovati in rete per attaccare il sistema. Le intrusioni sono varie e non è possibile elencarle tutte.
+
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \subsection{Tipi di IDS}
 Gli IDS possono essere di due tipi in base al target su cui vengono applicati: possono essere basati su rete o su host.
 \begin{verse}
@@ -125,7 +145,11 @@ Un IDS è composto da quattro componenti \cite{idsbook}:
 				\item \textbf{Database}, memorizza le regole utilizzate per identificare violazioni di sicurezza.
 \end{itemize}
 
+<<<<<<< HEAD
 L'immagine ~\ref{fig:esempioIds} descrive i componenti di un NIDS. I pacchetti in entrata e uscita dalla rete sono ricevuti da un sensore che raccoglie il traffico dati, successivamente il motore analizza i dati prelevati dai sensori con le regole presenti nel database.
+=======
+L'immagine ~\ref{fig:esempioIds} descrive i componenti di un IDS. I pacchetti in entrata e uscita dalla rete sono ricevuti da un sensore che raccoglie il traffico dati, successivamente il motore analizza i dati prelevati dai sensori con le regole presenti nel database.
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
 \begin{figure}[H]
 				\centering
@@ -148,6 +172,7 @@ Poiché i due sistemi coesistono spesso, il termine combinato Intrusion Detectio
 \subsection{Perchè usare IDS}
 Dispositivi di tipo IDS sono utili per le difese di sistemi informatici per molteplici ragioni:
 \begin{itemize}
+<<<<<<< HEAD
 				\item \textbf{defense in depth}, l'utilizzo di un dispositivo IDS unito a firewall~\cite{idswithfirewall}, controlli di accesso e autenticazione~\cite{idswithacl}, e antivirus~\cite{idswithav} permette la realizzazione di un meccanismo di protezione multi-livello 
 				\item \textbf{documentazione}, i dati acquisiti sono utili anche per il miglioramento continuo della qualità. Gli IDS raccolgono costantemente informazioni sugli attacchi che hanno compromesso con successo gli strati esterni dei controlli di sicurezza, per esempio di un firewall. Queste informazioni possono essere utilizzate per identificare e riparare le vulnerabilità esposte dagli attacchi, di fatto aiutando l'organizzazione ad accelerare il processo di risposta agli incidenti e ad apportare miglioramenti continui.
 Inoltre, sebbene un IDS non sia in grado di assicurare la prevenzione completa delle intrusioni, è comunque in grado di assistere nella revisione fornendo informazioni su come si è verificato l'attacco, assuieme ai dettagli sulle operazioni compiute dall'intruso. Gli IDS possono anche essere utilizzati in ambito forense, risultando utili anche per motivi legali \cite{IPS}
@@ -155,6 +180,15 @@ Inoltre, sebbene un IDS non sia in grado di assicurare la prevenzione completa d
 \end{itemize}
 
 Si segnala anche l'importante funzione di deterrente svolta dalla presenza di un IDS. Se gli utenti esterni e interni sanno che un'organizzazione utilizza un sistema di rilevamento e prevenzione delle intrusioni, saranno meno propensi ad effettuare azioni malevole verso tale azienda\cite{IPS}.
+=======
+				\item \textbf{defense in depth}, l'utilizzo di un dispositivo IDS unito a firewall, controlli di accesso e autenticazione e antivirus permette la realizzazione di un meccanismo di protezione multi-livello
+				\item \textbf{documentazione}, i dati acquisiti sono utili anche per il miglioramento continuo della qualità, gli IDS raccolgono costantemente informazioni sugli attacchi che hanno compromesso con successo gli strati esterni dei controlli di sicurezza, per esempio di un firewall. Queste informazioni possono essere utilizzate per identificare e riparare le vulnerabilità esposte dagli attacchi, questo aiuta l'organizzazione ad accelerare il processo di risposta agli incidenti e ad apportare miglioramenti continui.
+Inoltre, nei casi in cui un IDS non riesce a prevenire un'intrusione, può ancora assistere nella revisione fornendo informazioni su come si è verificato l'attacco, i dettagli su cosa ha fatto l'intruso e i metodi utilizzati. Gli IDS possono anche fornire informazioni forensi che possono essere utili per motivi legali qualora l'attaccante venga catturato \cite{IPS}
+				\item \textbf{insider threat}, gli attacchi non sempre arrivano dall'esterno, con questi dispositivi è possibile difendersi anche da intrusioni che avvengono all'interno della rete
+\end{itemize}
+
+Il miglior motivo per installare un IDS è per la sua funzione di deterrente. Se gli utenti esterni e interni sanno che un'organizzazione ha un sistema di rilevamento e prevenzione delle intrusioni sono meno propensi a sondare o tentare di comprometterla \cite{IPS}.
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
 \subsection{Metodi di rilevamento}
 
@@ -181,7 +215,11 @@ Per problemi come il riconoscimento vocale gli algoritmi basati sul machine lear
 
 Generalmente esistono tre paradigmi di machine learning\cite{ai}.
 \begin{verse}
+<<<<<<< HEAD
 				\textbf{Supervised learning} Questo paradigma prevede una fase di training in cui viene fornito un apposito dataset definito da una serie di features\footnote{In ambito di machine learning, si utilizza il termine \textit{feature} per indicare una proprietà misurabile di un determinato sample (dato). Ogni sample fornito in input ad un qualsiasi algoritmo di machine learning sarà quindi identificato da una serie di features.}, insieme alle corrispondenti label\footnote{Le labels vengono utilizzate per indicare cosa rappresenta un determinato sample}. L'obiettivo è ottenere un modello in grado di effettuare previsioni su samples non precedentemente noti, analizzandone le features e confrontandole con la conoscenza acquisita in fase di training.
+=======
+				\textbf{Supervised learning} Viene fornito un dataset con una serie di features insieme alle corrispondenti label. Si vuole trovare quella funzione che dato una feature non conosciuta calcola la corrispettiva label. L'obiettivo è quello di fare una previsione basata su proprietà conosciute apprese dai dati in input.
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \end{verse}
 
 \begin{verse}
@@ -304,12 +342,19 @@ L'algoritmo continua a ripetere questi due passi fino a quando i centroidi non s
 				\caption{Algoritmo k-means - Convergenza}
 \end{figure}
 
+<<<<<<< HEAD
 Algoritmi di clustering sono usati per fare botnet detection dagli IDS~\cite{netflowbotnetdetection}.
 
 \subsection{Reinforced learning}
 A differenza dell'unsupervised learning, il reinforced learning viene indirizzato dalla valutazione esterna. Inoltre a differenza del supervised learning in cui viene specificato l'output corrispondente ad un input, nel reinforced learning viene fornita solo una valutazione sull'azione compiuta.
 
 In aggiunta, questo tipo di machine learning è caratterizzato da un processo dinamico in fasi discrete: ad ogni passo, osservando l'ambiente circostante e ottenendo qualche input, il computer compie un'azione e si sposta in un nuovo stato, venendo premiato o punito in base all'azione effettuata \cite{compIntelligence}.
+=======
+\subsection{Reinforced learning}
+A differenza dell'unsupervised learning, il reinforced learning viene indirizzato dalla valutazione esterna. Inoltre a differenza del supervised learning in cui viene specificato l'output corrispondente ad un input, nel reinforced learning viene fornita solo una valutazione sull'azione compiuta.
+
+In aggiunta, questo tipo di apprendimento è caratterizzato da un processo dinamico in fasi discrete: ad ogni passo, osservando l'ambiente circostante e ottenendo qualche input, il computer compie un'azione e si sposta in un nuovo stato, venendo premiato o punito in base all'azione effettuata \cite{compIntelligence}.
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
 \subsubsection{Processo decisionale di Markov}
 Il reinforced learning è strettamente correlato con il processo decisionale di Markov \cite{compIntelligence}, che consiste in una serie di stati $s _ { 0 } , s _ { 1 } , \ldots , s _ { t } , s _ { t + 1 } , \ldots$. Allo stato ${ s } _ { t }$, un'azione $a _ { t } = \pi \left( s _ { t } \right)$ è selezionata da un insieme $A$ di azioni intraprese in funzione dello stato $\pi$, che fa muovere l'ambiente per raggiungere lo stato successivo $s _ { t  + 1}$ e la valutazione $v _ {t + 1}$ associata con la transizione $\left( s _ { t } , a _ { t } , s _ { t + 1 } \right)$ viene assegnata. L'obiettivo è ottenere la valutazione più alta possibile, cioè di massimizzare 

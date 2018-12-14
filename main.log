@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  29 NOV 2018 09:40
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.6.22)  27 NOV 2018 02:06
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1097,7 +1101,11 @@ Package caption Info: End \AtBeginDocument code.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
+<<<<<<< HEAD
 * modes: 
+=======
+* modes: twoside 
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 * h-part:(L,W,R)=(99.58464pt, 398.3386pt, 99.58464pt)
 * v-part:(T,H,B)=(99.58464pt, 645.87756pt, 99.58464pt)
 * \paperwidth=597.50787pt
@@ -1154,6 +1162,7 @@ Package pdftex.def Info: main-frn.pdf used on input line 4.
  [1
 
 
+<<<<<<< HEAD
  <./main-frn.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}>]) (./main.
 tocpdfTeX warning (ext4): destination with the same identifier (name{page.1}) h
 as been already used, duplicate ignored
@@ -1166,24 +1175,45 @@ l.29 ... Utilization System}{27}{subsection.3.2.1}
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
+=======
+ <./main-frn.pdf{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}>]) [2] (./m
+ain.toc
+[3
+
+] [4])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ (./sections/1-introduzione.tex [5] [6
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
 (./sections/1-introduzione.tex [3]
 Capitolo 1.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+<<<<<<< HEAD
 ) [4
+=======
+) [7] [8])
+(./sections/2-stato_dellarte.tex [9] [10
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
 ] [5])
 (./sections/2-stato_dellarte.tex [6]
 Capitolo 2.
+<<<<<<< HEAD
 [7
 
 ] [8] <pictures/botnet.png, id=358, 683.55376pt x 573.14125pt>
+=======
+[11] [12] <pictures/botnet.png, id=362, 683.55376pt x 573.14125pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/botnet.png Graphic file (type png)
 
 <use pictures/botnet.png>
 Package pdftex.def Info: pictures/botnet.png used on input line 57.
 (pdftex.def)             Requested size: 273.41666pt x 229.25243pt.
+<<<<<<< HEAD
  [9] [10 <./pictures/botnet.png>]
 <pictures/zombielayer.png, id=389, 773.89125pt x 652.4375pt>
 File: pictures/zombielayer.png Graphic file (type png)
@@ -1193,12 +1223,24 @@ Package pdftex.def Info: pictures/zombielayer.png used on input line 91.
 (pdftex.def)             Requested size: 278.60063pt x 234.87732pt.
  [11 <./pictures/zombielayer.png>] [12]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 119.
+=======
+ [13] [14 <./pictures/botnet.png>]
+<pictures/zombielayer.png, id=383, 773.89125pt x 652.4375pt>
+File: pictures/zombielayer.png Graphic file (type png)
+
+<use pictures/zombielayer.png>
+Package pdftex.def Info: pictures/zombielayer.png used on input line 102.
+(pdftex.def)             Requested size: 309.55101pt x 260.97037pt.
+ [15] [16 <./pictures/zombielayer.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 130.
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+<<<<<<< HEAD
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 119.
 
 <pictures/IDS.png, id=422, 642.4pt x 675.52374pt>
@@ -1216,10 +1258,23 @@ si ba-sa sul prin-ci-pio dell'\OT1/cmr/m/it/10.95 esplorazione\OT1/cmr/m/n/10.9
 
 [17]
 <pictures/apprendimentosupervisionato.png, id=496, 492.84125pt x 242.9075pt>
+=======
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
+
+<pictures/IDS.png, id=403, 642.4pt x 675.52374pt>
+File: pictures/IDS.png Graphic file (type png)
+ <use pictures/IDS.png>
+Package pdftex.def Info: pictures/IDS.png used on input line 143.
+(pdftex.def)             Requested size: 256.95544pt x 270.20471pt.
+
+[17] [18 <./pictures/IDS.png>] [19] [20] [21]
+<pictures/apprendimentosupervisionato.png, id=456, 492.84125pt x 242.9075pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/apprendimentosupervisionato.png Graphic file (type png)
 
 <use pictures/apprendimentosupervisionato.png>
 Package pdftex.def Info: pictures/apprendimentosupervisionato.png used on input
+<<<<<<< HEAD
  line 211.
 (pdftex.def)             Requested size: 246.42001pt x 121.45345pt.
 
@@ -1264,13 +1319,57 @@ Capitolo 3.
 [25
 
 ] [26] <pictures/netflowgraph.png, id=588, 684.5575pt x 502.87875pt>
+=======
+ line 223.
+(pdftex.def)             Requested size: 246.42001pt x 121.45345pt.
+ [22 <./pictures/apprendimentosupervisionato.png>] [23]
+<pictures/k-means1.png, id=477, 865.2325pt x 704.6325pt>
+File: pictures/k-means1.png Graphic file (type png)
+
+<use pictures/k-means1.png>
+Package pdftex.def Info: pictures/k-means1.png used on input line 271.
+(pdftex.def)             Requested size: 259.57175pt x 211.39139pt.
+
+<pictures/k-means2.png, id=479, 865.2325pt x 704.6325pt>
+File: pictures/k-means2.png Graphic file (type png)
+
+<use pictures/k-means2.png>
+Package pdftex.def Info: pictures/k-means2.png used on input line 282.
+(pdftex.def)             Requested size: 259.57175pt x 211.39139pt.
+ [24 <./pictures/k-means1.png>]
+<pictures/k-means3.png, id=490, 865.2325pt x 704.6325pt>
+File: pictures/k-means3.png Graphic file (type png)
+
+<use pictures/k-means3.png>
+Package pdftex.def Info: pictures/k-means3.png used on input line 291.
+(pdftex.def)             Requested size: 259.57175pt x 211.39139pt.
+
+<pictures/k-means4.png, id=491, 1059.96pt x 961.5925pt>
+File: pictures/k-means4.png Graphic file (type png)
+
+<use pictures/k-means4.png>
+Package pdftex.def Info: pictures/k-means4.png used on input line 300.
+(pdftex.def)             Requested size: 317.99045pt x 288.47997pt.
+ [25 <./pictures/k-means2.png> <./pictures/k-means3.png>] [26 <./pictures/k-mea
+ns4.png>]) (./sections/3-analisi_del_problema.tex
+[27] [28
+
+]
+Capitolo 3.
+[29] <pictures/netflowgraph.png, id=530, 684.5575pt x 502.87875pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/netflowgraph.png Graphic file (type png)
 
 <use pictures/netflowgraph.png>
 Package pdftex.def Info: pictures/netflowgraph.png used on input line 45.
 (pdftex.def)             Requested size: 342.27791pt x 251.43875pt.
+<<<<<<< HEAD
 
 <pictures/netflowexporter.png, id=590, 854.19125pt x 447.6725pt>
+=======
+ [30]
+<pictures/netflowexporter.png, id=539, 854.19125pt x 447.6725pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/netflowexporter.png Graphic file (type png)
 
 <use pictures/netflowexporter.png>
@@ -1281,14 +1380,29 @@ Overfull \hbox (28.756pt too wide) in paragraph at lines 65--66
  [][] 
  []
 
+<<<<<<< HEAD
 [27 <./pictures/netflowgraph.png>]
 <pictures/netflowreport.jpg, id=600, 702.625pt x 398.48875pt>
+=======
+[31 <./pictures/netflowgraph.png>]
+<pictures/netflowreport.jpg, id=549, 702.625pt x 398.48875pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/netflowreport.jpg Graphic file (type jpg)
 
 <use pictures/netflowreport.jpg>
 Package pdftex.def Info: pictures/netflowreport.jpg used on input line 84.
 (pdftex.def)             Requested size: 351.31163pt x 199.24388pt.
+<<<<<<< HEAD
  [28 <./pictures/netflowexporter.png>] [29 <./pictures/netflowreport.jpg>]
+=======
+ [32 <./pictures/netflowexporter.png>]
+Overfull \hbox (6.24457pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 3.2.  STRUMENTI DI MONITORAGGIO E ANALISI DEL TRAFFICO DI R
+ETE \OT1/cmr/m/n/10.95 33
+ []
+
+[33 <./pictures/netflowreport.jpg>]
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 122.
 
 
@@ -1297,6 +1411,7 @@ File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 122.
+<<<<<<< HEAD
  [30] [31]
 <pictures/archslips.png, id=635, 1612.0225pt x 1069.9975pt>
 File: pictures/archslips.png Graphic file (type png)
@@ -1305,6 +1420,21 @@ File: pictures/archslips.png Graphic file (type png)
 Package pdftex.def Info: pictures/archslips.png used on input line 193.
 (pdftex.def)             Requested size: 386.89331pt x 256.80464pt.
  [32]
+=======
+ [34]
+Overfull \hbox (6.24457pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 3.2.  STRUMENTI DI MONITORAGGIO E ANALISI DEL TRAFFICO DI R
+ETE \OT1/cmr/m/n/10.95 35
+ []
+
+[35] <pictures/archslips.png, id=581, 592.2125pt x 571.13374pt>
+File: pictures/archslips.png Graphic file (type png)
+
+<use pictures/archslips.png>
+Package pdftex.def Info: pictures/archslips.png used on input line 195.
+(pdftex.def)             Requested size: 236.8808pt x 228.44945pt.
+ [36]
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
@@ -1312,15 +1442,22 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+<<<<<<< HEAD
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 207.
  [33 <./pictures/archslips.png>]
 <pictures/modello-comportamentale.png, id=652, 752.8125pt x 396.48125pt>
+=======
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 209.
+ [37 <./pictures/archslips.png>]
+<pictures/modello-comportamentale.png, id=600, 752.8125pt x 396.48125pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/modello-comportamentale.png Graphic file (type png)
 
 <use pictures/modello-comportamentale.png>
 Package pdftex.def Info: pictures/modello-comportamentale.png used on input lin
 e 217.
 (pdftex.def)             Requested size: 376.40532pt x 198.24013pt.
+<<<<<<< HEAD
  [34 <./pictures/modello-comportamentale.png>] <pictures/folderstructure.png, i
 d=664, 352.31625pt x 382.42876pt>
 File: pictures/folderstructure.png Graphic file (type png)
@@ -1332,15 +1469,39 @@ Package pdftex.def Info: pictures/folderstructure.png used on input line 243.
 (./sections/4-soluzione_proposta.tex [36]
 Capitolo 4.
 <pictures/starttime.png, id=680, 1210.5225pt x 427.5975pt>
+=======
+ [38 <./pictures/modello-comportamentale.png>] (/usr/share/texlive/texmf-dist/t
+ex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(./slips.py) (./slips2.py [39])
+<pictures/folderstructure.png, id=642, 352.31625pt x 382.42876pt>
+File: pictures/folderstructure.png Graphic file (type png)
+
+<use pictures/folderstructure.png>
+Package pdftex.def Info: pictures/folderstructure.png used on input line 262.
+(pdftex.def)             Requested size: 176.15768pt x 191.2139pt.
+ [40]) (./sections/4-soluzione_proposta.tex
+[41 <./pictures/folderstructure.png>] [42
+
+]
+Capitolo 4.
+<pictures/starttime.png, id=668, 1210.5225pt x 427.5975pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/starttime.png Graphic file (type png)
 
 <use pictures/starttime.png>
 Package pdftex.def Info: pictures/starttime.png used on input line 14.
 (pdftex.def)             Requested size: 387.3751pt x 136.83398pt.
+<<<<<<< HEAD
  [37
 
 ]
 <pictures/duration.png, id=687, 1210.5225pt x 427.5975pt>
+=======
+ [43]
+<pictures/duration.png, id=676, 1210.5225pt x 427.5975pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/duration.png Graphic file (type png)
 
 <use pictures/duration.png>
@@ -1351,32 +1512,51 @@ Overfull \hbox (1.13507pt too wide) in paragraph at lines 23--24
  [][] 
  []
 
+<<<<<<< HEAD
 <pictures/protocol.png, id=689, 708.6475pt x 427.5975pt>
+=======
+<pictures/protocol.png, id=678, 708.6475pt x 427.5975pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/protocol.png Graphic file (type png)
 
 <use pictures/protocol.png>
 Package pdftex.def Info: pictures/protocol.png used on input line 32.
 (pdftex.def)             Requested size: 233.8544pt x 141.1076pt.
+<<<<<<< HEAD
  [38 <./pictures/starttime.png> <./pictures/duration.png>] (/usr/share/texlive/
 texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (./singlecore.py) [39 <./pictures/protocol.png>]
 <pictures/direction.png, id=718, 728.7225pt x 427.5975pt>
+=======
+ [44 <./pictures/starttime.png> <./pictures/duration.png>] (./singlecore.py) [4
+5 <./pictures/protocol.png>]
+<pictures/direction.png, id=707, 728.7225pt x 427.5975pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/direction.png Graphic file (type png)
 
 <use pictures/direction.png>
 Package pdftex.def Info: pictures/direction.png used on input line 54.
 (pdftex.def)             Requested size: 262.33989pt x 153.93498pt.
 
+<<<<<<< HEAD
 <pictures/state.png, id=720, 929.4725pt x 447.6725pt>
+=======
+<pictures/state.png, id=709, 929.4725pt x 447.6725pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/state.png Graphic file (type png)
  <use pictures/state.png>
 Package pdftex.def Info: pictures/state.png used on input line 67.
 (pdftex.def)             Requested size: 334.60985pt x 161.16197pt.
 
+<<<<<<< HEAD
 [40 <./pictures/direction.png>]
 <pictures/totpkts.png, id=729, 1148.29pt x 427.5975pt>
+=======
+[46 <./pictures/direction.png>]
+<pictures/totpkts.png, id=718, 1148.29pt x 427.5975pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/totpkts.png Graphic file (type png)
 
 <use pictures/totpkts.png>
@@ -1387,8 +1567,13 @@ Overfull \hbox (15.04549pt too wide) in paragraph at lines 77--78
  [][] 
  []
 
+<<<<<<< HEAD
 [41 <./pictures/state.png>]
 <pictures/totbytes.png, id=738, 1148.29pt x 427.5975pt>
+=======
+[47 <./pictures/state.png>]
+<pictures/totbytes.png, id=727, 1148.29pt x 427.5975pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/totbytes.png Graphic file (type png)
 
 <use pictures/totbytes.png>
@@ -1399,8 +1584,13 @@ Overfull \hbox (15.04549pt too wide) in paragraph at lines 85--86
  [][] 
  []
 
+<<<<<<< HEAD
 [42 <./pictures/totpkts.png> <./pictures/totbytes.png>]
 <pictures/lettura.png, id=749, 1349.04pt x 847.165pt>
+=======
+[48 <./pictures/totpkts.png> <./pictures/totbytes.png>]
+<pictures/lettura.png, id=737, 1349.04pt x 847.165pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/lettura.png Graphic file (type png)
 
 <use pictures/lettura.png>
@@ -1418,51 +1608,85 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--114
 
  []
 
+<<<<<<< HEAD
 [43 <./pictures/lettura.png>]
 <pictures/letturarighe.png, id=762, 1270.7475pt x 1429.34pt>
+=======
+[49 <./pictures/lettura.png>]
+<pictures/letturarighe.png, id=752, 1270.7475pt x 1429.34pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/letturarighe.png Graphic file (type png)
 
 <use pictures/letturarighe.png>
 Package pdftex.def Info: pictures/letturarighe.png used on input line 131.
 (pdftex.def)             Requested size: 343.10641pt x 385.92696pt.
+<<<<<<< HEAD
  [44]
 <pictures/conversioneschema.png, id=776, 706.64pt x 264.99pt>
+=======
+ [50]
+<pictures/conversioneschema.png, id=765, 706.64pt x 264.99pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/conversioneschema.png Graphic file (type png)
 
 <use pictures/conversioneschema.png>
 Package pdftex.def Info: pictures/conversioneschema.png used on input line 156.
 
 (pdftex.def)             Requested size: 190.79535pt x 71.54825pt.
+<<<<<<< HEAD
  [45 <./pictures/letturarighe.png>]
 <pictures/conversionetonprobe.png, id=784, 1274.7625pt x 1373.13pt>
+=======
+ [51 <./pictures/letturarighe.png>]
+<pictures/conversionetonprobe.png, id=773, 1274.7625pt x 1373.13pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/conversionetonprobe.png Graphic file (type png)
 
 <use pictures/conversionetonprobe.png>
 Package pdftex.def Info: pictures/conversionetonprobe.png used on input line 17
 9.
 (pdftex.def)             Requested size: 344.19048pt x 370.75006pt.
+<<<<<<< HEAD
  [46 <./pictures/conversioneschema.png>]
 <pictures/soluzioneproposta.png, id=795, 1133.23375pt x 842.14626pt>
+=======
+ [52 <./pictures/conversioneschema.png>]
+<pictures/soluzioneproposta.png, id=784, 1133.23375pt x 842.14626pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/soluzioneproposta.png Graphic file (type png)
 
 <use pictures/soluzioneproposta.png>
 Package pdftex.def Info: pictures/soluzioneproposta.png used on input line 199.
 
 (pdftex.def)             Requested size: 396.63776pt x 294.7556pt.
+<<<<<<< HEAD
  [47 <./pictures/conversionetonprobe.png>]
 [48 <./pictures/soluzioneproposta.png>] [49] [50]
 <pictures/hydra.png, id=821, 1788.6825pt x 1168.365pt>
+=======
+ [53 <./pictures/conversionetonprobe.png>]
+[54 <./pictures/soluzioneproposta.png>] [55] [56]
+<pictures/hydra.png, id=810, 1788.6825pt x 1168.365pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/hydra.png Graphic file (type png)
 
 <use pictures/hydra.png>
 Package pdftex.def Info: pictures/hydra.png used on input line 285.
 (pdftex.def)             Requested size: 393.51137pt x 257.04109pt.
+<<<<<<< HEAD
  [51] [52 <./pictures/hydra.png>] (./slips.py)
 (./slips2.py [53])) (./sections/5-esperimenti.tex [54]
 Capitolo 5.
 [55
 
 ] [56]
+=======
+ [57]) (./sections/5-esperimenti.tex [58 <./pictures/hydra.png>]
+Capitolo 5.
+[59
+
+] [60]
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 Underfull \hbox (badness 10000) in paragraph at lines 89--89
 
  []
@@ -1471,14 +1695,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--89
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 89.
 
+<<<<<<< HEAD
 <pictures/homestf.png, id=928, 901.3675pt x 348.30125pt>
+=======
+<pictures/homestf.png, id=873, 901.3675pt x 348.30125pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/homestf.png Graphic file (type png)
 
 <use pictures/homestf.png>
 Package pdftex.def Info: pictures/homestf.png used on input line 99.
 (pdftex.def)             Requested size: 360.5406pt x 139.31802pt.
+<<<<<<< HEAD
  [57] [58 <./pictures/homestf.png>] [59]
 <pictures/graph1.png, id=965, 578.16pt x 433.62pt>
+=======
+ [61] [62 <./pictures/homestf.png>]
+<pictures/graph1.png, id=904, 578.16pt x 433.62pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/graph1.png Graphic file (type png)
  <use pictures/graph1.png>
 Package pdftex.def Info: pictures/graph1.png used on input line 168.
@@ -1488,8 +1721,13 @@ Overfull \hbox (6.37065pt too wide) in paragraph at lines 168--169
  [][] 
  []
 
+<<<<<<< HEAD
 [60 <./pictures/graph1.png>]
 <pictures/graph2.png, id=972, 578.16pt x 433.62pt>
+=======
+[63] [64 <./pictures/graph1.png>]
+<pictures/graph2.png, id=917, 578.16pt x 433.62pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/graph2.png Graphic file (type png)
  <use pictures/graph2.png>
 Package pdftex.def Info: pictures/graph2.png used on input line 194.
@@ -1499,8 +1737,12 @@ Overfull \hbox (6.37065pt too wide) in paragraph at lines 194--195
  [][] 
  []
 
+<<<<<<< HEAD
 [61 <./pictures/graph2.png>]
 <pictures/graph3.png, id=979, 578.16pt x 433.62pt>
+=======
+<pictures/graph3.png, id=919, 578.16pt x 433.62pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/graph3.png Graphic file (type png)
  <use pictures/graph3.png>
 Package pdftex.def Info: pictures/graph3.png used on input line 216.
@@ -1510,8 +1752,13 @@ Overfull \hbox (6.37065pt too wide) in paragraph at lines 216--217
  [][] 
  []
 
+<<<<<<< HEAD
 [62 <./pictures/graph3.png>]
 <pictures/graph4.png, id=986, 578.16pt x 433.62pt>
+=======
+[65 <./pictures/graph2.png>] [66 <./pictures/graph3.png>]
+<pictures/graph4.png, id=931, 578.16pt x 433.62pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/graph4.png Graphic file (type png)
  <use pictures/graph4.png>
 Package pdftex.def Info: pictures/graph4.png used on input line 240.
@@ -1521,14 +1768,20 @@ Overfull \hbox (6.37065pt too wide) in paragraph at lines 240--241
  [][] 
  []
 
+<<<<<<< HEAD
 [63 <./pictures/graph4.png>]
 <pictures/conversion.png, id=993, 623.32875pt x 81.30376pt>
+=======
+[67 <./pictures/graph4.png>]
+<pictures/conversion.png, id=939, 623.32875pt x 81.30376pt>
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 File: pictures/conversion.png Graphic file (type png)
 
 <use pictures/conversion.png>
 Package pdftex.def Info: pictures/conversion.png used on input line 254.
 (pdftex.def)             Requested size: 311.6636pt x 40.65176pt.
 
+<<<<<<< HEAD
 <pictures/slips.png, id=997, 610.28pt x 485.815pt>
 File: pictures/slips.png Graphic file (type png)
  <use pictures/slips.png>
@@ -1546,6 +1799,20 @@ Capitolo 6.
 [66
 
 ]) (./main.bbl [67]
+=======
+<pictures/slips.png, id=942, 610.28pt x 485.815pt>
+File: pictures/slips.png Graphic file (type png)
+ <use pictures/slips.png>
+Package pdftex.def Info: pictures/slips.png used on input line 268.
+(pdftex.def)             Requested size: 305.13925pt x 242.9069pt.
+
+[68 <./pictures/conversion.png>]) (./sections/6-conclusioni.tex [69 <./pictures
+/slips.png>] [70
+
+]
+Capitolo 6.
+[71]) (./main.bbl [72]
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 Underfull \hbox (badness 1655) in paragraph at lines 7--9
 []\OT1/cmr/m/n/10.95 Alpha soft-ware de-fi-ni-tion.  []$\OT1/cmtt/m/n/10.95 htt
 ps : / / techterms . com / definition / alpha _
@@ -1572,6 +1839,7 @@ Underfull \hbox (badness 5741) in paragraph at lines 26--29
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 26--29
 \OT1/cmtt/m/n/10.95 / / en . wikipedia . org / wiki / Argus _ %E2 % 80 % 93 _ A
 udit _ Record _ Generation _
@@ -1585,6 +1853,33 @@ n/10.95 https : / / web . archive . org / web /
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--34
+=======
+Underfull \hbox (badness 3536) in paragraph at lines 17--21
+[]\OT1/cmr/m/n/10.95 Apple ex-plains 'hey si-ri' spea-ker re-co-gni-tion in la-
+te-st ma-chi-ne lear-
+ []
+
+
+Underfull \hbox (badness 2285) in paragraph at lines 17--21
+\OT1/cmr/m/n/10.95 ning jour-nal up-da-te.  []$\OT1/cmtt/m/n/10.95 https : / / 
+appleinsider . com / articles / 18 / 04 / 16 /
+ []
+
+
+Overfull \hbox (121.3499pt too wide) in paragraph at lines 17--21
+\OT1/cmtt/m/n/10.95 apple-[]explains-[]hey-[]siri-[]speaker-[]recognition-[]in-
+[]latest-[]machine-[]learning-[]journal-[]update$[]\OT1/cmr/m/n/10.95 . 
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 27--30
+[]\OT1/cmr/m/n/10.95 Atis te-le-com glos-sa-ry - au-dit trail.  []$\OT1/cmtt/m/
+n/10.95 https : / / web . archive . org / web /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \OT1/cmtt/m/n/10.95 20130313232104 / http : / / www . atis . org / glossary / d
 efinition . aspx ? id =
  []
@@ -1601,11 +1896,16 @@ to / matchilling /
  []
 
 
+<<<<<<< HEAD
 Overfull \hbox (4.87614pt too wide) in paragraph at lines 44--47
+=======
+Overfull \hbox (40.36827pt too wide) in paragraph at lines 36--39
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \OT1/cmtt/m/n/10.95 comparison-[]of-[]machine-[]learning-[]techniques-[]in-[]em
 ail-[]spam-[]detection$[]\OT1/cmr/m/n/10.95 . 
  []
 
+<<<<<<< HEAD
 [68
 
 ]
@@ -1639,35 +1939,72 @@ target . com / tip /
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 89--92
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+Underfull \hbox (badness 6236) in paragraph at lines 58--62
+[]\OT1/cmr/m/n/10.95 Google as-si-stant and ar-ti-fi-cial in-tel-li-gen-ce { th
+e fu-tu-re of si-mu-la-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
+\OT1/cmr/m/n/10.95 ted com-mu-ni-ca-tion.  []$\OT1/cmtt/m/n/10.95 https : / / c
+ampaignsoftheworld . com / digital /
+ []
+
+[73
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 []\OT1/cmr/m/n/10.95 Machine lear-ning in prac-ti-ce: How does ama-zon's ale-xa
  real-ly
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 89--92
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \OT1/cmr/m/n/10.95 work?  []$\OT1/cmtt/m/n/10.95 https : / / www . forbes . com
  / sites / bernardmarr / 2018 / 10 / 05 /
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 94--97
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 []\OT1/cmr/m/n/10.95 Making fa-cial re-co-gni-tion smar-ter with ar-ti-fi-cial 
 in-tel-li-gen-
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 94--97
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \OT1/cmr/m/n/10.95 ce.  []$\OT1/cmtt/m/n/10.95 https : / / www . forbes . com /
  sites / jenniferhicks / 2018 / 09 / 30 /
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 94--97
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \OT1/cmtt/m/n/10.95 making-[]facial-[]recognition-[]smarter-[]with-[]artificial
 -[]intelligence /
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 110--113
 []\OT1/cmr/m/n/10.95 Mcafee: due so-le bot-net per (qua-si) tut-to lo spam
  []
@@ -1680,29 +2017,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--113
 
 [69]
 Underfull \hbox (badness 5908) in paragraph at lines 147--149
+=======
+Underfull \hbox (badness 7012) in paragraph at lines 93--95
+[]\OT1/cmr/m/n/10.95 Netflow and pcap (not or).  []$\OT1/cmtt/m/n/10.95 https :
+ / / blogs . cisco . com / security /
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 125--127
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 []\OT1/cmr/m/n/10.95 Sicurezza: Vi-rus, worm, tro-jan...  []$\OT1/cmtt/m/n/10.9
 5 http : / / www . bloomriot . org / 91 /
  []
 
+<<<<<<< HEAD
 
 Underfull \hbox (badness 7064) in paragraph at lines 172--174
+=======
+[74]
+Underfull \hbox (badness 7064) in paragraph at lines 146--148
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 []\OT1/cmr/m/n/10.95 Stratosphere ips for li-nux.  []$\OT1/cmtt/m/n/10.95 https
  : / / github . com / stratosphereips /
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 176--179
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 []\OT1/cmr/m/n/10.95 Stratosphere li-nux ips la-te-st com-mit.  []$\OT1/cmtt/m/
 n/10.95 https : / /
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 176--179
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 \OT1/cmtt/m/n/10.95 github . com / stratosphereips / StratosphereLinuxIPS / tre
 e /
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 196--199
 []\OT1/cmr/m/n/10.95 Video ad fraud bot-net bags up to 1.3 mil-
  []
@@ -1715,16 +2075,24 @@ nfosecurity . com /
 
 
 Underfull \hbox (badness 1418) in paragraph at lines 205--208
+=======
+Underfull \hbox (badness 1418) in paragraph at lines 170--173
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 []\OT1/cmr/m/n/10.95 What is a tro-jan vi-rus? - de-fi-ni-tion.  []$\OT1/cmtt/m
 /n/10.95 https : / / usa . kaspersky . com /
  []
 
 
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 210--212
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 175--177
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 []\OT1/cmr/m/n/10.95 What is spy-ware? - de-fi-ni-tion.  []$\OT1/cmtt/m/n/10.95
  https : / / www . kaspersky . com /
  []
 
+<<<<<<< HEAD
 [70]
 Underfull \hbox (badness 10000) in paragraph at lines 227--231
 []\OT1/cmr/m/n/10.95 \mining" bot-ne-ts are back - in-fec-ting thou-sands of pc
@@ -1783,6 +2151,26 @@ Here is how much of TeX's memory you used:
  16608 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,100p,10391b,2074s stack positions out of 5000i,500n,10000p,200000b,80000s
+=======
+[75]) [76]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
+ (./main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F89F9062CA1AD7D533DDFDB105B75F5E;3430.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
+ ) 
+Here is how much of TeX's memory you used:
+ 37529 strings out of 493029
+ 772979 string characters out of 6136234
+ 955065 words of memory out of 5000000
+ 40172 multiletter control sequences out of 15000+600000
+ 16263 words of font info for 57 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 68i,11n,100p,10391b,2075s stack positions out of 5000i,500n,10000p,200000b,80000s
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
@@ -1801,6 +2189,7 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+<<<<<<< HEAD
 /public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt10.pfb>
 Output written on main.pdf (74 pages, 1781123 bytes).
@@ -1809,4 +2198,13 @@ PDF statistics:
  1106 compressed objects within 12 object streams
  338 named destinations out of 1000 (max. 500000)
  577 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+/public/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (76 pages, 1665341 bytes).
+PDF statistics:
+ 1182 PDF objects out of 1200 (max. 8388607)
+ 1009 compressed objects within 11 object streams
+ 306 named destinations out of 1000 (max. 500000)
+ 580 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> c19796f244639ae6773a4ab1a275f8179b609258
 
